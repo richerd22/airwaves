@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How Flight Trackers Work: ADS-B, Mode S, MLAT and Airband | The Airwaves</title>
+<meta name="description" content="Most airliners and many small planes broadcast their own GPS position, altitude, speed and identity about once a second, unencrypted, on 1090 MHz (and...">
+<link rel="canonical" href="https://airwaves.cold.fyi/aviation/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="How Flight Trackers Work: ADS-B, Mode S, MLAT and Airband | The Airwaves"><meta property="og:description" content="Most airliners and many small planes broadcast their own GPS position, altitude, speed and identity about once a second, unencrypted, on 1090 MHz (and...">
+<meta property="og:url" content="https://airwaves.cold.fyi/aviation/"><meta property="og:image" content="https://airwaves.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "How Flight Trackers Work: ADS-B, Mode S, MLAT and Airband", "description": "Most airliners and many small planes broadcast their own GPS position, altitude, speed and identity about once a second, unencrypted, on 1090 MHz (and...", "url": "https://airwaves.cold.fyi/aviation/", "image": "https://airwaves.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Airwaves", "url": "https://airwaves.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Airwaves", "item": "https://airwaves.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "How flight trackers know where every plane is", "item": "https://airwaves.cold.fyi/aviation/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does Flightradar24 know where planes are?", "acceptedAnswer": {"@type": "Answer", "text": "Flightradar24 says its main source is ADS-B, the position broadcast most aircraft send about once a second, picked up by more than 50,000 ground receivers, most of them user-built. For aircraft with only Mode S transponders it uses multilateration, and it adds satellite ADS-B over oceans and some radar data."}}, {"@type": "Question", "name": "Why can't I see a plane on Flightradar24?", "acceptedAnswer": {"@type": "Answer", "text": "The plane may lack ADS-B and be too low or in too sparse an area for multilateration, which needs four or more receivers and works only from roughly 3,000-10,000 ft up. Its owner may also have it blocked from public display through the FAA's LADD program."}}, {"@type": "Question", "name": "How do I hide my aircraft from flight tracking?", "acceptedAnswer": {"@type": "Answer", "text": "US owners can join the FAA's LADD program, which makes FAA-fed vendors hide the registration, or request a Privacy ICAO Address (PIA), a temporary address not linked to the registry. Neither stops the ADS-B broadcast itself, which the FAA notes can be received by off-the-shelf receivers."}}, {"@type": "Question", "name": "What is ADS-B Exchange?", "acceptedAnswer": {"@type": "Answer", "text": "ADS-B Exchange was founded in 2016 as a hobby project and describes itself as offering a view of the skies without censorship or filtering, including military traffic. Like other trackers it relies on community-hosted receivers and multilateration."}}, {"@type": "Question", "name": "Is it legal to listen to air traffic control?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, yes: 18 USC 2511 says it is not unlawful to intercept communications transmitted by any marine or aeronautical communications system. In the UK, a 2012 petition to Parliament stated that listening to services you are not authorized to receive is an offence, though that is a petitioner's statement, not an official ruling."}}, {"@type": "Question", "name": "What is the difference between 1090 and 978 ADS-B?", "acceptedAnswer": {"@type": "Answer", "text": "1090 MHz Extended Squitter is used worldwide and is required in US airspace above 18,000 ft. 978 MHz UAT is a US-only link allowed below that, mainly used by smaller aircraft, and it is the only one that carries free FIS-B weather."}}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/space-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-grotesk-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a night-sky spectrum analyzer - dark navy, Space Grotesk display, a waterfall-plot hero, band colors per topic, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:dark;
+  --bg:#0b1020; --panel:#121a30; --panel2:#18223d; --ink:#e8ecf5; --muted:#9aa4bb; --line:#26314f;
+  --tape:#4fe3a1; --tape-ink:#0b1020; --hot:#ff6b7d; --cue:#7cc4ff; --sign:#4fe3a1; --sign-ink:#0b1020;
+  --ink-on:#0b1020; --ink-on-y:#0b1020;
+  --u-red:#ff6b7d; --u-yel:#ffcf5a; --u-org:#ff9a4d; --u-blu:#5aa8ff; --u-grn:#4fe3a1; --u-pur:#b98cff; --u-pnk:#ff7fc8; --u-wht:#dfe5f2;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-aviation">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Airwaves</a> / How flight trackers know where every plane is</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Airwaves</a></h2><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/" class=on aria-current=page><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 08 of 23 · about 14 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-yel);--sci:var(--ink-on-y)"><h1 class="sec-h1" id="sec-aviation" style="--sc:var(--u-yel);--sci:var(--ink-on-y)"><span class="tape">08</span>How flight trackers know where every plane is</h1>
+<p class="short"><strong>The short version:</strong> Most airliners and many small planes broadcast their own GPS position, altitude, speed and identity about once a second, unencrypted, on 1090 MHz (and, for some small US aircraft, 978 MHz). Flight-tracking sites collect those broadcasts from tens of thousands of ground receivers, most of them run by volunteers, and fill gaps by timing older transponder replies across several receivers. Owners can ask the FAA to hide a plane from public sites, but that does not stop the radio signal. In the US, federal law allows anyone to listen to aeronautical radio; the rules differ by country, and the UK's are described as stricter.</p><aside class="callout" style="--sc:var(--u-yel)"><b class="k">Did you know?</b>Logan&#x27;s Runway 14/32 opened on November 23, 2006, after being proposed in 1973, and it operates only in a strong northwest wind.<sup id="fnref-tv-146"><a class="footnote-ref" href="#fn-146">146</a></sup></aside>
+<div class="diagram wide"><div class="dhead">Diagram 2 · From a plane&#x27;s transponder to your phone</div><div class="dscroll"><svg class="dg" viewBox="0 0 770 188" role="img" aria-label="ADS-B data path: an aircraft broadcasts its GPS position, altitude, speed and identity on 1090 or 978 megahertz; volunteer and air traffic control receivers pick it up and send it over the internet to a tracking server, which also locates planes that send no position by comparing arrival times at four or more receivers (MLAT); your app shows the merged map."><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0 L10 5 L0 10z"/></marker></defs><text class="s cap" x="8" y="20" text-anchor="start">ADS-B: aircraft broadcast their own GPS position; anyone can receive it</text><rect class="bx cls" x="10" y="50" width="150" height="56" rx="6"/><text class="t" x="85.0" y="67.0" text-anchor="middle">Aircraft</text><text class="s xs" x="85.0" y="83.0" text-anchor="middle">GPS position, altitude,</text><text class="s xs" x="85.0" y="97.0" text-anchor="middle">speed, ID</text><rect class="bx yel" x="270" y="34" width="150" height="44" rx="6"/><text class="t" x="345.0" y="53.0" text-anchor="middle">Ground receivers</text><text class="s xs" x="345.0" y="69.0" text-anchor="middle">volunteers and ATC</text><rect class="bx " x="270" y="112" width="150" height="44" rx="6"/><text class="t" x="345.0" y="131.0" text-anchor="middle">Mode S-only plane</text><text class="s xs" x="345.0" y="147.0" text-anchor="middle">no position sent</text><rect class="bx grn" x="480" y="60" width="140" height="56" rx="6"/><text class="t" x="550.0" y="77.0" text-anchor="middle">Tracking server</text><text class="s xs" x="550.0" y="93.0" text-anchor="middle">merges feeds</text><text class="s xs" x="550.0" y="107.0" text-anchor="middle">MLAT: 4+ receivers</text><rect class="bx " x="660" y="60" width="100" height="56" rx="6"/><text class="t" x="710.0" y="85.0" text-anchor="middle">Your app</text><text class="s xs" x="710.0" y="101.0" text-anchor="middle">map</text><path class="w" d="M160 72 L270 56" marker-end="url(#ah)"/><text class="s xs" x="215" y="86" text-anchor="middle">1090 or 978 MHz</text><path class="w" d="M420 56 L480 74" marker-end="url(#ah)"/><text class="s xs" x="452" y="52" text-anchor="middle">internet</text><path class="w" d="M420 134 L480 104" marker-end="url(#ah)" style="stroke-dasharray:5 4"/><text class="s xs" x="452" y="150" text-anchor="middle">timing only</text><path class="w" d="M620 88 L660 88" marker-end="url(#ah)"/><text class="s xs" x="8" y="178" text-anchor="start">Planes in FAA privacy programs may use substitute or blocked IDs; trackers vary in what they show.</text></svg></div></div>
+
+<h3 id="what-is-ads-b-and-why-can-anyone-receive-it">What is ADS-B, and why can anyone receive it?</h3>
+<p><em>What you see:</em> A flight-tracker app showing a plane over your house with its flight number, altitude and speed, updating every second or so.</p>
+<p><strong>ADS-B</strong> (Automatic Dependent Surveillance-Broadcast) is the aircraft announcing itself. "Dependent" means it depends on the aircraft's own navigation, and "broadcast" means it is sent to everyone rather than in answer to a question. Under the FAA's description, <strong>ADS-B Out</strong> carries the aircraft's position, both barometric and GPS altitude, horizontal and vertical velocity, its ICAO aircraft address (tied to the tail number for US aircraft), its Mode A squawk code and a Flight ID such as an N-number or airline call sign.<sup id="fnref-122"><a class="footnote-ref" href="#fn-122">122</a></sup> It updates about once per second, and the FAA's specification calls for no encryption.<sup id="fnref2-122"><a class="footnote-ref" href="#fn-122">122</a></sup> The position comes from GPS or WAAS (see <a href="/gps/">GPS</a>), and the equipment must transmit at all times unless the FAA or ATC directs otherwise.<sup id="fnref-123"><a class="footnote-ref" href="#fn-123">123</a></sup></p>
+<p>That openness is why flight tracking exists as a hobby and a business: a cheap receiver hears the same broadcast the FAA hears.</p>
+<p><strong>ADS-B In</strong> is the receiving side in the cockpit, and it is not required.<sup id="fnref3-122"><a class="footnote-ref" href="#fn-122">122</a></sup> Aircraft that have it can get TIS-B traffic information on either link and, on 978 MHz only, free FIS-B weather and flight information.<sup id="fnref4-122"><a class="footnote-ref" href="#fn-122">122</a></sup></p>
+<h3 id="what-is-the-difference-between-1090-and-978-ads-b">What is the difference between 1090 and 978 ADS-B?</h3>
+<p><em>What you see:</em> A tracking site listing a plane's data source as "ADS-B" or "UAT," or a pilot shop selling two kinds of box.</p>
+<p>The US runs two ADS-B links. <strong>1090ES</strong> (1090 MHz Extended Squitter) is the worldwide standard, sent by a Mode S transponder. <strong>UAT</strong> (Universal Access Transceiver) on 978 MHz is a US system.<sup id="fnref-124"><a class="footnote-ref" href="#fn-124">124</a></sup> Flightradar24 describes UAT as "used primarily for smaller aircraft flying only below 18,000 feet in the United States."<sup id="fnref-125"><a class="footnote-ref" href="#fn-125">125</a></sup></p>
+<p>Under 14 CFR 91.225, Class A airspace (above 18,000 ft, about 5,500 m) requires 1090ES, while in the other mandated airspace an aircraft may use either link.<sup id="fnref-126"><a class="footnote-ref" href="#fn-126">126</a></sup> A receiver that listens only on 1090 misses the small planes using 978.</p>
+<h3 id="where-is-ads-b-out-required-in-the-us">Where is ADS-B Out required in the US?</h3>
+<p><em>What you see:</em> Nothing in the sky - but this table is why nearly every plane near a big airport shows up on a tracker.</p>
+<p>The rule took effect on January 1, 2020: "After January 1, 2020, unless otherwise authorized by ATC, no person may operate an aircraft" in the covered airspace without compliant equipment.<sup id="fnref2-126"><a class="footnote-ref" href="#fn-126">126</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Airspace (14 CFR 91.225)</th>
+<th>Link allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class A (above 18,000 ft)</td>
+<td>1090ES only</td>
+</tr>
+<tr>
+<td>Class B and Class C</td>
+<td>1090ES or UAT</td>
+</tr>
+<tr>
+<td>Within 30 nm (56 km) of airports listed in appendix D, surface to 10,000 ft MSL</td>
+<td>1090ES or UAT</td>
+</tr>
+<tr>
+<td>Above Class B/C ceilings, within their lateral limits, up to 10,000 ft MSL</td>
+<td>1090ES or UAT</td>
+</tr>
+<tr>
+<td>Class E in the 48 contiguous states and DC at and above 10,000 ft MSL, excluding at and below 2,500 ft above the surface</td>
+<td>1090ES or UAT</td>
+</tr>
+<tr>
+<td>Gulf of Mexico, coastline to 12 nm, at and above 3,000 ft MSL</td>
+<td>1090ES or UAT</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source: eCFR, 14 CFR 91.225.<sup id="fnref3-126"><a class="footnote-ref" href="#fn-126">126</a></sup> Aircraft certificated without an engine-driven electrical system, such as balloons and gliders, are excepted in some of this airspace.<sup id="fnref4-126"><a class="footnote-ref" href="#fn-126">126</a></sup></p>
+<p>As of October 1, 2026, the FAA counted 173,663 US civil aircraft equipped with ADS-B Out, 164,573 of them listed as good installs, and 7,200 equipped US air carrier aircraft.<sup id="fnref-127"><a class="footnote-ref" href="#fn-127">127</a></sup></p>
+<h3 id="what-does-a-transponder-do">What does a transponder do?</h3>
+<p><em>What you see:</em> A plane on a tracker with an altitude but a vague or estimated position, or labeled "MLAT."</p>
+<p>Before ADS-B there was secondary surveillance radar, and it is still in use. The FCC's aviation frequency table lists 1030 MHz and 1090 MHz, the latter described among other uses as "Vehicle Squitter."<sup id="fnref2-124"><a class="footnote-ref" href="#fn-124">124</a></sup> In plain terms, a ground radar asks on 1030 MHz and the aircraft's <strong>transponder</strong> answers on 1090 MHz. A <strong>Mode S</strong> transponder carries a unique address for each aircraft, so the radar can talk to one plane at a time. That address is the <strong>ICAO address</strong>, and for US aircraft the FAA ties it to the tail number.<sup id="fnref5-122"><a class="footnote-ref" href="#fn-122">122</a></sup> The four-digit <strong>squawk</strong> code assigned by ATC rides along too.<sup id="fnref6-122"><a class="footnote-ref" href="#fn-122">122</a></sup></p>
+<p>ADS-B 1090ES reuses that same transponder to send unprompted "extended squitter" messages. Some older civil aircraft and many military aircraft carry only Mode S transponders, which send less data, so trackers have to work out where they are by other means.<sup id="fnref2-125"><a class="footnote-ref" href="#fn-125">125</a></sup></p>
+<p>In the FAA's air traffic control order (JO 7110.65), Mode 3/A is "designated as the common military/civil mode for air traffic control use," and a Mode C transponder replies with the aircraft's pressure altitude in 100-foot increments.<sup id="fnref-128"><a class="footnote-ref" href="#fn-128">128</a></sup> The same order covers the three emergency codes in the US: 7500 for hijack or unlawful interference, 7600 for loss of two-way radio communications, and 7700 for an emergency.<sup id="fnref2-128"><a class="footnote-ref" href="#fn-128">128</a></sup></p>
+<h3 id="how-does-flightradar24-know-where-planes-are">How does Flightradar24 know where planes are?</h3>
+<p><em>What you see:</em> A map full of tiny yellow planes, each one tappable, including over the open ocean.</p>
+<p>Flightradar24 (FR24) says its primary source is ADS-B, with multilateration for aircraft that have only Mode S, satellite ADS-B over the oceans (more in <a href="/satellites/">satellites</a>), and further inputs from North American and Australian radar data, FLARM and the Open Glider Network, and UAT.<sup id="fnref3-125"><a class="footnote-ref" href="#fn-125">125</a></sup> It says it has "more than 50,000 receivers on seven continents and in space" and a database of more than 1.5 million aircraft.<sup id="fnref4-125"><a class="footnote-ref" href="#fn-125">125</a></sup> In a blog post from April 2025, updated October 2025, FR24 said it had "recently surpassed 50,000 connected ground stations globally," of which about 7,000 are FR24-supplied kits and the rest are user-built.<sup id="fnref-129"><a class="footnote-ref" href="#fn-129">129</a></sup></p>
+<p><strong>FlightAware</strong> works the same basic way. In October 2020 it reported 30,000 ADS-B receivers in 193 countries on all seven continents and called it "the largest terrestrial ADS-B network in the world."<sup id="fnref-130"><a class="footnote-ref" href="#fn-130">130</a></sup> Volunteers host the receivers, and the company may give out a free FlightFeeder where it needs coverage.<sup id="fnref2-130"><a class="footnote-ref" href="#fn-130">130</a></sup> The "About FlightAware" note on the same page gives no exact count, saying only "tens of thousands" of receivers.<sup id="fnref3-130"><a class="footnote-ref" href="#fn-130">130</a></sup></p>
+<p>The ground receivers only listen; nothing is sent to the aircraft.</p>
+<h3 id="what-is-mlat-and-why-can-t-i-see-a-plane-on-flightradar24">What is MLAT, and why can't I see a plane on Flightradar24?</h3>
+<p><em>What you see:</em> A plane you can hear overhead that is missing from the app, or one that appears only once it climbs.</p>
+<p><strong>MLAT</strong> (multilateration) finds a transmitter by comparing when the same signal reached several receivers. FR24 says it uses Time Difference of Arrival and that "Four FR24-receivers or more, receiving signals from the same aircraft, are needed to make MLAT work."<sup id="fnref-131"><a class="footnote-ref" href="#fn-131">131</a></sup> It works only from roughly 3,000-10,000 ft (about 900-3,000 m) and above, because lower down too few receivers can hear the plane.<sup id="fnref2-131"><a class="footnote-ref" href="#fn-131">131</a></sup></p>
+<p>So a plane can be missing for several ordinary reasons:</p>
+<ul>
+<li>It has no ADS-B and is too low, or in too thin a receiver area, for MLAT.<sup id="fnref3-131"><a class="footnote-ref" href="#fn-131">131</a></sup></li>
+<li>It uses 978 MHz UAT and no nearby receiver listens there.</li>
+<li>Its owner has asked for it to be blocked from public display (see LADD below).<sup id="fnref2-132"><a class="footnote-ref" href="#fn-132">132</a></sup></li>
+<li>It is over the ocean, beyond the reach of ground receivers, where FR24 relies on satellite ADS-B, and it has no ADS-B to hear.<sup id="fnref6-125"><a class="footnote-ref" href="#fn-125">125</a></sup></li>
+</ul>
+<p>Coverage follows the volunteers, so it thins out wherever few of them live.</p>
+<h3 id="what-is-ads-b-exchange">What is ADS-B Exchange?</h3>
+<p><em>What you see:</em> A tracking site showing military jets and business aircraft that the bigger apps leave off.</p>
+<p>ADS-B Exchange was "founded in 2016 ... as a hobby project."<sup id="fnref-133"><a class="footnote-ref" href="#fn-133">133</a></sup> It describes itself as offering "a transparent view of the skies without censorship or filtering," including military traffic, and like the others it uses MLAT and community-hosted receivers.<sup id="fnref2-133"><a class="footnote-ref" href="#fn-133">133</a></sup> The site's footer links to JETNET's terms.<sup id="fnref3-133"><a class="footnote-ref" href="#fn-133">133</a></sup></p>
+<p>The difference is policy, not radio. FR24 and FlightAware honor the FAA's LADD blocking list; ADS-B Exchange describes its view as unfiltered.<sup id="fnref4-133"><a class="footnote-ref" href="#fn-133">133</a></sup></p>
+<h3 id="can-owners-hide-a-plane-from-flight-trackers">Can owners hide a plane from flight trackers?</h3>
+<p><em>What you see:</em> A private jet that shows up as a blank or generic entry, or not at all, on a mainstream tracker.</p>
+<p>Two FAA programs exist, and neither switches off the radio.</p>
+<p><strong>LADD</strong> makes FAA-fed vendors hide a registration from public display. It grew out of BARR, a blocking system that NBAA, the FAA and data vendors began developing in 1997, and was later renamed LADD; NBAA welcomed new FAA privacy measures in a November 4, 2019 press release.<sup id="fnref-134"><a class="footnote-ref" href="#fn-134">134</a></sup> Vendors must block LADD-listed registrations, call signs and flight numbers and show no history for them.<sup id="fnref2-134"><a class="footnote-ref" href="#fn-134">134</a></sup></p>
+<p>LADD now operates under Section 803 of the 2024 FAA Reauthorization Act, filters data from the FAA's SWIM feed and participating websites, and offers "FAA Source" (FAA use only), "Subscriber Level" and "Unblocking" options, with changes taking effect on the first Thursday of each month.<sup id="fnref-132"><a class="footnote-ref" href="#fn-132">132</a></sup> The FAA is direct about the limit: "The LADD program does not impact the ADS-B broadcast data," which "may be received by off-the-shelf receivers."<sup id="fnref-135"><a class="footnote-ref" href="#fn-135">135</a></sup></p>
+<p><strong>PIA</strong> (Privacy ICAO Address) assigns a temporary ICAO address that is not linked to the owner in the Civil Aircraft Registry.<sup id="fnref2-135"><a class="footnote-ref" href="#fn-135">135</a></sup> To qualify, an aircraft must be US-registered, use 1090 MHz ADS-B, use a third-party call sign and fly in US-managed airspace; dual 1090/UAT aircraft were not eligible.<sup id="fnref3-135"><a class="footnote-ref" href="#fn-135">135</a></sup> It costs nothing in the first phase and can be re-requested after 20 days, per the FAA page as updated March 22, 2025.<sup id="fnref4-135"><a class="footnote-ref" href="#fn-135">135</a></sup></p>
+<p>FlightAware's PIA page gives a 60-day interval for the "initial phase," which differs from the FAA's current figure.<sup id="fnref-136"><a class="footnote-ref" href="#fn-136">136</a></sup> PIA is valid only in US and US-managed airspace, and the aircraft must revert to its registered address when leaving it.<sup id="fnref5-135"><a class="footnote-ref" href="#fn-135">135</a></sup></p>
+<p>Small planes have one more option. A UAT aircraft below 18,000 ft squawking 1200 (flying under visual rules) can select an "anonymous mode" that broadcasts a randomized address, at the cost of ATC services.<sup id="fnref7-122"><a class="footnote-ref" href="#fn-122">122</a></sup> The FAA keeps its own ADS-B surveillance data for at least six months regardless.<sup id="fnref8-122"><a class="footnote-ref" href="#fn-122">122</a></sup></p>
+<p>The two sides, as sourced: the business-aviation group NBAA publicly commended the FAA's 2019 privacy measures,<sup id="fnref3-134"><a class="footnote-ref" href="#fn-134">134</a></sup> while ADS-B Exchange presents an unfiltered view as transparency.<sup id="fnref5-133"><a class="footnote-ref" href="#fn-133">133</a></sup></p>
+<h3 id="what-is-acars">What is ACARS?</h3>
+<p><em>What you see:</em> Short bursts of digital noise on a scanner around 129-131 MHz, or a website listing text messages from airliners.</p>
+<p><strong>ACARS</strong> is text messaging between aircraft and their airlines, and increasingly air traffic control. ARINC developed it, and it has carried routine pilot-to-airline messages since 1978.<sup id="fnref-137"><a class="footnote-ref" href="#fn-137">137</a></sup> VHF ACARS runs mainly on 129.125 and 131.550 MHz with roughly 200 nm (370 km) line-of-sight range; HF datalink covers 2-22 MHz, and satellite links use Inmarsat around 1.5 GHz and Iridium around 1.6 GHz.<sup id="fnref2-137"><a class="footnote-ref" href="#fn-137">137</a></sup> The FCC table lists 131.450, 131.550, 131.725, 131.825 and 136.850 MHz for datalink.<sup id="fnref3-124"><a class="footnote-ref" href="#fn-124">124</a></sup> Oceanic controller messaging (CPDLC) and position reporting (ADS-C) ride over ACARS in remote airspace.<sup id="fnref3-137"><a class="footnote-ref" href="#fn-137">137</a></sup></p>
+<p>The faster successor is <strong>VDL Mode 2</strong>, which uses twelve 25 kHz channels from 136.700 to 136.975 MHz, with 136.975 MHz as the common signaling channel. It runs at 31.5 kbit/s raw, against 2.4 kb/s for plain VHF ACARS.<sup id="fnref-138"><a class="footnote-ref" href="#fn-138">138</a></sup> Europe's Single European Sky rule (January 2009) required new aircraft flying in Europe after January 1, 2014 to carry <strong>CPDLC</strong> (Controller-Pilot Data Link Communications), with VDL Mode 2 as the primary link.<sup id="fnref2-138"><a class="footnote-ref" href="#fn-138">138</a></sup></p>
+<p>US law does not name ACARS; the relevant text is the federal wiretap law's exemption for "any marine or aeronautical communications system," covered below.<sup id="fnref-139"><a class="footnote-ref" href="#fn-139">139</a></sup> Elsewhere, check the national regulator's rules.</p>
+<h3 id="what-frequency-is-air-traffic-control">What frequency is air traffic control?</h3>
+<p><em>What you see:</em> A scanner or a streaming site playing clipped, fast voices: "Delta 1234, contact departure."</p>
+<p>Pilots and controllers talk in plain voice on the VHF <strong>airband</strong>. The US frequency table assigns air traffic control and related services in 25 kHz steps across these ranges:<sup id="fnref4-124"><a class="footnote-ref" href="#fn-124">124</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Range (MHz)</th>
+<th>Use in the US table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>118.000-121.400</td>
+<td>ATC and related services</td>
+</tr>
+<tr>
+<td>121.500</td>
+<td>Emergency and distress</td>
+</tr>
+<tr>
+<td>121.600-121.925</td>
+<td>ATC and related services</td>
+</tr>
+<tr>
+<td>about 122.700-123.075</td>
+<td>Unicom (airport advisory)</td>
+</tr>
+<tr>
+<td>123.6-128.8</td>
+<td>ATC and related services</td>
+</tr>
+<tr>
+<td>129-131 (scattered)</td>
+<td>ACARS datalink</td>
+</tr>
+<tr>
+<td>132.025-135.975</td>
+<td>ATC and related services</td>
+</tr>
+<tr>
+<td>136.000-136.475</td>
+<td>ATC and related services</td>
+</tr>
+<tr>
+<td>136.700-136.975</td>
+<td>VDL Mode 2 datalink</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sources: 47 CFR 87.173, Airframes.io and Wikipedia's VHF Data Link article.<sup id="fnref5-124"><a class="footnote-ref" href="#fn-124">124</a></sup><sup id="fnref4-137"><a class="footnote-ref" href="#fn-137">137</a></sup><sup id="fnref3-138"><a class="footnote-ref" href="#fn-138">138</a></sup></p>
+<p>Airband voice uses AM rather than FM. AM does not suffer from FM's "capture effect," so when two stations transmit at once, listeners hear a garbled mix of both instead of only the stronger signal.<sup id="fnref-140"><a class="footnote-ref" href="#fn-140">140</a></sup> Europe has also split the standard 25 kHz channels into three, giving 8.33 kHz spacing.<sup id="fnref2-140"><a class="footnote-ref" href="#fn-140">140</a></sup> EUROCONTROL says Europe has "a known shortage of voice communication frequencies," and under EU Implementing Regulation 1079/2012 aircraft without 8.33 kHz-capable radios may not be able to operate in EU member states' controlled airspace from January 1, 2018.<sup id="fnref-141"><a class="footnote-ref" href="#fn-141">141</a></sup></p>
+<h3 id="is-it-legal-to-listen-to-air-traffic-control">Is it legal to listen to air traffic control?</h3>
+<p><em>What you see:</em> LiveATC-style streams of tower audio, or a scanner tuned to the local approach frequency.</p>
+<p><strong>In the US</strong>, yes. The federal wiretap statute says it is not unlawful to intercept radio communications from stations "for the use of the general public," those relating to "ships, aircraft, vehicles, or persons in distress," and those "transmitted by any marine or aeronautical communications system."<sup id="fnref2-139"><a class="footnote-ref" href="#fn-139">139</a></sup> That is the legal footing for scanner listeners and for sites that stream tower audio. State scanner rules and police radio are separate questions, covered in <a href="/scanners/">scanners</a>.</p>
+<p><strong>In the UK</strong> the picture is stricter, though the sources are less direct. A 2012 Parliament petition, citing the Wireless Telegraphy Apparatus (Receivers) (Exemption) Regulations 1989, stated that "It is an offence to listen to any other radio services unless you are authorised by a designated person to do so."<sup id="fnref-142"><a class="footnote-ref" href="#fn-142">142</a></sup> That is a petitioner's statement, not an official ruling; the petition drew 96 signatures and no government response.<sup id="fnref2-142"><a class="footnote-ref" href="#fn-142">142</a></sup> Ofcom's 2014 license-exemption notice states the general offense "to establish, install or use equipment for wireless telegraphy without holding a licence" but says nothing specific about receive-only scanning.<sup id="fnref-143"><a class="footnote-ref" href="#fn-143">143</a></sup></p>
+<p>Section 48 of the UK's Wireless Telegraphy Act 2006 makes it an offense, "without lawful authority," to use wireless telegraphy apparatus "with intent to obtain information as to the contents, sender or addressee" of a message of which neither the listener nor anyone they act for is an intended recipient, or to disclose such information.<sup id="fnref2-120"><a class="footnote-ref" href="#fn-120">120</a></sup> The penalty on summary conviction is a fine up to level 5 on the standard scale.<sup id="fnref3-120"><a class="footnote-ref" href="#fn-120">120</a></sup> The section does not mention scanners by name.</p>
+<h3 id="elsewhere-in-the-world">Elsewhere in the world</h3>
+<p><em>What you see:</em> The same flight-tracker apps working in Europe, but with no 978 MHz traffic.</p>
+<p>Outside the US, ADS-B means 1090ES; UAT is a US system.<sup id="fnref5-125"><a class="footnote-ref" href="#fn-125">125</a></sup> Europe's rule is EU Regulation 1207/2011, as amended, and it was carried into UK law after Brexit; legislation.gov.uk shows the retained text, with the airspace wording in paragraph 5 substituted from December 31, 2020.<sup id="fnref-144"><a class="footnote-ref" href="#fn-144">144</a></sup></p>
+<p>Sources disagree on the date. OPSGROUP, writing in November 2019, listed "June 7, 2020 - European ADS-B Out Mandate" for IFR aircraft above 5,700 kg or 250 kt, requiring a GPS source coupled to a 1090ES transponder.<sup id="fnref-145"><a class="footnote-ref" href="#fn-145">145</a></sup> The current text of Article 5 says that by December 7, 2020 operators must have serviceable transponders, with Parts A and B applying to aircraft over 5,700 kg (about 12,600 lb) maximum takeoff mass or 250 kt (about 460 km/h) cruise speed first certificated on or after June 7, 1995, and fixed-wing aircraft also meeting Part C.<sup id="fnref2-144"><a class="footnote-ref" href="#fn-144">144</a></sup></p>
+<p>Operators with a retrofit program in place before that date had until June 7, 2023, and exemptions cover aircraft flying for maintenance or export or retiring by October 31, 2025, and up to 3 consecutive days with an inoperative transponder.<sup id="fnref3-144"><a class="footnote-ref" href="#fn-144">144</a></sup></p>
+<p>The main difference from the US: Europe's rule keys on aircraft weight and speed, while the US rule keys on airspace.</p>
+<h3 id="in-boston-why-do-planes-fly-low-over-certain-neighborhoods">In Boston: why do planes fly low over certain neighborhoods?</h3>
+<p><em>What you see:</em> A steady line of jets climbing out over Cambridge or Somerville, or arriving low over the harbor, on some days and not others.</p>
+<p><strong>Logan International</strong>, run by Massport, sits on Boston Harbor 2.5 miles (4 km) northeast of Back Bay on 2,384 acres (965 ha).<sup id="fnref-146"><a class="footnote-ref" href="#fn-146">146</a></sup> It has six runways:<sup id="fnref2-146"><a class="footnote-ref" href="#fn-146">146</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Runway</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4L/22R</td>
+<td>7,864 ft (2,397 m)</td>
+</tr>
+<tr>
+<td>4R/22L</td>
+<td>10,006 ft (3,050 m)</td>
+</tr>
+<tr>
+<td>9/27</td>
+<td>7,001 ft (2,134 m)</td>
+</tr>
+<tr>
+<td>14/32</td>
+<td>5,000 ft (1,524 m)</td>
+</tr>
+<tr>
+<td>15L/33R</td>
+<td>2,557 ft (779 m)</td>
+</tr>
+<tr>
+<td>15R/33L</td>
+<td>10,083 ft (3,073 m)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Planes are low near an airport because they are lined up on final approach or have taken off along a fixed procedure, and which runway is in use mostly follows the wind. Runway 14/32 shows the wind's role plainly: it opened November 23, 2006, after being proposed in 1973, runs one way only (landings on 32, takeoffs on 14), is court-limited over land, and operates only in a strong northwest wind; residents want at least 11.5 kt and Massport favors 10 kt.<sup id="fnref3-146"><a class="footnote-ref" href="#fn-146">146</a></sup> Chelsea, East Boston, Winthrop and Revere residents opposed it.<sup id="fnref4-146"><a class="footnote-ref" href="#fn-146">146</a></sup></p>
+<p>The bigger change came from <strong>RNAV</strong>, area navigation along precise GPS-defined paths. The FAA's Environmental Assessment for the runway 33L RNAV departure came out in May 2013.<sup id="fnref-147"><a class="footnote-ref" href="#fn-147">147</a></sup> Cambridge Day reported that RNAV began in June 2013, while the City of Cambridge says the procedures were implemented in 2014.<sup id="fnref-148"><a class="footnote-ref" href="#fn-148">148</a></sup><sup id="fnref2-147"><a class="footnote-ref" href="#fn-147">147</a></sup></p>
+<p>RNAV was introduced "to make flights more efficient and reduce fuel burn," and it produced "a higher concentration of flights in a smaller cluster of neighborhoods," in Cambridge Day's words.<sup id="fnref2-148"><a class="footnote-ref" href="#fn-148">148</a></sup> Departures from 33L became "more concentrated over parts of north and west Cambridge," according to the city.<sup id="fnref3-147"><a class="footnote-ref" href="#fn-147">147</a></sup> People under that narrow track hear more flights even if the total number has not changed.</p>
+<p>Citing Massport data, Cambridge Day reported complaints from Medford rising from 0 in 2013 to 7,861 in 2017, Somerville from 162 to 3,840, Arlington from 6 to 2,225, and Cambridge from 263 in 2013 into the thousands by 2016.<sup id="fnref3-148"><a class="footnote-ref" href="#fn-148">148</a></sup></p>
+<p>The FAA, Massport and MIT then studied ways to spread the noise more evenly.<sup id="fnref4-147"><a class="footnote-ref" href="#fn-147">147</a></sup> A 2021 MIT proposal added a departure leg over central Somerville and Porter Square, and Cambridge and most communities on the Massport Community Advisory Committee, a body created by the state legislature, voted against it.<sup id="fnref5-147"><a class="footnote-ref" href="#fn-147">147</a></sup> Each proposed fix moves some of the noise somewhere else, which helps explain why proposals have drawn opponents.</p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Airwaves%20correction%3A%20How%20flight%20trackers%20know%20where%20every%20plane%20is">Report an error in this section</a></p></section><section class="sec faq qa"><h2>Quick answers</h2><details><summary>How does Flightradar24 know where planes are?</summary><p>Flightradar24 says its main source is ADS-B, the position broadcast most aircraft send about once a second, picked up by more than 50,000 ground receivers, most of them user-built. For aircraft with only Mode S transponders it uses multilateration, and it adds satellite ADS-B over oceans and some radar data.</p></details><details><summary>Why can&#x27;t I see a plane on Flightradar24?</summary><p>The plane may lack ADS-B and be too low or in too sparse an area for multilateration, which needs four or more receivers and works only from roughly 3,000-10,000 ft up. Its owner may also have it blocked from public display through the FAA&#x27;s LADD program.</p></details><details><summary>How do I hide my aircraft from flight tracking?</summary><p>US owners can join the FAA&#x27;s LADD program, which makes FAA-fed vendors hide the registration, or request a Privacy ICAO Address (PIA), a temporary address not linked to the registry. Neither stops the ADS-B broadcast itself, which the FAA notes can be received by off-the-shelf receivers.</p></details><details><summary>What is ADS-B Exchange?</summary><p>ADS-B Exchange was founded in 2016 as a hobby project and describes itself as offering a view of the skies without censorship or filtering, including military traffic. Like other trackers it relies on community-hosted receivers and multilateration.</p></details><details><summary>Is it legal to listen to air traffic control?</summary><p>In the US, yes: 18 USC 2511 says it is not unlawful to intercept communications transmitted by any marine or aeronautical communications system. In the UK, a 2012 petition to Parliament stated that listening to services you are not authorized to receive is an offence, though that is a petitioner&#x27;s statement, not an official ruling.</p></details><details><summary>What is the difference between 1090 and 978 ADS-B?</summary><p>1090 MHz Extended Squitter is used worldwide and is required in US airspace above 18,000 ft. 978 MHz UAT is a US-only link allowed below that, mainly used by smaller aircraft, and it is the only one that carries free FIS-B weather.</p></details></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/scanners/"><span>Previous · 07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a class="next" href="/ships/"><span>Next · 09</span>Ships, AIS and channel 16</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">28 of the guide's 339 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-120" value="120">
+<p>legislation.gov.uk: Wireless Telegraphy Act 2006, section 48 - <a href="https://www.legislation.gov.uk/ukpga/2006/36/section/48/data.html" rel="noopener" target="_blank">legislation.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref2-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref3-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref4-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref5-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref6-120" title="Jump back to footnote 120 in the text">↩</a></p>
+</li><li id="fn-122" value="122">
+<p>FAA: Equip ADS-B, Frequently Asked Questions - <a href="https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref2-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref3-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref4-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref5-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref6-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref7-122" title="Jump back to footnote 122 in the text">↩</a><a class="footnote-backref" href="#fnref8-122" title="Jump back to footnote 122 in the text">↩</a></p>
+</li><li id="fn-123" value="123">
+<p>FAA: Getting to Know Your ADS-B System - <a href="https://www.faa.gov/air_traffic/technology/equipadsb/installation/know_adsb_system" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-123" title="Jump back to footnote 123 in the text">↩</a></p>
+</li><li id="fn-124" value="124">
+<p>Cornell LII: 47 CFR 87.173, Frequencies - <a href="https://www.law.cornell.edu/cfr/text/47/87.173" rel="noopener" target="_blank">law.cornell.edu</a>&#160;<a class="footnote-backref" href="#fnref-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref2-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref3-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref4-124" title="Jump back to footnote 124 in the text">↩</a><a class="footnote-backref" href="#fnref5-124" title="Jump back to footnote 124 in the text">↩</a></p>
+</li><li id="fn-125" value="125">
+<p>Flightradar24: How does Flightradar24 track aircraft? - <a href="https://www.flightradar24.com/blog/inside-flightradar24/how-does-fr24-track-aircraft/" rel="noopener" target="_blank">flightradar24.com</a>&#160;<a class="footnote-backref" href="#fnref-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref2-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref3-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref4-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref5-125" title="Jump back to footnote 125 in the text">↩</a><a class="footnote-backref" href="#fnref6-125" title="Jump back to footnote 125 in the text">↩</a></p>
+</li><li id="fn-126" value="126">
+<p>eCFR: 14 CFR 91.225, ADS-B Out equipment and use - <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-C/section-91.225" rel="noopener" target="_blank">ecfr.gov</a>&#160;<a class="footnote-backref" href="#fnref-126" title="Jump back to footnote 126 in the text">↩</a><a class="footnote-backref" href="#fnref2-126" title="Jump back to footnote 126 in the text">↩</a><a class="footnote-backref" href="#fnref3-126" title="Jump back to footnote 126 in the text">↩</a><a class="footnote-backref" href="#fnref4-126" title="Jump back to footnote 126 in the text">↩</a></p>
+</li><li id="fn-127" value="127">
+<p>FAA: Current Equipage Levels - <a href="https://www.faa.gov/air_traffic/technology/equipadsb/installation/current_equipage_levels" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-127" title="Jump back to footnote 127 in the text">↩</a></p>
+</li><li id="fn-128" value="128">
+<p>FAA: JO 7110.65, Section 2. Beacon/ADS-B Systems - <a href="https://www.faa.gov/Air_traffic/publications/atpubs/atc_html/chap5_section_2.html" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-128" title="Jump back to footnote 128 in the text">↩</a><a class="footnote-backref" href="#fnref2-128" title="Jump back to footnote 128 in the text">↩</a></p>
+</li><li id="fn-129" value="129">
+<p>Flightradar24: Flightradar24 now has over 50,000 active data sharers around the world - <a href="https://www.flightradar24.com/blog/inside-flightradar24/flightradar24-now-has-over-50000-active-data-sharers-around-the-world/" rel="noopener" target="_blank">flightradar24.com</a>&#160;<a class="footnote-backref" href="#fnref-129" title="Jump back to footnote 129 in the text">↩</a></p>
+</li><li id="fn-130" value="130">
+<p>FlightAware: FlightAware Reaches 30,000 Receivers - <a href="https://flightaware.com/news/article/FlightAware-Reaches-30000-Receivers/1500" rel="noopener" target="_blank">flightaware.com</a>&#160;<a class="footnote-backref" href="#fnref-130" title="Jump back to footnote 130 in the text">↩</a><a class="footnote-backref" href="#fnref2-130" title="Jump back to footnote 130 in the text">↩</a><a class="footnote-backref" href="#fnref3-130" title="Jump back to footnote 130 in the text">↩</a></p>
+</li><li id="fn-131" value="131">
+<p>Flightradar24 Support: How does Flightradar24 work? - <a href="https://support.fr24.com/support/solutions/articles/3000117422-how-does-flightradar24-work-" rel="noopener" target="_blank">support.fr24.com</a>&#160;<a class="footnote-backref" href="#fnref-131" title="Jump back to footnote 131 in the text">↩</a><a class="footnote-backref" href="#fnref2-131" title="Jump back to footnote 131 in the text">↩</a><a class="footnote-backref" href="#fnref3-131" title="Jump back to footnote 131 in the text">↩</a></p>
+</li><li id="fn-132" value="132">
+<p>FAA: LADD program - <a href="https://www.faa.gov/pilots/ladd" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-132" title="Jump back to footnote 132 in the text">↩</a><a class="footnote-backref" href="#fnref2-132" title="Jump back to footnote 132 in the text">↩</a></p>
+</li><li id="fn-133" value="133">
+<p>ADS-B Exchange: About - <a href="https://www.adsbexchange.com/about/" rel="noopener" target="_blank">adsbexchange.com</a>&#160;<a class="footnote-backref" href="#fnref-133" title="Jump back to footnote 133 in the text">↩</a><a class="footnote-backref" href="#fnref2-133" title="Jump back to footnote 133 in the text">↩</a><a class="footnote-backref" href="#fnref3-133" title="Jump back to footnote 133 in the text">↩</a><a class="footnote-backref" href="#fnref4-133" title="Jump back to footnote 133 in the text">↩</a><a class="footnote-backref" href="#fnref5-133" title="Jump back to footnote 133 in the text">↩</a></p>
+</li><li id="fn-134" value="134">
+<p>NBAA: NBAA Commends FAA for New Measures to Preserve Aviation Privacy, Security - <a href="https://nbaa.org/2019-press-releases/nbaa-commends-faa-new-measures-preserve-aviation-privacy-security/" rel="noopener" target="_blank">nbaa.org</a>&#160;<a class="footnote-backref" href="#fnref-134" title="Jump back to footnote 134 in the text">↩</a><a class="footnote-backref" href="#fnref2-134" title="Jump back to footnote 134 in the text">↩</a><a class="footnote-backref" href="#fnref3-134" title="Jump back to footnote 134 in the text">↩</a></p>
+</li><li id="fn-135" value="135">
+<p>FAA: ADS-B Privacy - <a href="https://www.faa.gov/air_traffic/technology/equipadsb/privacy" rel="noopener" target="_blank">faa.gov</a>&#160;<a class="footnote-backref" href="#fnref-135" title="Jump back to footnote 135 in the text">↩</a><a class="footnote-backref" href="#fnref2-135" title="Jump back to footnote 135 in the text">↩</a><a class="footnote-backref" href="#fnref3-135" title="Jump back to footnote 135 in the text">↩</a><a class="footnote-backref" href="#fnref4-135" title="Jump back to footnote 135 in the text">↩</a><a class="footnote-backref" href="#fnref5-135" title="Jump back to footnote 135 in the text">↩</a></p>
+</li><li id="fn-136" value="136">
+<p>FlightAware: Privacy ICAO Address (PIA) - <a href="https://www.flightaware.com/pia/" rel="noopener" target="_blank">flightaware.com</a>&#160;<a class="footnote-backref" href="#fnref-136" title="Jump back to footnote 136 in the text">↩</a></p>
+</li><li id="fn-137" value="137">
+<p>Airframes.io: Technology overview - <a href="https://docs.airframes.io/docs/technology/overview" rel="noopener" target="_blank">docs.airframes.io</a>&#160;<a class="footnote-backref" href="#fnref-137" title="Jump back to footnote 137 in the text">↩</a><a class="footnote-backref" href="#fnref2-137" title="Jump back to footnote 137 in the text">↩</a><a class="footnote-backref" href="#fnref3-137" title="Jump back to footnote 137 in the text">↩</a><a class="footnote-backref" href="#fnref4-137" title="Jump back to footnote 137 in the text">↩</a></p>
+</li><li id="fn-138" value="138">
+<p>Wikipedia: VHF Data Link - <a href="https://en.wikipedia.org/wiki/VHF_Data_Link" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-138" title="Jump back to footnote 138 in the text">↩</a><a class="footnote-backref" href="#fnref2-138" title="Jump back to footnote 138 in the text">↩</a><a class="footnote-backref" href="#fnref3-138" title="Jump back to footnote 138 in the text">↩</a></p>
+</li><li id="fn-139" value="139">
+<p>Cornell LII: 18 USC 2511, Interception and disclosure of wire, oral, or electronic communications prohibited - <a href="https://www.law.cornell.edu/uscode/text/18/2511" rel="noopener" target="_blank">law.cornell.edu</a>&#160;<a class="footnote-backref" href="#fnref-139" title="Jump back to footnote 139 in the text">↩</a><a class="footnote-backref" href="#fnref2-139" title="Jump back to footnote 139 in the text">↩</a><a class="footnote-backref" href="#fnref3-139" title="Jump back to footnote 139 in the text">↩</a><a class="footnote-backref" href="#fnref4-139" title="Jump back to footnote 139 in the text">↩</a><a class="footnote-backref" href="#fnref5-139" title="Jump back to footnote 139 in the text">↩</a></p>
+</li><li id="fn-140" value="140">
+<p>Wikipedia: Airband - <a href="https://en.wikipedia.org/wiki/Airband" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-140" title="Jump back to footnote 140 in the text">↩</a><a class="footnote-backref" href="#fnref2-140" title="Jump back to footnote 140 in the text">↩</a></p>
+</li><li id="fn-141" value="141">
+<p>ATC Network (EUROCONTROL): 8.33 kHz: the magic number as of 1 January 2018 - <a href="https://www.atc-network.com/atc-news/eurocontrol/8-33-khz-the-magic-number-as-of-1-january-2018" rel="noopener" target="_blank">atc-network.com</a>&#160;<a class="footnote-backref" href="#fnref-141" title="Jump back to footnote 141 in the text">↩</a></p>
+</li><li id="fn-142" value="142">
+<p>UK Parliament Petitions: Refine the ATC radio traffic act to allow UK listening - <a href="https://petition.parliament.uk/archived/petitions/33967" rel="noopener" target="_blank">petition.parliament.uk</a>&#160;<a class="footnote-backref" href="#fnref-142" title="Jump back to footnote 142 in the text">↩</a><a class="footnote-backref" href="#fnref2-142" title="Jump back to footnote 142 in the text">↩</a><a class="footnote-backref" href="#fnref3-142" title="Jump back to footnote 142 in the text">↩</a></p>
+</li><li id="fn-143" value="143">
+<p>Ofcom: Wireless Telegraphy licence exemption notice 2014 (PDF) - <a href="https://ofcom.org.uk/siteassets/resources/documents/consultations/7957-proposal-wireless-telegraphy-exemption-2014/statement/summary/2014_le_notice.pdf" rel="noopener" target="_blank">ofcom.org.uk</a>&#160;<a class="footnote-backref" href="#fnref-143" title="Jump back to footnote 143 in the text">↩</a><a class="footnote-backref" href="#fnref2-143" title="Jump back to footnote 143 in the text">↩</a></p>
+</li><li id="fn-144" value="144">
+<p>legislation.gov.uk: Regulation (EU) No 1207/2011, Article 5 - <a href="https://www.legislation.gov.uk/eur/2011/1207/article/5" rel="noopener" target="_blank">legislation.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-144" title="Jump back to footnote 144 in the text">↩</a><a class="footnote-backref" href="#fnref2-144" title="Jump back to footnote 144 in the text">↩</a><a class="footnote-backref" href="#fnref3-144" title="Jump back to footnote 144 in the text">↩</a></p>
+</li><li id="fn-145" value="145">
+<p>OPSGROUP: Regulatory deadlines on the horizon - <a href="https://ops.group/blog/regulatory-deadlines-on-the-horizon/" rel="noopener" target="_blank">ops.group</a>&#160;<a class="footnote-backref" href="#fnref-145" title="Jump back to footnote 145 in the text">↩</a></p>
+</li><li id="fn-146" value="146">
+<p>Wikipedia: Logan International Airport - <a href="https://en.wikipedia.org/wiki/Logan_International_Airport" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-146" title="Jump back to footnote 146 in the text">↩</a><a class="footnote-backref" href="#fnref2-146" title="Jump back to footnote 146 in the text">↩</a><a class="footnote-backref" href="#fnref3-146" title="Jump back to footnote 146 in the text">↩</a><a class="footnote-backref" href="#fnref4-146" title="Jump back to footnote 146 in the text">↩</a><a class="footnote-backref" href="#fnref5-146" title="Jump back to footnote 146 in the text">↩</a></p>
+</li><li id="fn-147" value="147">
+<p>City of Cambridge: Logan Noise Study - <a href="https://www.cambridgema.gov/CDD/Transportation/regionalplanning/logannoisestudy" rel="noopener" target="_blank">cambridgema.gov</a>&#160;<a class="footnote-backref" href="#fnref-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref2-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref3-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref4-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref5-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref6-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref7-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref8-147" title="Jump back to footnote 147 in the text">↩</a><a class="footnote-backref" href="#fnref9-147" title="Jump back to footnote 147 in the text">↩</a></p>
+</li><li id="fn-148" value="148">
+<p>Cambridge Day: Communities enduring Logan flight noise see cause for optimism in MIT center study - <a href="https://www.cambridgeday.com/2018/02/28/communities-enduring-logan-flight-noise-see-cause-for-optimism-in-mit-center-study/" rel="noopener" target="_blank">cambridgeday.com</a>&#160;<a class="footnote-backref" href="#fnref-148" title="Jump back to footnote 148 in the text">↩</a><a class="footnote-backref" href="#fnref2-148" title="Jump back to footnote 148 in the text">↩</a><a class="footnote-backref" href="#fnref3-148" title="Jump back to footnote 148 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and antenna on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems these signals run</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/" class=on><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("aw-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Night sky";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("aw-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Basics: "var(--u-wht)", Rules: "var(--u-pnk)", Broadcast: "var(--u-org)", Cellular: "var(--u-blu)", "Public safety": "var(--u-red)",
+      "Aviation and ships": "var(--u-yel)", "Satellites and timing": "var(--u-pur)", "Unlicensed and IoT": "var(--u-grn)", Events: "var(--u-pnk)", Hobby: "var(--u-org)", Health: "var(--u-wht)", Boston: "var(--u-blu)", Towers: "var(--u-org)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(Basics|Rules|Aviation and ships|Events|Health)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* spectrum ruler */
+  (function () {
+    var data = readJSON("sp-data"), info = $("sp-info"); if (!info || !data.length) return;
+    var onAll = !!document.getElementById("sec-basics");
+    function hz(f) { var u = [[1e9, "GHz"], [1e6, "MHz"], [1e3, "kHz"]]; for (var i = 0; i < u.length; i++) if (f >= u[i][0]) return (Math.round(f / u[i][0] * 1000) / 1000) + " " + u[i][1]; return f + " Hz"; }
+    function show(i, el) {
+      var d = data[i]; if (!d) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".sp-bar.on"), function (x) { x.classList.remove("on"); }); el.classList.add("on");
+      info.innerHTML = "<b>" + esc(d.name) + "</b> <span class=\"count\">" + esc(hz(d.lo)) + " - " + esc(hz(d.hi)) + (d.where ? " · " + esc(d.where) : "") + "</span><p>" + esc(d.use) + "</p><p>" +
+        (d.section ? '<a href="' + (onAll ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">Read the section</a>' : "") + (d.src ? ' · <a href="' + esc(d.src) + '" target="_blank" rel="noopener">source</a>' : "") + "</p>";
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".sp-bar"), function (el) {
+      var i = +el.getAttribute("data-i");
+      el.addEventListener("click", function () { show(i, el); });
+      el.addEventListener("focus", function () { show(i, el); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(i, el); } });
+    });
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

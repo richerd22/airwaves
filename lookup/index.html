@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What&#x27;s That Signal? A Lookup of Radio Signals in a City | The Airwaves</title>
+<meta name="description" content="Search everything in this guide by what you noticed - &quot;plane on a flight tracker&quot;, &quot;phone says SOS only&quot;, &quot;scanner went silent&quot;, &quot;antenna on a light...">
+<link rel="canonical" href="https://airwaves.cold.fyi/lookup/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="What&#x27;s That Signal? A Lookup of Radio Signals in a City | The Airwaves"><meta property="og:description" content="Search everything in this guide by what you noticed - &quot;plane on a flight tracker&quot;, &quot;phone says SOS only&quot;, &quot;scanner went silent&quot;, &quot;antenna on a light...">
+<meta property="og:url" content="https://airwaves.cold.fyi/lookup/"><meta property="og:image" content="https://airwaves.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "What's That Signal? A Lookup of Radio Signals in a City", "description": "Search everything in this guide by what you noticed - \"plane on a flight tracker\", \"phone says SOS only\", \"scanner went silent\", \"antenna on a light...", "url": "https://airwaves.cold.fyi/lookup/", "image": "https://airwaves.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Airwaves", "url": "https://airwaves.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Airwaves", "item": "https://airwaves.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "What's that signal?", "item": "https://airwaves.cold.fyi/lookup/"}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/space-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-grotesk-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a night-sky spectrum analyzer - dark navy, Space Grotesk display, a waterfall-plot hero, band colors per topic, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:dark;
+  --bg:#0b1020; --panel:#121a30; --panel2:#18223d; --ink:#e8ecf5; --muted:#9aa4bb; --line:#26314f;
+  --tape:#4fe3a1; --tape-ink:#0b1020; --hot:#ff6b7d; --cue:#7cc4ff; --sign:#4fe3a1; --sign-ink:#0b1020;
+  --ink-on:#0b1020; --ink-on-y:#0b1020;
+  --u-red:#ff6b7d; --u-yel:#ffcf5a; --u-org:#ff9a4d; --u-blu:#5aa8ff; --u-grn:#4fe3a1; --u-pur:#b98cff; --u-pnk:#ff7fc8; --u-wht:#dfe5f2;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-lookup">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Airwaves</a> / What&#x27;s that signal?</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Airwaves</a></h2><a href="/lookup/" class=on aria-current=page><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 01 of 23 · about 12 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-grn);--sci:var(--ink-on)"><h1 class="sec-h1" id="sec-lookup" style="--sc:var(--u-grn);--sci:var(--ink-on)"><span class="tape">01</span>What's that signal?</h1>
+<p class="short"><strong>The short version:</strong> Search everything in this guide by what you noticed - "plane on a flight tracker", "phone says SOS only", "scanner went silent", "antenna on a light pole", "clock set itself" - and jump to the explanation. Below it, the spectrum chart lays every band in this guide on one ruler, from the time signal that sets radio-controlled clocks to the 5G millimeter waves.</p>
+<div class="mod wide" id="lookup-tool"><div class="mod-head"><div class="kicker">Signal lookup</div><h3>140 things you might notice</h3></div><div class="mod-body"><div class="lk-tools"><label class="field" for="lk-q">Describe what you saw<input id="lk-q" type="search" placeholder="Try: flight tracker, SOS only, scanner silent, antenna on a pole" autocomplete="off"></label><span class="count" id="lk-count"></span></div><ul class="lk-list" id="lk-list"></ul><button class="btn ghost" id="lk-more" type="button" style="margin-top:.8rem" hidden>Show more</button></div></div>
+
+<h3 id="the-spectrum-on-one-ruler">The spectrum on one ruler</h3>
+<p>Each bar is a band covered in this guide, placed on a logarithmic scale so that kilohertz and gigahertz fit on the same line. Tap a bar for what lives there, where the rule applies and the source.</p>
+<div class="mod wide" id="spectrum-tool"><div class="mod-head"><div class="kicker">Spectrum ruler</div><h3>68 bands on one line</h3></div><div class="mod-body"><div class="dscroll"><svg class="dg sp" viewBox="0 0 960 1000" role="img" aria-label="Spectrum chart from 10 kilohertz to 100 gigahertz with 68 bands from this guide, on a logarithmic scale."><line class="grid" x1="20.0" y1="34" x2="20.0" y2="976"/><text class="s xs" x="20.0" y="26" text-anchor="middle">10 kHz</text><line class="grid" x1="151.4" y1="34" x2="151.4" y2="976"/><text class="s xs" x="151.4" y="26" text-anchor="middle">100 kHz</text><line class="grid" x1="282.9" y1="34" x2="282.9" y2="976"/><text class="s xs" x="282.9" y="26" text-anchor="middle">1 MHz</text><line class="grid" x1="414.3" y1="34" x2="414.3" y2="976"/><text class="s xs" x="414.3" y="26" text-anchor="middle">10 MHz</text><line class="grid" x1="545.7" y1="34" x2="545.7" y2="976"/><text class="s xs" x="545.7" y="26" text-anchor="middle">100 MHz</text><line class="grid" x1="677.1" y1="34" x2="677.1" y2="976"/><text class="s xs" x="677.1" y="26" text-anchor="middle">1 GHz</text><line class="grid" x1="808.6" y1="34" x2="808.6" y2="976"/><text class="s xs" x="808.6" y="26" text-anchor="middle">10 GHz</text><line class="grid" x1="940.0" y1="34" x2="940.0" y2="976"/><text class="s xs" x="940.0" y="26" text-anchor="middle">100 GHz</text><g class="sp-bar" tabindex="0" role="button" data-i="0"><rect class="f-wht" x="20.0" y="46" width="62.7" height="16" rx="3"/><text class="s xs sp-lab" x="86.7" y="58">VLF (ITU band 4)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="1"><rect class="f-wht" x="82.7" y="68" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="218.1" y="80">LF (ITU band 5)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="2"><rect class="f-wht" x="151.4" y="90" width="628.0" height="16" rx="3"/><text class="s xs sp-lab" x="783.4" y="102">SAR-based exposure limits</text></g><g class="sp-bar" tabindex="0" role="button" data-i="3"><rect class="f-wht" x="151.4" y="112" width="788.6" height="16" rx="3"/><text class="s xs sp-lab" x="147.4" y="124" text-anchor="end">ICNIRP 2020 guidelines</text></g><g class="sp-bar" tabindex="0" role="button" data-i="4"><rect class="f-wht" x="214.1" y="46" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="349.6" y="58">MF (ITU band 6)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="5"><rect class="f-org" x="247.2" y="134" width="62.7" height="16" rx="3"/><text class="s xs sp-lab" x="313.9" y="146">AM broadcast</text></g><g class="sp-bar" tabindex="0" role="button" data-i="6"><rect class="f-wht" x="345.6" y="68" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="481.0" y="80">HF (ITU band 7)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="7"><rect class="f-yel" x="431.6" y="134" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="441.6" y="146">13.56 MHz ISM</text></g><g class="sp-bar" tabindex="0" role="button" data-i="8"><rect class="f-org" x="464.3" y="46" width="245.3" height="16" rx="3"/><text class="s xs sp-lab" x="713.6" y="58">RTL-SDR typical range</text></g><g class="sp-bar" tabindex="0" role="button" data-i="9"><rect class="f-wht" x="477.0" y="156" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="612.4" y="168">VHF (ITU band 8)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="10"><rect class="f-pnk" x="510.5" y="178" width="16.4" height="16" rx="3"/><text class="s xs sp-lab" x="531.0" y="190">VHF TV channels 2-4</text></g><g class="sp-bar" tabindex="0" role="button" data-i="11"><rect class="f-pnk" x="530.0" y="200" width="8.4" height="16" rx="3"/><text class="s xs sp-lab" x="542.4" y="212">VHF TV channels 5-6</text></g><g class="sp-bar" tabindex="0" role="button" data-i="12"><rect class="f-org" x="538.4" y="134" width="11.7" height="16" rx="3"/><text class="s xs sp-lab" x="554.1" y="146">FM broadcast</text></g><g class="sp-bar" tabindex="0" role="button" data-i="13"><rect class="f-yel" x="557.8" y="222" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="567.8" y="234">Airband ATC voice</text></g><g class="sp-bar" tabindex="0" role="button" data-i="14"><rect class="f-yel" x="563.6" y="244" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="573.6" y="256">VDL Mode 2</text></g><g class="sp-bar" tabindex="0" role="button" data-i="15"><rect class="f-blu" x="571.4" y="266" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="581.4" y="278">AIS 3 (156.775 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="16"><rect class="f-blu" x="571.4" y="288" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="581.4" y="300">AIS 4 (156.825 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="17"><rect class="f-red" x="572.6" y="310" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="582.6" y="322">Railroad VHF band</text></g><g class="sp-bar" tabindex="0" role="button" data-i="18"><rect class="f-blu" x="573.2" y="332" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="583.2" y="344">AIS 1 (161.975 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="19"><rect class="f-blu" x="573.3" y="354" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="583.3" y="366">AIS 2 (162.025 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="20"><rect class="f-red" x="573.4" y="376" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="583.4" y="388">NOAA Weather Radio</text></g><g class="sp-bar" tabindex="0" role="button" data-i="21"><rect class="f-pnk" x="575.7" y="398" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="585.7" y="410">169-172 MHz mics</text></g><g class="sp-bar" tabindex="0" role="button" data-i="22"><rect class="f-pnk" x="577.3" y="420" width="12.3" height="16" rx="3"/><text class="s xs sp-lab" x="593.7" y="432">VHF TV channels 7-13</text></g><g class="sp-bar" tabindex="0" role="button" data-i="23"><rect class="f-wht" x="608.4" y="68" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="743.9" y="80">UHF (ITU band 9)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="24"><rect class="f-yel" x="629.4" y="442" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="639.4" y="454">433 MHz ISM</text></g><g class="sp-bar" tabindex="0" role="button" data-i="25"><rect class="f-red" x="634.0" y="464" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="644.0" y="476">T-Band channel 14 (BAPERN)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="26"><rect class="f-red" x="634.0" y="486" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="644.0" y="498">T-Band</text></g><g class="sp-bar" tabindex="0" role="button" data-i="27"><rect class="f-pnk" x="634.0" y="508" width="14.7" height="16" rx="3"/><text class="s xs sp-lab" x="652.7" y="520">UHF TV channels 14-36</text></g><g class="sp-bar" tabindex="0" role="button" data-i="28"><rect class="f-red" x="635.5" y="530" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="645.5" y="542">T-Band channel 16</text></g><g class="sp-bar" tabindex="0" role="button" data-i="29"><rect class="f-pnk" x="639.8" y="552" width="16.5" height="16" rx="3"/><text class="s xs sp-lab" x="660.3" y="564">Australian mic class licence</text></g><g class="sp-bar" tabindex="0" role="button" data-i="30"><rect class="f-pnk" x="648.6" y="134" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="658.6" y="146">Channel 38 PMSE</text></g><g class="sp-bar" tabindex="0" role="button" data-i="31"><rect class="f-pnk" x="649.3" y="244" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="659.3" y="256">600 MHz guard band (part)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="32"><rect class="f-pnk" x="649.6" y="574" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="659.6" y="586">600 MHz mobile (617-652 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="33"><rect class="f-pnk" x="652.8" y="596" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="662.8" y="608">600 MHz duplex gap (licensed)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="34"><rect class="f-pnk" x="653.2" y="618" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="663.2" y="630">600 MHz duplex gap (unlicensed</text></g><g class="sp-bar" tabindex="0" role="button" data-i="35"><rect class="f-pnk" x="653.7" y="640" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="663.7" y="652">600 MHz mobile (663-698 MHz)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="36"><rect class="f-pnk" x="656.6" y="662" width="8.2" height="16" rx="3"/><text class="s xs sp-lab" x="668.8" y="674">700 MHz band</text></g><g class="sp-bar" tabindex="0" role="button" data-i="37"><rect class="f-blu" x="657.0" y="684" width="6.5" height="16" rx="3"/><text class="s xs sp-lab" x="667.5" y="696">700 MHz mobile (2021 award)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="38"><rect class="f-red" x="661.3" y="706" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="671.3" y="718">Band 14 downlink</text></g><g class="sp-bar" tabindex="0" role="button" data-i="39"><rect class="f-red" x="663.5" y="178" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="673.5" y="190">Band 14 uplink</text></g><g class="sp-bar" tabindex="0" role="button" data-i="40"><rect class="f-grn" x="668.7" y="728" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="678.7" y="740">EU868</text></g><g class="sp-bar" tabindex="0" role="button" data-i="41"><rect class="f-grn" x="669.1" y="750" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="679.1" y="762">Zigbee 868 MHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="42"><rect class="f-pnk" x="671.3" y="772" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="681.3" y="784">902-928 MHz (Part 15.247)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="43"><rect class="f-pnk" x="673.7" y="794" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="683.7" y="806">941.5-959.85 MHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="44"><rect class="f-pnk" x="697.8" y="200" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="707.8" y="212">1435-1525 MHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="45"><rect class="f-pnk" x="714.4" y="222" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="724.4" y="234">1920-1930 MHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="46"><rect class="f-pnk" x="727.1" y="156" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="737.1" y="168">2.4 GHz (Part 15.247)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="47"><rect class="f-grn" x="727.1" y="266" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="737.1" y="278">2.4 GHz ISM</text></g><g class="sp-bar" tabindex="0" role="button" data-i="48"><rect class="f-wht" x="739.9" y="816" width="131.4" height="16" rx="3"/><text class="s xs sp-lab" x="735.9" y="828" text-anchor="end">SHF (ITU band 10)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="49"><rect class="f-pnk" x="741.7" y="288" width="6.1" height="16" rx="3"/><text class="s xs sp-lab" x="751.8" y="300">3.1-3.45 GHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="50"><rect class="f-blu" x="747.8" y="310" width="8.2" height="16" rx="3"/><text class="s xs sp-lab" x="760.0" y="322">US mid-band 5G swath</text></g><g class="sp-bar" tabindex="0" role="button" data-i="51"><rect class="f-blu" x="751.5" y="332" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="761.5" y="344">3.6-3.8 GHz award (2021 assign</text></g><g class="sp-bar" tabindex="0" role="button" data-i="52"><rect class="f-pnk" x="751.8" y="354" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="761.8" y="366">C-band (Auction 107)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="53"><rect class="f-pnk" x="756.0" y="376" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="766.0" y="388">Upper C-band</text></g><g class="sp-bar" tabindex="0" role="button" data-i="54"><rect class="f-pnk" x="776.7" y="134" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="786.7" y="146">5.8 GHz (Part 15.247)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="55"><rect class="f-grn" x="776.7" y="178" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="786.7" y="190">5.8 GHz ISM</text></g><g class="sp-bar" tabindex="0" role="button" data-i="56"><rect class="f-grn" x="778.7" y="398" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="788.7" y="410">Lower 6 GHz (UK)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="57"><rect class="f-pnk" x="778.7" y="420" width="10.5" height="16" rx="3"/><text class="s xs sp-lab" x="793.2" y="432">6 GHz unlicensed</text></g><g class="sp-bar" tabindex="0" role="button" data-i="58"><rect class="f-grn" x="778.9" y="442" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="788.9" y="454">Lower 6 GHz (EU)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="59"><rect class="f-grn" x="783.3" y="486" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="793.3" y="498">Upper 6 GHz (UK)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="60"><rect class="f-pnk" x="787.2" y="838" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="797.2" y="850">6875-7125 MHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="61"><rect class="f-pnk" x="791.4" y="860" width="7.2" height="16" rx="3"/><text class="s xs sp-lab" x="802.6" y="872">7.4-8.4 GHz</text></g><g class="sp-bar" tabindex="0" role="button" data-i="62"><rect class="f-pur" x="844.0" y="882" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="840.0" y="894" text-anchor="end">Starlink Gen2 downlink (added </text></g><g class="sp-bar" tabindex="0" role="button" data-i="63"><rect class="f-wht" x="871.3" y="728" width="68.7" height="16" rx="3"/><text class="s xs sp-lab" x="867.3" y="740" text-anchor="end">EHF (ITU band 11)</text></g><g class="sp-bar" tabindex="0" role="button" data-i="64"><rect class="f-pur" x="902.0" y="904" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="898.0" y="916" text-anchor="end">Starlink Gen2 uplink, V-band (</text></g><g class="sp-bar" tabindex="0" role="button" data-i="65"><rect class="f-pur" x="937.1" y="926" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="933.1" y="938" text-anchor="end">Starlink Gen2 uplink, W-band (</text></g><g class="sp-bar" tabindex="0" role="button" data-i="66"><rect class="f-pur" x="940.0" y="948" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="936.0" y="960" text-anchor="end">Starlink Gen2 uplink (added 20</text></g><g class="sp-bar" tabindex="0" role="button" data-i="67"><rect class="f-wht" x="940.0" y="530" width="6.0" height="16" rx="3"/><text class="s xs sp-lab" x="936.0" y="542" text-anchor="end">Band 12 (decimillimetric)</text></g><text class="s xs" x="20" y="994">Logarithmic scale. Each band links to its section; rules differ by country.</text></svg></div><div class="sp-info" id="sp-info" aria-live="polite"><p class="count">Tap or focus a band to see what uses it.</p></div><script id="sp-data" type="application/json">[{"name": "VLF (ITU band 4)", "use": "Myriametric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 3000.0, "hi": 30000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "LF (ITU band 5)", "use": "Kilometric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 30000.0, "hi": 300000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "SAR-based exposure limits", "use": "Range where FCC SAR limits apply (1.6 W/kg over 1 g)", "where": "US", "lo": 100000.0, "hi": 6000000000.0, "section": "health", "src": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-I/section-1.1310", "srct": "eCFR: 47 CFR 1.1310 Radiofrequency radiation exposure limits"}, {"name": "ICNIRP 2020 guidelines", "use": "Range covered by ICNIRP RF exposure guidelines, including 5G", "where": "International", "lo": 100000.0, "hi": 300000000000.0, "section": "health", "src": "https://www.icnirp.org/en/activities/news/news-article/rf-guidelines-2020-published.html", "srct": "ICNIRP: RF EMF Guidelines 2020 published"}, {"name": "MF (ITU band 6)", "use": "Hectometric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 300000.0, "hi": 3000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "AM broadcast", "use": "AM radio stations, assigned 540-1600 kHz at 10 kHz spacing", "where": "US", "lo": 535000.0, "hi": 1605000.0, "section": "broadcast", "src": "https://hyperphysics.gsu.edu/hbase/audio/radio.html", "srct": "HyperPhysics (Georgia State University): AM and FM Radio Frequencies"}, {"name": "HF (ITU band 7)", "use": "Decametric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 3000000.0, "hi": 30000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "13.56 MHz ISM", "use": "NFC, contactless payment, transit cards (ISO 14443)", "where": "Worldwide (ITU)", "lo": 13553000.0, "hi": 13567000.0, "section": "everyday", "src": "https://en.wikipedia.org/wiki/ISM_radio_band", "srct": "Wikipedia: ISM radio band"}, {"name": "RTL-SDR typical range", "use": "Receive-only hobby SDR dongles with R820T-family tuners", "where": "Worldwide (receive)", "lo": 24000000.0, "hi": 1766000000.0, "section": "hobby", "src": "https://www.rtl-sdr.com/about-rtl-sdr/", "srct": "RTL-SDR.com: About RTL-SDR"}, {"name": "VHF (ITU band 8)", "use": "Metric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 30000000.0, "hi": 300000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "VHF TV channels 2-4", "use": "TV broadcast; secondary wireless mics at 50 mW EIRP", "where": "US", "lo": 54000000.0, "hi": 72000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "VHF TV channels 5-6", "use": "TV broadcast; secondary wireless mics at 50 mW EIRP", "where": "US", "lo": 76000000.0, "hi": 88000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "FM broadcast", "use": "FM radio stations, 200 kHz channels from 88.1 MHz", "where": "US", "lo": 88000000.0, "hi": 108000000.0, "section": "broadcast", "src": "https://hyperphysics.gsu.edu/hbase/audio/radio.html", "srct": "HyperPhysics (Georgia State University): AM and FM Radio Frequencies"}, {"name": "Airband ATC voice", "use": "Air traffic control and related services", "where": "US", "lo": 123600000.0, "hi": 128800000.0, "section": "aviation", "src": "https://www.law.cornell.edu/cfr/text/47/87.173", "srct": "Cornell LII: 47 CFR 87.173, Frequencies"}, {"name": "VDL Mode 2", "use": "Digital aircraft datalink; 136.975 MHz is the common signalling channel", "where": "International", "lo": 136700000.0, "hi": 136975000.0, "section": "aviation", "src": "https://en.wikipedia.org/wiki/VHF_Data_Link", "srct": "Wikipedia: VHF Data Link"}, {"name": "AIS 3 (156.775 MHz)", "use": "AIS-only ship data channel, 25 kHz", "where": "US (47 CFR 80.393)", "lo": 156762500.0, "hi": 156787500.0, "section": "boston", "src": "https://www.law.cornell.edu/cfr/text/47/80.393", "srct": "Cornell LII: 47 CFR 80.393, Frequencies for AIS stations"}, {"name": "AIS 4 (156.825 MHz)", "use": "AIS-only ship data channel, 25 kHz", "where": "US (47 CFR 80.393)", "lo": 156812500.0, "hi": 156837500.0, "section": "boston", "src": "https://www.law.cornell.edu/cfr/text/47/80.393", "srct": "Cornell LII: 47 CFR 80.393, Frequencies for AIS stations"}, {"name": "Railroad VHF band", "use": "US railroad operations and dispatch radio, 181 channels on a 7.5 kHz grid", "where": "US", "lo": 160215000.0, "hi": 161565000.0, "section": "public-safety", "src": "https://its.ntia.gov/publications/download/99-370.pdf", "srct": "NTIA ITS: Report 99-370 (railroad radio)"}, {"name": "AIS 1 (161.975 MHz)", "use": "Ship position and identity broadcasts, 25 kHz", "where": "US (47 CFR 80.393)", "lo": 161962500.0, "hi": 161987500.0, "section": "boston", "src": "https://www.law.cornell.edu/cfr/text/47/80.393", "srct": "Cornell LII: 47 CFR 80.393, Frequencies for AIS stations"}, {"name": "AIS 2 (162.025 MHz)", "use": "Ship position and identity broadcasts, 25 kHz", "where": "US (47 CFR 80.393)", "lo": 162012500.0, "hi": 162037500.0, "section": "boston", "src": "https://www.law.cornell.edu/cfr/text/47/80.393", "srct": "Cornell LII: 47 CFR 80.393, Frequencies for AIS stations"}, {"name": "NOAA Weather Radio", "use": "24-hour NWS weather and hazard broadcasts on seven channels; Boston area on 162.475 MHz", "where": "US", "lo": 162400000.0, "hi": 162550000.0, "section": "public-safety", "src": "https://www.weather.gov/media/nwr/NWR_Brochure_250428.pdf", "srct": "National Weather Service: NOAA Weather Radio brochure (April 2025)"}, {"name": "169-172 MHz mics", "use": "Licensed wireless mics outside the TV bands", "where": "US", "lo": 169000000.0, "hi": 172000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "VHF TV channels 7-13", "use": "TV broadcast; secondary wireless mics at 50 mW EIRP", "where": "US", "lo": 174000000.0, "hi": 216000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "UHF (ITU band 9)", "use": "Decimetric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 300000000.0, "hi": 3000000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "433 MHz ISM", "use": "European TPMS (434 MHz), LoRaWAN EU433, short-range devices", "where": "ITU Region 1", "lo": 433050000.0, "hi": 434790000.0, "section": "everyday", "src": "https://en.wikipedia.org/wiki/ISM_radio_band", "srct": "Wikipedia: ISM radio band"}, {"name": "T-Band channel 14 (BAPERN)", "use": "Boston Area Police Emergency Radio Network", "where": "US (Greater Boston)", "lo": 470000000.0, "hi": 476000000.0, "section": "public-safety", "src": "https://www.cisa.gov/news-events/news/metro-boston-area-public-safety-t-band-dilemma", "srct": "CISA: Metro Boston Area Public Safety T-Band Dilemma"}, {"name": "T-Band", "use": "Public safety land mobile radio in some large metro areas, including Greater Boston", "where": "US", "lo": 470000000.0, "hi": 512000000.0, "section": "public-safety", "src": "https://www.khlaw.com/insights/telecom-alert-6-ghz-band-pn-t-band-mandate-repealed-verizon-citing-petition-dismissed", "srct": "Keller and Heckman: Telecom Alert, T-Band Mandate Repealed"}, {"name": "UHF TV channels 14-36", "use": "TV broadcast; main wireless mic and IEM band (250 mW licensed, 50 mW unlicensed)", "where": "US", "lo": 470000000.0, "hi": 608000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "T-Band channel 16", "use": "Greater Boston fire agencies", "where": "US (Greater Boston)", "lo": 482000000.0, "hi": 488000000.0, "section": "public-safety", "src": "https://www.cisa.gov/news-events/news/metro-boston-area-public-safety-t-band-dilemma", "srct": "CISA: Metro Boston Area Public Safety T-Band Dilemma"}, {"name": "Australian mic class licence", "use": "Wireless mics up to 100 mW EIRP on unused TV channels", "where": "Australia", "lo": 520000000.0, "hi": 694000000.0, "section": "show-wireless", "src": "https://en.wikipedia.org/wiki/Wireless_microphone_licensing", "srct": "Wikipedia: Wireless microphone licensing"}, {"name": "Channel 38 PMSE", "use": "Shared-licence wireless mics", "where": "UK", "lo": 606000000.0, "hi": 614000000.0, "section": "show-wireless", "src": "https://en.wikipedia.org/wiki/Wireless_microphone_licensing", "srct": "Wikipedia: Wireless microphone licensing"}, {"name": "600 MHz guard band (part)", "use": "Unlicensed wireless mics, 20 mW EIRP", "where": "US", "lo": 614000000.0, "hi": 616000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "600 MHz mobile (617-652 MHz)", "use": "Mobile broadband; wireless mics barred since July 13, 2020", "where": "US", "lo": 617000000.0, "hi": 652000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/node/153", "srct": "FCC: Wireless microphones and the 600 MHz band transition"}, {"name": "600 MHz duplex gap (licensed)", "use": "Licensed wireless mics, 20 mW EIRP", "where": "US", "lo": 653000000.0, "hi": 657000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "600 MHz duplex gap (unlicensed)", "use": "Unlicensed wireless mics", "where": "US", "lo": 657000000.0, "hi": 663000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "600 MHz mobile (663-698 MHz)", "use": "Mobile broadband; wireless mics barred since July 13, 2020", "where": "US", "lo": 663000000.0, "hi": 698000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/node/153", "srct": "FCC: Wireless microphones and the 600 MHz band transition"}, {"name": "700 MHz band", "use": "Wireless mics barred since 2010 (FCC 10-16)", "where": "US", "lo": 698000000.0, "hi": 806000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "700 MHz mobile (2021 award)", "use": "4G/5G mobile (EE, Three, O2)", "where": "UK", "lo": 703000000.0, "hi": 788000000.0, "section": "cellular", "src": "https://www.ofcom.org.uk/spectrum/spectrum-awards/final-spectrum-auction-results", "srct": "Ofcom: Final spectrum auction results"}, {"name": "Band 14 downlink", "use": "FirstNet first-responder broadband, tower to device", "where": "US", "lo": 758000000.0, "hi": 768000000.0, "section": "public-safety", "src": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html", "srct": "Congressional Research Service: FirstNet and Next-Generation Communications for Public Safety (R45179)"}, {"name": "Band 14 uplink", "use": "FirstNet first-responder broadband, device to tower", "where": "US", "lo": 788000000.0, "hi": 798000000.0, "section": "public-safety", "src": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html", "srct": "Congressional Research Service: FirstNet and Next-Generation Communications for Public Safety (R45179)"}, {"name": "EU868", "use": "LoRaWAN EU863-870", "where": "EU", "lo": 863000000.0, "hi": 870000000.0, "section": "unlicensed", "src": "https://www.thethingsnetwork.org/docs/lorawan/regional-parameters/", "srct": "The Things Network: LoRaWAN Regional Parameters"}, {"name": "Zigbee 868 MHz", "use": "Zigbee sub-GHz", "where": "Europe", "lo": 868000000.0, "hi": 868600000.0, "section": "unlicensed", "src": "https://en.wikipedia.org/wiki/Zigbee", "srct": "Wikipedia: Zigbee"}, {"name": "902-928 MHz (Part 15.247)", "use": "Unlicensed frequency-hopping and digitally modulated systems, up to 1 W", "where": "US (FCC Part 15)", "lo": 902000000.0, "hi": 928000000.0, "section": "rules", "src": "https://www.law.cornell.edu/cfr/text/47/15.247", "srct": "Cornell LII: 47 CFR 15.247 Operation within the bands 902-928 MHz, 2400-2483.5 MHz, and 5725-5850 MHz"}, {"name": "941.5-959.85 MHz", "use": "Licensed LPAS wireless mics, 1 W", "where": "US", "lo": 941500000.0, "hi": 959850000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "1435-1525 MHz", "use": "Licensed wireless mics, 250 mW", "where": "US", "lo": 1435000000.0, "hi": 1525000000.0, "section": "show-wireless", "src": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf", "srct": "FCC Office of Engineering and Technology: Wireless Microphone Rules (Nov. 2017 presentation)"}, {"name": "1920-1930 MHz", "use": "Unlicensed wireless mics", "where": "US", "lo": 1920000000.0, "hi": 1930000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "2.4 GHz (Part 15.247)", "use": "Unlicensed hopping and digital systems such as Wi-Fi and Bluetooth, up to 1 W", "where": "US (FCC Part 15)", "lo": 2400000000.0, "hi": 2483500000.0, "section": "rules", "src": "https://www.law.cornell.edu/cfr/text/47/15.247", "srct": "Cornell LII: 47 CFR 15.247 Operation within the bands 902-928 MHz, 2400-2483.5 MHz, and 5725-5850 MHz"}, {"name": "2.4 GHz ISM", "use": "Wi-Fi, Bluetooth, BLE, Zigbee, Thread, microwave ovens", "where": "Worldwide (ITU)", "lo": 2400000000.0, "hi": 2500000000.0, "section": "unlicensed", "src": "https://en.wikipedia.org/wiki/ISM_radio_band", "srct": "Wikipedia: ISM radio band"}, {"name": "SHF (ITU band 10)", "use": "Centimetric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 3000000000.0, "hi": 30000000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "3.1-3.45 GHz", "use": "Excluded from the 2025 auction pipeline", "where": "US", "lo": 3100000000.0, "hi": 3450000000.0, "section": "rules", "src": "https://www.wiley.law/alert-One-Big-Beautiful-Bill-Act-Passes-Restoring-FCC-Auction-Authority-and-Establishing-Spectrum-Pipeline", "srct": "Wiley Law: One Big Beautiful Bill Act Passes, Restoring FCC Auction Authority and Establishing Spectrum Pipeline"}, {"name": "US mid-band 5G swath", "use": "5G mid band, including CBRS and C-band", "where": "US", "lo": 3450000000.0, "hi": 3980000000.0, "section": "cellular", "src": "https://docs.fcc.gov/public/attachments/DOC-367849A1.pdf", "srct": "FCC: Remarks of Chairman Ajit Pai, Oct 28, 2020 (DOC-367849A1)"}, {"name": "3.6-3.8 GHz award (2021 assigned portion)", "use": "5G mobile (EE, Vodafone, O2)", "where": "UK", "lo": 3680000000.0, "hi": 3800000000.0, "section": "cellular", "src": "https://www.ofcom.org.uk/spectrum/spectrum-awards/final-spectrum-auction-results", "srct": "Ofcom: Final spectrum auction results"}, {"name": "C-band (Auction 107)", "use": "Licensed 5G mobile; auctioned 2021 for over $80.9B gross", "where": "US (FCC)", "lo": 3700000000.0, "hi": 3980000000.0, "section": "rules", "src": "https://www.fierce-network.com/regulatory/c-band-clock-phase-auction-tops-charts-80-9b", "srct": "Fierce Network: C-band clock phase auction tops charts at $80.9B"}, {"name": "Upper C-band", "use": "At least 100 MHz to be auctioned by July 2027 under P.L. 119-21", "where": "US (FCC)", "lo": 3980000000.0, "hi": 4200000000.0, "section": "rules", "src": "https://www.wiley.law/alert-One-Big-Beautiful-Bill-Act-Passes-Restoring-FCC-Auction-Authority-and-Establishing-Spectrum-Pipeline", "srct": "Wiley Law: One Big Beautiful Bill Act Passes, Restoring FCC Auction Authority and Establishing Spectrum Pipeline"}, {"name": "5.8 GHz (Part 15.247)", "use": "Unlicensed hopping and digital systems, up to 1 W", "where": "US (FCC Part 15)", "lo": 5725000000.0, "hi": 5850000000.0, "section": "rules", "src": "https://www.law.cornell.edu/cfr/text/47/15.247", "srct": "Cornell LII: 47 CFR 15.247 Operation within the bands 902-928 MHz, 2400-2483.5 MHz, and 5725-5850 MHz"}, {"name": "5.8 GHz ISM", "use": "Upper 5 GHz Wi-Fi channels and other unlicensed use", "where": "Worldwide (ITU)", "lo": 5725000000.0, "hi": 5875000000.0, "section": "unlicensed", "src": "https://en.wikipedia.org/wiki/ISM_radio_band", "srct": "Wikipedia: ISM radio band"}, {"name": "Lower 6 GHz (UK)", "use": "Wi-Fi", "where": "UK (Ofcom)", "lo": 5925000000.0, "hi": 6425000000.0, "section": "unlicensed", "src": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/consultation-expanding-access-to-the-6-ghz-band-for-commercial-mobile-and-wi-fi-services/main-document/consultation-notice-of-proposed-regulations.pdf", "srct": "Ofcom: Expanding access to the 6 GHz band, notice of proposed regulations (July 2026)"}, {"name": "6 GHz unlicensed", "use": "Wi-Fi 6E/7: low-power indoor across 1,200 MHz; standard power in 850 MHz with AFC", "where": "US (FCC, 2020)", "lo": 5925000000.0, "hi": 7125000000.0, "section": "rules", "src": "https://www.telecomtv.com/content/wi-fi/fcc-opens-6ghz-band-to-wi-fi-and-other-unlicensed-uses-38453", "srct": "TelecomTV: FCC opens 6GHz band to Wi-Fi and other unlicensed uses"}, {"name": "Lower 6 GHz (EU)", "use": "Wi-Fi 6E and Wi-Fi 7", "where": "EU (Decision 2021/1067)", "lo": 5945000000.0, "hi": 6425000000.0, "section": "unlicensed", "src": "https://www.wi-fi.org/system/files/Wi-Fi_Alliance_Wi-Fi_6E_Insights_Newsletter_202112.pdf", "srct": "Wi-Fi Alliance: Wi-Fi 6E Insights newsletter, December 2021"}, {"name": "Upper 6 GHz (UK)", "use": "AFC-controlled higher-power Wi-Fi (decided July 2026)", "where": "UK (Ofcom)", "lo": 6425000000.0, "hi": 7125000000.0, "section": "unlicensed", "src": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/consultation-expanding-access-to-the-6-ghz-band-for-commercial-mobile-and-wi-fi-services/main-document/consultation-notice-of-proposed-regulations.pdf", "srct": "Ofcom: Expanding access to the 6 GHz band, notice of proposed regulations (July 2026)"}, {"name": "6875-7125 MHz", "use": "Licensed wireless mics outside the TV bands", "where": "US", "lo": 6875000000.0, "hi": 7125000000.0, "section": "show-wireless", "src": "https://www.fcc.gov/topic/wireless-microphone", "srct": "FCC: Wireless Microphones"}, {"name": "7.4-8.4 GHz", "use": "Excluded from the 2025 auction pipeline", "where": "US", "lo": 7400000000.0, "hi": 8400000000.0, "section": "rules", "src": "https://www.wiley.law/alert-One-Big-Beautiful-Bill-Act-Passes-Restoring-FCC-Auction-Authority-and-Establishing-Spectrum-Pipeline", "srct": "Wiley Law: One Big Beautiful Bill Act Passes, Restoring FCC Auction Authority and Establishing Spectrum Pipeline"}, {"name": "Starlink Gen2 downlink (added 2026)", "use": "Space-to-Earth satellite broadband", "where": "US (FCC)", "lo": 18600000000.0, "hi": 18800000000.0, "section": "satellites", "src": "https://broadbandbreakfast.com/fcc-approves-7-500-more-starlink-gen2-satellites/", "srct": "Broadband Breakfast: FCC approves 7,500 more Starlink Gen2 satellites"}, {"name": "EHF (ITU band 11)", "use": "Millimetric waves; ITU band name", "where": "ITU / US (47 CFR 2.101)", "lo": 30000000000.0, "hi": 300000000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}, {"name": "Starlink Gen2 uplink, V-band (added 2026)", "use": "Earth-to-space satellite broadband", "where": "US (FCC)", "lo": 51400000000.0, "hi": 52400000000.0, "section": "satellites", "src": "https://broadbandbreakfast.com/fcc-approves-7-500-more-starlink-gen2-satellites/", "srct": "Broadband Breakfast: FCC approves 7,500 more Starlink Gen2 satellites"}, {"name": "Starlink Gen2 uplink, W-band (added 2026)", "use": "Earth-to-space satellite broadband", "where": "US (FCC)", "lo": 95000000000.0, "hi": 100000000000.0, "section": "satellites", "src": "https://broadbandbreakfast.com/fcc-approves-7-500-more-starlink-gen2-satellites/", "srct": "Broadband Breakfast: FCC approves 7,500 more Starlink Gen2 satellites"}, {"name": "Starlink Gen2 uplink (added 2026)", "use": "Earth-to-space satellite broadband", "where": "US (FCC)", "lo": 102000000000.0, "hi": 109500000000.0, "section": "satellites", "src": "https://broadbandbreakfast.com/fcc-approves-7-500-more-starlink-gen2-satellites/", "srct": "Broadband Breakfast: FCC approves 7,500 more Starlink Gen2 satellites"}, {"name": "Band 12 (decimillimetric)", "use": "ITU band 12, no symbol listed", "where": "ITU / US (47 CFR 2.101)", "lo": 300000000000.0, "hi": 3000000000000.0, "section": "basics", "src": "https://www.law.cornell.edu/cfr/text/47/2.101", "srct": "Cornell LII: 47 CFR 2.101 Frequency and wavelength bands"}]</script></div></div>
+
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Airwaves%20correction%3A%20What%27s%20that%20signal%3F">Report an error in this section</a></p></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/"><span>Back to</span>The Airwaves</a><a class="next" href="/basics/"><span>Next · 02</span>Radio in plain words</a></nav><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and antenna on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems these signals run</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/lookup/" class=on><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script id="lk-data" type="application/json">[{"see": "'VHF/UHF' printed on a TV antenna box or scanner", "is": "ITU band names: VHF is 30-300 MHz, UHF is 300-3,000 MHz", "section": "basics", "anchor": "What do VHF and UHF stand for?", "tags": ["vhf", "uhf", "antenna", "bands", "scanner"], "c": "wht", "sid": "what-do-vhf-and-uhf-stand-for"}, {"see": "'2.4 GHz' or '6 GHz' on a Wi-Fi router box", "is": "The radio frequency the router transmits on, counted in hertz", "section": "basics", "anchor": "What is a radio frequency, and what does \"hertz\" mean?", "tags": ["hertz", "ghz", "frequency", "router", "wifi"], "c": "wht", "sid": "what-is-a-radio-frequency-and-what-does-hertz-mean"}, {"see": "Full bars outside, one bar or none inside a building", "is": "Walls and especially energy-saving glass absorb or reflect signals, more so at higher frequencies", "section": "basics", "anchor": "Why does my phone lose signal inside buildings?", "tags": ["indoor", "signal", "glass", "buildings", "bars"], "c": "wht", "sid": "why-does-my-phone-lose-signal-inside-buildings"}, {"see": "A '5G UW' or '5G+' icon that vanishes when I walk indoors", "is": "Higher-frequency 5G carries more data but gets through walls poorly", "section": "basics", "anchor": "Why do high frequencies carry more data?", "tags": ["5g", "mmwave", "speed", "indoor", "cband"], "c": "wht", "sid": "why-do-high-frequencies-carry-more-data"}, {"see": "Coverage map says good service but my phone struggles indoors", "is": "Outdoor maps do not capture building entry loss, which varies with construction", "section": "basics", "anchor": "What is \"building entry loss,\" and how do engineers model it?", "tags": ["coverage", "map", "building", "loss"], "c": "wht", "sid": "what-is-building-entry-loss-and-how-do-engineers-model-it"}, {"see": "A museum caption saying the Titanic created radio laws", "is": "The Radio Act of 1912 followed the Titanic and required radio licenses", "section": "basics", "anchor": "Did the Titanic lead to radio laws?", "tags": ["titanic", "1912", "history", "license"], "c": "wht", "sid": "did-the-titanic-lead-to-radio-laws"}, {"see": "A colorful US frequency allocation chart poster", "is": "NTIA's wall chart of the US Table of Frequency Allocations", "section": "rules", "anchor": "What is the US frequency allocation chart?", "tags": ["chart", "poster", "allocation", "ntia"], "c": "pnk", "sid": "what-is-the-us-frequency-allocation-chart"}, {"see": "'This device complies with Part 15 of the FCC Rules' label", "is": "The device runs without a license, on condition it causes no harmful interference and accepts interference", "section": "rules", "anchor": "What does \"FCC Part 15\" on my device mean?", "tags": ["fcc", "part15", "label", "unlicensed", "fccid"], "c": "pnk", "sid": "what-does-fcc-part-15-on-my-device-mean"}, {"see": "Wi-Fi slows down when the microwave oven runs", "is": "Wi-Fi shares ISM bands, and Part 15 devices must accept interference from ISM equipment", "section": "rules", "anchor": "What are ISM bands, and why do so many gadgets share them?", "tags": ["microwave", "wifi", "interference", "ism", "2.4ghz"], "c": "pnk", "sid": "what-are-ism-bands-and-why-do-so-many-gadgets-share-them"}, {"see": "A router advertising Wi-Fi 6E or Wi-Fi 7", "is": "Uses the 6 GHz band the FCC opened for unlicensed use in April 2020", "section": "rules", "anchor": "What is 6 GHz Wi-Fi, and is it legal?", "tags": ["6ghz", "wifi6e", "wifi7", "router", "afc"], "c": "pnk", "sid": "what-is-6-ghz-wi-fi-and-is-it-legal"}, {"see": "A news story about a carrier buying spectrum for billions", "is": "An FCC spectrum auction; licenses, not ownership, are sold", "section": "rules", "anchor": "Why does the government auction airwaves?", "tags": ["auction", "spectrum", "carrier", "fcc", "cband"], "c": "pnk", "sid": "why-does-the-government-auction-airwaves"}, {"see": "Headlines about WRC-27", "is": "The 2027 ITU World Radiocommunication Conference in Shanghai, which revises the global radio treaty", "section": "rules", "anchor": "When is the next World Radiocommunication Conference?", "tags": ["itu", "wrc", "treaty", "shanghai"], "c": "pnk", "sid": "when-is-the-next-world-radiocommunication-conference"}, {"see": "A car radio with AM and FM bands", "is": "Two broadcast bands: AM varies signal strength, FM varies frequency", "section": "broadcast", "anchor": "What is the difference between AM and FM?", "tags": ["am", "fm", "radio", "car radio", "frequency"], "c": "org", "sid": "what-is-the-difference-between-am-and-fm"}, {"see": "Far-away AM stations showing up at night", "is": "AM medium-wave signals can travel much farther after dark", "section": "broadcast", "anchor": "What is the difference between AM and FM?", "tags": ["am", "night", "distant", "skywave"], "c": "org", "sid": "what-is-the-difference-between-am-and-fm"}, {"see": "The stereo light flickering off on an FM station", "is": "A weak signal makes the radio drop the 38 kHz stereo subcarrier and go mono", "section": "broadcast", "anchor": "How does FM carry stereo on one station?", "tags": ["fm", "stereo", "mono", "static"], "c": "org", "sid": "how-does-fm-carry-stereo-on-one-station"}, {"see": "An HD logo or HD2 channel on my car stereo", "is": "HD Radio, the US digital system riding alongside AM and FM stations", "section": "broadcast", "anchor": "What is HD Radio, and what is DAB?", "tags": ["hd radio", "digital radio", "hd2", "iboc"], "c": "org", "sid": "what-is-hd-radio-and-what-is-dab"}, {"see": "A DAB radio in the UK", "is": "Digital radio where many stations share one multiplex", "section": "broadcast", "anchor": "What is HD Radio, and what is DAB?", "tags": ["dab", "uk", "digital radio", "multiplex"], "c": "org", "sid": "what-is-hd-radio-and-what-is-dab"}, {"see": "My TV lost channels until I rescanned it", "is": "The 2017-2020 TV repack moved stations to new frequencies", "section": "broadcast", "anchor": "Why did TV go digital, and why did I have to rescan my TV?", "tags": ["rescan", "antenna tv", "repack", "channels"], "c": "org", "sid": "why-did-tv-go-digital-and-why-did-i-have-to-rescan-my-tv"}, {"see": "A NextGen TV logo on a new television", "is": "ATSC 3.0, the optional newer US broadcast TV standard", "section": "broadcast", "anchor": "What is NextGen TV (ATSC 3.0), and is regular TV being shut off?", "tags": ["nextgen tv", "atsc 3.0", "tv", "antenna"], "c": "org", "sid": "what-is-nextgen-tv-atsc-3-0-and-is-regular-tv-being-shut-off"}, {"see": "Tall lit towers along Route 128 in Needham", "is": "Boston's main TV transmitter sites, Cedar Street and Cabot Street", "section": "broadcast", "anchor": "In Boston: what are the towers in Needham?", "tags": ["needham", "tv tower", "boston", "candelabra"], "c": "org", "sid": "in-boston-what-are-the-towers-in-needham"}, {"see": "A tower with a wide triangular top holding several antennas", "is": "A candelabra tower carrying several TV stations at once", "section": "broadcast", "anchor": "In Boston: what are the towers in Needham?", "tags": ["candelabra", "tower", "tv", "antennas"], "c": "org", "sid": "in-boston-what-are-the-towers-in-needham"}, {"see": "Bars on my phone changing as I walk", "is": "Your phone being served by, and handed off between, cell sites", "section": "cellular", "anchor": "How does a cell network work?", "tags": ["signal bars", "handoff", "cell tower", "phone"], "c": "blu", "sid": "how-does-a-cell-network-work"}, {"see": "A 5G or LTE icon next to my signal bars", "is": "Which cellular generation your phone is using right now", "section": "cellular", "anchor": "What do 1G, 2G, 3G, 4G and 5G mean?", "tags": ["5g", "lte", "4g", "icon"], "c": "blu", "sid": "what-do-1g-2g-3g-4g-and-5g-mean"}, {"see": "A canister or box on top of a light pole", "is": "Probably a small cell adding cellular capacity to a busy block", "section": "cellular", "anchor": "Is that a cell tower or a small cell?", "tags": ["small cell", "pole", "5g", "antenna"], "c": "blu", "sid": "is-that-a-cell-tower-or-a-small-cell"}, {"see": "Rows of rectangular panels at the top of a tall tower", "is": "A macro cell site covering a wide area", "section": "cellular", "anchor": "Is that a cell tower or a small cell?", "tags": ["cell tower", "macro", "panels", "antenna"], "c": "blu", "sid": "is-that-a-cell-tower-or-a-small-cell"}, {"see": "My phone is much faster on some corners than others", "is": "Different 5G tiers: low band, mid band and short-range mmWave", "section": "cellular", "anchor": "What do low-band, mid-band and mmWave 5G mean?", "tags": ["5g", "mmwave", "c-band", "speed"], "c": "blu", "sid": "what-do-low-band-mid-band-and-mmwave-5g-mean"}, {"see": "News about 5G and airplane altimeters", "is": "The 2021-2022 FAA dispute over C-band 5G near airports", "section": "cellular", "anchor": "Why did 5G cause problems for airplanes?", "tags": ["5g", "airplanes", "altimeter", "faa", "c-band"], "c": "blu", "sid": "why-did-5g-cause-problems-for-airplanes"}, {"see": "Small antennas on subway tunnel walls", "is": "A distributed antenna system carrying cell signal underground", "section": "cellular", "anchor": "What is a DAS, and why is there signal in some tunnels?", "tags": ["das", "subway", "tunnel", "antenna"], "c": "blu", "sid": "what-is-a-das-and-why-is-there-signal-in-some-tunnels"}, {"see": "Cell service on the T underground", "is": "The MBTA's tunnel DAS, in place since 2005 and upgraded for 5G", "section": "cellular", "anchor": "In Boston", "tags": ["mbta", "subway", "boston", "das", "cell service"], "c": "blu", "sid": "in-boston"}, {"see": "My old phone or alarm panel stopped working in 2022", "is": "US carriers shut down their 3G networks in 2022 and January 2023", "section": "cellular", "anchor": "Why did my old phone stop working?", "tags": ["3g", "shutdown", "old phone", "alarm"], "c": "blu", "sid": "why-did-my-old-phone-stop-working"}, {"see": "UK phone lost 3G", "is": "UK operators switched off 3G between 2023 and 2025", "section": "cellular", "anchor": "Elsewhere in the world", "tags": ["uk", "3g", "switch-off", "2g"], "c": "blu", "sid": "elsewhere-in-the-world"}, {"see": "A radio clipped to a police officer's vest with a microphone on the shoulder", "is": "Land mobile radio, push-to-talk radio that works through repeaters", "section": "public-safety", "anchor": "What is the radio on an officer's shoulder?", "tags": ["police", "radio", "lmr", "walkie-talkie", "repeater"], "c": "red", "sid": "what-is-the-radio-on-an-officer-s-shoulder"}, {"see": "A scanner listing that says P25 Phase 1 or Phase 2", "is": "The digital public safety radio standard and its two versions", "section": "public-safety", "anchor": "What is P25, and what does \"Phase 2\" mean?", "tags": ["p25", "digital", "phase 2", "scanner", "tdma"], "c": "red", "sid": "what-is-p25-and-what-does-phase-2-mean"}, {"see": "Scanner audio that sounds digital and hops between frequencies", "is": "A trunked system, where a control channel assigns each conversation a free frequency", "section": "public-safety", "anchor": "What is the radio on an officer's shoulder?", "tags": ["trunked", "talkgroup", "control channel", "scanner"], "c": "red", "sid": "what-is-the-radio-on-an-officer-s-shoulder"}, {"see": "A rugged tablet or modem in an ambulance or police cruiser", "is": "Possibly FirstNet, the US first-responder broadband network on Band 14", "section": "public-safety", "anchor": "What is FirstNet?", "tags": ["firstnet", "band 14", "att", "broadband", "700 mhz"], "c": "red", "sid": "what-is-firstnet"}, {"see": "Scanner channels named BAPERN or MetroFire around Boston", "is": "Greater Boston's regional police and fire mutual aid radio on the T-Band", "section": "public-safety", "anchor": "In Boston: what are BAPERN and the T-Band?", "tags": ["bapern", "boston", "t-band", "metrofire", "mutual aid"], "c": "red", "sid": "in-boston-what-are-bapern-and-the-t-band"}, {"see": "Radio chatter on 160-161 MHz near a rail line", "is": "Railroad VHF radio between crews and dispatchers", "section": "public-safety", "anchor": "What is that chatter near the train tracks?", "tags": ["railroad", "train", "vhf", "160 mhz", "nxdn"], "c": "red", "sid": "what-is-that-chatter-near-the-train-tracks"}, {"see": "A harsh two-tone alarm interrupting TV or radio", "is": "The Emergency Alert System", "section": "public-safety", "anchor": "What is the loud tone before an emergency message on TV or radio?", "tags": ["eas", "alert", "tone", "tv", "radio"], "c": "red", "sid": "what-is-the-loud-tone-before-an-emergency-message-on-tv-or-radio"}, {"see": "Every phone in a room blaring an alert at the same time", "is": "A Wireless Emergency Alert sent by cell broadcast", "section": "public-safety", "anchor": "Why did every phone in the room go off at once?", "tags": ["wea", "phone alert", "amber alert", "cell broadcast"], "c": "red", "sid": "why-did-every-phone-in-the-room-go-off-at-once"}, {"see": "A weather radio that sits silent then sounds an alarm", "is": "NOAA Weather Radio activated by SAME codes for your county", "section": "public-safety", "anchor": "What is on 162.475 MHz?", "tags": ["weather radio", "noaa", "same", "162 mhz"], "c": "red", "sid": "what-is-on-162-475-mhz"}, {"see": "A UK phone alert test on a Sunday afternoon", "is": "The UK Emergency Alerts system, first tested nationally April 23, 2023", "section": "public-safety", "anchor": "Elsewhere in the world", "tags": ["uk", "emergency alert", "test", "cell broadcast"], "c": "red", "sid": "elsewhere-in-the-world"}, {"see": "A scanner for sale at an electronics store", "is": "Legal to own and use for unencrypted public radio in the US, with limits on sharing", "section": "scanners", "anchor": "Is it legal to own a police scanner in the US?", "tags": ["scanner", "legal", "section 705", "police"], "c": "red", "sid": "is-it-legal-to-own-a-police-scanner-in-the-us"}, {"see": "A Facebook group posting what's on the police scanner", "is": "Divulging scanner traffic, restricted by Section 705 but questioned after Bartnicki v. Vopper", "section": "scanners", "anchor": "Can I post or use what I hear on a scanner?", "tags": ["divulge", "social media", "section 705", "bartnicki"], "c": "red", "sid": "can-i-post-or-use-what-i-hear-on-a-scanner"}, {"see": "A gap in a scanner's frequency coverage labeled cellular", "is": "Federally required blocking of cellular frequencies", "section": "scanners", "anchor": "Why can't a scanner pick up cell phone calls?", "tags": ["cellular", "blocked", "scanner", "fcc"], "c": "red", "sid": "why-can-t-a-scanner-pick-up-cell-phone-calls"}, {"see": "A scanner mounted on a car dashboard", "is": "Restricted in some states, such as Florida and New York", "section": "scanners", "anchor": "Can I have a scanner in my car?", "tags": ["car", "vehicle", "state law", "scanner"], "c": "red", "sid": "can-i-have-a-scanner-in-my-car"}, {"see": "My scanner used to get local police and now it is silent", "is": "The agency went digital, moved to P25 Phase 2, or encrypted", "section": "scanners", "anchor": "Why did my scanner go quiet, and do I need a digital one?", "tags": ["silent", "encrypted", "digital", "phase 2"], "c": "red", "sid": "why-did-my-scanner-go-quiet-and-do-i-need-a-digital-one"}, {"see": "Boston police missing from my scanner app", "is": "BPD encrypted on August 9, 2025, and offers a 5-minute delayed feed", "section": "scanners", "anchor": "In Boston: why can't I hear the police on my scanner?", "tags": ["boston", "bpd", "encrypted", "rapidsos", "delay"], "c": "red", "sid": "in-boston-why-can-t-i-hear-the-police-on-my-scanner"}, {"see": "A news story about police radio going dark", "is": "Police encryption, and the debate between officer safety and public access", "section": "scanners", "anchor": "Why are police departments encrypting their radios?", "tags": ["encryption", "police", "journalists", "transparency"], "c": "red", "sid": "why-are-police-departments-encrypting-their-radios"}, {"see": "A UK scanner leaflet warning what you may listen to", "is": "Section 48 of the Wireless Telegraphy Act 2006", "section": "scanners", "anchor": "Elsewhere in the world", "tags": ["uk", "wireless telegraphy act", "scanner", "law"], "c": "red", "sid": "elsewhere-in-the-world"}, {"see": "A flight tracker app showing a plane over my house", "is": "The plane's own ADS-B broadcast, picked up by volunteer ground receivers", "section": "aviation", "anchor": "What is ADS-B, and why can anyone receive it?", "tags": ["adsb", "flightradar24", "plane", "tracker", "app"], "c": "yel", "sid": "what-is-ads-b-and-why-can-anyone-receive-it"}, {"see": "A plane labeled UAT or 978 on a tracking site", "is": "A US-only ADS-B link used mainly by small aircraft below 18,000 ft", "section": "aviation", "anchor": "What is the difference between 1090 and 978 ADS-B?", "tags": ["uat", "978", "1090", "adsb"], "c": "yel", "sid": "what-is-the-difference-between-1090-and-978-ads-b"}, {"see": "A plane on a tracker marked MLAT or with an estimated position", "is": "An aircraft with only a Mode S transponder, located by timing its replies at four or more receivers", "section": "aviation", "anchor": "What is MLAT, and why can't I see a plane on Flightradar24?", "tags": ["mlat", "mode s", "multilateration", "transponder"], "c": "yel", "sid": "what-is-mlat-and-why-can-t-i-see-a-plane-on-flightradar24"}, {"see": "A plane I can hear but cannot find on Flightradar24", "is": "Too low for MLAT, outside receiver coverage, on 978 MHz, or blocked by its owner", "section": "aviation", "anchor": "What is MLAT, and why can't I see a plane on Flightradar24?", "tags": ["missing", "flightradar24", "coverage", "blocked"], "c": "yel", "sid": "what-is-mlat-and-why-can-t-i-see-a-plane-on-flightradar24"}, {"see": "A private jet that shows up blank or not at all on a tracker", "is": "The owner has used the FAA's LADD blocking or a Privacy ICAO Address", "section": "aviation", "anchor": "Can owners hide a plane from flight trackers?", "tags": ["ladd", "pia", "private jet", "privacy", "blocked"], "c": "yel", "sid": "can-owners-hide-a-plane-from-flight-trackers"}, {"see": "Military jets showing on one tracking site but not another", "is": "ADS-B Exchange describes itself as unfiltered, including military traffic", "section": "aviation", "anchor": "What is ADS-B Exchange?", "tags": ["adsb exchange", "military", "unfiltered", "tracker"], "c": "yel", "sid": "what-is-ads-b-exchange"}, {"see": "Short digital bursts on a scanner around 129-131 MHz", "is": "ACARS, text messaging between aircraft and their airlines", "section": "aviation", "anchor": "What is ACARS?", "tags": ["acars", "datalink", "scanner", "vdl"], "c": "yel", "sid": "what-is-acars"}, {"see": "Clipped voices on a scanner between 118 and 137 MHz", "is": "Air traffic control and pilots on the VHF airband", "section": "aviation", "anchor": "What frequency is air traffic control?", "tags": ["airband", "atc", "scanner", "121.5"], "c": "yel", "sid": "what-frequency-is-air-traffic-control"}, {"see": "A website streaming live tower audio", "is": "Listening to aeronautical radio is permitted under US federal law; the UK is described as stricter", "section": "aviation", "anchor": "Is it legal to listen to air traffic control?", "tags": ["liveatc", "legal", "scanner", "uk", "atc"], "c": "yel", "sid": "is-it-legal-to-listen-to-air-traffic-control"}, {"see": "A transponder or squawk code mentioned in a flight tracker", "is": "The radar-reply box on the aircraft and the four-digit code ATC assigns", "section": "aviation", "anchor": "What does a transponder do?", "tags": ["transponder", "squawk", "mode s", "radar"], "c": "yel", "sid": "what-does-a-transponder-do"}, {"see": "Jets climbing in a steady line over Cambridge or Somerville", "is": "Runway 33L RNAV departures from Logan, concentrated on a narrow track since 2013-2014", "section": "aviation", "anchor": "In Boston: why do planes fly low over certain neighborhoods?", "tags": ["logan", "noise", "rnav", "somerville", "cambridge"], "c": "yel", "sid": "in-boston-why-do-planes-fly-low-over-certain-neighborhoods"}, {"see": "A ship app showing a ferry or tanker in the harbor", "is": "The vessel's AIS broadcast on 161.975/162.025 MHz, collected by shore receivers", "section": "ships", "anchor": "What is AIS?", "tags": ["ais", "marinetraffic", "ship", "tracker"], "c": "blu", "sid": "what-is-ais"}, {"see": "Big ships on a tracker but not small sailboats", "is": "SOLAS and US rules require AIS on larger and commercial vessels, not most recreational boats", "section": "ships", "anchor": "Which ships have to carry AIS?", "tags": ["ais", "solas", "boats", "carriage"], "c": "blu", "sid": "which-ships-have-to-carry-ais"}, {"see": "A tug or ferry showing on a ship tracker", "is": "US rules require Class A AIS on commercial vessels of 65 ft or more, larger towing vessels and big passenger vessels", "section": "ships", "anchor": "What are the US rules for AIS?", "tags": ["ais", "tug", "ferry", "class a"], "c": "blu", "sid": "what-are-the-us-rules-for-ais"}, {"see": "A world map of ship icons that thins out at sea", "is": "MarineTraffic's network of coastal AIS receivers, mostly run by contributors", "section": "ships", "anchor": "How does MarineTraffic track ships?", "tags": ["marinetraffic", "ais", "receiver", "coverage"], "c": "blu", "sid": "how-does-marinetraffic-track-ships"}, {"see": "A marine radio or scanner tuned to channel 16", "is": "The international distress, safety and calling channel, 156.800 MHz", "section": "ships", "anchor": "What is marine VHF channel 16?", "tags": ["channel 16", "marine vhf", "distress", "156.8"], "c": "blu", "sid": "what-is-marine-vhf-channel-16"}, {"see": "A short data burst on marine channel 70", "is": "Digital Selective Calling, with no voice", "section": "ships", "anchor": "What is marine VHF channel 16?", "tags": ["dsc", "channel 70", "marine", "digital"], "c": "blu", "sid": "what-is-marine-vhf-channel-16"}, {"see": "A handheld scanner at the waterfront picking up boats", "is": "Receiving marine radio is permitted under US federal law", "section": "ships", "anchor": "Can I listen to marine radio?", "tags": ["marine radio", "legal", "scanner", "listen"], "c": "blu", "sid": "can-i-listen-to-marine-radio"}, {"see": "A line of buoys in the water around Logan Airport", "is": "A 250-ft security zone marked by 29 buoys, set up in 2002", "section": "ships", "anchor": "In Boston", "tags": ["logan", "buoys", "security zone", "harbor"], "c": "blu", "sid": "in-boston"}, {"see": "A blue dot that drifts across the street downtown", "is": "GPS multipath and blocked satellites in an urban canyon", "section": "gps", "anchor": "Why is my GPS wrong downtown?", "tags": ["gps", "multipath", "urban canyon", "phone", "accuracy"], "c": "grn", "sid": "why-is-my-gps-wrong-downtown"}, {"see": "A pale circle around my location dot", "is": "The phone's own estimate of its position error", "section": "gps", "anchor": "How accurate is GPS on my phone?", "tags": ["gps", "accuracy", "map", "phone"], "c": "grn", "sid": "how-accurate-is-gps-on-my-phone"}, {"see": "A GPS test app showing satellites with different country flags", "is": "Your phone using GPS, GLONASS, Galileo and BeiDou together", "section": "gps", "anchor": "Is my phone using GPS, or something else?", "tags": ["gnss", "galileo", "glonass", "beidou", "satellites"], "c": "grn", "sid": "is-my-phone-using-gps-or-something-else"}, {"see": "Dual-frequency GPS (L1 + L5) on a phone spec sheet", "is": "A receiver using two GPS carriers to correct atmospheric delay", "section": "gps", "anchor": "What frequencies does GPS use?", "tags": ["l5", "l1", "gps", "frequency", "dual-frequency"], "c": "grn", "sid": "what-frequencies-does-gps-use"}, {"see": "A small dome or puck antenna on a cell site", "is": "Possibly a GPS antenna; cell networks rely on GPS for precise timing", "section": "gps", "anchor": "Why do cell towers and power grids need GPS?", "tags": ["timing", "cell tower", "gps antenna", "grid"], "c": "grn", "sid": "why-do-cell-towers-and-power-grids-need-gps"}, {"see": "A 'GPS privacy' plug-in device for sale online", "is": "A GPS jammer, which the FCC says has no lawful use in the US", "section": "gps", "anchor": "Are GPS jammers illegal?", "tags": ["jammer", "illegal", "fcc", "gps"], "c": "grn", "sid": "are-gps-jammers-illegal"}, {"see": "A plane on a flight tracker flying a strange zigzag near a border", "is": "Possible GNSS jamming or spoofing affecting its reported position", "section": "gps", "anchor": "Why are planes losing GPS over the Baltic?", "tags": ["spoofing", "jamming", "aviation", "ads-b", "flight tracker"], "c": "grn", "sid": "why-are-planes-losing-gps-over-the-baltic"}, {"see": "An 'atomic' clock with a tower icon that syncs overnight", "is": "A radio-controlled clock receiving NIST's WWVB on 60 kHz", "section": "gps", "anchor": "How does an \"atomic\" clock set itself?", "tags": ["wwvb", "atomic clock", "60 khz", "radio-controlled"], "c": "grn", "sid": "how-does-an-atomic-clock-set-itself"}, {"see": "A ticking voice announcing Coordinated Universal Time on shortwave", "is": "NIST's WWV or WWVH time station", "section": "gps", "anchor": "What is that ticking voice on shortwave?", "tags": ["wwv", "wwvh", "shortwave", "time signal"], "c": "grn", "sid": "what-is-that-ticking-voice-on-shortwave"}, {"see": "Old tutorials for receiving NOAA weather images on 137 MHz", "is": "NOAA APT, shut down in 2025", "section": "satellites", "anchor": "Can I still pick up NOAA weather satellite pictures?", "tags": ["noaa", "apt", "137 mhz", "weather satellite"], "c": "pur", "sid": "can-i-still-pick-up-noaa-weather-satellite-pictures"}, {"see": "A cloud loop of all North America on the TV forecast", "is": "Imagery from NOAA's geostationary GOES satellites", "section": "satellites", "anchor": "What is GOES, and why does it never move?", "tags": ["goes", "weather", "satellite", "noaa"], "c": "pur", "sid": "what-is-goes-and-why-does-it-never-move"}, {"see": "A bright steady light crossing the sky in a few minutes", "is": "Often the International Space Station", "section": "satellites", "anchor": "Can I hear the International Space Station?", "tags": ["iss", "ariss", "ham radio", "space station"], "c": "pur", "sid": "can-i-hear-the-international-space-station"}, {"see": "Smeared pictures with 'ARISS' in the corner posted online", "is": "SSTV images received from the ISS on 145.800 MHz", "section": "satellites", "anchor": "What is SSTV from the ISS, and how do people receive it?", "tags": ["sstv", "iss", "145.800", "ariss"], "c": "pur", "sid": "what-is-sstv-from-the-iss-and-how-do-people-receive-it"}, {"see": "A line of satellites moving together after sunset", "is": "Starlink satellites", "section": "satellites", "anchor": "How many Starlink satellites are there?", "tags": ["starlink", "satellite train", "spacex"], "c": "pur", "sid": "how-many-starlink-satellites-are-there"}, {"see": "A flat white Starlink dish on a roof or RV", "is": "A Starlink user terminal using Ku/Ka-band links", "section": "satellites", "anchor": "What frequencies does Starlink use?", "tags": ["starlink", "dish", "ku band", "ka band"], "c": "pur", "sid": "what-frequencies-does-starlink-use"}, {"see": "My phone shows 'SAT' with no bars", "is": "Direct-to-cell satellite texting, such as T-Mobile T-Satellite", "section": "satellites", "anchor": "How can my phone text from space?", "tags": ["direct-to-cell", "t-satellite", "starlink", "texting"], "c": "pur", "sid": "how-can-my-phone-text-from-space"}, {"see": "\"This device must accept any interference received\" in a gadget manual", "is": "The FCC Part 15 condition for unlicensed radios: no protected frequency, no harmful interference allowed.", "section": "unlicensed", "anchor": "What does \"must accept any interference received\" mean?", "tags": ["fcc", "part 15", "label", "unlicensed"], "c": "grn", "sid": "what-does-must-accept-any-interference-received-mean"}, {"see": "Wi-Fi cuts out when the microwave is running", "is": "The oven leaks 2.45 GHz energy into 2.4 GHz Wi-Fi channels 7-11.", "section": "unlicensed", "anchor": "Why does my Wi-Fi drop when the microwave is on?", "tags": ["wifi", "microwave", "interference", "2.4 ghz"], "c": "grn", "sid": "why-does-my-wi-fi-drop-when-the-microwave-is-on"}, {"see": "A router box labeled Wi-Fi 6, 6E or 7", "is": "Wi-Fi Alliance generation names for IEEE 802.11ax and 802.11be.", "section": "unlicensed", "anchor": "What do Wi-Fi 4, 5, 6 and 7 mean?", "tags": ["wifi 7", "wifi 6", "router", "802.11"], "c": "grn", "sid": "what-do-wi-fi-4-5-6-and-7-mean"}, {"see": "My router shows separate 2.4 GHz, 5 GHz and 6 GHz networks", "is": "Three unlicensed bands with different range and capacity trade-offs.", "section": "unlicensed", "anchor": "Why does my router have 2.4, 5 and 6 GHz bands?", "tags": ["wifi", "bands", "6 ghz", "router"], "c": "grn", "sid": "why-does-my-router-have-2-4-5-and-6-ghz-bands"}, {"see": "My phone shows no 6 GHz Wi-Fi while traveling in Europe", "is": "The EU opened only the lower part of the 6 GHz band.", "section": "unlicensed", "anchor": "Can I use 6 GHz Wi-Fi outside the US?", "tags": ["6 ghz", "europe", "uk", "travel"], "c": "grn", "sid": "can-i-use-6-ghz-wi-fi-outside-the-us"}, {"see": "The blue angular Bluetooth \"B\" logo", "is": "Runic-style branding for a 2.4 GHz short-range radio named after a Danish king.", "section": "unlicensed", "anchor": "Why is Bluetooth called Bluetooth?", "tags": ["bluetooth", "logo", "name", "ble"], "c": "grn", "sid": "why-is-bluetooth-called-bluetooth"}, {"see": "A store app that knows which aisle I am in", "is": "A BLE beacon broadcasting an ID that the app recognizes.", "section": "unlicensed", "anchor": "What is a Bluetooth beacon?", "tags": ["beacon", "ibeacon", "ble", "store"], "c": "grn", "sid": "what-is-a-bluetooth-beacon"}, {"see": "A Matter, Thread, Zigbee or Z-Wave logo on a smart bulb or lock box", "is": "Low-power smart-home mesh radios and the Matter standard that runs over them.", "section": "unlicensed", "anchor": "What are Zigbee, Z-Wave, Thread and Matter?", "tags": ["smart home", "matter", "thread", "zigbee", "z-wave"], "c": "grn", "sid": "what-are-zigbee-z-wave-thread-and-matter"}, {"see": "A small box with a stubby antenna on a meter, fence or bin labeled LoRaWAN", "is": "A long-range, low-data-rate IoT sensor, at 915 MHz in the US.", "section": "unlicensed", "anchor": "What is LoRa, and how far does it reach?", "tags": ["lora", "lorawan", "iot", "sensor"], "c": "grn", "sid": "what-is-lora-and-how-far-does-it-reach"}, {"see": "A Helium crypto hotspot in a window", "is": "A crowd-built LoRaWAN gateway that earns tokens.", "section": "unlicensed", "anchor": "What is the Helium network, and is it legit?", "tags": ["helium", "crypto", "hotspot", "lorawan"], "c": "grn", "sid": "what-is-the-helium-network-and-is-it-legit"}, {"see": "A new digital electric meter with no spinning dial", "is": "An AMI smart meter that reports readings by radio, often a 902-928 MHz mesh.", "section": "everyday", "anchor": "What is that new electric meter, and does it transmit?", "tags": ["smart meter", "ami", "eversource", "national grid"], "c": "yel", "sid": "what-is-that-new-electric-meter-and-does-it-transmit"}, {"see": "A letter from Eversource scheduling a meter swap", "is": "Eversource's Massachusetts smart meter rollout, due to finish by late 2027.", "section": "everyday", "anchor": "When is Eversource installing smart meters in Massachusetts?", "tags": ["eversource", "smart meter", "massachusetts", "rollout"], "c": "yel", "sid": "when-is-eversource-installing-smart-meters-in-massachusetts"}, {"see": "A National Grid notice about a new meter", "is": "National Grid's Massachusetts smart meter rollout, with a fee-based opt-out.", "section": "everyday", "anchor": "Can I opt out of a National Grid smart meter in Massachusetts?", "tags": ["national grid", "opt out", "smart meter", "massachusetts"], "c": "yel", "sid": "can-i-opt-out-of-a-national-grid-smart-meter-in-massachusetts"}, {"see": "The amber horseshoe-shaped tire warning light on my dashboard", "is": "The TPMS warning, fed by 315 or 434 MHz sensors in each wheel.", "section": "everyday", "anchor": "What frequency do tire pressure sensors use?", "tags": ["tpms", "tire", "dashboard", "315 mhz"], "c": "yel", "sid": "what-frequency-do-tire-pressure-sensors-use"}, {"see": "The four curved lines of the contactless symbol", "is": "A 13.56 MHz tap-range link powered by the reader.", "section": "everyday", "anchor": "How does tap-to-pay work, and how close do I need to be?", "tags": ["nfc", "contactless", "tap to pay", "13.56 mhz"], "c": "yel", "sid": "how-does-tap-to-pay-work-and-how-close-do-i-need-to-be"}, {"see": "A green CharlieCard or an MBTA gate that takes my phone", "is": "MBTA fare media: MIFARE Classic CharlieCard since 2006, contactless bank cards since August 2024.", "section": "everyday", "anchor": "Is the CharlieCard being replaced?", "tags": ["charliecard", "mbta", "tap to ride", "fare"], "c": "yel", "sid": "is-the-charliecard-being-replaced"}, {"see": "A gray toll tag behind the rearview mirror", "is": "An E-ZPass active RFID transponder at 915 MHz.", "section": "everyday", "anchor": "How does E-ZPass work?", "tags": ["e-zpass", "toll", "rfid", "915 mhz"], "c": "yel", "sid": "how-does-e-zpass-work"}, {"see": "A highway sign showing minutes to the next town", "is": "Travel times computed by matching Bluetooth MAC addresses at roadside readers.", "section": "everyday", "anchor": "How do highway signs know the travel time?", "tags": ["travel time", "bluetooth", "massdot", "highway sign"], "c": "yel", "sid": "how-do-highway-signs-know-the-travel-time"}, {"see": "A presenter with a belt-pack transmitter and no mic cable", "is": "A wireless mic, a low-power transmitter sharing leftover TV spectrum", "section": "show-wireless", "anchor": "Who is allowed to put a microphone on the air?", "tags": ["wireless mic", "lavalier", "belt pack", "part 74"], "c": "pnk", "sid": "who-is-allowed-to-put-a-microphone-on-the-air"}, {"see": "A singer wearing a molded earpiece on stage", "is": "An in-ear monitor, a wireless transmitter sending the performer their mix", "section": "show-wireless", "anchor": "Who is allowed to put a microphone on the air?", "tags": ["iem", "in-ear monitor", "earpiece", "concert"], "c": "pnk", "sid": "who-is-allowed-to-put-a-microphone-on-the-air"}, {"see": "A \"50 mW\" notice in a wireless mic manual", "is": "The US power cap for unlicensed mics in the TV bands", "section": "show-wireless", "anchor": "What is the 50 mW rule?", "tags": ["50 mw", "unlicensed", "part 15", "eirp"], "c": "pnk", "sid": "what-is-the-50-mw-rule"}, {"see": "A cheap secondhand mic system labeled 700-something MHz", "is": "A 700 MHz mic, banned in the US since 2010", "section": "show-wireless", "anchor": "What happened to 700 MHz wireless microphones?", "tags": ["700 mhz", "illegal mic", "used gear"], "c": "pnk", "sid": "what-happened-to-700-mhz-wireless-microphones"}, {"see": "A wireless mic receiver tuned between 617 and 698 MHz", "is": "A 600 MHz mic that had to stop operating in the US by July 13, 2020", "section": "show-wireless", "anchor": "Is my 600 MHz wireless mic illegal?", "tags": ["600 mhz", "illegal mic", "incentive auction"], "c": "pnk", "sid": "is-my-600-mhz-wireless-mic-illegal"}, {"see": "Referees and coaches all on wireless at an NFL game", "is": "Hundreds of coordinated frequencies managed by SBE/NFL volunteers", "section": "show-wireless", "anchor": "Who coordinates frequencies at the Super Bowl?", "tags": ["super bowl", "nfl", "frequency coordination", "sbe"], "c": "pnk", "sid": "who-coordinates-frequencies-at-the-super-bowl"}, {"see": "A small antenna box on a lighting truss", "is": "Probably wireless DMX lighting control on 2.4 GHz", "section": "show-wireless", "anchor": "What about wireless lighting control?", "tags": ["dmx", "lighting", "2.4 ghz", "truss"], "c": "pnk", "sid": "what-about-wireless-lighting-control"}, {"see": "A license plate like W1ABC on a car with a tall antenna", "is": "Likely a ham radio operator's call sign", "section": "hobby", "anchor": "What is a ham, and how do you become one in the US?", "tags": ["ham", "call sign", "license plate", "amateur radio"], "c": "org", "sid": "what-is-a-ham-and-how-do-you-become-one-in-the-us"}, {"see": "A UK call sign starting M7, M8, M9 or M0", "is": "A UK amateur licence; the prefix shows the licence level", "section": "hobby", "anchor": "What are the UK amateur radio licence levels?", "tags": ["uk", "ofcom", "call sign", "licence"], "c": "org", "sid": "what-are-the-uk-amateur-radio-licence-levels"}, {"see": "A flyer for a radio \"swapfest\" in Cambridge", "is": "The MIT Swapfest, run by the MIT Radio Society W1MX", "section": "hobby", "anchor": "Are there ham radio clubs in Boston?", "tags": ["swapfest", "mit", "boston", "club"], "c": "org", "sid": "are-there-ham-radio-clubs-in-boston"}, {"see": "A USB stick with an antenna showing a rainbow waterfall on a laptop", "is": "An RTL-SDR, a cheap receive-only software-defined radio", "section": "hobby", "anchor": "What is a software-defined radio, and what is an RTL-SDR?", "tags": ["sdr", "rtl-sdr", "dongle", "waterfall"], "c": "org", "sid": "what-is-a-software-defined-radio-and-what-is-an-rtl-sdr"}, {"see": "A flight tracker map with planes over my house", "is": "Aircraft ADS-B position broadcasts, receivable with an SDR", "section": "hobby", "anchor": "What can I listen to with an RTL-SDR?", "tags": ["ads-b", "flight tracker", "planes", "logan"], "c": "org", "sid": "what-can-i-listen-to-with-an-rtl-sdr"}, {"see": "A creepy buzzing shortwave station on YouTube", "is": "UVB-76 \"The Buzzer\" on 4625 kHz", "section": "hobby", "anchor": "What is UVB-76, \"The Buzzer\"?", "tags": ["uvb-76", "buzzer", "number station", "shortwave"], "c": "org", "sid": "what-is-uvb-76-the-buzzer"}, {"see": "A SAR number in my phone's legal settings", "is": "How much RF energy the phone deposits in tissue, tested against FCC or ICNIRP limits", "section": "health", "anchor": "What is the SAR limit for cell phones in the US?", "tags": ["sar", "phone", "radiation", "fcc"], "c": "wht", "sid": "what-is-the-sar-limit-for-cell-phones-in-the-us"}, {"see": "Different SAR limits for the same phone in the US and Europe", "is": "Different averaging masses: 1.6 W/kg over 1 g (FCC) vs 2 W/kg over 10 g (ICNIRP)", "section": "health", "anchor": "Why is the US limit 1.6 and Europe's 2.0?", "tags": ["sar", "icnirp", "europe", "1.6"], "c": "wht", "sid": "why-is-the-us-limit-1-6-and-europe-s-2-0"}, {"see": "A headline saying WHO says phones may cause cancer", "is": "IARC's 2011 Group 2B classification, based on limited evidence", "section": "health", "anchor": "What does \"possibly carcinogenic\" (Group 2B) mean?", "tags": ["iarc", "cancer", "2b", "who"], "c": "wht", "sid": "what-does-possibly-carcinogenic-group-2b-mean"}, {"see": "A post claiming 5G masts make people sick", "is": "WHO says no adverse health effect has been causally linked to wireless technologies", "section": "health", "anchor": "Is 5G dangerous to health?", "tags": ["5g", "health", "mast", "who"], "c": "wht", "sid": "is-5g-dangerous-to-health"}, {"see": "Tall towers near Route 128 in Needham", "is": "Boston's TV antenna farm: WBZ-TV's Cedar Street tower and the Cabot Street candelabra.", "section": "boston", "anchor": "Where do Boston TV stations broadcast from?", "tags": ["needham", "tv", "towers", "route 128", "antenna"], "c": "blu", "sid": "where-do-boston-tv-stations-broadcast-from"}, {"see": "A tower whose top splits into several arms", "is": "A candelabra tower, holding a separate antenna for each TV station.", "section": "boston", "anchor": "What is the stainless-steel tower with arms in Needham?", "tags": ["candelabra", "tower", "needham", "tv"], "c": "blu", "sid": "what-is-the-stainless-steel-tower-with-arms-in-needham"}, {"see": "A mast on top of the Prudential", "is": "An FM broadcast mast with a shared master antenna (as of 2004).", "section": "boston", "anchor": "What antennas are on top of the Prudential?", "tags": ["prudential", "fm", "mast", "downtown"], "c": "blu", "sid": "what-antennas-are-on-top-of-the-prudential"}, {"see": "WBZ 1030 coming in from hundreds of miles away at night", "is": "A 50 kW clear-channel AM station whose night skywave travels far.", "section": "boston", "anchor": "Why can I hear WBZ 1030 at night in other states?", "tags": ["wbz", "am", "skywave", "night", "clear channel"], "c": "blu", "sid": "why-can-i-hear-wbz-1030-at-night-in-other-states"}, {"see": "Two bare towers by the water in Hull", "is": "WBZ's directional AM array, aimed at Boston and away from the Atlantic.", "section": "boston", "anchor": "Where is WBZ's transmitter?", "tags": ["wbz", "hull", "am", "towers"], "c": "blu", "sid": "where-is-wbz-s-transmitter"}, {"see": "My phone works in the subway tunnel", "is": "A distributed antenna system carries carrier signals over fiber and leaky cable.", "section": "boston", "anchor": "How does cell service reach the T tunnels?", "tags": ["mbta", "subway", "cell", "das", "tunnel"], "c": "blu", "sid": "how-does-cell-service-reach-the-t-tunnels"}, {"see": "Radios on MBTA staff and Transit Police", "is": "The MBTA is replacing EDACS with an L3Harris P25 system.", "section": "boston", "anchor": "What radio do MBTA crews and Transit Police use?", "tags": ["mbta", "p25", "l3harris", "radio"], "c": "blu", "sid": "what-radio-do-mbta-crews-and-transit-police-use"}, {"see": "Boston police and fire radio on a scanner app", "is": "A UHF P25 system being upgraded across ten city radio sites.", "section": "boston", "anchor": "What radio system do Boston police and firefighters use?", "tags": ["boston police", "fire", "p25", "uhf", "scanner"], "c": "blu", "sid": "what-radio-system-do-boston-police-and-firefighters-use"}, {"see": "Planes flying low over my house in Somerville or Milton", "is": "Logan runway use and satellite-guided RNAV paths concentrate tracks.", "section": "boston", "anchor": "Why are planes flying over my house in Somerville, Cambridge or Milton?", "tags": ["logan", "planes", "noise", "rnav", "massport"], "c": "blu", "sid": "why-are-planes-flying-over-my-house-in-somerville-cambridge-or-milton"}, {"see": "A flight tracker showing a plane over Boston", "is": "Massport runs a near-live public Flight Monitor for Logan traffic.", "section": "boston", "anchor": "How can I tell which plane just flew over Boston?", "tags": ["flight tracker", "logan", "massport", "planes"], "c": "blu", "sid": "how-can-i-tell-which-plane-just-flew-over-boston"}, {"see": "A ship-tracking website showing a tanker in the harbor", "is": "Ships broadcast position and identity on AIS, on dedicated marine VHF channels.", "section": "boston", "anchor": "How do I track ships in Boston Harbor?", "tags": ["ais", "ships", "harbor", "vhf", "marine"], "c": "blu", "sid": "how-do-i-track-ships-in-boston-harbor"}, {"see": "A new Eversource meter on my house", "is": "An Itron smart meter that reports usage daily by radio.", "section": "boston", "anchor": "What is the new meter on my house, and can I opt out?", "tags": ["smart meter", "eversource", "itron", "opt out"], "c": "blu", "sid": "what-is-the-new-meter-on-my-house-and-can-i-opt-out"}, {"see": "A Christmas Eve transmission on 486 kHz", "is": "WA1ZMS's experimental-license commemoration of Fessenden's claimed 1906 broadcast.", "section": "boston", "anchor": "Was the first radio broadcast really from Brant Rock in 1906?", "tags": ["fessenden", "brant rock", "1906", "history"], "c": "blu", "sid": "was-the-first-radio-broadcast-really-from-brant-rock-in-1906"}, {"see": "A Marconi marker on a Cape Cod bluff", "is": "The site of Marconi's 1903 Wellfleet transatlantic station.", "section": "boston", "anchor": "Where was Marconi's station on Cape Cod?", "tags": ["marconi", "wellfleet", "cape cod", "history"], "c": "blu", "sid": "where-was-marconi-s-station-on-cape-cod"}, {"see": "A cluster of towers on a hill", "is": "An antenna farm, where stations share height, land and backup.", "section": "towers", "anchor": "What is an antenna farm?", "tags": ["antenna farm", "towers", "hill"], "c": "org", "sid": "what-is-an-antenna-farm"}, {"see": "A very tall tower held up by cables", "is": "A guyed tower.", "section": "towers", "anchor": "How do I tell a guyed tower from a candelabra?", "tags": ["guyed", "tower", "cables"], "c": "org", "sid": "how-do-i-tell-a-guyed-tower-from-a-candelabra"}, {"see": "Several identical bare towers in a row", "is": "An AM directional array; the towers themselves are the antenna.", "section": "towers", "anchor": "Why do AM stations use several tall towers?", "tags": ["am", "array", "towers", "directional"], "c": "org", "sid": "why-do-am-stations-use-several-tall-towers"}, {"see": "Stacked rectangular panels on a rooftop mast", "is": "Often FM broadcast panel antennas, though cell panels look similar.", "section": "towers", "anchor": "What are the flat panels on a rooftop mast?", "tags": ["panel", "rooftop", "fm", "bay"], "c": "org", "sid": "what-are-the-flat-panels-on-a-rooftop-mast"}, {"see": "A thick cable along a subway tunnel wall", "is": "Radiating (leaky feeder) cable from a distributed antenna system.", "section": "towers", "anchor": "What carries cell signals into a tunnel?", "tags": ["leaky feeder", "tunnel", "das", "cable"], "c": "org", "sid": "what-carries-cell-signals-into-a-tunnel"}, {"see": "Who owns that tower?", "is": "Look it up free in the FCC's ASR database by coordinates and radius.", "section": "towers", "anchor": "How do I look up a tower near me?", "tags": ["asr", "fcc", "tower", "owner", "lookup"], "c": "org", "sid": "how-do-i-look-up-a-tower-near-me"}, {"see": "Who is licensed to transmit from that antenna?", "is": "Search the FCC's Universal Licensing System.", "section": "towers", "anchor": "How do I find out who holds a radio license?", "tags": ["uls", "fcc", "license", "lookup"], "c": "org", "sid": "how-do-i-find-out-who-holds-a-radio-license"}]</script><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("aw-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Night sky";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("aw-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Basics: "var(--u-wht)", Rules: "var(--u-pnk)", Broadcast: "var(--u-org)", Cellular: "var(--u-blu)", "Public safety": "var(--u-red)",
+      "Aviation and ships": "var(--u-yel)", "Satellites and timing": "var(--u-pur)", "Unlicensed and IoT": "var(--u-grn)", Events: "var(--u-pnk)", Hobby: "var(--u-org)", Health: "var(--u-wht)", Boston: "var(--u-blu)", Towers: "var(--u-org)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(Basics|Rules|Aviation and ships|Events|Health)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* spectrum ruler */
+  (function () {
+    var data = readJSON("sp-data"), info = $("sp-info"); if (!info || !data.length) return;
+    var onAll = !!document.getElementById("sec-basics");
+    function hz(f) { var u = [[1e9, "GHz"], [1e6, "MHz"], [1e3, "kHz"]]; for (var i = 0; i < u.length; i++) if (f >= u[i][0]) return (Math.round(f / u[i][0] * 1000) / 1000) + " " + u[i][1]; return f + " Hz"; }
+    function show(i, el) {
+      var d = data[i]; if (!d) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".sp-bar.on"), function (x) { x.classList.remove("on"); }); el.classList.add("on");
+      info.innerHTML = "<b>" + esc(d.name) + "</b> <span class=\"count\">" + esc(hz(d.lo)) + " - " + esc(hz(d.hi)) + (d.where ? " · " + esc(d.where) : "") + "</span><p>" + esc(d.use) + "</p><p>" +
+        (d.section ? '<a href="' + (onAll ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">Read the section</a>' : "") + (d.src ? ' · <a href="' + esc(d.src) + '" target="_blank" rel="noopener">source</a>' : "") + "</p>";
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".sp-bar"), function (el) {
+      var i = +el.getAttribute("data-i");
+      el.addEventListener("click", function () { show(i, el); });
+      el.addEventListener("focus", function () { show(i, el); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(i, el); } });
+    });
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

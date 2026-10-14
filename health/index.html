@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Is Cell Phone and 5G Radiation Safe? What FCC, WHO and ICNIRP Say | The Airwaves</title>
+<meta name="description" content="Governments cap radio-frequency (RF) exposure with limits designed to prevent tissue heating, with safety margins built in. The US uses FCC limits dating...">
+<link rel="canonical" href="https://airwaves.cold.fyi/health/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="Is Cell Phone and 5G Radiation Safe? What FCC, WHO and ICNIRP Say | The Airwaves"><meta property="og:description" content="Governments cap radio-frequency (RF) exposure with limits designed to prevent tissue heating, with safety margins built in. The US uses FCC limits dating...">
+<meta property="og:url" content="https://airwaves.cold.fyi/health/"><meta property="og:image" content="https://airwaves.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Is Cell Phone and 5G Radiation Safe? What FCC, WHO and ICNIRP Say", "description": "Governments cap radio-frequency (RF) exposure with limits designed to prevent tissue heating, with safety margins built in. The US uses FCC limits dating...", "url": "https://airwaves.cold.fyi/health/", "image": "https://airwaves.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Airwaves", "url": "https://airwaves.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Airwaves", "item": "https://airwaves.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "Is all this radio safe? What the agencies say", "item": "https://airwaves.cold.fyi/health/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the SAR limit for cell phones?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, the FCC limit is 1.6 W/kg averaged over any 1 gram of tissue. ICNIRP's 2020 guidelines set 2 W/kg over 10 grams for head and torso. The two use different averaging masses, so they are not directly comparable."}}, {"@type": "Question", "name": "What did the 2024 WHO review find about phones and brain cancer?", "acceptedAnswer": {"@type": "Answer", "text": "The WHO-commissioned review led by Ken Karipidis, published in Environment International in 2024, found moderate-certainty evidence that mobile phone use likely does not increase the risk of glioma, meningioma, acoustic neuroma and other head tumors. It screened over 5,000 studies and included 63, according to ARPANSA."}}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/space-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-grotesk-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a night-sky spectrum analyzer - dark navy, Space Grotesk display, a waterfall-plot hero, band colors per topic, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:dark;
+  --bg:#0b1020; --panel:#121a30; --panel2:#18223d; --ink:#e8ecf5; --muted:#9aa4bb; --line:#26314f;
+  --tape:#4fe3a1; --tape-ink:#0b1020; --hot:#ff6b7d; --cue:#7cc4ff; --sign:#4fe3a1; --sign-ink:#0b1020;
+  --ink-on:#0b1020; --ink-on-y:#0b1020;
+  --u-red:#ff6b7d; --u-yel:#ffcf5a; --u-org:#ff9a4d; --u-blu:#5aa8ff; --u-grn:#4fe3a1; --u-pur:#b98cff; --u-pnk:#ff7fc8; --u-wht:#dfe5f2;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-health">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Airwaves</a> / Is all this radio safe? What the agencies say</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Airwaves</a></h2><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/" class=on aria-current=page><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 16 of 23 · about 9 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-wht);--sci:var(--ink-on-y)"><h1 class="sec-h1" id="sec-health" style="--sc:var(--u-wht);--sci:var(--ink-on-y)"><span class="tape">16</span>Is all this radio safe? What the agencies say</h1>
+<p class="short"><strong>The short version:</strong> Governments cap radio-frequency (RF) exposure with limits designed to prevent tissue heating, with safety margins built in. The US uses FCC limits dating to 1996; an international commission, ICNIRP, publishes guidelines that were updated in 2020 to cover 5G. In 2011 the WHO's cancer agency, IARC, classified RF fields as "possibly carcinogenic" (Group 2B) on limited evidence, and a WHO-commissioned review published in 2024 found moderate-certainty evidence that mobile phone use likely does not raise the risk of brain and other head tumors, a finding some critics dispute. This section reports what each body says, with attribution, and does not offer advice.</p><aside class="callout" style="--sc:var(--u-wht)"><b class="k">Did you know?</b>Above 6 GHz, ICNIRP&#x27;s 2020 guidelines stop using SAR and switch to absorbed power density, because energy at those frequencies is absorbed close to the skin surface.<sup id="fnref-tv-288"><a class="footnote-ref" href="#fn-288">288</a></sup></aside>
+<h3 id="what-does-radiation-mean-here">What does "radiation" mean here?</h3>
+<p><em>What you see:</em> A phone's legal screen listing a "SAR" figure, or a sticker on a cell site warning about RF exposure.</p>
+<p>Radio waves, Wi-Fi, cell signals and microwaves are <strong>non-ionizing radiation</strong>: they do not carry enough energy per photon to knock electrons off atoms, which is what X-rays and nuclear radiation do. The question agencies study is what lower-energy RF does to the body.</p>
+<p>The World Health Organization's answer on the known mechanism: "Tissue heating is the main mechanism of interaction between radiofrequency fields and the human body," and current exposure levels cause a negligible temperature rise.<sup id="fnref-278"><a class="footnote-ref" href="#fn-278">278</a></sup> Exposure limits are built around that mechanism.</p>
+<p>The key unit is <strong>SAR</strong> (specific absorption rate): how much RF energy body tissue absorbs, measured in watts per kilogram (W/kg).</p>
+<h3 id="what-is-the-sar-limit-for-cell-phones-in-the-us">What is the SAR limit for cell phones in the US?</h3>
+<p><em>What you see:</em> "SAR: 1.19 W/kg" or similar in a phone's settings or manual.</p>
+<p>The FCC's limits for the general public are in 47 CFR 1.1310. For 100 kHz to 6 GHz they are:<sup id="fnref-279"><a class="footnote-ref" href="#fn-279">279</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>FCC limit (general population)</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whole-body average</td>
+<td>0.08 W/kg</td>
+</tr>
+<tr>
+<td>Partial body (e.g. head, from a phone)</td>
+<td>1.6 W/kg peak, averaged over any 1 gram of tissue</td>
+</tr>
+<tr>
+<td>Extremities</td>
+<td>4 W/kg averaged over 10 grams</td>
+</tr>
+</tbody>
+</table></div>
+<p>For far-field exposure, the same rule sets a general-population power-density limit of 1.0 mW/cm2 from 1,500 to 100,000 MHz.<sup id="fnref2-279"><a class="footnote-ref" href="#fn-279">279</a></sup></p>
+<p>These limits have a history. The FCC adopted exposure limits based on recommendations from the National Council on Radiation Protection and Measurements (NCRP) on August 1, 1996, covering 300 kHz to 100 GHz. Device SAR limits took effect August 7, 1996, and all licensees had to comply by September 1, 2000.<sup id="fnref-280"><a class="footnote-ref" href="#fn-280">280</a></sup> The FCC's technical guide for testing compliance is OET Bulletin 65, "Evaluating Compliance With FCC Guidelines for Human Exposure to Radiofrequency Electromagnetic Fields."<sup id="fnref2-280"><a class="footnote-ref" href="#fn-280">280</a></sup></p>
+<p>The FCC's RF safety page says it "is confident in its RF exposure guidelines," and that in 2019 it concluded the best available scientific evidence supports maintaining the existing limits.<sup id="fnref-281"><a class="footnote-ref" href="#fn-281">281</a></sup></p>
+<p>In the US, the FDA shares regulatory responsibility for cell phones with the FCC: the FCC sets the emission limits and the FDA provides scientific input.<sup id="fnref-282"><a class="footnote-ref" href="#fn-282">282</a></sup> The FCC describes the FDA as the agency with "primary jurisdiction for investigating mobile phone safety."<sup id="fnref-283"><a class="footnote-ref" href="#fn-283">283</a></sup> In 2019, Jeffrey Shuren, director of the FDA's Center for Devices and Radiological Health, wrote to the FCC that "the existing safety limits for cell phones remain acceptable for protecting the public health."<sup id="fnref-284"><a class="footnote-ref" href="#fn-284">284</a></sup> The FCC adopted its decision to keep its limits (FCC 19-126, ET Docket 19-226) on November 27, 2019, and released it on December 4, 2019.<sup id="fnref-285"><a class="footnote-ref" href="#fn-285">285</a></sup><sup id="fnref-286"><a class="footnote-ref" href="#fn-286">286</a></sup></p>
+<h3 id="what-are-the-icnirp-guidelines">What are the ICNIRP guidelines?</h3>
+<p><em>What you see:</em> A European or UK phone spec sheet quoting a SAR figure "over 10 g," or a council report citing "ICNIRP compliance" for a new mast.</p>
+<p><strong>ICNIRP</strong>, the International Commission on Non-Ionizing Radiation Protection, publishes the exposure guidelines used by many countries. Its current RF guidelines, covering 100 kHz to 300 GHz, were published in March 2020 in the journal Health Physics. They replace the 1998 RF guidelines and, in ICNIRP's words, "cover many applications such as 5G technologies, WiFi, Bluetooth, mobile phones, and base stations."<sup id="fnref-287"><a class="footnote-ref" href="#fn-287">287</a></sup></p>
+<p>The general-public basic restrictions in the 2020 guidelines are:<sup id="fnref-288"><a class="footnote-ref" href="#fn-288">288</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>ICNIRP 2020 (general public)</th>
+<th>Value</th>
+<th>Averaging time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whole-body SAR</td>
+<td>0.08 W/kg</td>
+<td>30 minutes</td>
+</tr>
+<tr>
+<td>Head and torso SAR (100 kHz-6 GHz)</td>
+<td>2 W/kg over 10 g</td>
+<td>6 minutes</td>
+</tr>
+<tr>
+<td>Limbs SAR (100 kHz-6 GHz)</td>
+<td>4 W/kg over 10 g</td>
+<td>6 minutes</td>
+</tr>
+<tr>
+<td>Above 6 GHz</td>
+<td>Absorbed power density 20 W/m2 over 4 cm2</td>
+<td>6 minutes</td>
+</tr>
+</tbody>
+</table></div>
+<p>For the general public, ICNIRP applies a reduction factor of 50 for whole-body exposure and 10 for local limits; these are its safety margins.<sup id="fnref2-288"><a class="footnote-ref" href="#fn-288">288</a></sup> Above 6 GHz, energy is absorbed close to the skin surface, which is why the guidelines switch from SAR to a power-density measure.</p>
+<h3 id="why-is-the-us-limit-1-6-and-europe-s-2-0">Why is the US limit 1.6 and Europe's 2.0?</h3>
+<p><em>What you see:</em> Two different SAR numbers for the same phone model in different countries.</p>
+<p>The two figures are measured differently. The FCC averages over 1 gram of tissue;<sup id="fnref3-279"><a class="footnote-ref" href="#fn-279">279</a></sup> ICNIRP averages over 10 grams.<sup id="fnref3-288"><a class="footnote-ref" href="#fn-288">288</a></sup> Averaging over a smaller mass captures sharper hot spots, so a 1 g number and a 10 g number for the same phone are not directly comparable, and "1.6 is stricter than 2.0" is not a fair reading on its own. The whole-body limit, 0.08 W/kg, is the same in both.<sup id="fnref4-279"><a class="footnote-ref" href="#fn-279">279</a></sup><sup id="fnref4-288"><a class="footnote-ref" href="#fn-288">288</a></sup></p>
+<p>Canada's limits are set in Health Canada's Safety Code 6 (2015). For the general public they are 0.08 W/kg whole-body, 1.6 W/kg over any 1 g for the head, neck and trunk, and 4 W/kg over 10 g for limbs, averaged over 6 minutes, so Canada uses the same 1 g measure as the US.<sup id="fnref-289"><a class="footnote-ref" href="#fn-289">289</a></sup></p>
+<p>Switzerland applies a precautionary principle under which, according to its Federal Office of Communications, radiation limits "must be ten times lower in Switzerland than in neighbouring countries."<sup id="fnref-290"><a class="footnote-ref" href="#fn-290">290</a></sup> Italy long used a 6 V/m attention value and quality objective for RF fields; according to the Molise regional environmental agency (ARPA Molise), Law 214 of December 30, 2023 raised both to 15 V/m, fully in effect from April 2024.<sup id="fnref-291"><a class="footnote-ref" href="#fn-291">291</a></sup></p>
+<h3 id="what-does-possibly-carcinogenic-group-2b-mean">What does "possibly carcinogenic" (Group 2B) mean?</h3>
+<p><em>What you see:</em> A headline saying "WHO: cell phones may cause cancer."</p>
+<p>On May 31, 2011, in Lyon, a working group of 31 scientists from 14 countries convened by the <strong>International Agency for Research on Cancer (IARC)</strong>, part of the WHO, classified RF electromagnetic fields as Group 2B, "possibly carcinogenic to humans."<sup id="fnref-292"><a class="footnote-ref" href="#fn-292">292</a></sup></p>
+<p>According to IARC's press release:<sup id="fnref2-292"><a class="footnote-ref" href="#fn-292">292</a></sup></p>
+<ul>
+<li>The basis was "limited" evidence for glioma (a brain tumor) and acoustic neuroma (a tumor of the hearing nerve) in wireless phone users, and "inadequate" evidence for other cancers.</li>
+<li>One study of past cell phone use (up to 2004) found a 40% increased glioma risk in the highest category of heavy users, who reported an average of 30 minutes a day over 10 years.</li>
+<li>Working group chair Jonathan Samet said: "The conclusion means that there could be some risk."</li>
+<li>IARC adds that the words "probably" and "possibly" carcinogenic "have no quantitative significance."</li>
+</ul>
+<p>That last point matters for reading headlines. IARC's groups describe how strong the evidence is that something can cause cancer, not how large any risk is.</p>
+<p>Australia's radiation agency, ARPANSA, describes the IARC classification as "largely based on limited evidence from human observational studies," and dates it to 2013,<sup id="fnref-293"><a class="footnote-ref" href="#fn-293">293</a></sup> the year the full monograph was published, while IARC's own press release dates the decision to May 2011.<sup id="fnref3-292"><a class="footnote-ref" href="#fn-292">292</a></sup> Both dates appear in coverage; they refer to the meeting and the publication.</p>
+<p>In 2024, an IARC Advisory Group recommended, in a summary published in The Lancet Oncology, that RF fields be re-evaluated "with high priority" in the latter half of 2025-2029.<sup id="fnref-294"><a class="footnote-ref" href="#fn-294">294</a></sup> IARC's announcement of its next listed meeting, Volume 144 on lead and cadmium compounds (October 19-26, 2027), does not mention RF,<sup id="fnref-295"><a class="footnote-ref" href="#fn-295">295</a></sup> and Microwave News reported in 2024 that no date for an RF review had been set.<sup id="fnref-296"><a class="footnote-ref" href="#fn-296">296</a></sup></p>
+<h3 id="what-did-the-2024-who-review-find-about-phones-and-brain-cancer">What did the 2024 WHO review find about phones and brain cancer?</h3>
+<p><em>What you see:</em> A 2024 headline saying "WHO review finds no link between mobile phones and brain cancer."</p>
+<p>WHO surveyed experts in 2018 to set research priorities and then commissioned a series of <strong>systematic reviews</strong> (studies that gather and grade all the relevant research on a question by a preset method).<sup id="fnref-297"><a class="footnote-ref" href="#fn-297">297</a></sup> The cancer review in humans was led by Ken Karipidis of ARPANSA and published in Environment International in 2024:</p>
+<blockquote>
+<p>Karipidis K, Baaken D, Loney T, Blettner M, Brzozek C, Elwood M, Narh C, Orsini N, Röösli M, Paulo MS, Lagorio S. "The effect of exposure to radiofrequency fields on cancer risk in the general and working population: A systematic review of human observational studies - Part I: Most researched outcomes." Environment International 2024; 191:108983.<sup id="fnref3-297"><a class="footnote-ref" href="#fn-297">297</a></sup></p>
+</blockquote>
+<p>What it reported:<sup id="fnref2-297"><a class="footnote-ref" href="#fn-297">297</a></sup></p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>Exposure</th>
+<th>Outcome</th>
+<th>Certainty of evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mobile phone use</td>
+<td>Likely no increased risk of glioma, meningioma, acoustic neuroma, pituitary or salivary gland tumors, or pediatric brain tumors</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Cordless phones; occupational exposure</td>
+<td>Evidence on cancer risk rated less certain</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Fixed-site transmitters (broadcast and cell towers)</td>
+<td>Likely no increased childhood leukemia risk</td>
+<td>Moderate</td>
+</tr>
+</tbody>
+</table></div>
+<p>ARPANSA, announcing the review on September 4, 2024, said more than 5,000 studies from 1994-2022 were screened and 63 were included, and that there has been "no rise in the incidence of brain cancers" despite greatly increased wireless use.<sup id="fnref2-293"><a class="footnote-ref" href="#fn-293">293</a></sup> ARPANSA's summary: "we can be more confident that exposure to radio waves from wireless technology is not a human health hazard."<sup id="fnref3-293"><a class="footnote-ref" href="#fn-293">293</a></sup> It also said WHO is preparing an Environmental Health Criteria monograph that will draw on this and the other commissioned reviews.<sup id="fnref4-293"><a class="footnote-ref" href="#fn-293">293</a></sup></p>
+<p>The review has critics. Microwave News, a newsletter on non-ionizing radiation, wrote in September 2024 that "the results of this review were never in doubt," pointing to the authors' ties to ICNIRP, the inclusion of a Danish cohort study not designed to study cell phones, and the omission of rodent studies by the US National Toxicology Program and the Ramazzini Institute.<sup id="fnref-298"><a class="footnote-ref" href="#fn-298">298</a></sup> The same article quotes the International Commission on the Biological Effects of Electromagnetic Fields (ICBE-EMF): "There is no scientific justification for concluding there is any certainty that RF exposures do not cause cancer."<sup id="fnref2-298"><a class="footnote-ref" href="#fn-298">298</a></sup></p>
+<p>In a January 2025 reply in Environment International to a critical letter by Di Ciaula and colleagues, the review's authors said the review covered only human studies and that a separate review of animal studies was in progress.<sup id="fnref-299"><a class="footnote-ref" href="#fn-299">299</a></sup></p>
+<p>As of October 2026, WHO's radiofrequency page still describes the Environmental Health Criteria monograph as work under way, a health risk assessment "to be published as a monograph," with no publication date given.<sup id="fnref-300"><a class="footnote-ref" href="#fn-300">300</a></sup></p>
+<h3 id="is-5g-dangerous-to-health">Is 5G dangerous to health?</h3>
+<p><em>What you see:</em> A flyer or post linking 5G masts to illness, or the 2020 claims linking 5G to COVID-19.</p>
+<p>The WHO's Q&amp;A on 5G, dated February 27, 2020, says:<sup id="fnref2-278"><a class="footnote-ref" href="#fn-278">278</a></sup></p>
+<ul>
+<li>"No adverse health effect has been causally linked with exposure to wireless technologies."</li>
+<li>5G at around 3.5 GHz produces exposure "similar to that from existing mobile phone base stations."</li>
+<li>Beam-forming, where 5G antennas steer energy toward users, may make exposure more variable, and this is still being studied.</li>
+<li>"Only a few studies" have examined the frequencies 5G uses, so conclusions draw on research across the wider spectrum.</li>
+</ul>
+<p>ICNIRP states that its 2020 guidelines explicitly cover 5G.<sup id="fnref2-287"><a class="footnote-ref" href="#fn-287">287</a></sup> The WHO Q&amp;A predates the 2024 review described above. How 5G networks are built is covered in <a href="/cellular/">cellular</a>.</p>
+<p>Some local governments and campaign groups have called for 5G moratoriums; this section quotes only national and international agencies. For what the boxes on poles and lampposts are, see the sister guide <a href="https://streetcode.cold.fyi/utility-poles/">Street Code: utility poles</a>.</p>
+<h3 id="in-boston">In Boston</h3>
+<p>RF exposure limits in the US are set federally by the FCC, and the limits above are the ones that apply to devices and transmitters in Boston.<sup id="fnref5-279"><a class="footnote-ref" href="#fn-279">279</a></sup></p>
+<p>Federal law also limits what states and cities can do. Under 47 USC 332(c)(7)(B)(iv), no state or local government may regulate the placement, construction or modification of personal wireless service facilities "on the basis of the environmental effects of radio frequency emissions," as long as those facilities comply with the FCC's rules.<sup id="fnref-301"><a class="footnote-ref" href="#fn-301">301</a></sup> For where the area's large transmitters stand, see <a href="/towers/">towers</a>.</p>
+<h3 id="elsewhere-in-the-world">Elsewhere in the world</h3>
+<p>ICNIRP's guidelines are international and explicitly cover phones, Wi-Fi, Bluetooth, base stations and 5G;<sup id="fnref3-287"><a class="footnote-ref" href="#fn-287">287</a></sup> the US instead sets its own limits through the FCC.<sup id="fnref6-279"><a class="footnote-ref" href="#fn-279">279</a></sup> The practical difference most people meet is the SAR figure on a phone: 1.6 W/kg over 1 g under US rules, 2 W/kg over 10 g under ICNIRP. IARC's 2011 classification is a single global finding, while national agencies differ in how they explain it to the public, as ARPANSA's framing above shows.<sup id="fnref5-293"><a class="footnote-ref" href="#fn-293">293</a></sup></p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Airwaves%20correction%3A%20Is%20all%20this%20radio%20safe%3F%20What%20the%20agencies%20say">Report an error in this section</a></p></section><section class="sec faq qa"><h2>Quick answers</h2><details><summary>What is the SAR limit for cell phones?</summary><p>In the US, the FCC limit is 1.6 W/kg averaged over any 1 gram of tissue. ICNIRP&#x27;s 2020 guidelines set 2 W/kg over 10 grams for head and torso. The two use different averaging masses, so they are not directly comparable.</p></details><details><summary>What did the 2024 WHO review find about phones and brain cancer?</summary><p>The WHO-commissioned review led by Ken Karipidis, published in Environment International in 2024, found moderate-certainty evidence that mobile phone use likely does not increase the risk of glioma, meningioma, acoustic neuroma and other head tumors. It screened over 5,000 studies and included 63, according to ARPANSA.</p></details></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/hobby/"><span>Previous · 15</span>Hams, SDRs and number stations</a><a class="next" href="/boston/"><span>Next · 17</span>The airwaves over Boston</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">24 of the guide's 339 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-278" value="278">
+<p>WHO: Radiation: 5G mobile networks and health - <a href="https://www.who.int/news-room/q-a-detail/radiation-5g-mobile-networks-and-health" rel="noopener" target="_blank">who.int</a>&#160;<a class="footnote-backref" href="#fnref-278" title="Jump back to footnote 278 in the text">↩</a><a class="footnote-backref" href="#fnref2-278" title="Jump back to footnote 278 in the text">↩</a></p>
+</li><li id="fn-279" value="279">
+<p>eCFR: 47 CFR 1.1310 Radiofrequency radiation exposure limits - <a href="https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-I/section-1.1310" rel="noopener" target="_blank">ecfr.gov</a>&#160;<a class="footnote-backref" href="#fnref-279" title="Jump back to footnote 279 in the text">↩</a><a class="footnote-backref" href="#fnref2-279" title="Jump back to footnote 279 in the text">↩</a><a class="footnote-backref" href="#fnref3-279" title="Jump back to footnote 279 in the text">↩</a><a class="footnote-backref" href="#fnref4-279" title="Jump back to footnote 279 in the text">↩</a><a class="footnote-backref" href="#fnref5-279" title="Jump back to footnote 279 in the text">↩</a><a class="footnote-backref" href="#fnref6-279" title="Jump back to footnote 279 in the text">↩</a></p>
+</li><li id="fn-280" value="280">
+<p>FCC: FCC Policy on Human Exposure to Radiofrequency Electromagnetic Fields - <a href="https://www.fcc.gov/general/fcc-policy-human-exposure" rel="noopener" target="_blank">fcc.gov</a>&#160;<a class="footnote-backref" href="#fnref-280" title="Jump back to footnote 280 in the text">↩</a><a class="footnote-backref" href="#fnref2-280" title="Jump back to footnote 280 in the text">↩</a></p>
+</li><li id="fn-281" value="281">
+<p>FCC: Radio Frequency Safety - <a href="https://www.fcc.gov/general/radio-frequency-safety-0" rel="noopener" target="_blank">fcc.gov</a>&#160;<a class="footnote-backref" href="#fnref-281" title="Jump back to footnote 281 in the text">↩</a></p>
+</li><li id="fn-282" value="282">
+<p>FDA: Scientific Evidence for Cell Phone Safety - <a href="https://www.fda.gov/radiation-emitting-products/cell-phones/scientific-evidence-cell-phone-safety" rel="noopener" target="_blank">fda.gov</a>&#160;<a class="footnote-backref" href="#fnref-282" title="Jump back to footnote 282 in the text">↩</a></p>
+</li><li id="fn-283" value="283">
+<p>FCC: RF Safety FAQ - <a href="https://www.fcc.gov/engineering-technology/electromagnetic-compatibility-division/radio-frequency-safety/faq/rf-safety" rel="noopener" target="_blank">fcc.gov</a>&#160;<a class="footnote-backref" href="#fnref-283" title="Jump back to footnote 283 in the text">↩</a><a class="footnote-backref" href="#fnref2-283" title="Jump back to footnote 283 in the text">↩</a><a class="footnote-backref" href="#fnref3-283" title="Jump back to footnote 283 in the text">↩</a></p>
+</li><li id="fn-284" value="284">
+<p>Broadband Breakfast: FCC Rejects Changes to Existing Radiofrequency Exposure Limits (Aug. 8, 2019) - <a href="https://broadbandbreakfast.com/fcc-rejects-changes-to-existing-radiofrequency-exposure-limits/" rel="noopener" target="_blank">broadbandbreakfast.com</a>&#160;<a class="footnote-backref" href="#fnref-284" title="Jump back to footnote 284 in the text">↩</a></p>
+</li><li id="fn-285" value="285">
+<p>FCC: Daily Digest, December 5, 2019 - <a href="https://www.fcc.gov/edocs/daily-digest/2019/12/05" rel="noopener" target="_blank">fcc.gov</a>&#160;<a class="footnote-backref" href="#fnref-285" title="Jump back to footnote 285 in the text">↩</a></p>
+</li><li id="fn-286" value="286">
+<p>FCC: FCC Maintains Current RF Exposure Safety Standards (FCC 19-126) - <a href="https://www.fcc.gov/document/fcc-maintains-current-rf-exposure-safety-standards" rel="noopener" target="_blank">fcc.gov</a>&#160;<a class="footnote-backref" href="#fnref-286" title="Jump back to footnote 286 in the text">↩</a></p>
+</li><li id="fn-287" value="287">
+<p>ICNIRP: RF EMF Guidelines 2020 published - <a href="https://www.icnirp.org/en/activities/news/news-article/rf-guidelines-2020-published.html" rel="noopener" target="_blank">icnirp.org</a>&#160;<a class="footnote-backref" href="#fnref-287" title="Jump back to footnote 287 in the text">↩</a><a class="footnote-backref" href="#fnref2-287" title="Jump back to footnote 287 in the text">↩</a><a class="footnote-backref" href="#fnref3-287" title="Jump back to footnote 287 in the text">↩</a></p>
+</li><li id="fn-288" value="288">
+<p>ICNIRP: Guidelines for limiting exposure to electromagnetic fields (100 kHz to 300 GHz), Sefton Council copy - <a href="https://modgov.sefton.gov.uk/documents/s125303/ICNIRPrfgdl2020.pdf" rel="noopener" target="_blank">modgov.sefton.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-288" title="Jump back to footnote 288 in the text">↩</a><a class="footnote-backref" href="#fnref2-288" title="Jump back to footnote 288 in the text">↩</a><a class="footnote-backref" href="#fnref3-288" title="Jump back to footnote 288 in the text">↩</a><a class="footnote-backref" href="#fnref4-288" title="Jump back to footnote 288 in the text">↩</a></p>
+</li><li id="fn-289" value="289">
+<p>Health Canada: Limits of Human Exposure to Radiofrequency Electromagnetic Energy in the Frequency Range from 3 kHz to 300 GHz (Safety Code 6) - <a href="https://www.canada.ca/en/health-canada/services/publications/health-risks-safety/limits-human-exposure-radiofrequency-electromagnetic-energy-range-3-300.html" rel="noopener" target="_blank">canada.ca</a>&#160;<a class="footnote-backref" href="#fnref-289" title="Jump back to footnote 289 in the text">↩</a></p>
+</li><li id="fn-290" value="290">
+<p>Swiss Federal Office of Communications (OFCOM/BAKOM): Frequently asked questions on 5G - <a href="https://www.bakom.admin.ch/en/frequently-asked-questions-5g" rel="noopener" target="_blank">bakom.admin.ch</a>&#160;<a class="footnote-backref" href="#fnref-290" title="Jump back to footnote 290 in the text">↩</a></p>
+</li><li id="fn-291" value="291">
+<p>ARPA Molise: Report CEM 2025 - <a href="https://www.arpamolise.it/WP/wp-content/uploads/2026/01/Report_cem_2025_-_Definitivo.pdf" rel="noopener" target="_blank">arpamolise.it</a>&#160;<a class="footnote-backref" href="#fnref-291" title="Jump back to footnote 291 in the text">↩</a></p>
+</li><li id="fn-292" value="292">
+<p>IARC: Press Release No. 208, IARC classifies radiofrequency electromagnetic fields as possibly carcinogenic to humans - <a href="https://www.iarc.who.int/wp-content/uploads/2018/07/pr208_E.pdf" rel="noopener" target="_blank">iarc.who.int</a>&#160;<a class="footnote-backref" href="#fnref-292" title="Jump back to footnote 292 in the text">↩</a><a class="footnote-backref" href="#fnref2-292" title="Jump back to footnote 292 in the text">↩</a><a class="footnote-backref" href="#fnref3-292" title="Jump back to footnote 292 in the text">↩</a></p>
+</li><li id="fn-293" value="293">
+<p>ARPANSA: WHO review finds no link between mobile phone use and brain cancer - <a href="https://www.arpansa.gov.au/who-review-finds-no-link-between-mobile-phone-use-and-brain-cancer" rel="noopener" target="_blank">arpansa.gov.au</a>&#160;<a class="footnote-backref" href="#fnref-293" title="Jump back to footnote 293 in the text">↩</a><a class="footnote-backref" href="#fnref2-293" title="Jump back to footnote 293 in the text">↩</a><a class="footnote-backref" href="#fnref3-293" title="Jump back to footnote 293 in the text">↩</a><a class="footnote-backref" href="#fnref4-293" title="Jump back to footnote 293 in the text">↩</a><a class="footnote-backref" href="#fnref5-293" title="Jump back to footnote 293 in the text">↩</a></p>
+</li><li id="fn-294" value="294">
+<p>EMF-Portal (RWTH Aachen University): IARC advised to revisit radiofrequency cancer risk - <a href="https://www.emf-portal.org/en/news/2601" rel="noopener" target="_blank">emf-portal.org</a>&#160;<a class="footnote-backref" href="#fnref-294" title="Jump back to footnote 294 in the text">↩</a></p>
+</li><li id="fn-295" value="295">
+<p>IARC: IARC Monographs Meeting Volume 144 is announced - <a href="https://www.iarc.who.int/news-events/iarc-monographs-meetings-volume-144-is-announced/" rel="noopener" target="_blank">iarc.who.int</a>&#160;<a class="footnote-backref" href="#fnref-295" title="Jump back to footnote 295 in the text">↩</a></p>
+</li><li id="fn-296" value="296">
+<p>Microwave News: IARC Will Soon Reassess RF Cancer Risk - Or Maybe Not - <a href="https://microwavenews.com/news-center/iarc-2nd-rf-monograph-meeting" rel="noopener" target="_blank">microwavenews.com</a>&#160;<a class="footnote-backref" href="#fnref-296" title="Jump back to footnote 296 in the text">↩</a></p>
+</li><li id="fn-297" value="297">
+<p>Environment International (BfS repository copy): Karipidis et al. 2024, The effect of exposure to radiofrequency fields on cancer risk - <a href="https://doris.bfs.de/jspui/bitstream/urn:nbn:de:0221-2025070452870/2/SL_Karipidis_2024_EffectOfExposure_Eng.pdf" rel="noopener" target="_blank">doris.bfs.de</a>&#160;<a class="footnote-backref" href="#fnref-297" title="Jump back to footnote 297 in the text">↩</a><a class="footnote-backref" href="#fnref2-297" title="Jump back to footnote 297 in the text">↩</a><a class="footnote-backref" href="#fnref3-297" title="Jump back to footnote 297 in the text">↩</a></p>
+</li><li id="fn-298" value="298">
+<p>Microwave News: Old Wine in New Bottles - <a href="https://www.microwavenews.com/news-center/old-wine-new-bottles" rel="noopener" target="_blank">microwavenews.com</a>&#160;<a class="footnote-backref" href="#fnref-298" title="Jump back to footnote 298 in the text">↩</a><a class="footnote-backref" href="#fnref2-298" title="Jump back to footnote 298 in the text">↩</a></p>
+</li><li id="fn-299" value="299">
+<p>Environment International (via Universidade NOVA de Lisboa repository): Response to the letter from Di Ciaula et al (2025) - <a href="https://run.unl.pt/bitstream/10362/186097/1/Karipidis_2025_Environ_International_196_109276.pdf" rel="noopener" target="_blank">run.unl.pt</a>&#160;<a class="footnote-backref" href="#fnref-299" title="Jump back to footnote 299 in the text">↩</a></p>
+</li><li id="fn-300" value="300">
+<p>WHO: Radiation and health - Radiofrequency fields - <a href="https://www.who.int/teams/environment-climate-change-and-health/radiation-and-health/non-ionizing/emf/radiofrequency-fields" rel="noopener" target="_blank">who.int</a>&#160;<a class="footnote-backref" href="#fnref-300" title="Jump back to footnote 300 in the text">↩</a></p>
+</li><li id="fn-301" value="301">
+<p>Cornell LII: 47 U.S. Code 332 - Mobile services - <a href="https://www.law.cornell.edu/uscode/text/47/332" rel="noopener" target="_blank">law.cornell.edu</a>&#160;<a class="footnote-backref" href="#fnref-301" title="Jump back to footnote 301 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and antenna on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems these signals run</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/"><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/" class=on><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("aw-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Night sky";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("aw-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Basics: "var(--u-wht)", Rules: "var(--u-pnk)", Broadcast: "var(--u-org)", Cellular: "var(--u-blu)", "Public safety": "var(--u-red)",
+      "Aviation and ships": "var(--u-yel)", "Satellites and timing": "var(--u-pur)", "Unlicensed and IoT": "var(--u-grn)", Events: "var(--u-pnk)", Hobby: "var(--u-org)", Health: "var(--u-wht)", Boston: "var(--u-blu)", Towers: "var(--u-org)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(Basics|Rules|Aviation and ships|Events|Health)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* spectrum ruler */
+  (function () {
+    var data = readJSON("sp-data"), info = $("sp-info"); if (!info || !data.length) return;
+    var onAll = !!document.getElementById("sec-basics");
+    function hz(f) { var u = [[1e9, "GHz"], [1e6, "MHz"], [1e3, "kHz"]]; for (var i = 0; i < u.length; i++) if (f >= u[i][0]) return (Math.round(f / u[i][0] * 1000) / 1000) + " " + u[i][1]; return f + " Hz"; }
+    function show(i, el) {
+      var d = data[i]; if (!d) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".sp-bar.on"), function (x) { x.classList.remove("on"); }); el.classList.add("on");
+      info.innerHTML = "<b>" + esc(d.name) + "</b> <span class=\"count\">" + esc(hz(d.lo)) + " - " + esc(hz(d.hi)) + (d.where ? " · " + esc(d.where) : "") + "</span><p>" + esc(d.use) + "</p><p>" +
+        (d.section ? '<a href="' + (onAll ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">Read the section</a>' : "") + (d.src ? ' · <a href="' + esc(d.src) + '" target="_blank" rel="noopener">source</a>' : "") + "</p>";
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".sp-bar"), function (el) {
+      var i = +el.getAttribute("data-i");
+      el.addEventListener("click", function () { show(i, el); });
+      el.addEventListener("focus", function () { show(i, el); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(i, el); } });
+    });
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

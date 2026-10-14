@@ -1,0 +1,1055 @@
+[
+ {
+  "lo": 118000000.0,
+  "hi": 121400000.0,
+  "name": "Airband ATC voice",
+  "use": "Air traffic control and related services (25 kHz channels)",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 121500000.0,
+  "hi": 121500000.0,
+  "name": "Aeronautical emergency",
+  "use": "Emergency and distress",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 123600000.0,
+  "hi": 128800000.0,
+  "name": "Airband ATC voice",
+  "use": "Air traffic control and related services",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 129125000.0,
+  "hi": 129125000.0,
+  "name": "VHF ACARS",
+  "use": "Airline datalink",
+  "where": "US / global",
+  "section": "aviation",
+  "key": "avn-airframes-overview"
+ },
+ {
+  "lo": 131550000.0,
+  "hi": 131550000.0,
+  "name": "VHF ACARS",
+  "use": "Airline datalink (DLT in FCC table)",
+  "where": "US / global",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 132025000.0,
+  "hi": 135975000.0,
+  "name": "Airband ATC voice",
+  "use": "Air traffic control and related services",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 136700000.0,
+  "hi": 136975000.0,
+  "name": "VDL Mode 2",
+  "use": "Digital aircraft datalink; 136.975 MHz is the common signalling channel",
+  "where": "International",
+  "section": "aviation",
+  "key": "avn-wiki-vdl"
+ },
+ {
+  "lo": 156450000.0,
+  "hi": 156450000.0,
+  "name": "Marine channel 9",
+  "use": "Boater calling",
+  "where": "US",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 156525000.0,
+  "hi": 156525000.0,
+  "name": "Marine channel 70",
+  "use": "Digital Selective Calling, no voice",
+  "where": "US",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 156650000.0,
+  "hi": 156650000.0,
+  "name": "Marine channel 13",
+  "use": "Bridge-to-bridge navigation safety",
+  "where": "US",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 156800000.0,
+  "hi": 156800000.0,
+  "name": "Marine channel 16",
+  "use": "International distress, safety and calling",
+  "where": "US; international",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 157100000.0,
+  "hi": 157100000.0,
+  "name": "Marine channel 22A",
+  "use": "Coast Guard liaison and safety broadcasts",
+  "where": "US",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 161975000.0,
+  "hi": 161975000.0,
+  "name": "AIS 1",
+  "use": "Ship Automatic Identification System",
+  "where": "US; international",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 162025000.0,
+  "hi": 162025000.0,
+  "name": "AIS 2",
+  "use": "Ship Automatic Identification System",
+  "where": "US; international",
+  "section": "ships",
+  "key": "avn-navcen-vhf"
+ },
+ {
+  "lo": 978000000.0,
+  "hi": 978000000.0,
+  "name": "UAT",
+  "use": "US-only ADS-B below 18,000 ft, with FIS-B and TIS-B",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 1030000000.0,
+  "hi": 1030000000.0,
+  "name": "SSR interrogation",
+  "use": "Ground radar interrogates transponders",
+  "where": "US",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 1090000000.0,
+  "hi": 1090000000.0,
+  "name": "1090ES / Mode S reply",
+  "use": "Transponder replies and ADS-B Extended Squitter",
+  "where": "US; worldwide",
+  "section": "aviation",
+  "key": "avn-cfr-87-173"
+ },
+ {
+  "lo": 3000.0,
+  "hi": 30000.0,
+  "name": "VLF (ITU band 4)",
+  "use": "Myriametric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 30000.0,
+  "hi": 300000.0,
+  "name": "LF (ITU band 5)",
+  "use": "Kilometric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 300000.0,
+  "hi": 3000000.0,
+  "name": "MF (ITU band 6)",
+  "use": "Hectometric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 3000000.0,
+  "hi": 30000000.0,
+  "name": "HF (ITU band 7)",
+  "use": "Decametric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 30000000.0,
+  "hi": 300000000.0,
+  "name": "VHF (ITU band 8)",
+  "use": "Metric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 300000000.0,
+  "hi": 3000000000.0,
+  "name": "UHF (ITU band 9)",
+  "use": "Decimetric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 3000000000.0,
+  "hi": 30000000000.0,
+  "name": "SHF (ITU band 10)",
+  "use": "Centimetric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 30000000000.0,
+  "hi": 300000000000.0,
+  "name": "EHF (ITU band 11)",
+  "use": "Millimetric waves; ITU band name",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 300000000000.0,
+  "hi": 3000000000000.0,
+  "name": "Band 12 (decimillimetric)",
+  "use": "ITU band 12, no symbol listed",
+  "where": "ITU / US (47 CFR 2.101)",
+  "section": "basics",
+  "key": "bas-cfr-2-101"
+ },
+ {
+  "lo": 902000000.0,
+  "hi": 928000000.0,
+  "name": "902-928 MHz (Part 15.247)",
+  "use": "Unlicensed frequency-hopping and digitally modulated systems, up to 1 W",
+  "where": "US (FCC Part 15)",
+  "section": "rules",
+  "key": "bas-cfr-15-247"
+ },
+ {
+  "lo": 2400000000.0,
+  "hi": 2483500000.0,
+  "name": "2.4 GHz (Part 15.247)",
+  "use": "Unlicensed hopping and digital systems such as Wi-Fi and Bluetooth, up to 1 W",
+  "where": "US (FCC Part 15)",
+  "section": "rules",
+  "key": "bas-cfr-15-247"
+ },
+ {
+  "lo": 5725000000.0,
+  "hi": 5850000000.0,
+  "name": "5.8 GHz (Part 15.247)",
+  "use": "Unlicensed hopping and digital systems, up to 1 W",
+  "where": "US (FCC Part 15)",
+  "section": "rules",
+  "key": "bas-cfr-15-247"
+ },
+ {
+  "lo": 3700000000.0,
+  "hi": 3980000000.0,
+  "name": "C-band (Auction 107)",
+  "use": "Licensed 5G mobile; auctioned 2021 for over $80.9B gross",
+  "where": "US (FCC)",
+  "section": "rules",
+  "key": "bas-fierce-cband"
+ },
+ {
+  "lo": 3980000000.0,
+  "hi": 4200000000.0,
+  "name": "Upper C-band",
+  "use": "At least 100 MHz to be auctioned by July 2027 under P.L. 119-21",
+  "where": "US (FCC)",
+  "section": "rules",
+  "key": "bas-wiley-obbba"
+ },
+ {
+  "lo": 3100000000.0,
+  "hi": 3450000000.0,
+  "name": "3.1-3.45 GHz",
+  "use": "Excluded from the 2025 auction pipeline",
+  "where": "US",
+  "section": "rules",
+  "key": "bas-wiley-obbba"
+ },
+ {
+  "lo": 5925000000.0,
+  "hi": 7125000000.0,
+  "name": "6 GHz unlicensed",
+  "use": "Wi-Fi 6E/7: low-power indoor across 1,200 MHz; standard power in 850 MHz with AFC",
+  "where": "US (FCC, 2020)",
+  "section": "rules",
+  "key": "bas-telecomtv-6ghz"
+ },
+ {
+  "lo": 7400000000.0,
+  "hi": 8400000000.0,
+  "name": "7.4-8.4 GHz",
+  "use": "Excluded from the 2025 auction pipeline",
+  "where": "US",
+  "section": "rules",
+  "key": "bas-wiley-obbba"
+ },
+ {
+  "lo": 1030000.0,
+  "hi": 1030000.0,
+  "name": "WBZ 1030 AM",
+  "use": "Class A clear-channel AM broadcast, 50 kW from Hull",
+  "where": "US (FCC)",
+  "section": "boston",
+  "key": "bos-wiki-wbz-am"
+ },
+ {
+  "lo": 486000.0,
+  "hi": 486000.0,
+  "name": "WA1ZMS Fessenden commemoration (486 kHz)",
+  "use": "Experimental (Part 5) commemorative transmission each Christmas Eve",
+  "where": "US (FCC experimental license WI2XLQ)",
+  "section": "boston",
+  "key": "bos-arrl-wa1zms"
+ },
+ {
+  "lo": 156762500.0,
+  "hi": 156787500.0,
+  "name": "AIS 3 (156.775 MHz)",
+  "use": "AIS-only ship data channel, 25 kHz",
+  "where": "US (47 CFR 80.393)",
+  "section": "boston",
+  "key": "bos-cfr-80-393"
+ },
+ {
+  "lo": 156812500.0,
+  "hi": 156837500.0,
+  "name": "AIS 4 (156.825 MHz)",
+  "use": "AIS-only ship data channel, 25 kHz",
+  "where": "US (47 CFR 80.393)",
+  "section": "boston",
+  "key": "bos-cfr-80-393"
+ },
+ {
+  "lo": 161962500.0,
+  "hi": 161987500.0,
+  "name": "AIS 1 (161.975 MHz)",
+  "use": "Ship position and identity broadcasts, 25 kHz",
+  "where": "US (47 CFR 80.393)",
+  "section": "boston",
+  "key": "bos-cfr-80-393"
+ },
+ {
+  "lo": 162012500.0,
+  "hi": 162037500.0,
+  "name": "AIS 2 (162.025 MHz)",
+  "use": "Ship position and identity broadcasts, 25 kHz",
+  "where": "US (47 CFR 80.393)",
+  "section": "boston",
+  "key": "bos-cfr-80-393"
+ },
+ {
+  "lo": 100700000.0,
+  "hi": 100700000.0,
+  "name": "100.7 MHz FM",
+  "use": "FM broadcast from the Prudential master antenna (as of 2004)",
+  "where": "US (FCC)",
+  "section": "boston",
+  "key": "bos-fybush-pru-2004"
+ },
+ {
+  "lo": 104100000.0,
+  "hi": 104100000.0,
+  "name": "104.1 MHz FM",
+  "use": "FM broadcast from the Prudential master antenna (as of 2004)",
+  "where": "US (FCC)",
+  "section": "boston",
+  "key": "bos-fybush-pru-2004"
+ },
+ {
+  "lo": 106700000.0,
+  "hi": 106700000.0,
+  "name": "106.7 MHz FM (WMJX)",
+  "use": "FM broadcast from the Prudential master antenna (as of 2004)",
+  "where": "US (FCC)",
+  "section": "boston",
+  "key": "bos-fybush-pru-2004"
+ },
+ {
+  "lo": 107900000.0,
+  "hi": 107900000.0,
+  "name": "107.9 MHz FM",
+  "use": "FM broadcast from the Prudential master antenna (as of 2004)",
+  "where": "US (FCC)",
+  "section": "boston",
+  "key": "bos-fybush-pru-2004"
+ },
+ {
+  "lo": 535000.0,
+  "hi": 1605000.0,
+  "name": "AM broadcast",
+  "use": "AM radio stations, assigned 540-1600 kHz at 10 kHz spacing",
+  "where": "US",
+  "section": "broadcast",
+  "key": "brc-hyperphysics-radio"
+ },
+ {
+  "lo": 88000000.0,
+  "hi": 108000000.0,
+  "name": "FM broadcast",
+  "use": "FM radio stations, 200 kHz channels from 88.1 MHz",
+  "where": "US",
+  "section": "broadcast",
+  "key": "brc-hyperphysics-radio"
+ },
+ {
+  "lo": 703000000.0,
+  "hi": 788000000.0,
+  "name": "700 MHz mobile (2021 award)",
+  "use": "4G/5G mobile (EE, Three, O2)",
+  "where": "UK",
+  "section": "cellular",
+  "key": "brc-ofcom-auction-results"
+ },
+ {
+  "lo": 3450000000.0,
+  "hi": 3980000000.0,
+  "name": "US mid-band 5G swath",
+  "use": "5G mid band, including CBRS and C-band",
+  "where": "US",
+  "section": "cellular",
+  "key": "brc-fcc-pai-2020"
+ },
+ {
+  "lo": 3680000000.0,
+  "hi": 3800000000.0,
+  "name": "3.6-3.8 GHz award (2021 assigned portion)",
+  "use": "5G mobile (EE, Vodafone, O2)",
+  "where": "UK",
+  "section": "cellular",
+  "key": "brc-ofcom-auction-results"
+ },
+ {
+  "lo": 4625000.0,
+  "hi": 4625000.0,
+  "name": "UVB-76 \"The Buzzer\"",
+  "use": "Russian shortwave station, purpose unconfirmed",
+  "where": "Russia (received widely)",
+  "section": "hobby",
+  "key": "evh-wiki-uvb76"
+ },
+ {
+  "lo": 54000000.0,
+  "hi": 72000000.0,
+  "name": "VHF TV channels 2-4",
+  "use": "TV broadcast; secondary wireless mics at 50 mW EIRP",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 76000000.0,
+  "hi": 88000000.0,
+  "name": "VHF TV channels 5-6",
+  "use": "TV broadcast; secondary wireless mics at 50 mW EIRP",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 169000000.0,
+  "hi": 172000000.0,
+  "name": "169-172 MHz mics",
+  "use": "Licensed wireless mics outside the TV bands",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 174000000.0,
+  "hi": 216000000.0,
+  "name": "VHF TV channels 7-13",
+  "use": "TV broadcast; secondary wireless mics at 50 mW EIRP",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 470000000.0,
+  "hi": 608000000.0,
+  "name": "UHF TV channels 14-36",
+  "use": "TV broadcast; main wireless mic and IEM band (250 mW licensed, 50 mW unlicensed)",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 520000000.0,
+  "hi": 694000000.0,
+  "name": "Australian mic class licence",
+  "use": "Wireless mics up to 100 mW EIRP on unused TV channels",
+  "where": "Australia",
+  "section": "show-wireless",
+  "key": "evh-wiki-mic-licensing"
+ },
+ {
+  "lo": 606000000.0,
+  "hi": 614000000.0,
+  "name": "Channel 38 PMSE",
+  "use": "Shared-licence wireless mics",
+  "where": "UK",
+  "section": "show-wireless",
+  "key": "evh-wiki-mic-licensing"
+ },
+ {
+  "lo": 614000000.0,
+  "hi": 616000000.0,
+  "name": "600 MHz guard band (part)",
+  "use": "Unlicensed wireless mics, 20 mW EIRP",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 617000000.0,
+  "hi": 652000000.0,
+  "name": "600 MHz mobile (617-652 MHz)",
+  "use": "Mobile broadband; wireless mics barred since July 13, 2020",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-600-transition-faq"
+ },
+ {
+  "lo": 653000000.0,
+  "hi": 657000000.0,
+  "name": "600 MHz duplex gap (licensed)",
+  "use": "Licensed wireless mics, 20 mW EIRP",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 657000000.0,
+  "hi": 663000000.0,
+  "name": "600 MHz duplex gap (unlicensed)",
+  "use": "Unlicensed wireless mics",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 663000000.0,
+  "hi": 698000000.0,
+  "name": "600 MHz mobile (663-698 MHz)",
+  "use": "Mobile broadband; wireless mics barred since July 13, 2020",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-600-transition-faq"
+ },
+ {
+  "lo": 698000000.0,
+  "hi": 806000000.0,
+  "name": "700 MHz band",
+  "use": "Wireless mics barred since 2010 (FCC 10-16)",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 941500000.0,
+  "hi": 959850000.0,
+  "name": "941.5-959.85 MHz",
+  "use": "Licensed LPAS wireless mics, 1 W",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 1435000000.0,
+  "hi": 1525000000.0,
+  "name": "1435-1525 MHz",
+  "use": "Licensed wireless mics, 250 mW",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-oet-mic-rules"
+ },
+ {
+  "lo": 1920000000.0,
+  "hi": 1930000000.0,
+  "name": "1920-1930 MHz",
+  "use": "Unlicensed wireless mics",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 6875000000.0,
+  "hi": 7125000000.0,
+  "name": "6875-7125 MHz",
+  "use": "Licensed wireless mics outside the TV bands",
+  "where": "US",
+  "section": "show-wireless",
+  "key": "evh-fcc-wireless-mic"
+ },
+ {
+  "lo": 24000000.0,
+  "hi": 1766000000.0,
+  "name": "RTL-SDR typical range",
+  "use": "Receive-only hobby SDR dongles with R820T-family tuners",
+  "where": "Worldwide (receive)",
+  "section": "hobby",
+  "key": "evh-rtlsdr-about"
+ },
+ {
+  "lo": 100000.0,
+  "hi": 6000000000.0,
+  "name": "SAR-based exposure limits",
+  "use": "Range where FCC SAR limits apply (1.6 W/kg over 1 g)",
+  "where": "US",
+  "section": "health",
+  "key": "evh-ecfr-1310"
+ },
+ {
+  "lo": 100000.0,
+  "hi": 300000000000.0,
+  "name": "ICNIRP 2020 guidelines",
+  "use": "Range covered by ICNIRP RF exposure guidelines, including 5G",
+  "where": "International",
+  "section": "health",
+  "key": "evh-icnirp-2020-news"
+ },
+ {
+  "lo": 13553000.0,
+  "hi": 13567000.0,
+  "name": "13.56 MHz ISM",
+  "use": "NFC, contactless payment, transit cards (ISO 14443)",
+  "where": "Worldwide (ITU)",
+  "section": "everyday",
+  "key": "iot-wiki-ism"
+ },
+ {
+  "lo": 315000000.0,
+  "hi": 315000000.0,
+  "name": "TPMS 315 MHz",
+  "use": "Tire pressure sensors",
+  "where": "North America",
+  "section": "everyday",
+  "key": "iot-sigidwiki-tpms"
+ },
+ {
+  "lo": 433050000.0,
+  "hi": 434790000.0,
+  "name": "433 MHz ISM",
+  "use": "European TPMS (434 MHz), LoRaWAN EU433, short-range devices",
+  "where": "ITU Region 1",
+  "section": "everyday",
+  "key": "iot-wiki-ism"
+ },
+ {
+  "lo": 863000000.0,
+  "hi": 870000000.0,
+  "name": "EU868",
+  "use": "LoRaWAN EU863-870",
+  "where": "EU",
+  "section": "unlicensed",
+  "key": "iot-ttn-regional"
+ },
+ {
+  "lo": 868000000.0,
+  "hi": 868600000.0,
+  "name": "Zigbee 868 MHz",
+  "use": "Zigbee sub-GHz",
+  "where": "Europe",
+  "section": "unlicensed",
+  "key": "iot-wiki-zigbee"
+ },
+ {
+  "lo": 868420000.0,
+  "hi": 868420000.0,
+  "name": "Z-Wave EU",
+  "use": "Z-Wave smart home",
+  "where": "Europe",
+  "section": "unlicensed",
+  "key": "iot-techtarget-zwave"
+ },
+ {
+  "lo": 908420000.0,
+  "hi": 908420000.0,
+  "name": "Z-Wave US",
+  "use": "Z-Wave smart home",
+  "where": "US",
+  "section": "unlicensed",
+  "key": "iot-techtarget-zwave"
+ },
+ {
+  "lo": 915000000.0,
+  "hi": 915000000.0,
+  "name": "E-ZPass",
+  "use": "Toll transponders (active RFID)",
+  "where": "US (20 states)",
+  "section": "everyday",
+  "key": "iot-wiki-ezpass"
+ },
+ {
+  "lo": 2400000000.0,
+  "hi": 2500000000.0,
+  "name": "2.4 GHz ISM",
+  "use": "Wi-Fi, Bluetooth, BLE, Zigbee, Thread, microwave ovens",
+  "where": "Worldwide (ITU)",
+  "section": "unlicensed",
+  "key": "iot-wiki-ism"
+ },
+ {
+  "lo": 2450000000.0,
+  "hi": 2450000000.0,
+  "name": "Microwave oven",
+  "use": "Home microwave ovens, about 1,000 W",
+  "where": "Worldwide",
+  "section": "unlicensed",
+  "key": "iot-designnews-microwave"
+ },
+ {
+  "lo": 5725000000.0,
+  "hi": 5875000000.0,
+  "name": "5.8 GHz ISM",
+  "use": "Upper 5 GHz Wi-Fi channels and other unlicensed use",
+  "where": "Worldwide (ITU)",
+  "section": "unlicensed",
+  "key": "iot-wiki-ism"
+ },
+ {
+  "lo": 5945000000.0,
+  "hi": 6425000000.0,
+  "name": "Lower 6 GHz (EU)",
+  "use": "Wi-Fi 6E and Wi-Fi 7",
+  "where": "EU (Decision 2021/1067)",
+  "section": "unlicensed",
+  "key": "iot-wfa-6e-newsletter"
+ },
+ {
+  "lo": 5925000000.0,
+  "hi": 6425000000.0,
+  "name": "Lower 6 GHz (UK)",
+  "use": "Wi-Fi",
+  "where": "UK (Ofcom)",
+  "section": "unlicensed",
+  "key": "iot-ofcom-6ghz-2026"
+ },
+ {
+  "lo": 6425000000.0,
+  "hi": 7125000000.0,
+  "name": "Upper 6 GHz (UK)",
+  "use": "AFC-controlled higher-power Wi-Fi (decided July 2026)",
+  "where": "UK (Ofcom)",
+  "section": "unlicensed",
+  "key": "iot-ofcom-6ghz-2026"
+ },
+ {
+  "lo": 160215000.0,
+  "hi": 161565000.0,
+  "name": "Railroad VHF band",
+  "use": "US railroad operations and dispatch radio, 181 channels on a 7.5 kHz grid",
+  "where": "US",
+  "section": "public-safety",
+  "key": "pub-ntia-railroad"
+ },
+ {
+  "lo": 162400000.0,
+  "hi": 162550000.0,
+  "name": "NOAA Weather Radio",
+  "use": "24-hour NWS weather and hazard broadcasts on seven channels; Boston area on 162.475 MHz",
+  "where": "US",
+  "section": "public-safety",
+  "key": "pub-nws-nwr-brochure"
+ },
+ {
+  "lo": 470000000.0,
+  "hi": 512000000.0,
+  "name": "T-Band",
+  "use": "Public safety land mobile radio in some large metro areas, including Greater Boston",
+  "where": "US",
+  "section": "public-safety",
+  "key": "pub-khlaw-tband-repeal"
+ },
+ {
+  "lo": 470000000.0,
+  "hi": 476000000.0,
+  "name": "T-Band channel 14 (BAPERN)",
+  "use": "Boston Area Police Emergency Radio Network",
+  "where": "US (Greater Boston)",
+  "section": "public-safety",
+  "key": "pub-cisa-tband-boston"
+ },
+ {
+  "lo": 482000000.0,
+  "hi": 488000000.0,
+  "name": "T-Band channel 16",
+  "use": "Greater Boston fire agencies",
+  "where": "US (Greater Boston)",
+  "section": "public-safety",
+  "key": "pub-cisa-tband-boston"
+ },
+ {
+  "lo": 758000000.0,
+  "hi": 768000000.0,
+  "name": "Band 14 downlink",
+  "use": "FirstNet first-responder broadband, tower to device",
+  "where": "US",
+  "section": "public-safety",
+  "key": "pub-crs-firstnet"
+ },
+ {
+  "lo": 788000000.0,
+  "hi": 798000000.0,
+  "name": "Band 14 uplink",
+  "use": "FirstNet first-responder broadband, device to tower",
+  "where": "US",
+  "section": "public-safety",
+  "key": "pub-crs-firstnet"
+ },
+ {
+  "lo": 40000.0,
+  "hi": 40000.0,
+  "name": "JJY (Tamura-shi)",
+  "use": "Time signal for radio-controlled clocks",
+  "where": "Japan (NICT)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 60000.0,
+  "hi": 60000.0,
+  "name": "WWVB",
+  "use": "Time code for radio-controlled clocks, Fort Collins CO",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 68500.0,
+  "hi": 68500.0,
+  "name": "BPC",
+  "use": "Time signal, Shangqiu",
+  "where": "China (NTSC)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 77500.0,
+  "hi": 77500.0,
+  "name": "DCF77",
+  "use": "Time signal, Mainflingen",
+  "where": "Germany (PTB)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 2500000.0,
+  "hi": 2500000.0,
+  "name": "WWV / WWVH",
+  "use": "Shortwave voice and tick time signal",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 3330000.0,
+  "hi": 3330000.0,
+  "name": "CHU",
+  "use": "Shortwave time signal, Ottawa",
+  "where": "Canada (NRC)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 5000000.0,
+  "hi": 5000000.0,
+  "name": "WWV / WWVH",
+  "use": "Shortwave time signal",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 7850000.0,
+  "hi": 7850000.0,
+  "name": "CHU",
+  "use": "Shortwave time signal, Ottawa",
+  "where": "Canada (NRC)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 10000000.0,
+  "hi": 10000000.0,
+  "name": "WWV / WWVH",
+  "use": "Shortwave time signal",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 14670000.0,
+  "hi": 14670000.0,
+  "name": "CHU",
+  "use": "Shortwave time signal, Ottawa",
+  "where": "Canada (NRC)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 15000000.0,
+  "hi": 15000000.0,
+  "name": "WWV / WWVH",
+  "use": "Shortwave time signal",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 20000000.0,
+  "hi": 20000000.0,
+  "name": "WWV",
+  "use": "Shortwave time signal (Fort Collins only)",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-nist-time-faq"
+ },
+ {
+  "lo": 25000000.0,
+  "hi": 25000000.0,
+  "name": "WWV",
+  "use": "Shortwave time signal (listed by BIPM)",
+  "where": "US (NIST)",
+  "section": "gps",
+  "key": "sat-bipm-time-signals"
+ },
+ {
+  "lo": 145800000.0,
+  "hi": 145800000.0,
+  "name": "ISS amateur downlink (ARISS SSTV)",
+  "use": "SSTV images from the ISS, FM",
+  "where": "Worldwide (amateur)",
+  "section": "satellites",
+  "key": "sat-amsatuk-sstv-2023"
+ },
+ {
+  "lo": 1176450000.0,
+  "hi": 1176450000.0,
+  "name": "GPS L5",
+  "use": "Safety-of-life civil GPS signal",
+  "where": "Worldwide (US-operated)",
+  "section": "gps",
+  "key": "sat-gps-l2c-factsheet"
+ },
+ {
+  "lo": 1227600000.0,
+  "hi": 1227600000.0,
+  "name": "GPS L2 (L2C)",
+  "use": "Second civil GPS frequency",
+  "where": "Worldwide (US-operated)",
+  "section": "gps",
+  "key": "sat-gps-l2c-factsheet"
+ },
+ {
+  "lo": 1575420000.0,
+  "hi": 1575420000.0,
+  "name": "GPS L1 (C/A, L1C)",
+  "use": "Main civil GPS signal used by phones",
+  "where": "Worldwide (US-operated)",
+  "section": "gps",
+  "key": "sat-gps-l2c-factsheet"
+ },
+ {
+  "lo": 14500000000.0,
+  "hi": 14800000000.0,
+  "name": "Starlink Gen2 uplink (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 17300000000.0,
+  "hi": 17800000000.0,
+  "name": "Starlink Gen2 uplink (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 18600000000.0,
+  "hi": 18800000000.0,
+  "name": "Starlink Gen2 downlink (added 2026)",
+  "use": "Space-to-Earth satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 51400000000.0,
+  "hi": 52400000000.0,
+  "name": "Starlink Gen2 uplink, V-band (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 92000000000.0,
+  "hi": 94000000000.0,
+  "name": "Starlink Gen2 uplink, W-band (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 94100000000.0,
+  "hi": 95000000000.0,
+  "name": "Starlink Gen2 uplink, W-band (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 95000000000.0,
+  "hi": 100000000000.0,
+  "name": "Starlink Gen2 uplink, W-band (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 102000000000.0,
+  "hi": 109500000000.0,
+  "name": "Starlink Gen2 uplink (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ },
+ {
+  "lo": 111800000000.0,
+  "hi": 114250000000.0,
+  "name": "Starlink Gen2 uplink (added 2026)",
+  "use": "Earth-to-space satellite broadband",
+  "where": "US (FCC)",
+  "section": "satellites",
+  "key": "sat-bbb-starlink-2026"
+ }
+]

@@ -1,0 +1,1346 @@
+[
+ {
+  "term": "1090ES",
+  "aka": "1090 MHz Extended Squitter",
+  "category": "Aviation and ships",
+  "definition": "ADS-B sent on 1090 MHz by a Mode S transponder; required in US Class A airspace and the standard outside the US.",
+  "section": "aviation",
+  "source_url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-C/section-91.225"
+ },
+ {
+  "term": "3G sunset",
+  "aka": "3G shutdown",
+  "category": "Cellular",
+  "definition": "A carrier switching off its 3G network; AT&T, T-Mobile and Verizon did so between February 2022 and January 2023.",
+  "section": "cellular",
+  "source_url": "https://www.lightreading.com/4g3gwifi/3g-shutdowns-in-2022-what-we-know-so-far/d/d-id/775109"
+ },
+ {
+  "term": "ACARS",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "Text messaging between aircraft and airlines, created by ARINC in 1978, carried on VHF, HF and satellite links.",
+  "section": "aviation",
+  "source_url": "https://docs.airframes.io/docs/technology/overview"
+ },
+ {
+  "term": "ADS-B",
+  "aka": "",
+  "category": "Hobby",
+  "definition": "A system in which aircraft broadcast their own position; a common thing to receive with an RTL-SDR.",
+  "section": "hobby",
+  "source_url": "https://www.rtl-sdr.com/about-rtl-sdr/"
+ },
+ {
+  "term": "ADS-B In",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "Cockpit equipment that receives ADS-B and related traffic (TIS-B) and weather (FIS-B) services; not required in the US.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq"
+ },
+ {
+  "term": "AFC",
+  "aka": "Automated Frequency Coordination",
+  "category": "Unlicensed and IoT",
+  "definition": "A database service that tells a higher-power 6 GHz Wi-Fi access point which channels it can use without harming licensed microwave links.",
+  "section": "unlicensed",
+  "source_url": "https://mwrf.com/technologies/systems/article/21129760/fcc-opens-6ghz-band-to-wifi"
+ },
+ {
+  "term": "Airband",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "The VHF band, roughly 118-137 MHz, where US air traffic control and related services use 25 kHz channels; 121.5 MHz is for emergencies.",
+  "section": "aviation",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/87.173"
+ },
+ {
+  "term": "AIS",
+  "aka": "Automatic Identification System",
+  "category": "Boston",
+  "definition": "Ships broadcast identity, position and course on dedicated marine VHF channels so others can see them.",
+  "section": "boston",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/80.393"
+ },
+ {
+  "term": "allocation",
+  "aka": "",
+  "category": "Rules",
+  "definition": "A decision about which kind of radio service may use a band; assignments must follow the allocation table.",
+  "section": "rules",
+  "source_url": "https://www.legislation.gov.uk/ukpga/2006/36/part/1/crossheading/radio-spectrum-functions-of-ofcom"
+ },
+ {
+  "term": "AM",
+  "aka": "amplitude modulation",
+  "category": "Broadcast",
+  "definition": "Radio that carries sound by varying the strength of a carrier; US stations are assigned 540-1600 kHz in 10 kHz steps.",
+  "section": "broadcast",
+  "source_url": "https://hyperphysics.gsu.edu/hbase/audio/radio.html"
+ },
+ {
+  "term": "Amateur radio",
+  "aka": "Ham radio",
+  "category": "Hobby",
+  "definition": "A licensed, non-commercial radio service; US licenses are Technician, General and Amateur Extra, each by written exam.",
+  "section": "hobby",
+  "source_url": "https://ziggy.hallikainen.org/org/FCC/FccRules/2021/97/503"
+ },
+ {
+  "term": "AMI",
+  "aka": "Advanced metering infrastructure; smart meter",
+  "category": "Unlicensed and IoT",
+  "definition": "Utility meters that report usage over a two-way network, often a radio mesh.",
+  "section": "everyday",
+  "source_url": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/customer-care/smart-metering/itron-open-way-rf-white-paper.pdf"
+ },
+ {
+  "term": "antenna farm",
+  "aka": "",
+  "category": "Towers",
+  "definition": "A place where many transmitting or receiving towers, antennas or dishes are clustered, usually on high ground, to share land, costs and backup.",
+  "section": "towers",
+  "source_url": "https://en.wikipedia.org/wiki/Antenna_farm"
+ },
+ {
+  "term": "APT",
+  "aka": "Automatic Picture Transmission",
+  "category": "Satellites and timing",
+  "definition": "The analog 137 MHz weather image signal from NOAA's legacy polar satellites, shut down in 2025.",
+  "section": "satellites",
+  "source_url": "https://www.arnewsline.org/news-text/2025/8/14/us-legacy-weather-satellites-being-decommissioned"
+ },
+ {
+  "term": "ARISS",
+  "aka": "Amateur Radio on the International Space Station",
+  "category": "Satellites and timing",
+  "definition": "The program running the ISS ham radio station, used for school contacts and SSTV events.",
+  "section": "satellites",
+  "source_url": "https://www.ariss.org/latest-news.html"
+ },
+ {
+  "term": "ASR",
+  "aka": "Antenna Structure Registration",
+  "category": "Towers",
+  "definition": "The FCC's public registry of structures over 200 ft or near airports, searchable by coordinates and radius.",
+  "section": "towers",
+  "source_url": "https://www.fcc.gov/wireless/support/antenna-structure-registration-asr-resources"
+ },
+ {
+  "term": "ASRN",
+  "aka": "Antenna Structure Registration Number",
+  "category": "Towers",
+  "definition": "The number the FCC assigns to a registered structure; Media Bureau tools link stations to ASRNs within 0.5 km.",
+  "section": "towers",
+  "source_url": "https://www.fcc.gov/media/radio/asrn-within-radius"
+ },
+ {
+  "term": "assignment",
+  "aka": "",
+  "category": "Rules",
+  "definition": "Permission for a specific station or licensee to use a specific frequency within an allocation.",
+  "section": "rules",
+  "source_url": "https://chanrobles.com/usa/uslaws/cfr/title47/47-1.0.1.1.3.2.213.3.php"
+ },
+ {
+  "term": "ATSC 3.0",
+  "aka": "NextGen TV",
+  "category": "Broadcast",
+  "definition": "An internet-protocol-based US TV broadcast standard that stations adopt voluntarily while keeping an ATSC 1.0 simulcast.",
+  "section": "broadcast",
+  "source_url": "https://docs.fcc.gov/public/attachments/FCC-25-72A1.pdf"
+ },
+ {
+  "term": "automated frequency coordination",
+  "aka": "AFC",
+  "category": "Rules",
+  "definition": "A database system that tells standard-power 6 GHz Wi-Fi access points which channels they can use without interfering with incumbent users.",
+  "section": "rules",
+  "source_url": "https://www.telecomtv.com/content/wi-fi/fcc-opens-6ghz-band-to-wi-fi-and-other-unlicensed-uses-38453"
+ },
+ {
+  "term": "Band 14",
+  "aka": "Band Class 14",
+  "category": "Public safety",
+  "definition": "FirstNet's 20 MHz of 700 MHz spectrum: 758-768 MHz downlink and 788-798 MHz uplink.",
+  "section": "public-safety",
+  "source_url": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html"
+ },
+ {
+  "term": "BAPERN",
+  "aka": "Boston Area Police Emergency Radio Network",
+  "category": "Public safety",
+  "definition": "Greater Boston's police mutual aid radio network, run by the Greater Boston Police Council since the early 1970s.",
+  "section": "public-safety",
+  "source_url": "https://pcsdma.org/commbapern.html"
+ },
+ {
+  "term": "Beacon",
+  "aka": "iBeacon",
+  "category": "Unlicensed and IoT",
+  "definition": "A small BLE transmitter that repeatedly broadcasts an ID so nearby phones can estimate how close they are.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/IBeacon"
+ },
+ {
+  "term": "BLE",
+  "aka": "Bluetooth Low Energy",
+  "category": "Unlicensed and IoT",
+  "definition": "A low-power form of Bluetooth introduced with version 4.0 in 2009, using 40 channels; used by wearables, trackers and beacons.",
+  "section": "unlicensed",
+  "source_url": "https://www.electronics-notes.com/articles/connectivity/bluetooth/what-is-bluetooth-technology-basics-summary.php"
+ },
+ {
+  "term": "Border router",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A device that connects a Thread mesh to a home Wi-Fi or Ethernet network.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/Thread_(network_protocol)"
+ },
+ {
+  "term": "building entry loss",
+  "aka": "building penetration loss",
+  "category": "Basics",
+  "definition": "The signal lost between the outside of a building and a point inside it; it rises with frequency and depends heavily on construction.",
+  "section": "basics",
+  "source_url": "https://its.ntia.gov/publications/details?pub=4481"
+ },
+ {
+  "term": "C-band",
+  "aka": "3.7-3.98 GHz",
+  "category": "Cellular",
+  "definition": "US mid-band 5G spectrum sold in Auction 107, which grossed $80.9 billion in 2021.",
+  "section": "cellular",
+  "source_url": "https://www.telecompetitor.com/c-band-spectrum-auction-ends-with-haul-of-almost-81-billion-shattering-records/"
+ },
+ {
+  "term": "Call sign",
+  "aka": "",
+  "category": "Hobby",
+  "definition": "A unique station identifier such as W1MX; new UK Foundation call signs start M7 and Intermediate M8 or M9.",
+  "section": "hobby",
+  "source_url": "https://www.ofcom.org.uk/__data/assets/pdf_file/0037/272998/Statement-Updating-the-amateur-radio-licensing-framework.pdf"
+ },
+ {
+  "term": "Candelabra tower",
+  "aka": "",
+  "category": "Broadcast",
+  "definition": "A tower with a wide top frame holding several stations' antennas side by side, like the Cabot Street tower in Needham.",
+  "section": "broadcast",
+  "source_url": "https://www.fybush.com/site-20210326"
+ },
+ {
+  "term": "cardioid pattern",
+  "aka": "",
+  "category": "Boston",
+  "definition": "A heart-shaped coverage pattern; WBZ's two Hull towers use one to cut signal over the Atlantic.",
+  "section": "boston",
+  "source_url": "https://www.fybush.com/sites/2005/site-050805.html"
+ },
+ {
+  "term": "CBRS",
+  "aka": "3.5 GHz band",
+  "category": "Cellular",
+  "definition": "US mid-band spectrum at 3.5 GHz; the FCC auctioned 70 MHz of licensed CBRS spectrum in August 2020.",
+  "section": "cellular",
+  "source_url": "https://docs.fcc.gov/public/attachments/DOC-367849A1.pdf"
+ },
+ {
+  "term": "Cell site",
+  "aka": "base station",
+  "category": "Cellular",
+  "definition": "The antennas, radios and backhaul serving one coverage area; CTIA counted 418,887 US sites at end of 2021.",
+  "section": "cellular",
+  "source_url": "https://www.lightreading.com/5g/us-cell-site-count-nears-half-a-million"
+ },
+ {
+  "term": "Channel 13",
+  "aka": "Bridge-to-bridge",
+  "category": "Aviation and ships",
+  "definition": "156.650 MHz, intership navigation safety; ships over 20 m keep a listening watch on it in US waters.",
+  "section": "ships",
+  "source_url": "https://www.navcen.uscg.gov/us-vhf-channel-information"
+ },
+ {
+  "term": "Channel 16",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "156.800 MHz, the international marine distress, safety and calling channel.",
+  "section": "ships",
+  "source_url": "https://www.navcen.uscg.gov/us-vhf-channel-information"
+ },
+ {
+  "term": "CharlieCard",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "The MBTA's contactless fare card, introduced in 2006 and based on NXP MIFARE Classic.",
+  "section": "everyday",
+  "source_url": "https://en.wikipedia.org/wiki/CharlieCard"
+ },
+ {
+  "term": "Class A AIS",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "The full AIS class required in the US on commercial vessels of 65 ft or more, larger towing vessels and others under 33 CFR 164.46.",
+  "section": "ships",
+  "source_url": "https://www.law.cornell.edu/cfr/text/33/164.46"
+ },
+ {
+  "term": "Class B AIS",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "A lighter AIS class that US rules allow on some fishing and smaller vessels.",
+  "section": "ships",
+  "source_url": "https://www.law.cornell.edu/cfr/text/33/164.46"
+ },
+ {
+  "term": "clear channel",
+  "aka": "Class A station",
+  "category": "Boston",
+  "definition": "An AM frequency where one high-power station is protected from interference over a wide area, day and night. WBZ 1030 is one.",
+  "section": "boston",
+  "source_url": "https://en.wikipedia.org/wiki/WBZ_(AM)"
+ },
+ {
+  "term": "communications access policy",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "Under Colorado law (C.R.S. 24-6-502), the policy a fully encrypted agency must adopt to give media access to primary dispatch channels.",
+  "section": "scanners",
+  "source_url": "https://colorado.public.law/statutes/crs_24-6-502"
+ },
+ {
+  "term": "compulsory pilotage",
+  "aka": "",
+  "category": "Boston",
+  "definition": "A legal rule that certain vessels must use a state- or federally licensed local pilot, depending on type, size, flag and waters.",
+  "section": "boston",
+  "source_url": "https://nemarinepilots.com/compulsory-pilotage/"
+ },
+ {
+  "term": "conventional system",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "A radio system in which each group of users has its own dedicated frequency or channel.",
+  "section": "public-safety",
+  "source_url": "https://www.cisa.gov/sites/default/files/publications/LMR%20101_508FINAL.pdf"
+ },
+ {
+  "term": "CPDLC",
+  "aka": "Controller-Pilot Data Link Communications",
+  "category": "Aviation and ships",
+  "definition": "Text messaging between controllers and pilots; required on new aircraft in Europe from 2014 under the Single European Sky rule.",
+  "section": "aviation",
+  "source_url": "https://en.wikipedia.org/wiki/VHF_Data_Link"
+ },
+ {
+  "term": "DAB+",
+  "aka": "DAB, Digital Audio Broadcasting",
+  "category": "Broadcast",
+  "definition": "The digital radio system used in the UK and much of Europe, where many stations share one transmitted multiplex.",
+  "section": "broadcast",
+  "source_url": "https://www.worlddab.org/countries/united-kingdom?page=25"
+ },
+ {
+  "term": "DAS",
+  "aka": "distributed antenna system",
+  "category": "Cellular",
+  "definition": "A network of small antennas fed from a central head end, used in tunnels and large venues; the MBTA's dates from 2005.",
+  "section": "cellular",
+  "source_url": "https://wia.org/right-on-track-5g-connectivity-helps-bostons-regional-transit-system-meet-the-demands-of-the-digital-age/"
+ },
+ {
+  "term": "Direct-to-cell",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "Satellites that talk directly to ordinary mobile phones using mobile-network spectrum, such as Starlink's service for T-Mobile.",
+  "section": "satellites",
+  "source_url": "https://docs.fcc.gov/public/attachments/DOC-417881A1.pdf"
+ },
+ {
+  "term": "directional array",
+  "aka": "AM array",
+  "category": "Towers",
+  "definition": "Two or more AM towers fed together so the signal is stronger in some directions and weaker in others, as at WBZ's Hull site.",
+  "section": "towers",
+  "source_url": "https://www.fybush.com/sites/2005/site-050805.html"
+ },
+ {
+  "term": "distributed antenna system",
+  "aka": "DAS",
+  "category": "Boston",
+  "definition": "A network of small antennas fed over fiber from a central point, used to carry cell signals into tunnels and buildings.",
+  "section": "boston",
+  "source_url": "https://www.bostonglobe.com/metro/2012/05/20/mbta-subway-will-fully-wired-for-cellular-service-end-year/C7ZySW1UWd6Xn4hWx7fyuO/story.html"
+ },
+ {
+  "term": "Doppler shift",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "The apparent change in a satellite's frequency as it approaches and recedes; ISS SSTV listeners allow plus or minus 3 kHz.",
+  "section": "satellites",
+  "source_url": "https://amsat-uk.org/2023/12/14/iss-sstv-40th-anniv-ham-radio-in-human-spaceflight/"
+ },
+ {
+  "term": "DSC",
+  "aka": "Digital Selective Calling",
+  "category": "Aviation and ships",
+  "definition": "Digital marine calling on channel 70 (156.525 MHz), with no voice.",
+  "section": "ships",
+  "source_url": "https://www.navcen.uscg.gov/us-vhf-channel-information"
+ },
+ {
+  "term": "Duplex gap",
+  "aka": "",
+  "category": "Events",
+  "definition": "The unpaired slice between mobile uplink and downlink in the US 600 MHz band; 653-657 MHz is licensed and 657-663 MHz unlicensed for mics.",
+  "section": "show-wireless",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone"
+ },
+ {
+  "term": "Duty cycle",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "The fraction of time a transmitter is actually sending; about 0.21% for the BC Hydro smart meters studied.",
+  "section": "everyday",
+  "source_url": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/customer-care/smart-metering/itron-open-way-rf-white-paper.pdf"
+ },
+ {
+  "term": "EDACS",
+  "aka": "Enhanced Digital Access Communications System",
+  "category": "Boston",
+  "definition": "The legacy trunked radio system the MBTA is replacing with P25.",
+  "section": "boston",
+  "source_url": "https://www.l3harris.com/newsroom/trade-release/2022/12/l3harris-awarded-93-million-contract-improve-mbta-public-safety"
+ },
+ {
+  "term": "EHF",
+  "aka": "extremely high frequency, millimetric waves",
+  "category": "Basics",
+  "definition": "ITU band 11, 30-300 GHz, also called millimetric waves.",
+  "section": "basics",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.101"
+ },
+ {
+  "term": "EIRP",
+  "aka": "Effective isotropic radiated power",
+  "category": "Events",
+  "definition": "Transmitter power including antenna gain, counted as if radiated equally in all directions; US mic limits are stated in EIRP.",
+  "section": "show-wireless",
+  "source_url": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf"
+ },
+ {
+  "term": "Emergency Alert System",
+  "aka": "EAS",
+  "category": "Public safety",
+  "definition": "The US system that interrupts radio and TV with alerts; it replaced the Emergency Broadcast System between 1994 and 1997.",
+  "section": "public-safety",
+  "source_url": "https://www.globalsecurity.org/security/systems/eas.htm"
+ },
+ {
+  "term": "FDMA / TDMA",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "Ways of sharing spectrum: separate frequencies for each user (FDMA, P25 Phase 1) or separate time slots on one frequency (TDMA, P25 Phase 2).",
+  "section": "public-safety",
+  "source_url": "https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf"
+ },
+ {
+  "term": "Federal Communications Commission",
+  "aka": "FCC",
+  "category": "Rules",
+  "definition": "The US agency created by the Communications Act of 1934 that administers the non-Federal Table of Frequency Allocations.",
+  "section": "rules",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.105"
+ },
+ {
+  "term": "Federal Radio Commission",
+  "aka": "FRC",
+  "category": "Basics",
+  "definition": "The five-member commission created by the Radio Act of 1927; replaced by the FCC in 1934.",
+  "section": "basics",
+  "source_url": "https://en.wikipedia.org/wiki/Radio_Act_of_1927"
+ },
+ {
+  "term": "FirstNet",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "The US nationwide broadband network for first responders, created by Congress in 2012 and built by AT&T under a 25-year contract.",
+  "section": "public-safety",
+  "source_url": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html"
+ },
+ {
+  "term": "FM",
+  "aka": "frequency modulation",
+  "category": "Broadcast",
+  "definition": "Radio that carries sound by varying the carrier's frequency; the US band is 88-108 MHz with 200 kHz channels starting at 88.1 MHz.",
+  "section": "broadcast",
+  "source_url": "https://hyperphysics.gsu.edu/hbase/audio/radio.html"
+ },
+ {
+  "term": "FM stereo subcarrier",
+  "aka": "38 kHz subcarrier",
+  "category": "Broadcast",
+  "definition": "A 38 kHz signal inside an FM channel carrying left-minus-right audio, while the main carrier carries left-plus-right for mono radios.",
+  "section": "broadcast",
+  "source_url": "https://hyperphysics.gsu.edu/hbase/audio/radio.html"
+ },
+ {
+  "term": "frequency band",
+  "aka": "band",
+  "category": "Basics",
+  "definition": "A range of frequencies with a lower and upper edge, such as 3.7-3.98 GHz; its width is its bandwidth.",
+  "section": "basics",
+  "source_url": "https://www.fierce-network.com/regulatory/c-band-clock-phase-auction-tops-charts-80-9b"
+ },
+ {
+  "term": "Frequency coordinator",
+  "aka": "",
+  "category": "Events",
+  "definition": "The person who assigns a non-conflicting frequency to every wireless device at an event; the NFL uses SBE volunteer coordinators.",
+  "section": "show-wireless",
+  "source_url": "https://www.radioworld.com/?p=92138"
+ },
+ {
+  "term": "GBAS",
+  "aka": "Ground-Based Augmentation System",
+  "category": "Satellites and timing",
+  "definition": "Ground stations at an airport that refine GPS for landing approaches; one at Newark was disrupted by a jammer in 2012.",
+  "section": "gps",
+  "source_url": "https://transition.fcc.gov/eb/Orders/2013/FCC-13-106A1.html"
+ },
+ {
+  "term": "GNSS",
+  "aka": "Global Navigation Satellite System",
+  "category": "Satellites and timing",
+  "definition": "The general term for satellite navigation systems such as GPS, GLONASS, Galileo and BeiDou.",
+  "section": "gps",
+  "source_url": "https://flightplan.forecastinternational.com/2024/09/25/global-navigation-satellite-systems-a-modern-necessity-a-look-at-the-worlds-leading-pnt-constellations/"
+ },
+ {
+  "term": "GOES",
+  "aka": "Geostationary Operational Environmental Satellite",
+  "category": "Satellites and timing",
+  "definition": "NOAA's geostationary weather satellites; GOES-19 became GOES East on April 7, 2025.",
+  "section": "satellites",
+  "source_url": "https://www.weathernationtv.com/news/noaa-goes-19-satellite-now-operational"
+ },
+ {
+  "term": "GPS",
+  "aka": "Global Positioning System; Navstar",
+  "category": "Satellites and timing",
+  "definition": "The US satellite navigation system, developed, maintained and operated by the US Space Force.",
+  "section": "gps",
+  "source_url": "https://www.gps.gov/node/70"
+ },
+ {
+  "term": "Guard band",
+  "aka": "",
+  "category": "Events",
+  "definition": "A buffer slice of spectrum between services; part of the US 600 MHz guard band (614-616 MHz) is open to unlicensed mics.",
+  "section": "show-wireless",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone"
+ },
+ {
+  "term": "guyed tower",
+  "aka": "guyed mast",
+  "category": "Towers",
+  "definition": "A slender tower held upright by steel guy cables anchored around it. WBZ-TV's Cedar Street tower in Needham is guyed.",
+  "section": "towers",
+  "source_url": "https://www.fybush.com/sites/2009/site-090102.html"
+ },
+ {
+  "term": "HAAT",
+  "aka": "height above average terrain",
+  "category": "Broadcast",
+  "definition": "A measure of a broadcast antenna's height relative to the average ground around it; WGBH-TV's is 362.7 m (1,190 ft).",
+  "section": "broadcast",
+  "source_url": "https://en.wikipedia.org/wiki/WGBH-TV"
+ },
+ {
+  "term": "Handoff",
+  "aka": "handover",
+  "category": "Cellular",
+  "definition": "Passing a phone's connection from one cell to the next as it moves; the 1983 Chicago system used computers to do this.",
+  "section": "cellular",
+  "source_url": "https://www.csmonitor.com/layout/set/amphtml/1983/1013/101337.html"
+ },
+ {
+  "term": "HD Radio",
+  "aka": "IBOC, in-band on-channel",
+  "category": "Broadcast",
+  "definition": "The US digital radio system, approved by the FCC in 2002, which adds digital sidebands next to an existing AM or FM signal.",
+  "section": "broadcast",
+  "source_url": "https://hdradio.com/broadcasters/us-regulatory/fcc-approval-process/"
+ },
+ {
+  "term": "hertz",
+  "aka": "Hz",
+  "category": "Basics",
+  "definition": "One cycle per second; the unit of frequency. Radio frequencies are given in kilohertz, megahertz and gigahertz.",
+  "section": "basics",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.101"
+ },
+ {
+  "term": "IARC Group 2B",
+  "aka": "Possibly carcinogenic to humans",
+  "category": "Health",
+  "definition": "The IARC category RF fields were placed in in 2011, based on limited evidence; IARC says the label has no quantitative significance.",
+  "section": "health",
+  "source_url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr208_E.pdf"
+ },
+ {
+  "term": "ICAO address",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "The unique aircraft address broadcast by a transponder; for US aircraft the FAA ties it to the tail number.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq"
+ },
+ {
+  "term": "ICNIRP",
+  "aka": "International Commission on Non-Ionizing Radiation Protection",
+  "category": "Health",
+  "definition": "The body that publishes international RF exposure guidelines; its 2020 guidelines cover 100 kHz to 300 GHz, including 5G.",
+  "section": "health",
+  "source_url": "https://www.icnirp.org/en/activities/news/news-article/rf-guidelines-2020-published.html"
+ },
+ {
+  "term": "In-ear monitor",
+  "aka": "IEM",
+  "category": "Events",
+  "definition": "A wireless earpiece system that sends a performer their own mix; it shares the wireless mic bands and rules.",
+  "section": "show-wireless",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone"
+ },
+ {
+  "term": "Incentive auction",
+  "aka": "",
+  "category": "Broadcast",
+  "definition": "The 2016-2017 FCC auction in which TV stations sold spectrum and wireless carriers bought it; gross proceeds were $19.8 billion.",
+  "section": "broadcast",
+  "source_url": "https://www.everycrsreport.com/reports/IF10751.html"
+ },
+ {
+  "term": "International Telecommunication Union",
+  "aka": "ITU",
+  "category": "Rules",
+  "definition": "The UN agency, with 194 member governments, that maintains the Radio Regulations treaty.",
+  "section": "rules",
+  "source_url": "https://www.itu.int/wrc-23"
+ },
+ {
+  "term": "ISM band",
+  "aka": "Industrial, scientific and medical band",
+  "category": "Unlicensed and IoT",
+  "definition": "Frequencies set aside for machines such as microwave ovens that use radio energy for non-communication purposes; unlicensed radios share them and must tolerate the noise.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/ISM_radio_band"
+ },
+ {
+  "term": "ISO 14443",
+  "aka": "Proximity card",
+  "category": "Unlicensed and IoT",
+  "definition": "The contactless card standard for tap cards, with a range up to about 10 cm.",
+  "section": "everyday",
+  "source_url": "https://itwissen.info/en/contactless-chipcard-113292.html"
+ },
+ {
+  "term": "ITU Region 2",
+  "aka": "",
+  "category": "Rules",
+  "definition": "The ITU allocation region that includes the 50 US states; the US Table of Frequency Allocations is based on it.",
+  "section": "rules",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.105"
+ },
+ {
+  "term": "Jamming",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "Drowning out a radio signal with noise so it cannot be received; GPS jammers have no lawful use in the US, per the FCC.",
+  "section": "gps",
+  "source_url": "https://transition.fcc.gov/eb/Orders/2013/FCC-13-106A1.html"
+ },
+ {
+  "term": "L1 / L2 / L5",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "The three GPS carrier frequencies: 1575.42 MHz, 1227.6 MHz and 1176.45 MHz.",
+  "section": "gps",
+  "source_url": "https://www.GPS.gov/news/2006/01/L2C-event/factsheet.pdf"
+ },
+ {
+  "term": "LADD",
+  "aka": "formerly BARR",
+  "category": "Aviation and ships",
+  "definition": "FAA program that makes FAA-fed flight-tracking vendors hide a registration from public display; it does not affect the ADS-B broadcast.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/pilots/ladd"
+ },
+ {
+  "term": "land mobile radio",
+  "aka": "LMR",
+  "category": "Public safety",
+  "definition": "Push-to-talk two-way radio used by police, fire, EMS, utilities, transit and railroads, built from handhelds, vehicle radios, base stations and repeaters.",
+  "section": "public-safety",
+  "source_url": "https://www.cisa.gov/sites/default/files/publications/LMR%20101_508FINAL.pdf"
+ },
+ {
+  "term": "LoRa",
+  "aka": "LoRaWAN",
+  "category": "Unlicensed and IoT",
+  "definition": "A long-range, slow, low-power chirp spread spectrum radio (LoRa) and the network protocol on top of it (LoRaWAN).",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/LoRa"
+ },
+ {
+  "term": "low-E glass",
+  "aka": "low-emissivity glass",
+  "category": "Basics",
+  "definition": "Energy-saving window glass with a thin metallic coating that reflects radio signals, causing far more loss than ordinary glass.",
+  "section": "basics",
+  "source_url": "https://rfessentials.com/rf-knowledge-base/how-does-building-penetration-loss-vary-with-frequency-from-sub-6-ghz-to-millime/"
+ },
+ {
+  "term": "LPAS",
+  "aka": "Low power auxiliary station",
+  "category": "Events",
+  "definition": "The FCC licensed category (Part 74 Subpart H) for wireless mics and related devices, which has secondary status and must protect TV broadcasters.",
+  "section": "show-wireless",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone"
+ },
+ {
+  "term": "MAC address",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A hardware ID broadcast by a radio such as Bluetooth, which roadside readers can log to measure travel times.",
+  "section": "everyday",
+  "source_url": "https://www.enr.com/articles/8916-traffic-technology-gets-driving-data-through-construction-zones-using-bluetooth"
+ },
+ {
+  "term": "master antenna",
+  "aka": "combined antenna",
+  "category": "Towers",
+  "definition": "One broadcast antenna shared by several stations, such as the six-bay panel antenna on the Prudential mast.",
+  "section": "towers",
+  "source_url": "https://www.fybush.com/sites/2004/site-040709.html"
+ },
+ {
+  "term": "Matter",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A common smart-home application standard, launched in 2022, that runs over Wi-Fi, Thread or Ethernet and uses BLE for setup.",
+  "section": "unlicensed",
+  "source_url": "https://csa-iot.org/newsroom/matter-arrives/"
+ },
+ {
+  "term": "Mesh network",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "Devices that relay each other's messages so data can hop around obstacles to reach a hub.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/Zigbee"
+ },
+ {
+  "term": "MLAT",
+  "aka": "Multilateration",
+  "category": "Aviation and ships",
+  "definition": "Locating an aircraft by comparing when its signal reaches four or more receivers (time difference of arrival); works only from roughly 3,000-10,000 ft and above.",
+  "section": "aviation",
+  "source_url": "https://support.fr24.com/support/solutions/articles/3000117422-how-does-flightradar24-work-"
+ },
+ {
+  "term": "mmWave",
+  "aka": "millimeter wave, high band",
+  "category": "Cellular",
+  "definition": "Very high 5G frequencies (24, 28, 37, 39 and 47 GHz in the US) with large capacity and short range.",
+  "section": "cellular",
+  "source_url": "https://docs.fcc.gov/public/attachments/DOC-367849A1.pdf"
+ },
+ {
+  "term": "Mode S",
+  "aka": "",
+  "category": "Aviation and ships",
+  "definition": "A transponder mode that gives each aircraft a unique address; aircraft with only Mode S are located by trackers using multilateration.",
+  "section": "aviation",
+  "source_url": "https://www.flightradar24.com/blog/inside-flightradar24/how-does-fr24-track-aircraft/"
+ },
+ {
+  "term": "Multi-Link Operation",
+  "aka": "MLO",
+  "category": "Unlicensed and IoT",
+  "definition": "A Wi-Fi 7 feature that lets a device use more than one band at the same time.",
+  "section": "unlicensed",
+  "source_url": "https://wi-fi.org/news-events/newsroom/wi-fi-alliance-introduces-wi-fi-certified-7"
+ },
+ {
+  "term": "Multipath",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "Satellite signals reflected off buildings or walls before reaching a receiver, a cause of position errors.",
+  "section": "gps",
+  "source_url": "https://www.gps.gov/node/70"
+ },
+ {
+  "term": "Multiplex",
+  "aka": "mux",
+  "category": "Broadcast",
+  "definition": "One transmitted signal that bundles several radio or TV services; the UK had 75 small-scale DAB multiplexes by September 2025.",
+  "section": "broadcast",
+  "source_url": "https://www.worlddab.org/countries/united-kingdom?page=25"
+ },
+ {
+  "term": "National Telecommunications and Information Administration",
+  "aka": "NTIA",
+  "category": "Rules",
+  "definition": "The Commerce Department agency that administers the Federal Table of Frequency Allocations for federal government users.",
+  "section": "rules",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.105"
+ },
+ {
+  "term": "Network Access Code",
+  "aka": "NAC",
+  "category": "Public safety",
+  "definition": "A 12-bit code on each conventional P25 packet that replaces the analog CTCSS and DCS tones of older radios.",
+  "section": "public-safety",
+  "source_url": "https://wiki.radioreference.com/index.php/APCO_Project_25"
+ },
+ {
+  "term": "neutral host",
+  "aka": "",
+  "category": "Towers",
+  "definition": "A company that owns a tunnel or in-building network and lets several carriers share it.",
+  "section": "towers",
+  "source_url": "https://www.masstransitmag.com/technology/press-release/10683171/tmobile-expands-mbta-wireless-service-to-blue-and-green-lines-throughout-boston"
+ },
+ {
+  "term": "NFC",
+  "aka": "Near-field communication; contactless",
+  "category": "Unlicensed and IoT",
+  "definition": "A 13.56 MHz tap-range link used by phones, bank cards and transit cards; the card is powered by the reader.",
+  "section": "everyday",
+  "source_url": "https://itwissen.info/en/contactless-chipcard-113292.html"
+ },
+ {
+  "term": "NOAA Weather Radio",
+  "aka": "NWR",
+  "category": "Public safety",
+  "definition": "The National Weather Service's 24-hour broadcast network on seven VHF channels from 162.400 to 162.550 MHz.",
+  "section": "public-safety",
+  "source_url": "https://www.weather.gov/media/nwr/NWR_Brochure_250428.pdf"
+ },
+ {
+  "term": "Number station",
+  "aka": "",
+  "category": "Hobby",
+  "definition": "A shortwave station broadcasting coded numbers or tones of unconfirmed purpose; UVB-76 on 4625 kHz is the best known.",
+  "section": "hobby",
+  "source_url": "https://en.wikipedia.org/wiki/UVB-76"
+ },
+ {
+  "term": "OET Bulletin 65",
+  "aka": "",
+  "category": "Health",
+  "definition": "The FCC guide to evaluating compliance with its RF exposure limits.",
+  "section": "health",
+  "source_url": "https://www.fcc.gov/general/fcc-policy-human-exposure"
+ },
+ {
+  "term": "P25",
+  "aka": "Project 25, APCO-25",
+  "category": "Public safety",
+  "definition": "The North American digital public safety radio standard, established in 1989 so radios from different makers can interoperate.",
+  "section": "public-safety",
+  "source_url": "https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf"
+ },
+ {
+  "term": "P25 Phase 2",
+  "aka": "TDMA P25",
+  "category": "Public safety",
+  "definition": "The version of P25 that splits one 12.5 kHz channel into two time slots, doubling voice capacity; approved in November 2010.",
+  "section": "public-safety",
+  "source_url": "https://wiki.radioreference.com/index.php/APCO_Project_25"
+ },
+ {
+  "term": "Part 15",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "The FCC rules that let people use low-power radios without a license, provided they cause no harmful interference and accept any they receive.",
+  "section": "unlicensed",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/15.5"
+ },
+ {
+  "term": "PEP",
+  "aka": "Peak envelope power",
+  "category": "Hobby",
+  "definition": "A measure of transmitter output used in UK amateur power limits: 25 W Foundation, 100 W Intermediate, 1000 W Full.",
+  "section": "hobby",
+  "source_url": "https://www.ofcom.org.uk/__data/assets/pdf_file/0037/272998/Statement-Updating-the-amateur-radio-licensing-framework.pdf"
+ },
+ {
+  "term": "Phasor measurement unit",
+  "aka": "PMU; synchrophasor",
+  "category": "Satellites and timing",
+  "definition": "A power-grid sensor that timestamps voltage and current readings with GPS-derived time.",
+  "section": "gps",
+  "source_url": "https://tf.nist.gov/general/pdf/2620.pdf"
+ },
+ {
+  "term": "PIA",
+  "aka": "Privacy ICAO Address",
+  "category": "Aviation and ships",
+  "definition": "A temporary ICAO address not linked to the owner in the US Civil Aircraft Registry, valid in US-managed airspace.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/air_traffic/technology/equipadsb/privacy"
+ },
+ {
+  "term": "PMSE",
+  "aka": "Programme making and special events",
+  "category": "Events",
+  "definition": "The UK and European term for wireless mics, IEMs and production radio, licensed in the UK by Ofcom.",
+  "section": "show-wireless",
+  "source_url": "https://en.wikipedia.org/wiki/Wireless_microphone_licensing"
+ },
+ {
+  "term": "POES",
+  "aka": "Polar-orbiting Operational Environmental Satellites",
+  "category": "Satellites and timing",
+  "definition": "NOAA's legacy polar-orbiting weather satellites (NOAA-15, -18, -19), decommissioned in 2025.",
+  "section": "satellites",
+  "source_url": "https://www.arnewsline.org/news-text/2025/8/14/us-legacy-weather-satellites-being-decommissioned"
+ },
+ {
+  "term": "primary service",
+  "aka": "",
+  "category": "Rules",
+  "definition": "A service printed in capital letters in the US allocation table; it is protected from interference by secondary services.",
+  "section": "rules",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.105"
+ },
+ {
+  "term": "radiating cable",
+  "aka": "leaky feeder",
+  "category": "Towers",
+  "definition": "Coaxial cable with slots that let radio signal leak out along its length, used in tunnels like the MBTA's.",
+  "section": "towers",
+  "source_url": "https://www.masstransitmag.com/technology/press-release/10683171/tmobile-expands-mbta-wireless-service-to-blue-and-green-lines-throughout-boston"
+ },
+ {
+  "term": "Radio altimeter",
+  "aka": "",
+  "category": "Cellular",
+  "definition": "An aircraft instrument that measures height above the ground by radio; the FAA found in 2021 that C-band 5G could interfere with some.",
+  "section": "cellular",
+  "source_url": "https://alerts.aaae.org/latest/regulatory_52523"
+ },
+ {
+  "term": "radio encryption",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "Scrambling digital voice so only radios holding the key can hear it; an optional feature of P25.",
+  "section": "scanners",
+  "source_url": "https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf"
+ },
+ {
+  "term": "Radio-controlled clock",
+  "aka": "atomic clock",
+  "category": "Satellites and timing",
+  "definition": "A clock that sets itself from a radio time signal such as WWVB; NIST prefers this name to 'atomic clock'.",
+  "section": "gps",
+  "source_url": "https://www.nist.gov/pml/time-and-frequency-division/what-time-it-faqs"
+ },
+ {
+  "term": "readily accessible to the general public",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "The Wiretap Act test for radio that may lawfully be intercepted; encrypted traffic does not meet it.",
+  "section": "scanners",
+  "source_url": "https://www.rtdna.org/use-of-information-from-police-scanners"
+ },
+ {
+  "term": "Repack",
+  "aka": "",
+  "category": "Broadcast",
+  "definition": "The move of US TV stations to new channels after the incentive auction, over 39 months in ten phases, finished in 2020.",
+  "section": "broadcast",
+  "source_url": "https://www.everycrsreport.com/reports/IF10751.html"
+ },
+ {
+  "term": "repeater",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "A radio at a high site that receives a transmission and rebroadcasts it to extend range.",
+  "section": "public-safety",
+  "source_url": "https://www.cisa.gov/sites/default/files/publications/LMR%20101_508FINAL.pdf"
+ },
+ {
+  "term": "RFID",
+  "aka": "Radio-frequency identification",
+  "category": "Unlicensed and IoT",
+  "definition": "Tags read by radio, either passive (powered by the reader) or active (with a battery, like a toll tag).",
+  "section": "everyday",
+  "source_url": "https://en.wikipedia.org/wiki/E-ZPass"
+ },
+ {
+  "term": "RNAV",
+  "aka": "area navigation",
+  "category": "Boston",
+  "definition": "Satellite-guided flight procedures that let planes fly precise, repeatable paths; at Logan they concentrated flight tracks.",
+  "section": "boston",
+  "source_url": "https://news.mit.edu/2024/new-flight-procedures-reduce-noise-aircraft-boston-logan-airport-0418"
+ },
+ {
+  "term": "RNP",
+  "aka": "required navigation performance",
+  "category": "Boston",
+  "definition": "A precise satellite-guided procedure that can include curved segments, used on Logan's Runway 33L approach since 2021.",
+  "section": "boston",
+  "source_url": "https://news.mit.edu/2024/new-flight-procedures-reduce-noise-aircraft-boston-logan-airport-0418"
+ },
+ {
+  "term": "RTL-SDR",
+  "aka": "",
+  "category": "Hobby",
+  "definition": "A USB TV-tuner dongle built on the Realtek RTL2832U chip, used as a cheap wideband receiver (about 24-1766 MHz with common tuners).",
+  "section": "hobby",
+  "source_url": "https://www.rtl-sdr.com/about-rtl-sdr/"
+ },
+ {
+  "term": "SAFO",
+  "aka": "Safety Alert for Operators",
+  "category": "Satellites and timing",
+  "definition": "An FAA advisory to airlines and pilots; SAFO 24002 (2024) covers GPS/GNSS disruptions.",
+  "section": "gps",
+  "source_url": "https://nbaa.org/wp-content/uploads/2024/02/SAFO24002.pdf"
+ },
+ {
+  "term": "SAME",
+  "aka": "Specific Area Message Encoding",
+  "category": "Public safety",
+  "definition": "Digital codes on NOAA Weather Radio that activate only receivers set for a given county or marine area.",
+  "section": "public-safety",
+  "source_url": "https://www.weather.gov/media/nwr/NWR_Brochure_250428.pdf"
+ },
+ {
+  "term": "SAR",
+  "aka": "Specific absorption rate",
+  "category": "Health",
+  "definition": "How much RF energy body tissue absorbs, in W/kg; the US phone limit is 1.6 W/kg over 1 g of tissue.",
+  "section": "health",
+  "source_url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-I/section-1.1310"
+ },
+ {
+  "term": "SBE",
+  "aka": "Society of Broadcast Engineers",
+  "category": "Events",
+  "definition": "US broadcast engineering society whose volunteer coordinators run game-day frequency coordination with the NFL.",
+  "section": "show-wireless",
+  "source_url": "https://www.radioworld.com/?p=92138"
+ },
+ {
+  "term": "scanner",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "A receiver that steps through many frequencies to find active transmissions; in the US it may not be able to receive cellular frequencies.",
+  "section": "scanners",
+  "source_url": "https://corporate.findlaw.com/litigation-disputes/interception-and-divulgence-of-radio-communications.html"
+ },
+ {
+  "term": "secondary service",
+  "aka": "",
+  "category": "Rules",
+  "definition": "A service printed in normal type in the US table; it must not interfere with primary services and cannot claim protection from them.",
+  "section": "rules",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.105"
+ },
+ {
+  "term": "Section 705",
+  "aka": "47 U.S.C. 605",
+  "category": "Public safety",
+  "definition": "The Communications Act provision that generally allows listening to radio but restricts divulging or profiting from what is heard.",
+  "section": "scanners",
+  "source_url": "https://corporate.findlaw.com/litigation-disputes/interception-and-divulgence-of-radio-communications.html"
+ },
+ {
+  "term": "SHF",
+  "aka": "super high frequency",
+  "category": "Basics",
+  "definition": "ITU band 10, 3-30 GHz, also called centimetric waves.",
+  "section": "basics",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.101"
+ },
+ {
+  "term": "SIB",
+  "aka": "Safety Information Bulletin",
+  "category": "Satellites and timing",
+  "definition": "An EASA safety advisory; SIB 2022-02 covers GNSS outages and alterations.",
+  "section": "gps",
+  "source_url": "https://www.easa.europa.eu/en/node/143832"
+ },
+ {
+  "term": "simulcast",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "Several transmitter sites sending the same signal at once to cover a wide area, as BAPERN does.",
+  "section": "public-safety",
+  "source_url": "https://pcsdma.org/commbapern.html"
+ },
+ {
+  "term": "skywave",
+  "aka": "",
+  "category": "Boston",
+  "definition": "AM signal that bounces off the upper atmosphere at night and comes down hundreds of miles away.",
+  "section": "boston",
+  "source_url": "https://www.fybush.com/sites/2005/site-050805.html"
+ },
+ {
+  "term": "Small cell",
+  "aka": "",
+  "category": "Cellular",
+  "definition": "A low-power cell site on a pole or building that adds capacity in a small area; Crown Castle had more than 115,000 in 2022.",
+  "section": "cellular",
+  "source_url": "https://www.lightreading.com/5g/us-cell-site-count-nears-half-a-million"
+ },
+ {
+  "term": "SOLAS",
+  "aka": "International Convention for the Safety of Life at Sea",
+  "category": "Aviation and ships",
+  "definition": "The international convention whose Chapter V Regulation 19 requires AIS on ships of 300 GT and up on international voyages and on all passenger ships.",
+  "section": "ships",
+  "source_url": "https://WWW.NAVCEN.USCG.GOV/sites/default/files/pdf/AIS/AIS_Regs_SOLAS_MTSA_2015.pdf"
+ },
+ {
+  "term": "spectrum auction",
+  "aka": "",
+  "category": "Rules",
+  "definition": "Sale of spectrum licenses to the highest bidder; the FCC has held them since Congress authorized them in 1993.",
+  "section": "rules",
+  "source_url": "https://www.everycrsreport.com/reports/R48861.html"
+ },
+ {
+  "term": "Spoofing",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "Broadcasting fake satellite signals so a receiver computes a false position or time.",
+  "section": "gps",
+  "source_url": "https://www.easa.europa.eu/en/domains/air-operations/global-navigation-satellite-system-outages-and-alterations"
+ },
+ {
+  "term": "Squawk",
+  "aka": "Mode A code",
+  "category": "Aviation and ships",
+  "definition": "The four-digit transponder code assigned by air traffic control, also carried in ADS-B.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq"
+ },
+ {
+  "term": "SSTV",
+  "aka": "Slow-scan television",
+  "category": "Satellites and timing",
+  "definition": "Still pictures sent as audio tones over a voice radio channel; the ISS sends them on 145.800 MHz FM during events.",
+  "section": "satellites",
+  "source_url": "https://amsat-uk.org/2023/12/14/iss-sstv-40th-anniv-ham-radio-in-human-spaceflight/"
+ },
+ {
+  "term": "Starlink Gen2",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "SpaceX's second-generation Starlink satellites; the FCC has authorized 15,000 of them as of January 2026.",
+  "section": "satellites",
+  "source_url": "https://docs.fcc.gov/public/attachments/DOC-417881A1.pdf"
+ },
+ {
+  "term": "Systematic review",
+  "aka": "",
+  "category": "Health",
+  "definition": "A study that gathers and grades all relevant research on a question by a preset method, like the 2024 WHO-commissioned Karipidis review.",
+  "section": "health",
+  "source_url": "https://doris.bfs.de/jspui/bitstream/urn:nbn:de:0221-2025070452870/2/SL_Karipidis_2024_EffectOfExposure_Eng.pdf"
+ },
+ {
+  "term": "T-Band",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "The 470-512 MHz band used for public safety radio in some large US metro areas, including Greater Boston.",
+  "section": "public-safety",
+  "source_url": "https://www.khlaw.com/insights/telecom-alert-6-ghz-band-pn-t-band-mandate-repealed-verizon-citing-petition-dismissed"
+ },
+ {
+  "term": "talkgroup",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "A virtual channel on a trunked system that a group of users joins; a control channel assigns it a real frequency for each conversation.",
+  "section": "public-safety",
+  "source_url": "https://wiki.radioreference.com/index.php/APCO_Project_25"
+ },
+ {
+  "term": "Thread",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A low-power IPv6 mesh radio for smart-home devices, using the same 802.15.4 radio as Zigbee.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/Thread_(network_protocol)"
+ },
+ {
+  "term": "TPMS",
+  "aka": "Tire pressure monitoring system",
+  "category": "Unlicensed and IoT",
+  "definition": "A battery-powered sensor in each wheel that radios tire pressure to the car, required on new US vehicles from the 2008 model year.",
+  "section": "everyday",
+  "source_url": "https://www.controleng.com/tire-pressure-monitoring-requirement-kicks-in/"
+ },
+ {
+  "term": "Trilateration",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "Finding a position from measured distances to several known points; a GPS receiver uses distances to satellites.",
+  "section": "gps",
+  "source_url": "https://www.gps.gov/node/198"
+ },
+ {
+  "term": "trunked system",
+  "aka": "trunking",
+  "category": "Public safety",
+  "definition": "A computer-controlled radio system that assigns each conversation a free channel from a shared pool.",
+  "section": "public-safety",
+  "source_url": "https://www.cisa.gov/sites/default/files/publications/LMR%20101_508FINAL.pdf"
+ },
+ {
+  "term": "UAT",
+  "aka": "Universal Access Transceiver",
+  "category": "Aviation and ships",
+  "definition": "US-only ADS-B on 978 MHz, accepted below 18,000 ft and the only link carrying free FIS-B weather.",
+  "section": "aviation",
+  "source_url": "https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq"
+ },
+ {
+  "term": "UHF",
+  "aka": "ultra high frequency",
+  "category": "Basics",
+  "definition": "ITU band 9, 300-3,000 MHz, also called decimetric waves.",
+  "section": "basics",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.101"
+ },
+ {
+  "term": "ULS",
+  "aka": "Universal Licensing System",
+  "category": "Towers",
+  "definition": "The FCC's public database of wireless licenses, searchable by call sign, name, location, ASR number or frequency.",
+  "section": "towers",
+  "source_url": "https://wireless2.fcc.gov/helpfiles/licenseSearch/helpAbout.html"
+ },
+ {
+  "term": "Unlicensed",
+  "aka": "Licence-exempt",
+  "category": "Unlicensed and IoT",
+  "definition": "Radio use allowed without an individual license, but with no protection from interference.",
+  "section": "unlicensed",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/15.5"
+ },
+ {
+  "term": "Urban canyon",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "A street lined with tall buildings that block and reflect satellite signals.",
+  "section": "gps",
+  "source_url": "https://www.gps.gov/node/70"
+ },
+ {
+  "term": "User range error",
+  "aka": "URE",
+  "category": "Satellites and timing",
+  "definition": "How far off a satellite's own distance information is before a receiver adds its own errors; the US commits to 2.0 m or less, 95% of the time.",
+  "section": "gps",
+  "source_url": "https://www.gps.gov/node/70"
+ },
+ {
+  "term": "VDL Mode 2",
+  "aka": "VHF Data Link Mode 2",
+  "category": "Aviation and ships",
+  "definition": "A digital VHF datalink at 31.5 kbit/s on twelve channels from 136.700 to 136.975 MHz, carrying ACARS and CPDLC.",
+  "section": "aviation",
+  "source_url": "https://en.wikipedia.org/wiki/VHF_Data_Link"
+ },
+ {
+  "term": "VHF",
+  "aka": "very high frequency",
+  "category": "Basics",
+  "definition": "ITU band 8, 30-300 MHz, also called metric waves.",
+  "section": "basics",
+  "source_url": "https://www.law.cornell.edu/cfr/text/47/2.101"
+ },
+ {
+  "term": "virtual channel",
+  "aka": "",
+  "category": "Boston",
+  "definition": "The channel number a TV displays, which can differ from the RF channel the signal uses. WBZ-TV is virtual 4 on RF 20.",
+  "section": "boston",
+  "source_url": "https://en.wikipedia.org/wiki/WBZ-TV"
+ },
+ {
+  "term": "Wi-Fi 7",
+  "aka": "802.11be",
+  "category": "Unlicensed and IoT",
+  "definition": "The Wi-Fi generation certified from January 2024, adding 320 MHz channels in 6 GHz, Multi-Link Operation and 4K QAM.",
+  "section": "unlicensed",
+  "source_url": "https://wi-fi.org/news-events/newsroom/wi-fi-alliance-introduces-wi-fi-certified-7"
+ },
+ {
+  "term": "Wireless Emergency Alerts",
+  "aka": "WEA",
+  "category": "Public safety",
+  "definition": "US alerts pushed to phones in a targeted area, launched in April 2012.",
+  "section": "public-safety",
+  "source_url": "https://www.fcc.gov/node/212676"
+ },
+ {
+  "term": "Wireless Telegraphy Act 2006 s.48",
+  "aka": "",
+  "category": "Public safety",
+  "definition": "The UK offence of using a receiver with intent to learn the contents of a message you are not an intended recipient of, or disclosing it.",
+  "section": "scanners",
+  "source_url": "https://www.legislation.gov.uk/ukpga/2006/36/section/48/enacted/data.html"
+ },
+ {
+  "term": "World Radiocommunication Conference",
+  "aka": "WRC",
+  "category": "Rules",
+  "definition": "An ITU conference held every three to four years to revise the Radio Regulations; WRC-27 meets in Shanghai in 2027.",
+  "section": "rules",
+  "source_url": "https://itu.int/wrc-27/"
+ },
+ {
+  "term": "WWV / WWVH",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "NIST shortwave time stations in Colorado and Hawaii that broadcast ticks and spoken time.",
+  "section": "gps",
+  "source_url": "https://www.nist.gov/pml/time-and-frequency-division/what-time-it-faqs"
+ },
+ {
+  "term": "WWVB",
+  "aka": "",
+  "category": "Satellites and timing",
+  "definition": "NIST's 60 kHz time-code station near Fort Collins, Colorado, which sets radio-controlled clocks.",
+  "section": "gps",
+  "source_url": "https://www.nist.gov/pml/time-and-frequency-division/what-time-it-faqs"
+ },
+ {
+  "term": "Z-Wave",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A sub-GHz smart-home mesh radio at 908.42 MHz in the US and 868.42 MHz in Europe.",
+  "section": "unlicensed",
+  "source_url": "https://www.techtarget.com/iotagenda/definition/Z-Wave"
+ },
+ {
+  "term": "Zigbee",
+  "aka": "",
+  "category": "Unlicensed and IoT",
+  "definition": "A low-power mesh smart-home radio built on IEEE 802.15.4, mainly at 2.4 GHz.",
+  "section": "unlicensed",
+  "source_url": "https://en.wikipedia.org/wiki/Zigbee"
+ }
+]

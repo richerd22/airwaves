@@ -1,0 +1,828 @@
+[
+ {
+  "date": "1899",
+  "label": "Marconi signals across the English Channel",
+  "detail": "Guglielmo Marconi, who had moved to England in 1896 for funding, sends wireless signals across the Channel.",
+  "source_url": "https://daily.jstor.org/the-birth-of-radio",
+  "era": "Before 1900"
+ },
+ {
+  "date": "1901-02",
+  "label": "Marconi arrives on Cape Cod",
+  "detail": "Marconi arrives in February 1901 and builds four 210 ft towers in South Wellfleet.",
+  "source_url": "https://capecodandtheislandsmag.com/where-radio-began/",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1901-12-12",
+  "label": "Morse 'S' heard across the Atlantic",
+  "detail": "Marconi and George Kemp at Signal Hill, Newfoundland, hear the letter S sent from Poldhu, Cornwall, using a kite-borne antenna.",
+  "source_url": "https://ethw.org/Milestones:Reception_of_Transatlantic_Radio_Signals,_1901",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1903-01-18",
+  "label": "Wellfleet's transatlantic exchange",
+  "detail": "A 48-word message goes from Wellfleet to England and a reply returns; Roosevelt's greeting to Edward VII is dated January 19.",
+  "source_url": "https://www.hmdb.org/m.asp?m=141101",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1906-12-21",
+  "label": "Fessenden's documented demonstration",
+  "detail": "Fessenden demonstrates his alternator transmitter at Brant Rock; about 12 W reached the antenna.",
+  "source_url": "https://www.radioworld.com/columns-and-views/fessenden-the-next-chapter",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1906-12-24",
+  "label": "Claimed Christmas Eve broadcast (disputed)",
+  "detail": "Fessenden's 1932 letter claims a voice-and-music broadcast; no contemporary accounts have been found.",
+  "source_url": "https://www.earlyradiohistory.us/1940fes2.htm",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1912-08-13",
+  "label": "Radio Act of 1912",
+  "detail": "Passed after the Titanic sank; requires licenses to transmit and puts the Commerce Department in charge.",
+  "source_url": "https://incompliancemag.com/a-selective-history-of-part-15-of-the-fcc-rules-an-engineering-perspective/",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1914-04-06",
+  "label": "ARRL founded",
+  "detail": "Hiram Percy Maxim and Clarence D. Tuska co-found the American Radio Relay League in Hartford, Connecticut.",
+  "source_url": "https://en.wikipedia.org/wiki/American_Radio_Relay_League",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1917",
+  "label": "Navy shuts Wellfleet station",
+  "detail": "The Navy closes Marconi's Wellfleet station; it is dismantled in 1920.",
+  "source_url": "https://capecodandtheislandsmag.com/where-radio-began/",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1921-09-15",
+  "label": "WBZ licensed",
+  "detail": "WBZ is licensed and first broadcasts on September 19 from the Eastern States Exposition in Springfield.",
+  "source_url": "https://en.wikipedia.org/wiki/WBZ_(AM)",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1926-04-16",
+  "label": "Court rules for Zenith's WJAZ",
+  "detail": "A federal judge rules the government lacks authority to set operating requirements, leaving stations free to change frequencies.",
+  "source_url": "https://en.wikipedia.org/wiki/Radio_Act_of_1927",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1927-02-23",
+  "label": "Radio Act of 1927",
+  "detail": "Creates the Federal Radio Commission and the 'public interest, convenience, or necessity' standard.",
+  "source_url": "https://en.wikipedia.org/wiki/Radio_Act_of_1927",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1934-06-19",
+  "label": "Communications Act of 1934",
+  "detail": "Creates the FCC to replace the FRC and puts wire and radio under one framework.",
+  "source_url": "https://en.wikipedia.org/wiki/Communications_Act_of_1934",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1938-11",
+  "label": "First low-power unlicensed rules",
+  "detail": "The FCC adopts rules for low-power devices, the ancestor of today's Part 15.",
+  "source_url": "https://incompliancemag.com/a-selective-history-of-part-15-of-the-fcc-rules-an-engineering-perspective/",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1940-07",
+  "label": "WBZ moves to Hull",
+  "detail": "Fybush gives July 8, 1940 for the Hull dedication; Wikipedia gives July 27, 1940 for the move.",
+  "source_url": "https://www.fybush.com/sites/2005/site-050805.html",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1941-03-29",
+  "label": "WBZ moves to 1030 kHz",
+  "detail": "Under NARBA, WBZ moves from 990 to 1030 kHz as a clear-channel station.",
+  "source_url": "https://en.wikipedia.org/wiki/WBZ_(AM)",
+  "era": "1900-1945"
+ },
+ {
+  "date": "1951",
+  "label": "CONELRAD created",
+  "detail": "President Truman sets up CONELRAD, the first US national emergency broadcast system.",
+  "source_url": "https://www.globalsecurity.org/security/systems/eas.htm",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1957",
+  "label": "Cedar Street tower in Needham",
+  "detail": "WBZ-TV's roughly 1,200 ft tower replaces one destroyed in 1954.",
+  "source_url": "https://www.fybush.com/sites/2009/site-090102.html",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1957",
+  "label": "Needham's Cedar Street TV tower built",
+  "detail": "Built for WBZ-TV; WGBH-TV, WCVB and WGBX joined later.",
+  "source_url": "https://www.fybush.com/site-20210326",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1963",
+  "label": "Emergency Broadcast System",
+  "detail": "The Emergency Broadcast System replaces CONELRAD under President Kennedy.",
+  "source_url": "https://www.globalsecurity.org/security/systems/eas.htm",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1966-06-18",
+  "label": "WGBH-TV moves its transmitter to Needham",
+  "detail": "WGBH-TV's signal is rated at 362.7 m (1,190 ft) above average terrain.",
+  "source_url": "https://en.wikipedia.org/wiki/WGBH-TV",
+  "era": "1945-1980"
+ },
+ {
+  "date": "Early 1970s",
+  "label": "BAPERN begins",
+  "detail": "The Greater Boston Police Council starts building a shared police mutual aid radio network.",
+  "source_url": "https://pcsdma.org/commbapern.html",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1971",
+  "label": "ALOHAnet",
+  "detail": "ALOHAnet links the Hawaiian Islands by UHF packet radio, an ancestor of Wi-Fi.",
+  "source_url": "https://www.cablefree.net/history-of-wifi-technology/",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1973",
+  "label": "Logan Runway 14/32 first proposed",
+  "detail": "The runway would not open for another 33 years.",
+  "source_url": "https://en.wikipedia.org/wiki/Logan_International_Airport",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1975-01",
+  "label": "NOAA Weather Radio named home warning system",
+  "detail": "A White House policy names it the sole government-operated radio system for warnings into homes.",
+  "source_url": "https://www.weather.gov/media/nwr/NWR_Brochure_250428.pdf",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1978",
+  "label": "ARINC creates ACARS",
+  "detail": "Text messaging between aircraft and airlines begins, to automate routine pilot-to-airline messages.",
+  "source_url": "https://docs.airframes.io/docs/technology/overview",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1978",
+  "label": "First Navstar GPS satellites",
+  "detail": "Four Navstar satellites launched, the start of GPS.",
+  "source_url": "https://flightplan.forecastinternational.com/2024/09/25/global-navigation-satellite-systems-a-modern-necessity-a-look-at-the-worlds-leading-pnt-constellations/",
+  "era": "1945-1980"
+ },
+ {
+  "date": "1982",
+  "label": "Earliest recording of UVB-76",
+  "detail": "The earliest preserved recording of \"the Buzzer\" on 4625 kHz dates from 1982.",
+  "source_url": "https://en.wikipedia.org/wiki/UVB-76",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1983-10-13",
+  "label": "First US commercial cellular service",
+  "detail": "Ameritech opened service in Chicago; phones cost $2,200-$3,500.",
+  "source_url": "https://www.csmonitor.com/layout/set/amphtml/1983/1013/101337.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1985",
+  "label": "FCC opens 2.4 GHz to unlicensed use",
+  "detail": "An FCC ruling opens the 2.4 GHz ISM band to unlicensed spread-spectrum radios.",
+  "source_url": "https://www.cablefree.net/history-of-wifi-technology/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1988",
+  "label": "First GPS-timed grid sensor",
+  "detail": "The first prototype phasor measurement unit used a GPS clock.",
+  "source_url": "https://tf.nist.gov/general/pdf/2620.pdf",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1989-10",
+  "label": "Project 25 established",
+  "detail": "APCO, NASTD, NCS, NTIA and NSA launch the P25 digital radio standard effort.",
+  "source_url": "https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1993",
+  "label": "Congress authorizes spectrum auctions",
+  "detail": "The Omnibus Budget Reconciliation Act of 1993 gives the FCC auction authority.",
+  "source_url": "https://www.everycrsreport.com/reports/R48861.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1994-04-26",
+  "label": "Cellular-capable scanners barred",
+  "detail": "Scanners able to receive cellular frequencies may no longer be made or imported for US use.",
+  "source_url": "https://corporate.findlaw.com/litigation-disputes/interception-and-divulgence-of-radio-communications.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1994-07",
+  "label": "First FCC spectrum auction",
+  "detail": "Ten nationwide narrowband PCS licenses sell for about $617 million in five days.",
+  "source_url": "https://core.ac.uk/display/56103741",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1995",
+  "label": "GLONASS completed",
+  "detail": "Russia's 24-satellite constellation, planned for 1987, was completed.",
+  "source_url": "https://flightplan.forecastinternational.com/2024/09/25/global-navigation-satellite-systems-a-modern-necessity-a-look-at-the-worlds-leading-pnt-constellations/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1996-08-01",
+  "label": "FCC adopts RF exposure limits",
+  "detail": "The FCC adopts NCRP-based limits covering 300 kHz to 100 GHz; device SAR limits take effect Aug. 7.",
+  "source_url": "https://www.fcc.gov/general/fcc-policy-human-exposure",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1996-12-17",
+  "label": "First E-ZPass system",
+  "detail": "The first E-ZPass electronic toll system goes live.",
+  "source_url": "https://en.wikipedia.org/wiki/E-ZPass",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1997",
+  "label": "BARR aircraft-blocking program begins",
+  "detail": "The forerunner of LADD lets owners keep aircraft off public flight-tracking displays.",
+  "source_url": "https://nbaa.org/2019-press-releases/nbaa-commends-faa-new-measures-preserve-aviation-privacy-security/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1997",
+  "label": "First 802.11 standard",
+  "detail": "The first IEEE 802.11 wireless LAN standard, up to 2 Mbit/s.",
+  "source_url": "https://www.cablefree.net/history-of-wifi-technology/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "1998-02",
+  "label": "Bluetooth SIG formed",
+  "detail": "Ericsson, Nokia, IBM, Toshiba and Intel form the Bluetooth Special Interest Group.",
+  "source_url": "https://www.electronics-notes.com/articles/connectivity/bluetooth/what-is-bluetooth-technology-basics-summary.php",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2000-09-01",
+  "label": "All FCC licensees must comply",
+  "detail": "Deadline for all FCC licensees to comply with the RF exposure limits.",
+  "source_url": "https://www.fcc.gov/general/fcc-policy-human-exposure",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2002-07-01",
+  "label": "SOLAS AIS required on new ships",
+  "detail": "Ships built on or after July 1, 2002 must carry AIS; existing ships phased in 2003-2008.",
+  "source_url": "https://WWW.NAVCEN.USCG.GOV/sites/default/files/pdf/AIS/AIS_Regs_SOLAS_MTSA_2015.pdf",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2002-10-11",
+  "label": "FCC approves HD Radio",
+  "detail": "IBOC chosen as the US digital radio method after a 1998 petition.",
+  "source_url": "https://hdradio.com/broadcasters/us-regulatory/fcc-approval-process/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2005",
+  "label": "MBTA tunnel cellular deal",
+  "detail": "The MBTA signs a 15-year contract with InSite Wireless; Verizon service begins downtown in 2007.",
+  "source_url": "https://www.bostonglobe.com/metro/2012/05/20/mbta-subway-will-fully-wired-for-cellular-service-end-year/C7ZySW1UWd6Xn4hWx7fyuO/story.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2005",
+  "label": "MBTA signs subway cellular contract",
+  "detail": "15-year deal with InSite Wireless to wire tunnels for cell service.",
+  "source_url": "https://www.bostonglobe.com/metro/2012/05/20/mbta-subway-will-fully-wired-for-cellular-service-end-year/C7ZySW1UWd6Xn4hWx7fyuO/story.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2006",
+  "label": "UK Wireless Telegraphy Act 2006",
+  "detail": "Section 48 makes intercepting messages not meant for you an offence in the UK.",
+  "source_url": "https://www.legislation.gov.uk/ukpga/2006/36/section/48/enacted/data.html",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2006-11-23",
+  "label": "Logan Runway 14/32 opens",
+  "detail": "A one-way runway used only in strong northwest wind.",
+  "source_url": "https://en.wikipedia.org/wiki/Logan_International_Airport",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2006-12-04",
+  "label": "CharlieCard launches",
+  "detail": "The MBTA introduces the CharlieCard, replacing the token.",
+  "source_url": "https://en.wikipedia.org/wiki/CharlieCard",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2007-09",
+  "label": "TPMS mandate",
+  "detail": "Tire pressure monitoring becomes required on 2008 model-year US vehicles built after Aug 31, 2007.",
+  "source_url": "https://www.controleng.com/tire-pressure-monitoring-requirement-kicks-in/",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2008-08-19",
+  "label": "MBTA v. Anderson",
+  "detail": "A court lets an MIT students' DEF CON 16 talk on the MBTA fare system proceed.",
+  "source_url": "https://en.wikipedia.org/wiki/CharlieCard",
+  "era": "1980-2010"
+ },
+ {
+  "date": "2010-01-15",
+  "label": "Mics barred from 700 MHz",
+  "detail": "FCC 10-16 bars wireless mics from 698-806 MHz.",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone",
+  "era": "2010-now"
+ },
+ {
+  "date": "2011",
+  "label": "GPS 'Expandable 24'",
+  "detail": "GPS becomes effectively a 27-slot constellation.",
+  "source_url": "https://www.gps.gov/node/198",
+  "era": "2010-now"
+ },
+ {
+  "date": "2011-05-31",
+  "label": "IARC classifies RF as Group 2B",
+  "detail": "A 31-scientist IARC working group in Lyon classifies RF fields as possibly carcinogenic to humans.",
+  "source_url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr208_E.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2011-11-09",
+  "label": "First nationwide EAS test",
+  "detail": "A roughly 30-second national Emergency Alert System test runs at 2 p.m. Eastern.",
+  "source_url": "https://www.globalsecurity.org/security/systems/eas.htm",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012",
+  "label": "MassDOT Bluetooth travel times",
+  "detail": "MassDOT first installs roadside Bluetooth readers for highway travel-time signs; Fast Lane is rebranded E-ZPass the same year.",
+  "source_url": "https://statescoop.com/massachusetts-expands-real-time-traffic-info-system/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012-02-05",
+  "label": "Super Bowl XLVI wireless",
+  "detail": "In Indianapolis, PWS manages 110 frequencies among several hundred in use.",
+  "source_url": "https://www.tvtechnology.com/be-blogs/3183",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012-02-22",
+  "label": "FirstNet created",
+  "detail": "The Middle Class Tax Relief and Job Creation Act creates FirstNet as an independent authority within NTIA.",
+  "source_url": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012-03-27",
+  "label": "T-Mobile reaches Green and Blue Lines",
+  "detail": "Coverage extends to the Green Line (Park to Kenmore) and the Blue Line under the harbor.",
+  "source_url": "https://www.masstransitmag.com/technology/press-release/10683171/tmobile-expands-mbta-wireless-service-to-blue-and-green-lines-throughout-boston",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012-04",
+  "label": "Wireless Emergency Alerts launch",
+  "detail": "Phones begin receiving geographically targeted emergency alerts.",
+  "source_url": "https://www.fcc.gov/node/212676",
+  "era": "2010-now"
+ },
+ {
+  "date": "2012-08-03",
+  "label": "Jammer disrupts Newark GBAS",
+  "detail": "FAA complains after a truck-borne GPS jammer interferes with a landing-aid test at Newark Liberty.",
+  "source_url": "https://transition.fcc.gov/eb/Orders/2013/FCC-13-106A1.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2013",
+  "label": "RNAV departures begin at Logan",
+  "detail": "Cambridge Day dates it to June 2013; the City of Cambridge says 2014. The FAA's Environmental Assessment came out in May 2013.",
+  "source_url": "https://www.cambridgeday.com/2018/02/28/communities-enduring-logan-flight-noise-see-cause-for-optimism-in-mit-center-study/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2013-08-02",
+  "label": "FCC proposes $31,875 fine",
+  "detail": "FCC 13-106 released in the Newark jammer case.",
+  "source_url": "https://transition.fcc.gov/eb/Orders/2013/FCC-13-106A1.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2014",
+  "label": "Part 74 eligibility widened",
+  "detail": "FCC 14-62 adds large venues and professional sound companies to wireless mic license eligibility.",
+  "source_url": "https://www.fcc.gov/topic/wireless-microphone",
+  "era": "2010-now"
+ },
+ {
+  "date": "2014-01-01",
+  "label": "CPDLC required on new aircraft in Europe",
+  "detail": "The Single European Sky rule names VDL Mode 2 as the primary link.",
+  "source_url": "https://en.wikipedia.org/wiki/VHF_Data_Link",
+  "era": "2010-now"
+ },
+ {
+  "date": "2015",
+  "label": "AWS-3 auction raises $44.9 billion",
+  "detail": "The AWS-3 auction sets a record that stands until the C-band auction.",
+  "source_url": "https://www.fierce-network.com/regulatory/c-band-clock-phase-auction-tops-charts-80-9b",
+  "era": "2010-now"
+ },
+ {
+  "date": "2016",
+  "label": "ADS-B Exchange founded",
+  "detail": "Started as a hobby project offering an unfiltered view of air traffic.",
+  "source_url": "https://www.adsbexchange.com/about/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2016-03-01",
+  "label": "US AIS expansion deadline",
+  "detail": "Previously exempt vessels covered by 33 CFR 164.46 must have AIS installed.",
+  "source_url": "https://www.law.cornell.edu/cfr/text/33/164.46",
+  "era": "2010-now"
+ },
+ {
+  "date": "2016-12-15",
+  "label": "Galileo Initial Services",
+  "detail": "European Commission declares Galileo's initial services available.",
+  "source_url": "https://insidegnss.com/european-commission-declares-galileo-initial-services-available-for-use/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2017-02",
+  "label": "Super Bowl LI: about 1,000 frequencies",
+  "detail": "About 1,000 frequencies in use in Houston; Karl Voss is the NFL lead coordinator.",
+  "source_url": "https://www.sportsvideo.org/?p=114322",
+  "era": "2010-now"
+ },
+ {
+  "date": "2017-03-30",
+  "label": "TV incentive auction bidding closes",
+  "detail": "$19.8 billion gross; $10.05 billion paid to 175 stations.",
+  "source_url": "https://www.everycrsreport.com/reports/IF10751.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2017-03-30",
+  "label": "AT&T wins FirstNet contract",
+  "detail": "FirstNet awards AT&T a 25-year contract to build and run the network.",
+  "source_url": "https://www.everycrsreport.com/files/20180427_R45179_de0b3c96e61ffdef402d042709db70a83d3d2dfb.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2017-04-13",
+  "label": "Incentive auction ends",
+  "detail": "The FCC broadcast incentive auction ends, starting the 39-month 600 MHz transition.",
+  "source_url": "https://www.fcc.gov/node/153",
+  "era": "2010-now"
+ },
+ {
+  "date": "2018-10",
+  "label": "Wi-Fi 4, 5, 6 names",
+  "detail": "The Wi-Fi Alliance adopts generation numbers for Wi-Fi standards.",
+  "source_url": "https://www.cepro.com/news/new_naming_designation_wireless_wifi/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2019",
+  "label": "Needham's Cabot Street candelabra rebuild completed",
+  "detail": "New top UHF antenna and large low-band VHF antenna for WGBH.",
+  "source_url": "https://www.fybush.com/site-20210326",
+  "era": "2010-now"
+ },
+ {
+  "date": "2019-11-04",
+  "label": "FAA announces PIA; BARR renamed LADD",
+  "detail": "New privacy measures for aircraft owners.",
+  "source_url": "https://nbaa.org/2019-press-releases/nbaa-commends-faa-new-measures-preserve-aviation-privacy-security/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020",
+  "label": "BeiDou goes global",
+  "detail": "China's BDS-3 completes global coverage.",
+  "source_url": "https://flightplan.forecastinternational.com/2024/09/25/global-navigation-satellite-systems-a-modern-necessity-a-look-at-the-worlds-leading-pnt-constellations/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-01-01",
+  "label": "US ADS-B Out mandate takes effect",
+  "detail": "Required in Class A, B and C and other designated airspace under 14 CFR 91.225.",
+  "source_url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-C/section-91.225",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-03",
+  "label": "ICNIRP 2020 guidelines",
+  "detail": "ICNIRP publishes RF guidelines for 100 kHz-300 GHz, replacing its 1998 guidelines and covering 5G.",
+  "source_url": "https://www.icnirp.org/en/activities/news/news-article/rf-guidelines-2020-published.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-04",
+  "label": "FCC opens 6 GHz",
+  "detail": "The FCC makes 1,200 MHz at 5.925-7.125 GHz available for unlicensed use.",
+  "source_url": "https://mwrf.com/technologies/systems/article/21129760/fcc-opens-6ghz-band-to-wifi",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-04-23",
+  "label": "FCC opens 6 GHz to Wi-Fi",
+  "detail": "1,200 MHz at 5.925-7.125 GHz opened for unlicensed use, with AFC for standard-power access points.",
+  "source_url": "https://www.telecomtv.com/content/wi-fi/fcc-opens-6ghz-band-to-wi-fi-and-other-unlicensed-uses-38453",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-07-13",
+  "label": "Mics out of 600 MHz",
+  "detail": "Wireless mics must stop operating on 617-652 and 663-698 MHz in the US.",
+  "source_url": "https://www.fcc.gov/node/153",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-09-08",
+  "label": "TV repack deadline for last holdouts",
+  "detail": "987 full-power stations repacked or extended; cost about $2.75 billion.",
+  "source_url": "https://www.tvtechnology.com/news/repack-crosses-the-finish-line",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-10",
+  "label": "FlightAware reports 30,000 receivers",
+  "detail": "In 193 countries on all seven continents.",
+  "source_url": "https://flightaware.com/news/article/FlightAware-Reaches-30000-Receivers/1500",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-12-07",
+  "label": "EU/UK transponder compliance date",
+  "detail": "Current text of Reg 1207/2011 Art 5; OPSGROUP had reported June 7, 2020.",
+  "source_url": "https://www.legislation.gov.uk/eur/2011/1207/article/5",
+  "era": "2010-now"
+ },
+ {
+  "date": "2020-12-27",
+  "label": "T-Band auction repealed",
+  "detail": "The Don't Break Up the T-Band Act cancels the auction of public safety T-Band spectrum.",
+  "source_url": "https://www.khlaw.com/insights/telecom-alert-6-ghz-band-pn-t-band-mandate-repealed-verizon-citing-petition-dismissed",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021",
+  "label": "Curved approach to Logan 33L",
+  "detail": "A Runway 33L RNP approach with curved segments is introduced to move noise away from homes.",
+  "source_url": "https://news.mit.edu/2024/new-flight-procedures-reduce-noise-aircraft-boston-logan-airport-0418",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021",
+  "label": "Colorado media access rule",
+  "detail": "HB 21-1250 requires fully encrypted agencies to adopt media access policies.",
+  "source_url": "https://colabnews.co/projects/a-year-after-the-legislature-passed-a-law-on-police-radio-encryption-denver-area-news-outlets-are-still-blocked-from-listening",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021-01",
+  "label": "C-band auction ends at $80.9 billion",
+  "detail": "Highest-grossing US spectrum auction: 280 MHz at 3.7-3.98 GHz.",
+  "source_url": "https://www.telecompetitor.com/c-band-spectrum-auction-ends-with-haul-of-almost-81-billion-shattering-records/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021-01-15",
+  "label": "C-band auction bidding closes",
+  "detail": "Auction 107 clock phase closes at over $80.9 billion gross for 280 MHz at 3.7-3.98 GHz.",
+  "source_url": "https://www.fierce-network.com/regulatory/c-band-clock-phase-auction-tops-charts-80-9b",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021-04-27",
+  "label": "Ofcom 5G auction final results",
+  "detail": "700 MHz and 3.6-3.8 GHz sold for £1.379 billion to four UK operators.",
+  "source_url": "https://www.ofcom.org.uk/spectrum/spectrum-awards/final-spectrum-auction-results",
+  "era": "2010-now"
+ },
+ {
+  "date": "2021-12",
+  "label": "FAA airworthiness directive on 5G and altimeters",
+  "detail": "FAA found C-band 5G could stop some radio altimeters working properly.",
+  "source_url": "https://alerts.aaae.org/latest/regulatory_52523",
+  "era": "2010-now"
+ },
+ {
+  "date": "2022-02-22",
+  "label": "AT&T shuts down 3G",
+  "detail": "About 2.7 million customers affected; T-Mobile and Verizon followed by Jan 2023.",
+  "source_url": "https://www.lightreading.com/4g3gwifi/3g-shutdowns-in-2022-what-we-know-so-far/d/d-id/775109",
+  "era": "2010-now"
+ },
+ {
+  "date": "2022-03-17",
+  "label": "EASA GNSS interference bulletin",
+  "detail": "EASA issues SIB 2022-02 on GNSS outages and alterations.",
+  "source_url": "https://www.easa.europa.eu/en/node/143832",
+  "era": "2010-now"
+ },
+ {
+  "date": "2022-10-04",
+  "label": "Matter 1.0",
+  "detail": "The Connectivity Standards Alliance launches Matter 1.0 and its certification program.",
+  "source_url": "https://csa-iot.org/newsroom/matter-arrives/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2022-12",
+  "label": "Starlink Gen2 authorized",
+  "detail": "FCC authorizes 7,500 Gen2 Starlink satellites in Ku and Ka bands.",
+  "source_url": "https://www.rcrwireless.com/20221202/network-infrastructure/fcc-grants-spacex-partial-permission-to-launch-starlink-gen2",
+  "era": "2010-now"
+ },
+ {
+  "date": "2022-12-16",
+  "label": "MBTA picks L3Harris for P25",
+  "detail": "A five-year, $93 million contract to replace EDACS with P25.",
+  "source_url": "https://www.l3harris.com/newsroom/trade-release/2022/12/l3harris-awarded-93-million-contract-improve-mbta-public-safety",
+  "era": "2010-now"
+ },
+ {
+  "date": "2023-03-09",
+  "label": "FCC auction authority lapses",
+  "detail": "Congress lets the authority expire for the first time since 1993.",
+  "source_url": "https://www.everycrsreport.com/reports/R48861.html",
+  "era": "2010-now"
+ },
+ {
+  "date": "2023-04-23",
+  "label": "UK Emergency Alerts national test",
+  "detail": "Phones across the UK sound a test alert at 3 p.m.",
+  "source_url": "https://www.gov.uk/government/news/time-set-for-uk-emergency-alerts-test",
+  "era": "2010-now"
+ },
+ {
+  "date": "2023-06-07",
+  "label": "EU/UK retrofit deadline",
+  "detail": "Last date for operators with a retrofit programme in place before December 7, 2020.",
+  "source_url": "https://www.legislation.gov.uk/eur/2011/1207/article/5",
+  "era": "2010-now"
+ },
+ {
+  "date": "2023-12-11",
+  "label": "Ofcom updates UK amateur licences",
+  "detail": "Ofcom sets 25 W, 100 W and 1000 W PEP tiers and new M8/M9 Intermediate call signs.",
+  "source_url": "https://www.ofcom.org.uk/__data/assets/pdf_file/0037/272998/Statement-Updating-the-amateur-radio-licensing-framework.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2024-01-08",
+  "label": "Wi-Fi CERTIFIED 7",
+  "detail": "Wi-Fi 7 certification launches, with 320 MHz channels in the 6 GHz band.",
+  "source_url": "https://wi-fi.org/news-events/newsroom/wi-fi-alliance-introduces-wi-fi-certified-7",
+  "era": "2010-now"
+ },
+ {
+  "date": "2024-01-25",
+  "label": "FAA SAFO 24002",
+  "detail": "FAA alerts operators to increasing GPS/GNSS disruptions.",
+  "source_url": "https://nbaa.org/wp-content/uploads/2024/02/SAFO24002.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2024-02-01",
+  "label": "FAA altimeter deadline for US airliners",
+  "detail": "Part 121 aircraft must have approved, 5G-tolerant radio altimeters.",
+  "source_url": "https://alerts.aaae.org/latest/regulatory_52523",
+  "era": "2010-now"
+ },
+ {
+  "date": "2024-08-01",
+  "label": "MBTA tap to ride",
+  "detail": "Contactless bank cards and phone wallets start working at MBTA fare gates.",
+  "source_url": "https://en.wikipedia.org/wiki/CharlieCard",
+  "era": "2010-now"
+ },
+ {
+  "date": "2024-09-04",
+  "label": "WHO-commissioned review on phones and cancer",
+  "detail": "ARPANSA publicizes the Karipidis review: moderate-certainty evidence that mobile phones likely do not raise brain tumor risk.",
+  "source_url": "https://www.arpansa.gov.au/who-review-finds-no-link-between-mobile-phone-use-and-brain-cancer",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025",
+  "label": "Eversource smart meter rollout begins",
+  "detail": "Itron smart meters start replacing Massachusetts electric meters in summer 2025.",
+  "source_url": "https://atholdailynews.com/2026/02/15/smart-meter-shift-eversource-rolling-out-new-technology-across-valley/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-04",
+  "label": "Flightradar24 passes 50,000 ground stations",
+  "detail": "About 7,000 are FR24-supplied kits; the rest are user-built.",
+  "source_url": "https://www.flightradar24.com/blog/inside-flightradar24/flightradar24-now-has-over-50000-active-data-sharers-around-the-world/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-04-07",
+  "label": "GOES-19 becomes GOES East",
+  "detail": "GOES-19 replaces GOES-16 at 75.2 degrees west.",
+  "source_url": "https://www.weathernationtv.com/news/noaa-goes-19-satellite-now-operational",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-06-06",
+  "label": "NOAA-18 decommissioned",
+  "detail": "First of the last three APT satellites shut down; NOAA-15 and -19 scheduled for August 2025.",
+  "source_url": "https://www.rtl-sdr.com/noaa-15-and-19-to-be-decommissioned-within-the-next-two-weeks/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-07-04",
+  "label": "Auction authority restored",
+  "detail": "Public Law 119-21 restores FCC auction authority through 30 September 2034 and sets a spectrum pipeline.",
+  "source_url": "https://www.wiley.law/alert-One-Big-Beautiful-Bill-Act-Passes-Restoring-FCC-Auction-Authority-and-Establishing-Spectrum-Pipeline",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-08-09",
+  "label": "Boston Police encrypt radio",
+  "detail": "BPD switches to a digital encrypted system, with a delayed public feed.",
+  "source_url": "https://police.boston.gov/2025/08/06/radio/",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-08-18",
+  "label": "Boston Police radio outage",
+  "detail": "A BPD channel fails during a night of shootings, weeks after the new system was adopted; accounts of its length differ.",
+  "source_url": "https://www.nbcboston.com/news/local/radio-outage-within-boston-police-during-string-of-shootings-prompts-concern/3792445/?amp=1",
+  "era": "2010-now"
+ },
+ {
+  "date": "2025-10-28",
+  "label": "FCC proposes ending mandatory ATSC 1.0 simulcast",
+  "detail": "Fifth Further Notice in GN Docket 16-142, adopted unanimously.",
+  "source_url": "https://docs.fcc.gov/public/attachments/FCC-25-72A1.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2026-01-09",
+  "label": "Starlink Gen2 doubled",
+  "detail": "FCC authorizes 7,500 more Gen2 satellites, 15,000 total, including direct-to-cell.",
+  "source_url": "https://docs.fcc.gov/public/attachments/DOC-417881A1.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2026-07",
+  "label": "Ofcom upper 6 GHz Wi-Fi",
+  "detail": "Ofcom decides to allow AFC-controlled higher-power Wi-Fi across 6425-7125 MHz.",
+  "source_url": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/consultation-expanding-access-to-the-6-ghz-band-for-commercial-mobile-and-wi-fi-services/main-document/consultation-notice-of-proposed-regulations.pdf",
+  "era": "2010-now"
+ },
+ {
+  "date": "2026-07-03",
+  "label": "EASA SIB 2022-02 Revision 4",
+  "detail": "Adds pilot-controller phraseology for GNSS interference.",
+  "source_url": "https://www.easa.europa.eu/en/node/143832",
+  "era": "2010-now"
+ },
+ {
+  "date": "2027-10-18",
+  "label": "WRC-27 opens in Shanghai",
+  "detail": "The World Radiocommunication Conference runs 18 October - 12 November 2027.",
+  "source_url": "https://itu.int/wrc-27/",
+  "era": "2010-now"
+ }
+]

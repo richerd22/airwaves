@@ -1,0 +1,1092 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Is It Legal to Listen to Police Scanners? Laws and Encryption | The Airwaves</title>
+<meta name="description" content="In the US, owning a scanner and listening to unencrypted public safety radio is generally legal under federal law, but sharing or profiting from what you...">
+<link rel="canonical" href="https://airwaves.cold.fyi/scanners/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="article"><meta property="og:site_name" content="cold.fyi">
+<meta property="og:title" content="Is It Legal to Listen to Police Scanners? Laws and Encryption | The Airwaves"><meta property="og:description" content="In the US, owning a scanner and listening to unencrypted public safety radio is generally legal under federal law, but sharing or profiting from what you...">
+<meta property="og:url" content="https://airwaves.cold.fyi/scanners/"><meta property="og:image" content="https://airwaves.cold.fyi/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Is It Legal to Listen to Police Scanners? Laws and Encryption", "description": "In the US, owning a scanner and listening to unencrypted public safety radio is generally legal under federal law, but sharing or profiting from what you...", "url": "https://airwaves.cold.fyi/scanners/", "image": "https://airwaves.cold.fyi/og.png", "datePublished": "2026-10-14", "dateModified": "2026-10-14", "inLanguage": "en", "author": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "publisher": {"@type": "Organization", "name": "Third Polar Arch", "url": "https://thirdpolararch.com"}, "isPartOf": {"@type": "CreativeWork", "name": "The Airwaves", "url": "https://airwaves.cold.fyi/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Airwaves", "item": "https://airwaves.cold.fyi/"}, {"@type": "ListItem", "position": 2, "name": "Scanners, encryption and what you're allowed to hear", "item": "https://airwaves.cold.fyi/scanners/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it legal to own a police scanner?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, generally yes: the FCC says Section 705 of the Communications Act does not prohibit the mere interception of radio communications. Divulging or profiting from what you hear can violate it, scanners able to receive cellular frequencies are banned, and some states restrict scanners in vehicles."}}, {"@type": "Question", "name": "Is it legal to have a police scanner in my car?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the state. A retailer's state guide lists in-vehicle restrictions in Florida, Indiana, Kentucky, Minnesota and New York, with exemptions for licensed hams in some states and local permits in New York; check the statute text before relying on it."}}, {"@type": "Question", "name": "Why can't I hear the police on my scanner anymore?", "acceptedAnswer": {"@type": "Answer", "text": "The agency may have moved to digital P25, moved to P25 Phase 2, which many older scanners cannot decode, or encrypted its traffic. A newer scanner helps with the first two; encrypted traffic is not readily accessible to the public under the Wiretap Act."}}, {"@type": "Question", "name": "Is Boston police radio encrypted?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Boston Police switched to a digital encrypted radio system on August 9, 2025. The department offers a free public feed at radio.rapidsos.com/boston, delayed about 5 minutes in most cases."}}, {"@type": "Question", "name": "Can scanners pick up cell phone calls?", "acceptedAnswer": {"@type": "Answer", "text": "US law bars the FCC from authorizing scanners that can receive cellular frequencies, and such scanners could not be made or imported for US use after April 26, 1994. Intercepting phone calls can also bring severe criminal penalties under 18 U.S.C. 2510-2520."}}]}]}</script>
+<style>
+:root{padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/space-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-grotesk-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/source-serif-4-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/source-serif-4-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/jetbrains-mono-latin-600-normal.woff2) format('woff2')}
+/* Layout: a night-sky spectrum analyzer - dark navy, Space Grotesk display, a waterfall-plot hero, band colors per topic, one 68ch reading column with wide breakouts and a contents rail on big screens */
+:root{
+  color-scheme:dark;
+  --bg:#0b1020; --panel:#121a30; --panel2:#18223d; --ink:#e8ecf5; --muted:#9aa4bb; --line:#26314f;
+  --tape:#4fe3a1; --tape-ink:#0b1020; --hot:#ff6b7d; --cue:#7cc4ff; --sign:#4fe3a1; --sign-ink:#0b1020;
+  --ink-on:#0b1020; --ink-on-y:#0b1020;
+  --u-red:#ff6b7d; --u-yel:#ffcf5a; --u-org:#ff9a4d; --u-blu:#5aa8ff; --u-grn:#4fe3a1; --u-pur:#b98cff; --u-pnk:#ff7fc8; --u-wht:#dfe5f2;
+  --s1:var(--u-grn); --s2:var(--u-blu); --s3:var(--u-red); --s4:var(--u-yel); --s5:var(--u-org); --s6:var(--u-pnk);
+  --f-display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --f-hand:var(--f-mono);
+  --measure:68ch; --wide:980px;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f3f5fa; --panel:#ffffff; --panel2:#eef1f8; --ink:#141a2b; --muted:#566079; --line:#d5dbe8;
+  --tape:#0b7a52; --tape-ink:#ffffff; --hot:#c0283c; --cue:#1452b8; --sign:#0b7a52;
+  --ink-on:#ffffff; --ink-on-y:#141a2b;
+  --u-red:#c8283c; --u-yel:#b38600; --u-org:#c25a12; --u-blu:#1b63c6; --u-grn:#0b8a5c; --u-pur:#7444c4; --u-pnk:#c2397f; --u-wht:#6f7891 }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.125rem;line-height:1.62;margin:0}
+a{color:var(--cue);text-underline-offset:.16em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--tape);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--panel);padding:.5rem;z-index:20}
+::selection{background:var(--tape);color:var(--tape-ink)}
+
+.wrap{max-width:calc(var(--wide) + 2rem);margin:0 auto;padding-inline:1rem;padding-block:1rem 4rem}
+.col{max-width:var(--measure);margin-inline:auto}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-block:.4rem;border-bottom:1px solid var(--line)}
+.mast a{color:var(--ink);text-decoration:none}
+.theme-btn{font:600 .72rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:none;border:1px solid var(--line);border-radius:3px;padding:.25rem .5rem;cursor:pointer}
+
+/* hero */
+.hero{padding-block:2.2rem 1.5rem}
+.case-id{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(3.6rem,15vw,9.5rem);line-height:.84;letter-spacing:.01em;text-transform:uppercase;margin:.4rem 0 .9rem;text-wrap:balance}
+h1 span{display:block}
+h1 .file{color:var(--tape)}
+.dek{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.45;color:var(--muted);max-width:44rem;margin:0 0 1.4rem;text-wrap:pretty}
+.labels{display:flex;flex-wrap:wrap;gap:.55rem;margin:0 0 1.6rem;padding:0;list-style:none}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:12px;padding:1.4rem 1.4rem 1.3rem;color:#e8ecf5;overflow:hidden;background:#070b18;border:1px solid #26314f;min-height:15rem;display:flex;flex-direction:column;justify-content:flex-end}
+.sign .wf{position:absolute;inset:0;opacity:.9;background:
+  repeating-linear-gradient(0deg,rgba(7,11,24,.0) 0 3px,rgba(7,11,24,.35) 3px 4px),
+  radial-gradient(ellipse 6% 60% at 18% 40%,rgba(255,207,90,.75),transparent 70%),
+  radial-gradient(ellipse 3% 80% at 34% 50%,rgba(79,227,161,.8),transparent 70%),
+  radial-gradient(ellipse 9% 40% at 52% 30%,rgba(90,168,255,.7),transparent 70%),
+  radial-gradient(ellipse 2% 90% at 63% 55%,rgba(255,127,200,.75),transparent 70%),
+  radial-gradient(ellipse 14% 30% at 80% 35%,rgba(185,140,255,.6),transparent 70%),
+  linear-gradient(180deg,#0b1430,#070b18)}
+.sign .dial{position:absolute;left:1.4rem;right:1.4rem;top:1rem;display:flex;justify-content:space-between;font:600 .7rem var(--f-mono);color:#9aa4bb;border-bottom:1px solid #3a4770;padding-bottom:.3rem}
+.sign h1{position:relative;color:#e8ecf5;font-weight:700;font-size:clamp(3.2rem,12vw,6.8rem);line-height:.9;margin:.1rem 0 0;letter-spacing:-.02em}
+.sign h1 span:first-child{font-size:.45em;letter-spacing:.02em;color:#9aa4bb}
+.sign h1 .file{color:#4fe3a1}
+.labels li{background:var(--tape);color:var(--tape-ink);font-family:var(--f-hand);font-size:1.02rem;line-height:1;padding:.5rem .7rem .45rem;transform:rotate(var(--r,-1deg));box-shadow:0 1px 0 rgba(0,0,0,.25);clip-path:polygon(2% 0,98% 4%,100% 92%,1% 100%)}
+.labels li:nth-child(2){--r:.8deg}.labels li:nth-child(3){--r:-.4deg}.labels li:nth-child(4){--r:1.2deg}.labels li:nth-child(5){--r:-1.4deg}
+.labels b{font-family:var(--f-mono);font-weight:600;font-size:.9rem;margin-right:.25rem}
+
+.paths{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:.9rem;display:grid;gap:.6rem}
+.paths h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.path-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:.6rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.path b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.path p{margin:.25rem 0 .4rem;font-size:.9rem;line-height:1.35;color:var(--muted)}
+.path a{font-family:var(--f-mono);font-size:.74rem;margin-right:.55rem;display:inline-block;line-height:1.7}
+
+/* layout with rail */
+.layout{display:block}
+.rail{display:none}
+@media (min-width:1260px){
+  .layout{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:2.5rem;max-width:calc(var(--wide) + 17.5rem);margin:0 auto}
+  .rail{display:block;position:sticky;top:calc(env(safe-area-inset-top,0px) + 1rem);align-self:start;max-height:calc(100vh - 2rem);overflow:auto;padding-right:.5rem;font-family:var(--f-mono);font-size:.74rem;line-height:1.3}
+  .rail a{display:flex;gap:.5rem;padding:.28rem .3rem;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+  .rail a.on{color:var(--ink);border-left-color:var(--tape);background:var(--panel)}
+  .rail .n{min-width:1.6rem;color:var(--muted)}
+  .rail h2{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+  .wrap.has-rail{max-width:none}
+}
+
+/* lede + toc */
+.lede{font-size:1.22rem;line-height:1.6;margin-top:1.8rem}
+.lede > p:first-of-type::first-letter{font-family:var(--f-display);font-weight:800;float:left;font-size:4.4em;line-height:.8;padding:.06em .1em 0 0;color:var(--tape)}
+nav.toc{margin:2.2rem 0;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.1rem}
+nav.toc h2{margin:0 0 .6rem;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav.toc ol{list-style:none;margin:0;padding:0;columns:2 17rem;column-gap:2rem}
+nav.toc li{break-inside:avoid;padding:.18rem 0;font-size:1rem;line-height:1.3}
+nav.toc a{color:var(--ink);text-decoration:none;display:flex;gap:.55rem}
+nav.toc a:hover{color:var(--tape)}
+.chip-n{font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--tape-ink);background:var(--sc,var(--tape));min-width:1.9rem;text-align:center;padding:.12rem .25rem;border-radius:2px;height:fit-content;margin-top:.15rem}
+
+/* article */
+article h2{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.3rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:4.2rem 0 1rem;text-wrap:balance;scroll-margin-top:1rem}
+article h2 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.36em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+article h3{font-family:var(--f-body);font-weight:600;font-size:1.32rem;line-height:1.25;margin:2.2rem 0 .55rem;text-wrap:balance}
+article p{margin:0 0 1.05rem;text-wrap:pretty}
+article strong{font-weight:600}
+article ul,article ol{padding-left:1.25rem;margin:0 0 1.05rem}
+article li{margin-bottom:.35rem}
+article p strong:first-child:is(:only-child,:first-child){}
+.short{border-left:4px solid var(--sc,var(--tape));background:var(--panel);padding:.85rem 1rem;border-radius:0 6px 6px 0;font-size:1.06rem}
+article code{font-family:var(--f-mono);font-size:.84em;background:var(--panel2);padding:.05em .3em;border-radius:3px}
+.tbl{overflow-x:auto;margin:1.2rem 0;border:1px solid var(--line);border-radius:6px}
+.tbl table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.35}
+.tbl th,.tbl td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--panel)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td{font-variant-numeric:tabular-nums}
+sup{line-height:0}
+a.footnote-ref{font-family:var(--f-mono);font-size:.66rem;text-decoration:none;padding:0 .08em;color:var(--muted)}
+a.footnote-ref:hover{color:var(--tape)}
+a.footnote-ref::before{content:"["}a.footnote-ref::after{content:"]"}
+
+/* breakouts */
+.wide{max-width:var(--wide);margin-inline:auto}
+.fig{margin:2rem auto;display:grid;gap:.8rem}
+.fig.pair{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.fig figure{margin:0;min-width:0}
+.fig .frame{display:block;background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;position:relative;aspect-ratio:4/3}
+.fig img{display:block;width:100%;height:100%;object-fit:cover}
+.fig .fallback{display:none;position:absolute;inset:0;padding:1rem;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);align-content:center;justify-items:start;gap:.3rem}
+.fig .frame.broken img{display:none}
+.fig .frame.broken .fallback{display:grid}
+.fig figcaption{font-size:.86rem;line-height:1.4;color:var(--muted);margin-top:.45rem}
+.fig figcaption b{color:var(--ink);font-weight:600}
+.fig .credit{display:block;font-family:var(--f-mono);font-size:.68rem;margin-top:.2rem}
+.fig .credit a{color:var(--muted)}
+
+.diagram{margin:2rem auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem .9rem .6rem}
+.diagram .dhead{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape);margin-bottom:.4rem}
+.dscroll{overflow-x:auto}
+.dg{display:block;width:100%;min-width:560px;height:auto}
+.dg .bx{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+.dg .bx.acc{stroke:var(--tape);stroke-width:2}
+.dg .bx.hot{stroke:var(--hot);stroke-width:2}
+.dg .bx.panel{fill:var(--bg);stroke:var(--tape);stroke-width:1}
+.dg .t{fill:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:13px}
+.dg .t.sm{font-size:11.5px}
+.dg .s{fill:var(--muted);font-family:var(--f-mono);font-size:11px}
+.dg .s.xs{font-size:10.5px}
+.dg .s.cap{fill:var(--tape);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.dg .s.lbl{font-size:10px}
+.dg .s.hot{fill:var(--hot)}
+.dg .w{stroke:var(--muted);stroke-width:1.8;fill:none}
+.dg .w.acc{stroke:var(--tape)}
+.dg .ah{fill:var(--muted)}.dg .aha{fill:var(--tape)}
+.dg .grid{stroke:var(--line);stroke-width:1}
+.dg .head{fill:var(--muted);opacity:.55}
+.dg .sep{stroke:var(--hot);stroke-width:1.5;stroke-dasharray:6 5}
+.dg .beam{stroke:var(--s4);stroke-width:2.2;fill:none;opacity:.9}
+.dg .beam.scan{stroke:var(--hot);stroke-dasharray:4 4}
+
+/* modules */
+.mod{margin:2.2rem auto;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.mod-head{padding:.9rem 1rem .8rem;border-bottom:1px solid var(--line)}
+.mod-head .kicker{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.mod-head h3{margin:.15rem 0 0;font-family:var(--f-display);font-weight:800;font-size:1.65rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.mod-head p{margin:.35rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.4}
+.mod-body{padding:1rem}
+.mod-foot{padding:.55rem 1rem;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.7rem;color:var(--muted);line-height:1.5;overflow-wrap:anywhere}
+.mod-foot a{color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:600 .78rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.3rem .65rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--tape);color:var(--tape-ink);border-color:var(--tape)}
+.field{display:flex;flex-direction:column;gap:.25rem;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+.field input,.field select{font:500 1rem var(--f-mono);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.5rem .55rem;width:100%;min-width:0;letter-spacing:0;text-transform:none}
+.btn{font:600 .85rem var(--f-mono);color:var(--tape-ink);background:var(--tape);border:0;border-radius:4px;padding:.55rem .9rem;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.count{font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:.9rem 0 0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:5.6rem;top:.4rem;bottom:.4rem;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:1.4rem;padding:.5rem 0;position:relative}
+.tl li::before{content:"";position:absolute;left:5.35rem;top:.95rem;width:10px;height:10px;border-radius:50%;background:var(--ec,var(--tape))}
+.tl .d{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);padding-top:.25rem;text-align:right;font-variant-numeric:tabular-nums}
+.tl .l{font-weight:600;font-size:1.02rem;line-height:1.3}
+.tl .x{font-size:.92rem;line-height:1.42;color:var(--muted)}
+.tl .x a{font-family:var(--f-mono);font-size:.68rem;margin-left:.2rem;white-space:nowrap}
+.tl-box{max-height:30rem;overflow:hidden;position:relative}
+.tl-box.open{max-height:none}
+.tl-box:not(.open)::after{content:"";position:absolute;inset:auto 0 0 0;height:5rem;background:linear-gradient(transparent,var(--panel))}
+
+/* glossary */
+.gl-tools{display:grid;gap:.7rem}
+.gl-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.gl-list li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.65rem .75rem;min-width:0}
+.gl-list dfn{font-style:normal;font-weight:600;font-size:1.04rem}
+.gl-list .aka{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);margin-left:.3rem}
+.gl-list .cat{display:inline-block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tape-ink);background:var(--gc,var(--tape));padding:.05rem .35rem;border-radius:2px;margin-bottom:.3rem}
+.gl-list p{margin:.25rem 0 0;font-size:.92rem;line-height:1.42;color:var(--muted)}
+.gl-list .more{font-family:var(--f-mono);font-size:.68rem;margin-top:.35rem;display:inline-block}
+
+/* roles */
+.roles{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:.6rem}
+.roles details{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem .75rem;min-width:0}
+.roles summary{cursor:pointer;list-style:none}
+.roles summary::-webkit-details-marker{display:none}
+.roles summary b{display:block;font-size:1.02rem}
+.roles summary span{font-size:.88rem;color:var(--muted);line-height:1.35;display:block}
+.roles .rd{font-size:.92rem;line-height:1.45;margin-top:.5rem}
+.roles .rd dl{margin:.4rem 0 0;font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.roles .rd dt{text-transform:uppercase;letter-spacing:.06em}
+.roles .rd dd{margin:0 0 .35rem;color:var(--ink);font-family:var(--f-body);font-size:.88rem}
+
+/* toolbox */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:.8rem}
+.tool{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.85rem;display:grid;gap:.65rem;align-content:start;min-width:0}
+.tool h4{margin:0;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.tool .row{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.out{border-top:1px dashed var(--line);padding-top:.6rem;display:grid;gap:.3rem}
+.out .big{font-family:var(--f-mono);font-weight:600;font-size:1.5rem;color:var(--tape);line-height:1.1;font-variant-numeric:tabular-nums}
+.out p{margin:0;font-size:.86rem;line-height:1.4;color:var(--muted)}
+.out .warn{color:var(--hot)}
+.tool .src{font-family:var(--f-mono);font-size:.66rem;color:var(--muted)}
+.tool .src a{color:var(--muted)}
+
+/* checklist */
+.check{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.check li{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.check input{width:1.15rem;height:1.15rem;margin-top:.2rem;accent-color:var(--tape);flex:none}
+.check label{font-size:.98rem;line-height:1.4;cursor:pointer}
+.check h4{margin:.8rem 0 .2rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.check li.done label{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tape)}
+
+/* resources */
+.res{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.45rem}
+.res li{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:.7rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
+.res .ty{font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.res a{font-weight:600}
+.res p{margin:.1rem 0 0;font-size:.9rem;color:var(--muted);line-height:1.4}
+
+/* faq, refs, footer */
+.faq details{border-bottom:1px solid var(--line);padding:.7rem 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.06rem;line-height:1.35}
+.faq details p{margin:.45rem 0 0;font-size:1rem;color:var(--muted)}
+.cite{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;margin:1.4rem 0;font-size:.95rem}
+.cite code{display:block;font-family:var(--f-mono);font-size:.78rem;white-space:pre-wrap;overflow-wrap:anywhere;margin:.4rem 0 .6rem}
+.refs{margin-top:3.5rem;border-top:2px solid var(--line);padding-top:1rem}
+.refs hr{display:none}
+.refs ol{padding-left:2.6rem;margin:0;font-size:.88rem;line-height:1.45;color:var(--muted)}
+.refs li{margin-bottom:.4rem;overflow-wrap:anywhere}
+.refs li::marker{font-family:var(--f-mono);font-size:.74rem;color:var(--tape)}
+.refs li p{margin:0;display:inline}
+.refs a.footnote-backref{text-decoration:none;margin-left:.25rem}
+.sisters{margin-top:3rem;border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;display:grid;gap:.4rem;background:var(--panel)}
+.sisters h2{margin:0;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sisters ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.sisters a{font-weight:600}
+.sisters span{font-size:.92rem;color:var(--muted)}
+footer{margin-top:2rem;border-top:1px solid var(--line);padding-top:.8rem;font-family:var(--f-mono);font-size:.72rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;justify-content:space-between}
+footer a{color:var(--muted)}
+.in-frame .site-only{display:none!important}
+
+/* breakouts: diagrams, figures, tables and tools widen past the text column, measured against the content column */
+.main{container-type:inline-size;min-width:0}
+.col .wide{width:min(var(--wide),100cqw);max-width:none;position:relative;left:50%;transform:translateX(-50%)}
+article h2{scroll-margin-top:1.6rem}
+
+.dscroll{position:relative}
+@media (max-width:620px){.diagram .dhead::after{content:" · swipe to see all";color:var(--muted)}}
+.roles summary b::after{content:" +";color:var(--tape);font-family:var(--f-mono);font-weight:600}
+.roles details[open] summary b::after{content:" -"}
+
+/* scene grid */
+.scenes{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.6rem}
+.scene{background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--tape);border-radius:6px;padding:.7rem .8rem;min-width:0}
+.scene:nth-child(6n+2){border-left-color:var(--s2)}.scene:nth-child(6n+3){border-left-color:var(--s3)}.scene:nth-child(6n+4){border-left-color:var(--s4)}.scene:nth-child(6n+5){border-left-color:var(--s5)}.scene:nth-child(6n+6){border-left-color:var(--s6)}
+.sc-top b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.05}
+.sc-top span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted)}
+.scene p{margin:.4rem 0 0;font-size:.9rem;line-height:1.4}
+.scene .lab{display:block;font-family:var(--f-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+/* corrections */
+.corr{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
+.corr h4{margin:0 0 .4rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tape)}
+.corr p{margin:0 0 .6rem;font-size:.95rem}
+.report{margin:1.6rem 0 0;font-family:var(--f-mono);font-size:.72rem}
+.report a{color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;margin-top:.6rem;font-family:var(--f-mono);font-size:.76rem;color:var(--muted)}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}
+.sc-top span{display:block;line-height:1.4;margin-top:.15rem}
+
+/* multi-page: progress, section h1, meta, prev/next, hub cards, phone contents drawer */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--tape);z-index:30;transition:width .1s linear}
+article h1.sec-h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,7vw,3.8rem);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:.6rem 0 1.1rem;text-wrap:balance}
+article h1.sec-h1 .tape{display:inline-block;vertical-align:.5em;margin-right:.55rem;font-family:var(--f-hand);font-weight:400;font-size:.34em;letter-spacing:0;text-transform:none;color:var(--tape-ink);background:var(--sc,var(--tape));padding:.3em .5em .22em;transform:rotate(-2deg);clip-path:polygon(3% 0,97% 6%,100% 94%,0 100%)}
+.readmeta{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);margin:1.6rem 0 0}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:3rem 0 0}
+.pn a{display:block;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);font-weight:600;line-height:1.3;min-width:0}
+.pn a:hover{border-color:var(--tape)}
+.pn span{display:block;font-family:var(--f-mono);font-size:.68rem;font-weight:400;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.pn .next{text-align:right}
+.hubtoc{max-width:var(--wide);margin:2.6rem auto 0}
+.hubtoc h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);text-transform:uppercase;line-height:.95;margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.65rem;margin-top:1rem}
+.card{display:grid;grid-template-rows:auto auto 1fr auto;gap:.35rem;background:var(--panel);border:1px solid var(--line);border-top:4px solid var(--sc,var(--tape));border-radius:8px;padding:.8rem .9rem;text-decoration:none;color:var(--ink);min-width:0}
+.card:hover{border-color:var(--sc,var(--tape))}
+.card .chip-n{width:fit-content;margin:0}
+.card b{font-size:1.1rem;line-height:1.25}
+.card p{margin:0;font-size:.9rem;line-height:1.42;color:var(--muted)}
+.mtoc{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;max-width:calc(100vw - 2rem)}
+.mtoc summary{list-style:none;cursor:pointer;font:600 .8rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--tape);color:var(--tape-ink);padding:.6rem .9rem;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.35);width:fit-content;margin-left:auto}
+.mtoc summary::-webkit-details-marker{display:none}
+.mtoc nav{margin-bottom:.5rem;background:var(--panel);border:1px solid var(--line);border-radius:10px;max-height:65vh;overflow:auto;padding:.4rem;width:min(22rem,calc(100vw - 2rem));font-family:var(--f-mono);font-size:.8rem}
+.mtoc[open]{display:flex;flex-direction:column-reverse}
+.mtoc a{display:flex;gap:.55rem;padding:.45rem .5rem;color:var(--ink);text-decoration:none;border-radius:6px}
+.mtoc a.on{background:var(--bg);color:var(--tape)}
+.mtoc .n{color:var(--muted);min-width:1.5rem}
+@media (min-width:1260px){.mtoc{display:none}}
+
+/* ---------- streetcode overrides ---------- */
+h1,article h2,article h1.sec-h1,.hubtoc h2,.mod-head h3,.tool h4,.path b,.sc-top b{text-transform:none;letter-spacing:0}
+.hero{padding-block:1.6rem 1.5rem}
+.sign{position:relative;margin:.6rem 0 1.2rem;max-width:46rem;border-radius:10px;padding:1.4rem 1.4rem 1.2rem;color:#f2f0ea;overflow:hidden;
+  background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 1px,transparent 1.5px) 0 0/7px 7px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.25) 0 1px,transparent 1.5px) 0 0/9px 9px,#2c2f32;border:1px solid #3d4246}
+.sign h1{color:#f2f0ea;font-weight:800;font-size:clamp(3.4rem,13vw,7.4rem);line-height:.86;margin:.1rem 0 .5rem;text-transform:uppercase;letter-spacing:.01em}
+.sign h1 .file{color:#ff8a3d}
+.sign .marks{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.4rem}
+.sign .marks span{font-family:var(--f-hand);font-size:1.05rem;line-height:1;padding:.32rem .55rem .2rem;border-radius:3px;color:#1a1c1e;transform:rotate(var(--r,-2deg))}
+.sign .arrow{position:absolute;right:1.2rem;top:1rem;font-family:var(--f-hand);font-size:2.4rem;color:#f5c935;transform:rotate(8deg);line-height:1}
+.labels li{font-family:var(--f-display);font-weight:700;font-size:1rem;letter-spacing:.02em;transform:none;clip-path:none;border-radius:4px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-left:6px solid var(--lc,var(--tape));box-shadow:none;padding:.4rem .7rem}
+.labels li:nth-child(1){--lc:var(--u-grn)}.labels li:nth-child(2){--lc:var(--u-blu)}.labels li:nth-child(3){--lc:var(--u-yel)}.labels li:nth-child(4){--lc:var(--u-pur)}.labels li:nth-child(5){--lc:var(--u-pnk)}
+.labels b{color:var(--ink)}
+.path b{font-weight:800;font-size:1.3rem}
+.lede > p:first-of-type::first-letter{font-weight:800;color:var(--tape)}
+article h2,article h1.sec-h1{font-weight:800}
+article h2 .tape,article h1.sec-h1 .tape{font-family:var(--f-mono);font-weight:600;font-size:.32em;transform:none;clip-path:none;border-radius:3px;color:var(--sci,#1a1c1e);background:var(--sc,var(--tape));padding:.32em .5em .2em;vertical-align:.55em}
+.chip-n{color:var(--sci,#1a1c1e);border-radius:3px}
+.card{border-top-width:6px}
+.mod-head h3,.tool h4{font-weight:800}
+.diagram .dhead,.mod-head .kicker,.check h4,.corr h4{color:var(--tape)}
+.progress{background:var(--tape)}
+.mtoc summary{background:var(--tape);color:var(--tape-ink)}
+.seg button[aria-pressed="true"]{color:var(--tape-ink)}
+.btn{color:var(--tape-ink)}
+em:first-child{color:var(--muted)}
+.gl-list .cat{color:var(--ink-on)}
+/* lookup + decoder */
+.lk-tools{display:grid;gap:.7rem}
+.lk-list{list-style:none;margin:.9rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.55rem}
+.lk-list a{display:block;height:100%;background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--lc,var(--tape));border-radius:6px;padding:.6rem .75rem;text-decoration:none;color:var(--ink)}
+.lk-list a:hover{border-color:var(--lc,var(--tape))}
+.lk-list .see{display:block;font-weight:600;font-size:1rem;line-height:1.3}
+.lk-list .is{display:block;font-size:.9rem;line-height:1.4;color:var(--muted);margin-top:.2rem}
+.lk-list .sec{display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.55rem;margin-top:.9rem}
+.dec-item{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.6rem;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.6rem}
+.dec-sw{width:2.6rem;height:2.6rem;border-radius:5px;border:1px solid rgba(0,0,0,.25);display:grid;place-items:center;font-family:var(--f-hand);font-size:.95rem;color:#1a1c1e}
+.dec-item b{display:block;font-size:.98rem;line-height:1.25}
+.dec-item p{margin:.15rem 0 0;font-size:.86rem;line-height:1.38;color:var(--muted)}
+.dec-src{font-family:var(--f-mono);font-size:.68rem;color:var(--muted);margin-top:.7rem;overflow-wrap:anywhere}
+.dec-src a{color:var(--muted)}
+.dg .t.wh{fill:#fff}
+.dg .f-blu{fill:var(--u-blu)}.dg .f-grn{fill:var(--u-grn)}.dg .f-red{fill:var(--u-red)}.dg .f-yel{fill:var(--u-yel)}.dg .f-org{fill:var(--u-org)}.dg .f-pur{fill:var(--u-pur)}.dg .f-pnk{fill:var(--u-pnk)}.dg .f-wht{fill:var(--u-wht)}.dg .f-mut{fill:var(--muted)}.dg .f-bg{fill:var(--bg)}.dg .f-pan{fill:var(--panel2)}
+.dg .w.blu{stroke:var(--u-blu)}.dg .w.grn{stroke:var(--u-grn)}.dg .w.red{stroke:var(--u-red)}.dg .w.yel{stroke:var(--u-yel)}.dg .w.org{stroke:var(--u-org)}.dg .w.pur{stroke:var(--u-pur)}.dg .w.pnk{stroke:var(--u-pnk)}.dg .w.wht{stroke:var(--u-wht)}
+.dg .bx.blu{stroke:var(--u-blu);stroke-width:2}.dg .bx.grn{stroke:var(--u-grn);stroke-width:2}.dg .bx.red{stroke:var(--u-red);stroke-width:2}.dg .bx.yel{stroke:var(--u-yel);stroke-width:2}.dg .bx.org{stroke:var(--u-org);stroke-width:2}.dg .bx.pur{stroke:var(--u-pur);stroke-width:2}
+.dg .wthick{stroke-width:7;fill:none;stroke-linecap:round}
+.dg .hand{font-family:var(--f-hand);font-size:15px}
+.gapnote{font-family:var(--f-mono);font-size:.8rem;background:#ffe9a8;color:#3a2a00;border:1px dashed #b8860b;padding:.4rem .6rem;border-radius:4px}
+.gaplist{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.45}
+.gaplist li{margin-bottom:.35rem}
+
+/* quiz, quick answers, trivia */
+.qz{border-bottom:1px solid var(--line);padding:.8rem 0}
+.qz:last-child{border-bottom:0}
+.qz-q{margin:0 0 .5rem;font-weight:600;font-size:1.02rem;line-height:1.4}
+.qz-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:.4rem}
+.qz-o{font:inherit;font-size:.95rem;text-align:left;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.5rem .65rem;cursor:pointer;line-height:1.35}
+.qz-o:hover:not(:disabled){border-color:var(--tape)}
+.qz-o.right{border-color:var(--u-grn);box-shadow:inset 4px 0 0 var(--u-grn)}
+.qz-o.wrong{border-color:var(--u-red);box-shadow:inset 4px 0 0 var(--u-red)}
+.qz-o:disabled{cursor:default}
+.qz-why{margin:.55rem 0 0;font-size:.94rem;color:var(--muted);line-height:1.45}
+.qz-why b{color:var(--ink)}
+.qz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.8rem;flex-wrap:wrap}
+.qa{margin-top:2.6rem}
+.qa h2{font-size:1.6rem!important;margin:0 0 .4rem!important}
+.callout{border:1px solid var(--line);border-left:6px solid var(--sc,var(--tape));background:var(--panel);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin:1.4rem 0;font-size:1rem}
+.callout b.k{display:block;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:.2rem}
+
+/* spectrum ruler */
+.sp .sp-bar{cursor:pointer}
+.sp .sp-bar rect{opacity:.85}
+.sp .sp-bar:hover rect,.sp .sp-bar:focus rect,.sp .sp-bar.on rect{opacity:1;stroke:var(--ink);stroke-width:1.5}
+.sp .sp-bar:focus{outline:none}
+.sp-info{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem;min-height:4.2rem}
+.sp-info b{font-size:1.02rem}
+.sp-info p{margin:.2rem 0 0;font-size:.92rem;color:var(--muted);line-height:1.45}
+.dg.sp{min-width:900px}
+
+</style>
+</head>
+<body><a class="skip" href="#sec-scanners">Skip to the section</a><div class="wrap has-rail"><div class="progress" id="progress" aria-hidden="true"></div><div class="mast"><span><a href="https://cold.fyi">cold.fyi</a> / <a href="/">The Airwaves</a> / Scanners, encryption and what you&#x27;re allowed to hear</span><button class="theme-btn" id="theme-btn" type="button">Lights up</button></div><div class="layout"><nav class="rail" aria-label="Sections"><h2><a href="/" style="color:inherit;text-decoration:none">The Airwaves</a></h2><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/" class=on aria-current=page><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav><div class="main"><article class="col"><p class="readmeta">Section 07 of 23 · about 10 min read · updated October 2026</p><section class="sec" style="--sc:var(--u-red);--sci:var(--ink-on)"><h1 class="sec-h1" id="sec-scanners" style="--sc:var(--u-red);--sci:var(--ink-on)"><span class="tape">07</span>Scanners, encryption and what you're allowed to hear</h1>
+<p class="short"><strong>The short version:</strong> In the US, owning a scanner and listening to unencrypted public safety radio is generally legal under federal law, but sharing or profiting from what you hear can violate the Communications Act, scanners that can receive cell phone calls are banned, and a few states restrict scanners in vehicles. The UK is stricter: using a receiver with intent to learn the contents of a message not meant for you is an offense. Meanwhile, many US police departments, including Boston's since August 2025, have encrypted their radios, and the arguments for and against that move are still being made in statehouses and newsrooms.</p><aside class="callout" style="--sc:var(--u-red)"><b class="k">Did you know?</b>Under US rules, receivers that can pick up cellular frequencies could not be manufactured or imported for US use after April 26, 1994, which is why scanners have a gap in their range.<sup id="fnref-tv-102"><a class="footnote-ref" href="#fn-102">102</a></sup></aside>
+<h3 id="is-it-legal-to-own-a-police-scanner-in-the-us">Is it legal to own a police scanner in the US?</h3>
+<p><em>What you see:</em> A handheld or desktop scanner for sale at an electronics shop, or a scanner app on a neighbor's phone playing dispatch audio.</p>
+<p>A <strong>scanner</strong> is a receiver that steps through many frequencies, or follows a trunked system's control channel, to find active transmissions. (A software-defined radio on a computer can do the same job; see <a href="/hobby/">hobby radio</a>.) Federally, the key rule is <strong>Section 705</strong> of the Communications Act (47 U.S.C. 605). According to the FCC's consumer guide, Section 705 "generally does not prohibit the mere interception of radio communications," and monitoring scanner traffic such as emergency reports is not a violation<sup id="fnref-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<p>The other federal law in play is the <strong>Wiretap Act</strong>. It permits interception of radio communications that are "readily accessible to the general public" (18 U.S.C. 2511(2)(g)(ii))<sup id="fnref-103"><a class="footnote-ref" href="#fn-103">103</a></sup>. Unencrypted public safety radio falls on the permitted side of that line; encrypted traffic does not, as covered below.</p>
+<p>Federal permission is not the whole picture. Some states add their own rules, mostly about scanners in vehicles, and the FCC notes that intercepting cellular, cordless or landline calls may violate other federal law (18 U.S.C. 2510-2520) with severe criminal penalties<sup id="fnref2-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<h3 id="can-i-post-or-use-what-i-hear-on-a-scanner">Can I post or use what I hear on a scanner?</h3>
+<p><em>What you see:</em> A neighborhood social media page relaying "what's on the scanner," or a tow truck arriving at a crash suspiciously fast.</p>
+<p>Listening and divulging are treated differently. The FCC's guide says "a violation of Section 705 would occur if you divulge or publish what you hear" or use it for your own benefit<sup id="fnref3-102"><a class="footnote-ref" href="#fn-102">102</a></sup>. Its example is a tow-truck operator who hears about an accident on police radio and dispatches a truck to get the business<sup id="fnref4-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<p>The divulgence ban does not apply to broadcasts meant for general public use, to distress traffic from ships, aircraft, vehicles or persons, or to amateur and CB transmissions<sup id="fnref5-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<p>The legal ground is less settled than that guide's wording suggests. RTDNA, the journalism association, points to a 2011 FCC guide noting that the Supreme Court's 2001 decision in <em>Bartnicki v. Vopper</em> "questions the ability of the government to regulate the disclosure of legally-obtained radio communications"<sup id="fnref2-103"><a class="footnote-ref" href="#fn-103">103</a></sup>. So the FCC's text states a divulgence ban, and the FCC itself has acknowledged that a Supreme Court ruling casts doubt on how far it can be enforced against people who obtained the audio lawfully. This guide does not try to resolve it.</p>
+<h3 id="why-can-t-a-scanner-pick-up-cell-phone-calls">Why can't a scanner pick up cell phone calls?</h3>
+<p><em>What you see:</em> Scanner packaging or specs with a gap in the frequency range, or a note that cellular bands are "blocked."</p>
+<p>That gap is required. <strong>Section 302(d)</strong> of the Communications Act bars the FCC from authorizing scanners that can receive cellular frequencies, that can be readily altered to do so, or that can decode digital cellular signals to analog<sup id="fnref6-102"><a class="footnote-ref" href="#fn-102">102</a></sup>. Under 47 CFR 15.121, such receivers could not be manufactured or imported for US use after April 26, 1994, and 47 CFR 2.803 bars selling unauthorized scanners<sup id="fnref7-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<p>Separately from the equipment rules, intercepting phone calls can bring criminal penalties under 18 U.S.C. 2510-2520<sup id="fnref8-102"><a class="footnote-ref" href="#fn-102">102</a></sup>.</p>
+<h3 id="can-i-have-a-scanner-in-my-car">Can I have a scanner in my car?</h3>
+<p><em>What you see:</em> A scanner on a dashboard, or a state law that says scanners in cars require a license or permit.</p>
+<p>Federal law does not address this; some states do. The list below comes from a scanner retailer's state guide, a secondary commercial source, and the statutes themselves should be checked before relying on it<sup id="fnref-104"><a class="footnote-ref" href="#fn-104">104</a></sup>.</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>State</th>
+<th>Cited statute</th>
+<th>Notes from the retailer's guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Florida</td>
+<td>s. 843.16</td>
+<td>Licensed hams listed as exempt<sup id="fnref3-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+<tr>
+<td>Indiana</td>
+<td>IC 35-44.1-2-7</td>
+<td>Licensed hams listed as exempt<sup id="fnref4-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+<tr>
+<td>Kentucky</td>
+<td>KRS 432.570</td>
+<td>Listed as a restriction<sup id="fnref5-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+<tr>
+<td>Minnesota</td>
+<td>s. 299C.37</td>
+<td>Licensed hams listed as exempt<sup id="fnref6-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+<tr>
+<td>New York</td>
+<td>VTL s. 397</td>
+<td>Local permits available<sup id="fnref7-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+<tr>
+<td>Michigan</td>
+<td>MCL 750.508</td>
+<td>Adds penalties for using a scanner in a crime<sup id="fnref8-104"><a class="footnote-ref" href="#fn-104">104</a></sup></td>
+</tr>
+</tbody>
+</table></div>
+<p>Massachusetts does not appear on that list of in-vehicle restrictions<sup id="fnref2-104"><a class="footnote-ref" href="#fn-104">104</a></sup>.</p>
+<p>Read on the states' own code sites (Indiana via Justia) as of October 2026, the statutes differ more than the table suggests:</p>
+<ul>
+<li><strong>Florida, s. 843.16 (2026 Statutes):</strong> a first-degree misdemeanor to install or transport, in a motor vehicle or business, a receiver tuned to police, fire rescue or state agency frequencies. Exemptions include FCC amateur licensees, full-time news organizations, alarm monitoring contractors and some public safety workers.<sup id="fnref-105"><a class="footnote-ref" href="#fn-105">105</a></sup></li>
+<li><strong>Indiana, IC 35-44.1-2-7:</strong> a general possession offense rather than a vehicle rule. Knowingly possessing a "police radio" - defined to cover radios used in vehicles or carried by a person, but not radios designed only for home use - is a Class B misdemeanor. Exemptions include amateur licensees who do not transmit on police frequencies, news gatherers, home or business use and written police permission; using a police radio or a police scanner app in a crime or to evade police is a separate offense.<sup id="fnref-106"><a class="footnote-ref" href="#fn-106">106</a></sup></li>
+<li><strong>Kentucky, KRS 432.570:</strong> bars possessing or installing a radio that can send or receive police messages, including in vehicles, but exempts, among others, receive-only radios at home, licensed tow operators, reporters and amateur licensees. A violation is a misdemeanor with a $50 to $500 fine, up to 12 months in jail, or both.<sup id="fnref-107"><a class="footnote-ref" href="#fn-107">107</a></sup></li>
+<li><strong>Minnesota, s. 299C.37 (2025 Statutes):</strong> bars equipping, using or possessing in a vehicle a receiver for a "police emergency frequency" without a permit from the superintendent of the Bureau of Criminal Apprehension. Peace officers and most FCC amateur licensees are exempt; a first offense is a misdemeanor.<sup id="fnref-108"><a class="footnote-ref" href="#fn-108">108</a></sup></li>
+<li><strong>New York, VTL s. 397:</strong> bars equipping or knowingly using a vehicle with a receiver that picks up police frequencies without a local permit. It exempts licensed amateurs using amateur frequencies; the penalty is a fine up to $1,000, up to six months in jail, or both.<sup id="fnref-109"><a class="footnote-ref" href="#fn-109">109</a></sup></li>
+<li><strong>Michigan, MCL 750.508:</strong> not a vehicle rule. It bars anyone convicted of a felony in the past five years from possessing a receiver for police, fire, EMS, corrections or homeland security frequencies, and bars possessing one while committing a crime.<sup id="fnref-110"><a class="footnote-ref" href="#fn-110">110</a></sup></li>
+</ul>
+<h3 id="why-did-my-scanner-go-quiet-and-do-i-need-a-digital-one">Why did my scanner go quiet, and do I need a digital one?</h3>
+<p><em>What you see:</em> A scanner that used to carry local police now hissing or silent, or a listing that says "P25 Phase 2" or "encrypted."</p>
+<p>There are three common reasons, and they need different answers:</p>
+<div class="tbl wide"><table>
+<thead>
+<tr>
+<th>What happened</th>
+<th>What it means</th>
+<th>Does a new scanner help?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The agency went digital</td>
+<td>Analog-only scanners cannot play P25 voice</td>
+<td>Yes, a P25-capable model</td>
+</tr>
+<tr>
+<td>The system moved to P25 Phase 2</td>
+<td>Many older consumer scanners decode Phase 1 only; Phase 2 needs newer models<sup id="fnref11-83"><a class="footnote-ref" href="#fn-83">83</a></sup></td>
+<td>Yes, a Phase 2-capable model</td>
+</tr>
+<tr>
+<td>The agency encrypted</td>
+<td>Voice is scrambled so only radios holding the key can hear it</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></div>
+<p>Encryption is a feature of the P25 standard, which "supports secure communication through the use of encryption, key management, and equipment authentication"<sup id="fnref5-84"><a class="footnote-ref" href="#fn-84">84</a></sup>. Encrypted traffic is not "readily accessible to the general public" under the Wiretap Act, whose definitions exclude radio that is "scrambled or encrypted"<sup id="fnref-111"><a class="footnote-ref" href="#fn-111">111</a></sup>, and RTDNA notes that no law requires agencies to keep their feeds publicly available<sup id="fnref3-103"><a class="footnote-ref" href="#fn-103">103</a></sup>. This guide does not cover ways around encryption.</p>
+<p>Some agencies that encrypt offer a delayed online feed instead; Boston's is described below. For P25 basics, see <a href="/public-safety/">the public safety section</a>; for how dispatch works end to end, see https://works.cold.fyi/911/.</p>
+<h3 id="why-are-police-departments-encrypting-their-radios">Why are police departments encrypting their radios?</h3>
+<p><em>What you see:</em> A local news story about the police scanner "going dark," or a department notice about a new radio system.</p>
+<p>By December 2023, according to New York Times reporting republished by Boston.com, Denver, San Francisco, San Diego County, Baltimore, Chicago, New York and Sioux Falls had encrypted some or all of their signals; Minneapolis planned to in 2024 and Indianapolis was considering it<sup id="fnref-112"><a class="footnote-ref" href="#fn-112">112</a></sup>.</p>
+<p><strong>The case for encryption, as police and dispatchers put it.</strong> Minneapolis Police Chief Brian O'Hara cited a suspect search relayed live on social media, a viral false abduction report, and victims' personal information going out over the air<sup id="fnref2-112"><a class="footnote-ref" href="#fn-112">112</a></sup>. The same reporting describes strong support for encryption in the dispatch community, quoting Mike Hubbs<sup id="fnref3-112"><a class="footnote-ref" href="#fn-112">112</a></sup>. In Colorado, Greenwood Village city manager John Jackson argued that criminals monitor police traffic and that victim and witness details should not be released instantly<sup id="fnref-113"><a class="footnote-ref" href="#fn-113">113</a></sup>.</p>
+<p><strong>The case against, as journalists and civic groups put it.</strong> Greg Nojeim of the Center for Democracy and Technology said immediate emergency information has value to society and that privacy can be protected without cutting off access<sup id="fnref4-112"><a class="footnote-ref" href="#fn-112">112</a></sup>. The Rev. Charles Harrison in Indianapolis said encryption would increase distrust of police<sup id="fnref5-112"><a class="footnote-ref" href="#fn-112">112</a></sup>. Denver-area TV and newspaper reporters cited shootings where police were slow to warn the public, or did not warn it at all<sup id="fnref2-113"><a class="footnote-ref" href="#fn-113">113</a></sup>.</p>
+<p><strong>Compromises in use.</strong> Las Vegas, which encrypted in 2018, gave some journalists access; Chicago kept a Broadcastify feed on a 30-minute delay; San Diego County publishes a call log without precise addresses or names<sup id="fnref6-112"><a class="footnote-ref" href="#fn-112">112</a></sup>.</p>
+<h3 id="what-did-colorado-decide">What did Colorado decide?</h3>
+<p><em>What you see:</em> References to a Colorado "media access policy" for police radio.</p>
+<p>Colorado had one of the longest-running fights. Bills to limit encryption failed in 2018, 2019 and 2020; the last, HB 20-1282, died 6-5 in the House Transportation and Local Government Committee on March 4, 2020<sup id="fnref3-113"><a class="footnote-ref" href="#fn-113">113</a></sup>. Aurora police had encrypted around 2016 and Denver police in 2019<sup id="fnref-114"><a class="footnote-ref" href="#fn-114">114</a></sup>.</p>
+<p>In 2021 the rule arrived by another route, added to HB 21-1250, a police accountability bill<sup id="fnref2-114"><a class="footnote-ref" href="#fn-114">114</a></sup>. The current statute, C.R.S. 24-6-502, says an agency that encrypts all of its radio traffic must adopt a communications access policy, developed with Colorado media, giving the media access to primary dispatch channels or talkgroups through commercially available scanners or radios or other feasible technology<sup id="fnref-115"><a class="footnote-ref" href="#fn-115">115</a></sup>. The policy may cover credential checks, limits on use and equipment costs<sup id="fnref2-115"><a class="footnote-ref" href="#fn-115">115</a></sup>.</p>
+<p>Putting it into practice was slow. As of August 2022, COLab reported that Denver-area news outlets still had no access agreements, and Denver cited an auditor's clause in its contract<sup id="fnref3-114"><a class="footnote-ref" href="#fn-114">114</a></sup>.</p>
+<h3 id="what-happened-in-california">What happened in California?</h3>
+<p><em>What you see:</em> Bay Area departments announcing encryption in 2021, while the Highway Patrol stayed audible.</p>
+<p>California's push came from data protection rather than officer safety. A state Department of Justice bulletin, 20-09-CJIS, dated October 12, 2020, told agencies to protect criminal justice information and personally identifiable information drawn from CLETS, the state's law enforcement data system; the options were to stop sharing that information on open channels, or to encrypt all communications<sup id="fnref-116"><a class="footnote-ref" href="#fn-116">116</a></sup>.</p>
+<p>Agencies chose differently. The CHP did not encrypt, citing older radios, and since October 2020 limits personal information per transmission and sends details to in-car computers<sup id="fnref-117"><a class="footnote-ref" href="#fn-117">117</a></sup>. Palo Alto encrypted on January 5, 2021, and Mountain View and Los Altos followed in early 2021; in July 2021 the DOJ told Palo Alto it could not go back to broadcasting personal information unencrypted<sup id="fnref2-117"><a class="footnote-ref" href="#fn-117">117</a></sup>. Fremont kept its primary channel open and moved sensitive channels to AES 256-bit encryption on October 15, 2025, through the East Bay Regional Communications System Authority<sup id="fnref2-116"><a class="footnote-ref" href="#fn-116">116</a></sup>.</p>
+<h3 id="in-boston-why-can-t-i-hear-the-police-on-my-scanner">In Boston: why can't I hear the police on my scanner?</h3>
+<p><em>What you see:</em> Boston Police dispatch missing from a scanner or a live scanner app since August 2025.</p>
+<p>Boston Police switched from analog radio to a "digital encrypted radio system" on August 9, 2025, and analog scanners no longer receive it<sup id="fnref2-90"><a class="footnote-ref" href="#fn-90">90</a></sup>. The department gave its reasons as replacing old equipment, improving coverage, reducing static, and preventing monitoring and interference by "bad actors"<sup id="fnref3-90"><a class="footnote-ref" href="#fn-90">90</a></sup>.</p>
+<p>BPD offers a free public feed at radio.rapidsos.com/boston, which the department says is "delayed slightly"<sup id="fnref4-90"><a class="footnote-ref" href="#fn-90">90</a></sup>; a police spokesperson told the Boston Globe the delay is about 5 minutes in most cases<sup id="fnref-118"><a class="footnote-ref" href="#fn-118">118</a></sup>. Justin Silverman of the New England First Amendment Coalition told the Boston Globe that most police radio traffic is routine and only sensitive traffic needs encryption<sup id="fnref2-118"><a class="footnote-ref" href="#fn-118">118</a></sup>.</p>
+<p>Boston's switch covers the Boston Police Department. Many neighboring towns share the regional BAPERN network described in <a href="/public-safety/">the public safety section</a>, and BPD's notice does not say whether their traffic, or Boston Fire and EMS, is affected; a current scanner listing for those agencies is the place to check.<sup id="fnref5-90"><a class="footnote-ref" href="#fn-90">90</a></sup></p>
+<h3 id="elsewhere-in-the-world">Elsewhere in the world</h3>
+<p><em>What you see:</em> A scanner sold in the UK with a leaflet warning about what you may listen to.</p>
+<p><strong>United Kingdom.</strong> Section 48(1) of the Wireless Telegraphy Act 2006 makes it an offense, "without lawful authority" (wording substituted by the Investigatory Powers Act 2016, in force from June 27, 2018), to use wireless telegraphy apparatus "with intent to obtain information as to the contents, sender or addressee of a message" of which you are not an intended recipient, or to disclose such information<sup id="fnref-119"><a class="footnote-ref" href="#fn-119">119</a></sup>. The penalty on summary conviction is a fine up to level 5<sup id="fnref2-119"><a class="footnote-ref" href="#fn-119">119</a></sup><sup id="fnref-120"><a class="footnote-ref" href="#fn-120">120</a></sup>.</p>
+<p>The test turns on whether you are an intended recipient, so the US idea that anything unencrypted is fair to hear does not carry over. Broadcast radio, aimed at everyone, is a different case from a dispatcher talking to a patrol car.
+UK police radio runs on Airwave, the national TETRA network described in <a href="/public-safety/">the public safety section</a>. The government's July 2026 ESN business case discusses the security risks of Airwave's "air interface encryption algorithm," which confirms the radio link is encrypted.<sup id="fnref4-100"><a class="footnote-ref" href="#fn-100">100</a></sup> Wikipedia describes the move from open analog to the encrypted digital TETRA system as making it "practically impossible" for civilians to listen to UK police radio.<sup id="fnref-121"><a class="footnote-ref" href="#fn-121">121</a></sup></p>
+<p class="report site-only"><a href="mailto:hello@thirdpolararch.com?subject=The%20Airwaves%20correction%3A%20Scanners%2C%20encryption%20and%20what%20you%27re%20allowed%20to%20hear">Report an error in this section</a></p></section><section class="sec faq qa"><h2>Quick answers</h2><details><summary>Is it legal to own a police scanner?</summary><p>In the US, generally yes: the FCC says Section 705 of the Communications Act does not prohibit the mere interception of radio communications. Divulging or profiting from what you hear can violate it, scanners able to receive cellular frequencies are banned, and some states restrict scanners in vehicles.</p></details><details><summary>Is it legal to have a police scanner in my car?</summary><p>It depends on the state. A retailer&#x27;s state guide lists in-vehicle restrictions in Florida, Indiana, Kentucky, Minnesota and New York, with exemptions for licensed hams in some states and local permits in New York; check the statute text before relying on it.</p></details><details><summary>Why can&#x27;t I hear the police on my scanner anymore?</summary><p>The agency may have moved to digital P25, moved to P25 Phase 2, which many older scanners cannot decode, or encrypted its traffic. A newer scanner helps with the first two; encrypted traffic is not readily accessible to the public under the Wiretap Act.</p></details><details><summary>Is Boston police radio encrypted?</summary><p>Yes. Boston Police switched to a digital encrypted radio system on August 9, 2025. The department offers a free public feed at radio.rapidsos.com/boston, delayed about 5 minutes in most cases.</p></details><details><summary>Can scanners pick up cell phone calls?</summary><p>US law bars the FCC from authorizing scanners that can receive cellular frequencies, and such scanners could not be made or imported for US use after April 26, 1994. Intercepting phone calls can also bring severe criminal penalties under 18 U.S.C. 2510-2520.</p></details></section><nav class="pn" aria-label="Previous and next"><a class="prev" href="/public-safety/"><span>Previous · 06</span>Police, fire and the radios that dispatch them</a><a class="next" href="/aviation/"><span>Next · 08</span>How flight trackers know where every plane is</a></nav><section class="refs" id="refs"><h2 style="font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:2rem;margin:0 0 .4rem">Sources for this section</h2><p style="font-size:.9rem;color:var(--muted);margin:0 0 1rem">24 of the guide's 339 sources. Numbers match the <a href="/all/#refs">full reference list</a>.</p><div class="footnote"><ol><li id="fn-83" value="83">
+<p>RadioReference Wiki: APCO Project 25 - <a href="https://wiki.radioreference.com/index.php/APCO_Project_25" rel="noopener" target="_blank">wiki.radioreference.com</a>&#160;<a class="footnote-backref" href="#fnref-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref2-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref3-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref4-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref5-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref6-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref7-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref8-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref9-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref10-83" title="Jump back to footnote 83 in the text">↩</a><a class="footnote-backref" href="#fnref11-83" title="Jump back to footnote 83 in the text">↩</a></p>
+</li><li id="fn-84" value="84">
+<p>TIA: Benefits of Project 25 - <a href="https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf" rel="noopener" target="_blank">tiaonline.org</a>&#160;<a class="footnote-backref" href="#fnref-84" title="Jump back to footnote 84 in the text">↩</a><a class="footnote-backref" href="#fnref2-84" title="Jump back to footnote 84 in the text">↩</a><a class="footnote-backref" href="#fnref3-84" title="Jump back to footnote 84 in the text">↩</a><a class="footnote-backref" href="#fnref4-84" title="Jump back to footnote 84 in the text">↩</a><a class="footnote-backref" href="#fnref5-84" title="Jump back to footnote 84 in the text">↩</a><a class="footnote-backref" href="#fnref6-84" title="Jump back to footnote 84 in the text">↩</a></p>
+</li><li id="fn-90" value="90">
+<p>Boston Police Department: Radio system change notice - <a href="https://police.boston.gov/2025/08/06/radio/" rel="noopener" target="_blank">police.boston.gov</a>&#160;<a class="footnote-backref" href="#fnref-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref2-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref3-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref4-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref5-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref6-90" title="Jump back to footnote 90 in the text">↩</a><a class="footnote-backref" href="#fnref7-90" title="Jump back to footnote 90 in the text">↩</a></p>
+</li><li id="fn-100" value="100">
+<p>GOV.UK: 27 July 2026 Emergency Services Network summary business case - <a href="https://www.gov.uk/government/publications/27-july-2026-emergency-services-network-summary-business-case/27-july-2026-emergency-services-network-summary-business-case" rel="noopener" target="_blank">gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-100" title="Jump back to footnote 100 in the text">↩</a><a class="footnote-backref" href="#fnref2-100" title="Jump back to footnote 100 in the text">↩</a><a class="footnote-backref" href="#fnref3-100" title="Jump back to footnote 100 in the text">↩</a><a class="footnote-backref" href="#fnref4-100" title="Jump back to footnote 100 in the text">↩</a></p>
+</li><li id="fn-102" value="102">
+<p>FindLaw (FCC guide): Interception and Divulgence of Radio Communications - <a href="https://corporate.findlaw.com/litigation-disputes/interception-and-divulgence-of-radio-communications.html" rel="noopener" target="_blank">corporate.findlaw.com</a>&#160;<a class="footnote-backref" href="#fnref-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref2-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref3-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref4-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref5-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref6-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref7-102" title="Jump back to footnote 102 in the text">↩</a><a class="footnote-backref" href="#fnref8-102" title="Jump back to footnote 102 in the text">↩</a></p>
+</li><li id="fn-103" value="103">
+<p>RTDNA: Use of Information From Police Scanners - <a href="https://www.rtdna.org/use-of-information-from-police-scanners" rel="noopener" target="_blank">rtdna.org</a>&#160;<a class="footnote-backref" href="#fnref-103" title="Jump back to footnote 103 in the text">↩</a><a class="footnote-backref" href="#fnref2-103" title="Jump back to footnote 103 in the text">↩</a><a class="footnote-backref" href="#fnref3-103" title="Jump back to footnote 103 in the text">↩</a></p>
+</li><li id="fn-104" value="104">
+<p>ZipScanners (retailer): Are Police Scanners Legal? - <a href="https://zipscanners.com/blogs/learn/are-police-scanners-legal" rel="noopener" target="_blank">zipscanners.com</a>&#160;<a class="footnote-backref" href="#fnref-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref2-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref3-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref4-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref5-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref6-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref7-104" title="Jump back to footnote 104 in the text">↩</a><a class="footnote-backref" href="#fnref8-104" title="Jump back to footnote 104 in the text">↩</a></p>
+</li><li id="fn-105" value="105">
+<p>Florida Legislature (Online Sunshine): Florida Statutes s. 843.16 - <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899%2F0843%2FSections%2F0843.16.html" rel="noopener" target="_blank">leg.state.fl.us</a>&#160;<a class="footnote-backref" href="#fnref-105" title="Jump back to footnote 105 in the text">↩</a></p>
+</li><li id="fn-106" value="106">
+<p>Justia: 2025 Indiana Code 35-44.1-2-7, Unlawful use of a police radio - <a href="https://law.justia.com/codes/indiana/title-35/article-44-1/chapter-2/section-35-44-1-2-7/" rel="noopener" target="_blank">law.justia.com</a>&#160;<a class="footnote-backref" href="#fnref-106" title="Jump back to footnote 106 in the text">↩</a></p>
+</li><li id="fn-107" value="107">
+<p>Kentucky Legislature: KRS 432.570, Restrictions on possession or use of radio capable of sending or receiving police messages - <a href="https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=18715" rel="noopener" target="_blank">apps.legislature.ky.gov</a>&#160;<a class="footnote-backref" href="#fnref-107" title="Jump back to footnote 107 in the text">↩</a></p>
+</li><li id="fn-108" value="108">
+<p>Minnesota Revisor of Statutes: Minnesota Statutes 2025, section 299C.37 - <a href="https://www.revisor.mn.gov/statutes/cite/299C.37/pdf" rel="noopener" target="_blank">revisor.mn.gov</a>&#160;<a class="footnote-backref" href="#fnref-108" title="Jump back to footnote 108 in the text">↩</a></p>
+</li><li id="fn-109" value="109">
+<p>New York State Senate: Vehicle and Traffic Law section 397 - <a href="https://www.nysenate.gov/legislation/laws/VAT/397" rel="noopener" target="_blank">nysenate.gov</a>&#160;<a class="footnote-backref" href="#fnref-109" title="Jump back to footnote 109 in the text">↩</a></p>
+</li><li id="fn-110" value="110">
+<p>Michigan Legislature: MCL 750.508 - <a href="https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-508" rel="noopener" target="_blank">legislature.mi.gov</a>&#160;<a class="footnote-backref" href="#fnref-110" title="Jump back to footnote 110 in the text">↩</a></p>
+</li><li id="fn-111" value="111">
+<p>Cornell LII: 18 U.S. Code 2510 - Definitions - <a href="https://www.law.cornell.edu/uscode/text/18/2510" rel="noopener" target="_blank">law.cornell.edu</a>&#160;<a class="footnote-backref" href="#fnref-111" title="Jump back to footnote 111 in the text">↩</a><a class="footnote-backref" href="#fnref2-111" title="Jump back to footnote 111 in the text">↩</a></p>
+</li><li id="fn-112" value="112">
+<p>Boston.com (New York Times): The wildly popular police scanner goes silent for many - <a href="https://www.boston.com/news/national-news/2023/12/26/the-wildly-popular-police-scanner-goes-silent-for-many/" rel="noopener" target="_blank">boston.com</a>&#160;<a class="footnote-backref" href="#fnref-112" title="Jump back to footnote 112 in the text">↩</a><a class="footnote-backref" href="#fnref2-112" title="Jump back to footnote 112 in the text">↩</a><a class="footnote-backref" href="#fnref3-112" title="Jump back to footnote 112 in the text">↩</a><a class="footnote-backref" href="#fnref4-112" title="Jump back to footnote 112 in the text">↩</a><a class="footnote-backref" href="#fnref5-112" title="Jump back to footnote 112 in the text">↩</a><a class="footnote-backref" href="#fnref6-112" title="Jump back to footnote 112 in the text">↩</a></p>
+</li><li id="fn-113" value="113">
+<p>Colorado Freedom of Information Coalition: Latest bill to address police radio encryption dies in Colorado House committee - <a href="https://coloradofoic.org/latest-bill-to-address-police-radio-encryption-dies-in-colorado-house-committee/" rel="noopener" target="_blank">coloradofoic.org</a>&#160;<a class="footnote-backref" href="#fnref-113" title="Jump back to footnote 113 in the text">↩</a><a class="footnote-backref" href="#fnref2-113" title="Jump back to footnote 113 in the text">↩</a><a class="footnote-backref" href="#fnref3-113" title="Jump back to footnote 113 in the text">↩</a></p>
+</li><li id="fn-114" value="114">
+<p>COLab: A year after the legislature passed a law on police radio encryption, Denver-area news outlets are still blocked - <a href="https://colabnews.co/projects/a-year-after-the-legislature-passed-a-law-on-police-radio-encryption-denver-area-news-outlets-are-still-blocked-from-listening" rel="noopener" target="_blank">colabnews.co</a>&#160;<a class="footnote-backref" href="#fnref-114" title="Jump back to footnote 114 in the text">↩</a><a class="footnote-backref" href="#fnref2-114" title="Jump back to footnote 114 in the text">↩</a><a class="footnote-backref" href="#fnref3-114" title="Jump back to footnote 114 in the text">↩</a></p>
+</li><li id="fn-115" value="115">
+<p>Colorado Revised Statutes (public.law): C.R.S. 24-6-502 - <a href="https://colorado.public.law/statutes/crs_24-6-502" rel="noopener" target="_blank">colorado.public.law</a>&#160;<a class="footnote-backref" href="#fnref-115" title="Jump back to footnote 115 in the text">↩</a><a class="footnote-backref" href="#fnref2-115" title="Jump back to footnote 115 in the text">↩</a></p>
+</li><li id="fn-116" value="116">
+<p>Fremont Police Department: Radio Encryption - <a href="https://www.fremontpolice.gov/about-us/transparency-portal/equipment-vehicles/radio-encryption" rel="noopener" target="_blank">fremontpolice.gov</a>&#160;<a class="footnote-backref" href="#fnref-116" title="Jump back to footnote 116 in the text">↩</a><a class="footnote-backref" href="#fnref2-116" title="Jump back to footnote 116 in the text">↩</a></p>
+</li><li id="fn-117" value="117">
+<p>Palo Alto Daily Post: CHP hasn&#x27;t encrypted its radios like Palo Alto, Mtn. View and Los Altos - <a href="https://padailypost.com/2021/11/11/chp-hasnt-encrypted-its-radios-like-palo-alto-mtn-view-and-los-altos/" rel="noopener" target="_blank">padailypost.com</a>&#160;<a class="footnote-backref" href="#fnref-117" title="Jump back to footnote 117 in the text">↩</a><a class="footnote-backref" href="#fnref2-117" title="Jump back to footnote 117 in the text">↩</a></p>
+</li><li id="fn-118" value="118">
+<p>The Boston Globe: Boston police radio digital system - <a href="https://www.bostonglobe.com/2025/08/06/metro/boston-police-radio-digital-system/" rel="noopener" target="_blank">bostonglobe.com</a>&#160;<a class="footnote-backref" href="#fnref-118" title="Jump back to footnote 118 in the text">↩</a><a class="footnote-backref" href="#fnref2-118" title="Jump back to footnote 118 in the text">↩</a><a class="footnote-backref" href="#fnref3-118" title="Jump back to footnote 118 in the text">↩</a></p>
+</li><li id="fn-119" value="119">
+<p>legislation.gov.uk: Wireless Telegraphy Act 2006, section 48 - <a href="https://www.legislation.gov.uk/ukpga/2006/36/section/48/enacted/data.html" rel="noopener" target="_blank">legislation.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-119" title="Jump back to footnote 119 in the text">↩</a><a class="footnote-backref" href="#fnref2-119" title="Jump back to footnote 119 in the text">↩</a></p>
+</li><li id="fn-120" value="120">
+<p>legislation.gov.uk: Wireless Telegraphy Act 2006, section 48 - <a href="https://www.legislation.gov.uk/ukpga/2006/36/section/48/data.html" rel="noopener" target="_blank">legislation.gov.uk</a>&#160;<a class="footnote-backref" href="#fnref-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref2-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref3-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref4-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref5-120" title="Jump back to footnote 120 in the text">↩</a><a class="footnote-backref" href="#fnref6-120" title="Jump back to footnote 120 in the text">↩</a></p>
+</li><li id="fn-121" value="121">
+<p>Wikipedia: Police radio - <a href="https://en.wikipedia.org/wiki/Police_radio" rel="noopener" target="_blank">en.wikipedia.org</a>&#160;<a class="footnote-backref" href="#fnref-121" title="Jump back to footnote 121 in the text">↩</a></p>
+</li></ol></div></section><aside class="sisters" aria-labelledby="sis-h"><h2 id="sis-h">Also at cold.fyi</h2><ul><li><a href="https://streetcode.cold.fyi">Street Code</a> <span>- deep dive No. 4, every mark, box and antenna on the street</span></li><li><a href="https://works.cold.fyi">How a City Works</a> <span>- deep dive No. 3, the systems these signals run</span></li><li><a href="https://showfile.cold.fyi">The Show File</a> <span>- deep dive No. 2, how an electronic dance music show gets made</span></li><li><a href="https://penamnesty.cold.fyi">The Pens Went Away</a> <span>- deep dive No. 1, on pharma swag</span></li><li><a href="https://mbta.cold.fyi">Charlie</a> <span>- an MBTA tracker</span></li><li><a href="https://alarmclub.boston">Alarm Club</a> <span>- a street game built on Boston&#39;s 1852 fire alarm telegraph boxes</span></li></ul></aside><footer><span>made with &lt;3 in boston</span><span>Corrections: <span style="user-select:all">hello@thirdpolararch.com</span> · <a href="/corrections/">corrections log</a> · <a href="https://thirdpolararch.com/terms">terms</a> · <a href="https://thirdpolararch.com/privacy">privacy</a></span></footer></article></div></div><details class="mtoc"><summary>Contents</summary><nav aria-label="Sections"><a href="/"><span class="n">00</span>Start here</a><a href="/lookup/"><span class="n">01</span>What&#x27;s that signal?</a><a href="/basics/"><span class="n">02</span>Radio in plain words</a><a href="/rules/"><span class="n">03</span>Who owns the airwaves</a><a href="/broadcast/"><span class="n">04</span>AM, FM and TV: the broadcast bands</a><a href="/cellular/"><span class="n">05</span>How your phone talks to the network</a><a href="/public-safety/"><span class="n">06</span>Police, fire and the radios that dispatch them</a><a href="/scanners/" class=on><span class="n">07</span>Scanners, encryption and what you&#x27;re allowed to hear</a><a href="/aviation/"><span class="n">08</span>How flight trackers know where every plane is</a><a href="/ships/"><span class="n">09</span>Ships, AIS and channel 16</a><a href="/gps/"><span class="n">10</span>GPS, the city&#x27;s hidden clock</a><a href="/satellites/"><span class="n">11</span>What&#x27;s overhead: weather satellites, the ISS and Starlink</a><a href="/unlicensed/"><span class="n">12</span>Wi-Fi, Bluetooth and the free-for-all bands</a><a href="/everyday/"><span class="n">13</span>The radios you carry without knowing</a><a href="/show-wireless/"><span class="n">14</span>Wireless mics and the fight for stage spectrum</a><a href="/hobby/"><span class="n">15</span>Hams, SDRs and number stations</a><a href="/health/"><span class="n">16</span>Is all this radio safe? What the agencies say</a><a href="/boston/"><span class="n">17</span>The airwaves over Boston</a><a href="/towers/"><span class="n">18</span>Reading an antenna: towers, farms and the public records behind them</a><a href="/quiz/"><span class="n">19</span>Test yourself</a><a href="/glossary/"><span class="n">20</span>The glossary</a><a href="/next/"><span class="n">21</span>Where to go next</a><a href="/open/"><span class="n">22</span>Open questions and known gaps</a><a href="/corrections/"><span class="n">23</span>Corrections and updates</a><a href="/all/"><span class="n">··</span>Everything on one page</a></nav></details></div><script>(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var inFrame = false;
+  try { inFrame = window.self !== window.top; } catch (e) { inFrame = true; }
+  if (inFrame) document.documentElement.classList.add("in-frame");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function readJSON(id) { try { return JSON.parse($(id).textContent); } catch (e) { return []; } }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  /* theme toggle: system by default, remembered per viewer */
+  var root = document.documentElement, tb = $("theme-btn");
+  var saved = store("aw-theme"); if (saved) root.setAttribute("data-theme", saved);
+  function label() {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    if (tb) tb.textContent = dark ? "Daylight" : "Night sky";
+  }
+  if (tb) tb.addEventListener("click", function () {
+    var t = root.getAttribute("data-theme");
+    var dark = t ? t === "dark" : !window.matchMedia("(prefers-color-scheme: light)").matches;
+    var next = dark ? "light" : "dark"; root.setAttribute("data-theme", next); store("aw-theme", next); label();
+  });
+  label();
+
+  /* reading progress */
+  var bar = $("progress");
+  if (bar) {
+    var tick = false;
+    window.addEventListener("scroll", function () {
+      if (tick) return; tick = true;
+      requestAnimationFrame(function () {
+        var h = document.documentElement.scrollHeight - innerHeight;
+        bar.style.width = (h > 0 ? Math.min(100, scrollY / h * 100) : 0) + "%"; tick = false;
+      });
+    }, { passive: true });
+  }
+
+  /* figures: credit card when a remote image will not load */
+  Array.prototype.forEach.call(document.querySelectorAll(".fig .frame img"), function (img) {
+    function broke() { img.parentNode.classList.add("broken"); }
+    img.addEventListener("error", broke);
+    if (img.complete && img.naturalWidth === 0) broke();
+  });
+
+  /* footnote previews: hover or focus shows the source title */
+  var notes = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".refs li[id]"), function (li) {
+    notes[li.id] = li.textContent.replace("↩", "").replace(/\s+/g, " ").trim();
+  });
+  Array.prototype.forEach.call(document.querySelectorAll("a.footnote-ref"), function (a) {
+    var id = (a.getAttribute("href") || "").slice(1);
+    if (notes[id]) a.title = notes[id];
+  });
+
+  /* contents rail: highlight the section in view */
+  var railLinks = document.querySelectorAll(".rail a[href^='#']");
+  if (railLinks.length && "IntersectionObserver" in window) {
+    var map = {};
+    Array.prototype.forEach.call(railLinks, function (a) { map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && map[en.target.id]) {
+          Array.prototype.forEach.call(railLinks, function (a) { a.classList.remove("on"); });
+          map[en.target.id].classList.add("on");
+        }
+      });
+    }, { rootMargin: "-10% 0px -80% 0px" });
+    Object.keys(map).forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  /* timeline */
+  (function () {
+    var data = readJSON("tl-data"), list = $("tl-list"); if (!list) return;
+    var eraColor = { "Before 1900": "var(--u-wht)", "1900-1945": "var(--u-red)", "1945-1980": "var(--u-yel)", "1980-2010": "var(--u-blu)", "2010-now": "var(--u-org)" };
+    var era = "";
+    function fmt(d) {
+      if (/^-/.test(String(d))) return (+String(d).slice(1).split("-")[0]) + " BCE";
+      var m = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"], p = String(d).split("-");
+      if (p.length === 3) return m[+p[1] - 1] + " " + (+p[2]) + ", " + p[0];
+      if (p.length === 2) return m[+p[1] - 1] + " " + p[0];
+      return p[0];
+    }
+    function render() {
+      var rows = data.filter(function (e) { return !era || e.era === era; });
+      list.innerHTML = rows.map(function (e) {
+        var u = /^https?:/.test(e.source_url || "") ? e.source_url : "";
+        return '<li style="--ec:' + (eraColor[e.era] || "var(--tape)") + '"><div class="d">' + esc(fmt(e.date)) + '</div><div><div class="l">' + esc(e.label) +
+          '</div><div class="x">' + esc(e.detail) + (u ? ' <a href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</div></div></li>";
+      }).join("");
+      $("tl-count").textContent = rows.length + " of " + data.length + " events";
+    }
+    var seg = $("tl-eras");
+    var ORDER = ["Before 1900","1900-1945","1945-1980","1980-2010","2010-now"];
+    var eras = ORDER.filter(function (o) { return data.some(function (e) { return e.era === o; }); });
+    data.forEach(function (e) { if (eras.indexOf(e.era) < 0) eras.push(e.era); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-e="">All</button>' + eras.map(function (e) { return '<button type="button" aria-pressed="false" data-e="' + esc(e) + '">' + esc(e) + "</button>"; }).join("");
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; era = b.getAttribute("data-e");
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    var tg = $("tl-toggle");
+    tg.addEventListener("click", function () { var open = $("tl-box").classList.toggle("open"); tg.textContent = open ? "Collapse" : "Show every event"; tg.setAttribute("aria-expanded", open); });
+    render();
+  })();
+
+  /* glossary */
+  (function () {
+    var data = readJSON("gl-data"), list = $("gl-list"); if (!list) return;
+    var catColor = { Basics: "var(--u-wht)", Rules: "var(--u-pnk)", Broadcast: "var(--u-org)", Cellular: "var(--u-blu)", "Public safety": "var(--u-red)",
+      "Aviation and ships": "var(--u-yel)", "Satellites and timing": "var(--u-pur)", "Unlicensed and IoT": "var(--u-grn)", Events: "var(--u-pnk)", Hobby: "var(--u-org)", Health: "var(--u-wht)", Boston: "var(--u-blu)", Towers: "var(--u-org)" };
+    var cat = "", q = $("gl-q"), shown = 18, more = $("gl-more");
+    var cats = []; data.forEach(function (d) { if (cats.indexOf(d.category) < 0) cats.push(d.category); }); cats.sort();
+    var seg = $("gl-cats");
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-c="">All</button>' + cats.map(function (c) { return '<button type="button" aria-pressed="false" data-c="' + esc(c) + '">' + esc(c) + "</button>"; }).join("");
+    function render() {
+      var s = q.value.trim().toLowerCase();
+      var rows = data.filter(function (d) {
+        if (cat && d.category !== cat) return false;
+        if (s) return (d.term + " " + (d.aka || "") + " " + d.definition).toLowerCase().indexOf(s) >= 0;
+        return true;
+      });
+      if (s) rows.sort(function (a, b) { var at = a.term.toLowerCase().indexOf(s) === 0 ? 0 : 1, bt = b.term.toLowerCase().indexOf(s) === 0 ? 0 : 1; return at - bt || a.term.localeCompare(b.term); });
+      $("gl-count").textContent = rows.length + " of " + data.length + " terms";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try a shorter word, or clear the category.</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown);
+      more.hidden = all <= shown; more.textContent = "Show " + Math.min(36, all - shown) + " more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.source_url || "") ? d.source_url : "";
+        return '<li id="term-' + esc(d.term.toLowerCase().replace(/[^a-z0-9]+/g, "-")) + '"><span class="cat" style="--gc:' + (catColor[d.category] || "var(--tape)") + (/^(Basics|Rules|Aviation and ships|Events|Health)$/.test(d.category) ? ';color:var(--ink-on-y)' : ';color:var(--ink-on)') + '">' + esc(d.category) + "</span><br><dfn>" + esc(d.term) + "</dfn>" +
+          (d.aka ? '<span class="aka">' + esc(d.aka) + "</span>" : "") + "<p>" + esc(d.definition) + "</p>" +
+          (d.section ? '<a class="more" href="' + (document.getElementById("sec-" + d.section) ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">read the section</a> ' : "") +
+          (u ? '<a class="more" href="' + esc(u) + '" target="_blank" rel="noopener">source</a>' : "") + "</li>";
+      }).join("");
+    }
+    more.addEventListener("click", function () { shown += 36; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; cat = b.getAttribute("data-c"); shown = 18;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    q.addEventListener("input", function () { shown = 18; render(); });
+    var h = (location.hash || "").replace("#", "");
+    if (h.indexOf("term-") === 0) { q.value = h.slice(5).replace(/-/g, " "); }
+    if (list.getAttribute("data-all") === "1") shown = 9999;
+    render();
+  })();
+
+  /* resources */
+  (function () {
+    var data = readJSON("res-data"), list = $("res-list"); if (!list) return;
+    var topic = "", seg = $("res-topics"), rshown = 10, rmore = $("res-more");
+    var topics = []; data.forEach(function (d) { if (topics.indexOf(d.topic) < 0) topics.push(d.topic); });
+    seg.innerHTML = '<button type="button" aria-pressed="true" data-t="">All</button>' + topics.map(function (t) { return '<button type="button" aria-pressed="false" data-t="' + esc(t) + '">' + esc(t) + "</button>"; }).join("");
+    function render() {
+      var rows = data.filter(function (d) { return !topic || d.topic === topic; });
+      var all = rows.length; $("res-count").textContent = all + " of " + data.length;
+      rmore.hidden = all <= rshown; rmore.textContent = "Show all " + all;
+      rows = rows.slice(0, rshown);
+      list.innerHTML = rows.map(function (d) {
+        var u = /^https?:/.test(d.url || "") ? d.url : "#";
+        return '<li><div class="ty">' + esc(d.type) + '</div><div><a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(d.title) + "</a><p>" + esc(d.why) + "</p></div></li>";
+      }).join("");
+    }
+    rmore.addEventListener("click", function () { rshown = 9999; render(); });
+    seg.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button"); if (!b) return; topic = b.getAttribute("data-t"); rshown = 10;
+      Array.prototype.forEach.call(seg.querySelectorAll("button"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      render();
+    });
+    render();
+  })();
+
+  /* street lookup */
+  (function () {
+    var data = readJSON("lk-data"), list = $("lk-list"); if (!list) return;
+    var q = $("lk-q"), more = $("lk-more"), shown = 24;
+    var onAll = !!document.getElementById("sec-basics");
+    function href(d) { return onAll ? "#" + d.sid : "/" + d.section + "/#" + d.sid; }
+    function score(d, words) {
+      var hay = (d.see + " " + d.is + " " + (d.tags || []).join(" ")).toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) { var w = words[i]; if (hay.indexOf(w) < 0) return -1; if ((d.tags || []).indexOf(w) >= 0) s += 3; if (d.see.toLowerCase().indexOf(w) >= 0) s += 2; s += 1; }
+      return s;
+    }
+    function render() {
+      var words = q.value.trim().toLowerCase().split(/[^a-z0-9]+/).filter(function (w) { return w.length > 1 && ["the","a","an","on","in","of","with","is","and","what","thing","street"].indexOf(w) < 0; });
+      var rows = data.map(function (d) { return { d: d, s: words.length ? score(d, words) : 0 }; }).filter(function (r) { return r.s >= 0; });
+      if (words.length) rows.sort(function (a, b) { return b.s - a.s; });
+      $("lk-count").textContent = rows.length + " of " + data.length + " things";
+      if (!rows.length) { list.innerHTML = '<li><p>No match. Try one plain word: a color, a shape or a place ("blue", "triangle", "pole").</p></li>'; more.hidden = true; return; }
+      var all = rows.length; rows = rows.slice(0, shown); more.hidden = all <= shown; more.textContent = "Show more (" + (all - shown) + " left)";
+      list.innerHTML = rows.map(function (r) { var d = r.d;
+        return '<li><a href="' + esc(href(d)) + '" style="--lc:var(--u-' + esc(d.c) + ')"><span class="see">' + esc(d.see) + '</span><span class="is">' + esc(d.is) + '</span><span class="sec">' + esc(d.section.replace(/-/g, " ")) + "</span></a></li>";
+      }).join("");
+    }
+    q.addEventListener("input", function () { shown = 24; render(); });
+    more.addEventListener("click", function () { shown += 48; render(); });
+    render();
+  })();
+
+  /* spectrum ruler */
+  (function () {
+    var data = readJSON("sp-data"), info = $("sp-info"); if (!info || !data.length) return;
+    var onAll = !!document.getElementById("sec-basics");
+    function hz(f) { var u = [[1e9, "GHz"], [1e6, "MHz"], [1e3, "kHz"]]; for (var i = 0; i < u.length; i++) if (f >= u[i][0]) return (Math.round(f / u[i][0] * 1000) / 1000) + " " + u[i][1]; return f + " Hz"; }
+    function show(i, el) {
+      var d = data[i]; if (!d) return;
+      Array.prototype.forEach.call(document.querySelectorAll(".sp-bar.on"), function (x) { x.classList.remove("on"); }); el.classList.add("on");
+      info.innerHTML = "<b>" + esc(d.name) + "</b> <span class=\"count\">" + esc(hz(d.lo)) + " - " + esc(hz(d.hi)) + (d.where ? " · " + esc(d.where) : "") + "</span><p>" + esc(d.use) + "</p><p>" +
+        (d.section ? '<a href="' + (onAll ? "#sec-" + esc(d.section) : "/" + esc(d.section) + "/") + '">Read the section</a>' : "") + (d.src ? ' · <a href="' + esc(d.src) + '" target="_blank" rel="noopener">source</a>' : "") + "</p>";
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(".sp-bar"), function (el) {
+      var i = +el.getAttribute("data-i");
+      el.addEventListener("click", function () { show(i, el); });
+      el.addEventListener("focus", function () { show(i, el); });
+      el.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(i, el); } });
+    });
+  })();
+
+  /* copy citation */
+  var cbtn = $("cite-copy");
+  if (cbtn) cbtn.addEventListener("click", function () {
+    var t = $("cite-text").textContent;
+    function sel() { var r = document.createRange(); r.selectNodeContents($("cite-text")); var w = window.getSelection(); w.removeAllRanges(); w.addRange(r); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { cbtn.textContent = "Copied"; }, sel); else sel();
+  });
+})();
+</script></body></html>

@@ -1,0 +1,1991 @@
+[
+ {
+  "see": "'VHF/UHF' printed on a TV antenna box or scanner",
+  "is": "ITU band names: VHF is 30-300 MHz, UHF is 300-3,000 MHz",
+  "section": "basics",
+  "anchor": "What do VHF and UHF stand for?",
+  "tags": [
+   "vhf",
+   "uhf",
+   "antenna",
+   "bands",
+   "scanner"
+  ],
+  "c": "wht",
+  "sid": "what-do-vhf-and-uhf-stand-for"
+ },
+ {
+  "see": "'2.4 GHz' or '6 GHz' on a Wi-Fi router box",
+  "is": "The radio frequency the router transmits on, counted in hertz",
+  "section": "basics",
+  "anchor": "What is a radio frequency, and what does \"hertz\" mean?",
+  "tags": [
+   "hertz",
+   "ghz",
+   "frequency",
+   "router",
+   "wifi"
+  ],
+  "c": "wht",
+  "sid": "what-is-a-radio-frequency-and-what-does-hertz-mean"
+ },
+ {
+  "see": "Full bars outside, one bar or none inside a building",
+  "is": "Walls and especially energy-saving glass absorb or reflect signals, more so at higher frequencies",
+  "section": "basics",
+  "anchor": "Why does my phone lose signal inside buildings?",
+  "tags": [
+   "indoor",
+   "signal",
+   "glass",
+   "buildings",
+   "bars"
+  ],
+  "c": "wht",
+  "sid": "why-does-my-phone-lose-signal-inside-buildings"
+ },
+ {
+  "see": "A '5G UW' or '5G+' icon that vanishes when I walk indoors",
+  "is": "Higher-frequency 5G carries more data but gets through walls poorly",
+  "section": "basics",
+  "anchor": "Why do high frequencies carry more data?",
+  "tags": [
+   "5g",
+   "mmwave",
+   "speed",
+   "indoor",
+   "cband"
+  ],
+  "c": "wht",
+  "sid": "why-do-high-frequencies-carry-more-data"
+ },
+ {
+  "see": "Coverage map says good service but my phone struggles indoors",
+  "is": "Outdoor maps do not capture building entry loss, which varies with construction",
+  "section": "basics",
+  "anchor": "What is \"building entry loss,\" and how do engineers model it?",
+  "tags": [
+   "coverage",
+   "map",
+   "building",
+   "loss"
+  ],
+  "c": "wht",
+  "sid": "what-is-building-entry-loss-and-how-do-engineers-model-it"
+ },
+ {
+  "see": "A museum caption saying the Titanic created radio laws",
+  "is": "The Radio Act of 1912 followed the Titanic and required radio licenses",
+  "section": "basics",
+  "anchor": "Did the Titanic lead to radio laws?",
+  "tags": [
+   "titanic",
+   "1912",
+   "history",
+   "license"
+  ],
+  "c": "wht",
+  "sid": "did-the-titanic-lead-to-radio-laws"
+ },
+ {
+  "see": "A colorful US frequency allocation chart poster",
+  "is": "NTIA's wall chart of the US Table of Frequency Allocations",
+  "section": "rules",
+  "anchor": "What is the US frequency allocation chart?",
+  "tags": [
+   "chart",
+   "poster",
+   "allocation",
+   "ntia"
+  ],
+  "c": "pnk",
+  "sid": "what-is-the-us-frequency-allocation-chart"
+ },
+ {
+  "see": "'This device complies with Part 15 of the FCC Rules' label",
+  "is": "The device runs without a license, on condition it causes no harmful interference and accepts interference",
+  "section": "rules",
+  "anchor": "What does \"FCC Part 15\" on my device mean?",
+  "tags": [
+   "fcc",
+   "part15",
+   "label",
+   "unlicensed",
+   "fccid"
+  ],
+  "c": "pnk",
+  "sid": "what-does-fcc-part-15-on-my-device-mean"
+ },
+ {
+  "see": "Wi-Fi slows down when the microwave oven runs",
+  "is": "Wi-Fi shares ISM bands, and Part 15 devices must accept interference from ISM equipment",
+  "section": "rules",
+  "anchor": "What are ISM bands, and why do so many gadgets share them?",
+  "tags": [
+   "microwave",
+   "wifi",
+   "interference",
+   "ism",
+   "2.4ghz"
+  ],
+  "c": "pnk",
+  "sid": "what-are-ism-bands-and-why-do-so-many-gadgets-share-them"
+ },
+ {
+  "see": "A router advertising Wi-Fi 6E or Wi-Fi 7",
+  "is": "Uses the 6 GHz band the FCC opened for unlicensed use in April 2020",
+  "section": "rules",
+  "anchor": "What is 6 GHz Wi-Fi, and is it legal?",
+  "tags": [
+   "6ghz",
+   "wifi6e",
+   "wifi7",
+   "router",
+   "afc"
+  ],
+  "c": "pnk",
+  "sid": "what-is-6-ghz-wi-fi-and-is-it-legal"
+ },
+ {
+  "see": "A news story about a carrier buying spectrum for billions",
+  "is": "An FCC spectrum auction; licenses, not ownership, are sold",
+  "section": "rules",
+  "anchor": "Why does the government auction airwaves?",
+  "tags": [
+   "auction",
+   "spectrum",
+   "carrier",
+   "fcc",
+   "cband"
+  ],
+  "c": "pnk",
+  "sid": "why-does-the-government-auction-airwaves"
+ },
+ {
+  "see": "Headlines about WRC-27",
+  "is": "The 2027 ITU World Radiocommunication Conference in Shanghai, which revises the global radio treaty",
+  "section": "rules",
+  "anchor": "When is the next World Radiocommunication Conference?",
+  "tags": [
+   "itu",
+   "wrc",
+   "treaty",
+   "shanghai"
+  ],
+  "c": "pnk",
+  "sid": "when-is-the-next-world-radiocommunication-conference"
+ },
+ {
+  "see": "A car radio with AM and FM bands",
+  "is": "Two broadcast bands: AM varies signal strength, FM varies frequency",
+  "section": "broadcast",
+  "anchor": "What is the difference between AM and FM?",
+  "tags": [
+   "am",
+   "fm",
+   "radio",
+   "car radio",
+   "frequency"
+  ],
+  "c": "org",
+  "sid": "what-is-the-difference-between-am-and-fm"
+ },
+ {
+  "see": "Far-away AM stations showing up at night",
+  "is": "AM medium-wave signals can travel much farther after dark",
+  "section": "broadcast",
+  "anchor": "What is the difference between AM and FM?",
+  "tags": [
+   "am",
+   "night",
+   "distant",
+   "skywave"
+  ],
+  "c": "org",
+  "sid": "what-is-the-difference-between-am-and-fm"
+ },
+ {
+  "see": "The stereo light flickering off on an FM station",
+  "is": "A weak signal makes the radio drop the 38 kHz stereo subcarrier and go mono",
+  "section": "broadcast",
+  "anchor": "How does FM carry stereo on one station?",
+  "tags": [
+   "fm",
+   "stereo",
+   "mono",
+   "static"
+  ],
+  "c": "org",
+  "sid": "how-does-fm-carry-stereo-on-one-station"
+ },
+ {
+  "see": "An HD logo or HD2 channel on my car stereo",
+  "is": "HD Radio, the US digital system riding alongside AM and FM stations",
+  "section": "broadcast",
+  "anchor": "What is HD Radio, and what is DAB?",
+  "tags": [
+   "hd radio",
+   "digital radio",
+   "hd2",
+   "iboc"
+  ],
+  "c": "org",
+  "sid": "what-is-hd-radio-and-what-is-dab"
+ },
+ {
+  "see": "A DAB radio in the UK",
+  "is": "Digital radio where many stations share one multiplex",
+  "section": "broadcast",
+  "anchor": "What is HD Radio, and what is DAB?",
+  "tags": [
+   "dab",
+   "uk",
+   "digital radio",
+   "multiplex"
+  ],
+  "c": "org",
+  "sid": "what-is-hd-radio-and-what-is-dab"
+ },
+ {
+  "see": "My TV lost channels until I rescanned it",
+  "is": "The 2017-2020 TV repack moved stations to new frequencies",
+  "section": "broadcast",
+  "anchor": "Why did TV go digital, and why did I have to rescan my TV?",
+  "tags": [
+   "rescan",
+   "antenna tv",
+   "repack",
+   "channels"
+  ],
+  "c": "org",
+  "sid": "why-did-tv-go-digital-and-why-did-i-have-to-rescan-my-tv"
+ },
+ {
+  "see": "A NextGen TV logo on a new television",
+  "is": "ATSC 3.0, the optional newer US broadcast TV standard",
+  "section": "broadcast",
+  "anchor": "What is NextGen TV (ATSC 3.0), and is regular TV being shut off?",
+  "tags": [
+   "nextgen tv",
+   "atsc 3.0",
+   "tv",
+   "antenna"
+  ],
+  "c": "org",
+  "sid": "what-is-nextgen-tv-atsc-3-0-and-is-regular-tv-being-shut-off"
+ },
+ {
+  "see": "Tall lit towers along Route 128 in Needham",
+  "is": "Boston's main TV transmitter sites, Cedar Street and Cabot Street",
+  "section": "broadcast",
+  "anchor": "In Boston: what are the towers in Needham?",
+  "tags": [
+   "needham",
+   "tv tower",
+   "boston",
+   "candelabra"
+  ],
+  "c": "org",
+  "sid": "in-boston-what-are-the-towers-in-needham"
+ },
+ {
+  "see": "A tower with a wide triangular top holding several antennas",
+  "is": "A candelabra tower carrying several TV stations at once",
+  "section": "broadcast",
+  "anchor": "In Boston: what are the towers in Needham?",
+  "tags": [
+   "candelabra",
+   "tower",
+   "tv",
+   "antennas"
+  ],
+  "c": "org",
+  "sid": "in-boston-what-are-the-towers-in-needham"
+ },
+ {
+  "see": "Bars on my phone changing as I walk",
+  "is": "Your phone being served by, and handed off between, cell sites",
+  "section": "cellular",
+  "anchor": "How does a cell network work?",
+  "tags": [
+   "signal bars",
+   "handoff",
+   "cell tower",
+   "phone"
+  ],
+  "c": "blu",
+  "sid": "how-does-a-cell-network-work"
+ },
+ {
+  "see": "A 5G or LTE icon next to my signal bars",
+  "is": "Which cellular generation your phone is using right now",
+  "section": "cellular",
+  "anchor": "What do 1G, 2G, 3G, 4G and 5G mean?",
+  "tags": [
+   "5g",
+   "lte",
+   "4g",
+   "icon"
+  ],
+  "c": "blu",
+  "sid": "what-do-1g-2g-3g-4g-and-5g-mean"
+ },
+ {
+  "see": "A canister or box on top of a light pole",
+  "is": "Probably a small cell adding cellular capacity to a busy block",
+  "section": "cellular",
+  "anchor": "Is that a cell tower or a small cell?",
+  "tags": [
+   "small cell",
+   "pole",
+   "5g",
+   "antenna"
+  ],
+  "c": "blu",
+  "sid": "is-that-a-cell-tower-or-a-small-cell"
+ },
+ {
+  "see": "Rows of rectangular panels at the top of a tall tower",
+  "is": "A macro cell site covering a wide area",
+  "section": "cellular",
+  "anchor": "Is that a cell tower or a small cell?",
+  "tags": [
+   "cell tower",
+   "macro",
+   "panels",
+   "antenna"
+  ],
+  "c": "blu",
+  "sid": "is-that-a-cell-tower-or-a-small-cell"
+ },
+ {
+  "see": "My phone is much faster on some corners than others",
+  "is": "Different 5G tiers: low band, mid band and short-range mmWave",
+  "section": "cellular",
+  "anchor": "What do low-band, mid-band and mmWave 5G mean?",
+  "tags": [
+   "5g",
+   "mmwave",
+   "c-band",
+   "speed"
+  ],
+  "c": "blu",
+  "sid": "what-do-low-band-mid-band-and-mmwave-5g-mean"
+ },
+ {
+  "see": "News about 5G and airplane altimeters",
+  "is": "The 2021-2022 FAA dispute over C-band 5G near airports",
+  "section": "cellular",
+  "anchor": "Why did 5G cause problems for airplanes?",
+  "tags": [
+   "5g",
+   "airplanes",
+   "altimeter",
+   "faa",
+   "c-band"
+  ],
+  "c": "blu",
+  "sid": "why-did-5g-cause-problems-for-airplanes"
+ },
+ {
+  "see": "Small antennas on subway tunnel walls",
+  "is": "A distributed antenna system carrying cell signal underground",
+  "section": "cellular",
+  "anchor": "What is a DAS, and why is there signal in some tunnels?",
+  "tags": [
+   "das",
+   "subway",
+   "tunnel",
+   "antenna"
+  ],
+  "c": "blu",
+  "sid": "what-is-a-das-and-why-is-there-signal-in-some-tunnels"
+ },
+ {
+  "see": "Cell service on the T underground",
+  "is": "The MBTA's tunnel DAS, in place since 2005 and upgraded for 5G",
+  "section": "cellular",
+  "anchor": "In Boston",
+  "tags": [
+   "mbta",
+   "subway",
+   "boston",
+   "das",
+   "cell service"
+  ],
+  "c": "blu",
+  "sid": "in-boston"
+ },
+ {
+  "see": "My old phone or alarm panel stopped working in 2022",
+  "is": "US carriers shut down their 3G networks in 2022 and January 2023",
+  "section": "cellular",
+  "anchor": "Why did my old phone stop working?",
+  "tags": [
+   "3g",
+   "shutdown",
+   "old phone",
+   "alarm"
+  ],
+  "c": "blu",
+  "sid": "why-did-my-old-phone-stop-working"
+ },
+ {
+  "see": "UK phone lost 3G",
+  "is": "UK operators switched off 3G between 2023 and 2025",
+  "section": "cellular",
+  "anchor": "Elsewhere in the world",
+  "tags": [
+   "uk",
+   "3g",
+   "switch-off",
+   "2g"
+  ],
+  "c": "blu",
+  "sid": "elsewhere-in-the-world"
+ },
+ {
+  "see": "A radio clipped to a police officer's vest with a microphone on the shoulder",
+  "is": "Land mobile radio, push-to-talk radio that works through repeaters",
+  "section": "public-safety",
+  "anchor": "What is the radio on an officer's shoulder?",
+  "tags": [
+   "police",
+   "radio",
+   "lmr",
+   "walkie-talkie",
+   "repeater"
+  ],
+  "c": "red",
+  "sid": "what-is-the-radio-on-an-officer-s-shoulder"
+ },
+ {
+  "see": "A scanner listing that says P25 Phase 1 or Phase 2",
+  "is": "The digital public safety radio standard and its two versions",
+  "section": "public-safety",
+  "anchor": "What is P25, and what does \"Phase 2\" mean?",
+  "tags": [
+   "p25",
+   "digital",
+   "phase 2",
+   "scanner",
+   "tdma"
+  ],
+  "c": "red",
+  "sid": "what-is-p25-and-what-does-phase-2-mean"
+ },
+ {
+  "see": "Scanner audio that sounds digital and hops between frequencies",
+  "is": "A trunked system, where a control channel assigns each conversation a free frequency",
+  "section": "public-safety",
+  "anchor": "What is the radio on an officer's shoulder?",
+  "tags": [
+   "trunked",
+   "talkgroup",
+   "control channel",
+   "scanner"
+  ],
+  "c": "red",
+  "sid": "what-is-the-radio-on-an-officer-s-shoulder"
+ },
+ {
+  "see": "A rugged tablet or modem in an ambulance or police cruiser",
+  "is": "Possibly FirstNet, the US first-responder broadband network on Band 14",
+  "section": "public-safety",
+  "anchor": "What is FirstNet?",
+  "tags": [
+   "firstnet",
+   "band 14",
+   "att",
+   "broadband",
+   "700 mhz"
+  ],
+  "c": "red",
+  "sid": "what-is-firstnet"
+ },
+ {
+  "see": "Scanner channels named BAPERN or MetroFire around Boston",
+  "is": "Greater Boston's regional police and fire mutual aid radio on the T-Band",
+  "section": "public-safety",
+  "anchor": "In Boston: what are BAPERN and the T-Band?",
+  "tags": [
+   "bapern",
+   "boston",
+   "t-band",
+   "metrofire",
+   "mutual aid"
+  ],
+  "c": "red",
+  "sid": "in-boston-what-are-bapern-and-the-t-band"
+ },
+ {
+  "see": "Radio chatter on 160-161 MHz near a rail line",
+  "is": "Railroad VHF radio between crews and dispatchers",
+  "section": "public-safety",
+  "anchor": "What is that chatter near the train tracks?",
+  "tags": [
+   "railroad",
+   "train",
+   "vhf",
+   "160 mhz",
+   "nxdn"
+  ],
+  "c": "red",
+  "sid": "what-is-that-chatter-near-the-train-tracks"
+ },
+ {
+  "see": "A harsh two-tone alarm interrupting TV or radio",
+  "is": "The Emergency Alert System",
+  "section": "public-safety",
+  "anchor": "What is the loud tone before an emergency message on TV or radio?",
+  "tags": [
+   "eas",
+   "alert",
+   "tone",
+   "tv",
+   "radio"
+  ],
+  "c": "red",
+  "sid": "what-is-the-loud-tone-before-an-emergency-message-on-tv-or-radio"
+ },
+ {
+  "see": "Every phone in a room blaring an alert at the same time",
+  "is": "A Wireless Emergency Alert sent by cell broadcast",
+  "section": "public-safety",
+  "anchor": "Why did every phone in the room go off at once?",
+  "tags": [
+   "wea",
+   "phone alert",
+   "amber alert",
+   "cell broadcast"
+  ],
+  "c": "red",
+  "sid": "why-did-every-phone-in-the-room-go-off-at-once"
+ },
+ {
+  "see": "A weather radio that sits silent then sounds an alarm",
+  "is": "NOAA Weather Radio activated by SAME codes for your county",
+  "section": "public-safety",
+  "anchor": "What is on 162.475 MHz?",
+  "tags": [
+   "weather radio",
+   "noaa",
+   "same",
+   "162 mhz"
+  ],
+  "c": "red",
+  "sid": "what-is-on-162-475-mhz"
+ },
+ {
+  "see": "A UK phone alert test on a Sunday afternoon",
+  "is": "The UK Emergency Alerts system, first tested nationally April 23, 2023",
+  "section": "public-safety",
+  "anchor": "Elsewhere in the world",
+  "tags": [
+   "uk",
+   "emergency alert",
+   "test",
+   "cell broadcast"
+  ],
+  "c": "red",
+  "sid": "elsewhere-in-the-world"
+ },
+ {
+  "see": "A scanner for sale at an electronics store",
+  "is": "Legal to own and use for unencrypted public radio in the US, with limits on sharing",
+  "section": "scanners",
+  "anchor": "Is it legal to own a police scanner in the US?",
+  "tags": [
+   "scanner",
+   "legal",
+   "section 705",
+   "police"
+  ],
+  "c": "red",
+  "sid": "is-it-legal-to-own-a-police-scanner-in-the-us"
+ },
+ {
+  "see": "A Facebook group posting what's on the police scanner",
+  "is": "Divulging scanner traffic, restricted by Section 705 but questioned after Bartnicki v. Vopper",
+  "section": "scanners",
+  "anchor": "Can I post or use what I hear on a scanner?",
+  "tags": [
+   "divulge",
+   "social media",
+   "section 705",
+   "bartnicki"
+  ],
+  "c": "red",
+  "sid": "can-i-post-or-use-what-i-hear-on-a-scanner"
+ },
+ {
+  "see": "A gap in a scanner's frequency coverage labeled cellular",
+  "is": "Federally required blocking of cellular frequencies",
+  "section": "scanners",
+  "anchor": "Why can't a scanner pick up cell phone calls?",
+  "tags": [
+   "cellular",
+   "blocked",
+   "scanner",
+   "fcc"
+  ],
+  "c": "red",
+  "sid": "why-can-t-a-scanner-pick-up-cell-phone-calls"
+ },
+ {
+  "see": "A scanner mounted on a car dashboard",
+  "is": "Restricted in some states, such as Florida and New York",
+  "section": "scanners",
+  "anchor": "Can I have a scanner in my car?",
+  "tags": [
+   "car",
+   "vehicle",
+   "state law",
+   "scanner"
+  ],
+  "c": "red",
+  "sid": "can-i-have-a-scanner-in-my-car"
+ },
+ {
+  "see": "My scanner used to get local police and now it is silent",
+  "is": "The agency went digital, moved to P25 Phase 2, or encrypted",
+  "section": "scanners",
+  "anchor": "Why did my scanner go quiet, and do I need a digital one?",
+  "tags": [
+   "silent",
+   "encrypted",
+   "digital",
+   "phase 2"
+  ],
+  "c": "red",
+  "sid": "why-did-my-scanner-go-quiet-and-do-i-need-a-digital-one"
+ },
+ {
+  "see": "Boston police missing from my scanner app",
+  "is": "BPD encrypted on August 9, 2025, and offers a 5-minute delayed feed",
+  "section": "scanners",
+  "anchor": "In Boston: why can't I hear the police on my scanner?",
+  "tags": [
+   "boston",
+   "bpd",
+   "encrypted",
+   "rapidsos",
+   "delay"
+  ],
+  "c": "red",
+  "sid": "in-boston-why-can-t-i-hear-the-police-on-my-scanner"
+ },
+ {
+  "see": "A news story about police radio going dark",
+  "is": "Police encryption, and the debate between officer safety and public access",
+  "section": "scanners",
+  "anchor": "Why are police departments encrypting their radios?",
+  "tags": [
+   "encryption",
+   "police",
+   "journalists",
+   "transparency"
+  ],
+  "c": "red",
+  "sid": "why-are-police-departments-encrypting-their-radios"
+ },
+ {
+  "see": "A UK scanner leaflet warning what you may listen to",
+  "is": "Section 48 of the Wireless Telegraphy Act 2006",
+  "section": "scanners",
+  "anchor": "Elsewhere in the world",
+  "tags": [
+   "uk",
+   "wireless telegraphy act",
+   "scanner",
+   "law"
+  ],
+  "c": "red",
+  "sid": "elsewhere-in-the-world"
+ },
+ {
+  "see": "A flight tracker app showing a plane over my house",
+  "is": "The plane's own ADS-B broadcast, picked up by volunteer ground receivers",
+  "section": "aviation",
+  "anchor": "What is ADS-B, and why can anyone receive it?",
+  "tags": [
+   "adsb",
+   "flightradar24",
+   "plane",
+   "tracker",
+   "app"
+  ],
+  "c": "yel",
+  "sid": "what-is-ads-b-and-why-can-anyone-receive-it"
+ },
+ {
+  "see": "A plane labeled UAT or 978 on a tracking site",
+  "is": "A US-only ADS-B link used mainly by small aircraft below 18,000 ft",
+  "section": "aviation",
+  "anchor": "What is the difference between 1090 and 978 ADS-B?",
+  "tags": [
+   "uat",
+   "978",
+   "1090",
+   "adsb"
+  ],
+  "c": "yel",
+  "sid": "what-is-the-difference-between-1090-and-978-ads-b"
+ },
+ {
+  "see": "A plane on a tracker marked MLAT or with an estimated position",
+  "is": "An aircraft with only a Mode S transponder, located by timing its replies at four or more receivers",
+  "section": "aviation",
+  "anchor": "What is MLAT, and why can't I see a plane on Flightradar24?",
+  "tags": [
+   "mlat",
+   "mode s",
+   "multilateration",
+   "transponder"
+  ],
+  "c": "yel",
+  "sid": "what-is-mlat-and-why-can-t-i-see-a-plane-on-flightradar24"
+ },
+ {
+  "see": "A plane I can hear but cannot find on Flightradar24",
+  "is": "Too low for MLAT, outside receiver coverage, on 978 MHz, or blocked by its owner",
+  "section": "aviation",
+  "anchor": "What is MLAT, and why can't I see a plane on Flightradar24?",
+  "tags": [
+   "missing",
+   "flightradar24",
+   "coverage",
+   "blocked"
+  ],
+  "c": "yel",
+  "sid": "what-is-mlat-and-why-can-t-i-see-a-plane-on-flightradar24"
+ },
+ {
+  "see": "A private jet that shows up blank or not at all on a tracker",
+  "is": "The owner has used the FAA's LADD blocking or a Privacy ICAO Address",
+  "section": "aviation",
+  "anchor": "Can owners hide a plane from flight trackers?",
+  "tags": [
+   "ladd",
+   "pia",
+   "private jet",
+   "privacy",
+   "blocked"
+  ],
+  "c": "yel",
+  "sid": "can-owners-hide-a-plane-from-flight-trackers"
+ },
+ {
+  "see": "Military jets showing on one tracking site but not another",
+  "is": "ADS-B Exchange describes itself as unfiltered, including military traffic",
+  "section": "aviation",
+  "anchor": "What is ADS-B Exchange?",
+  "tags": [
+   "adsb exchange",
+   "military",
+   "unfiltered",
+   "tracker"
+  ],
+  "c": "yel",
+  "sid": "what-is-ads-b-exchange"
+ },
+ {
+  "see": "Short digital bursts on a scanner around 129-131 MHz",
+  "is": "ACARS, text messaging between aircraft and their airlines",
+  "section": "aviation",
+  "anchor": "What is ACARS?",
+  "tags": [
+   "acars",
+   "datalink",
+   "scanner",
+   "vdl"
+  ],
+  "c": "yel",
+  "sid": "what-is-acars"
+ },
+ {
+  "see": "Clipped voices on a scanner between 118 and 137 MHz",
+  "is": "Air traffic control and pilots on the VHF airband",
+  "section": "aviation",
+  "anchor": "What frequency is air traffic control?",
+  "tags": [
+   "airband",
+   "atc",
+   "scanner",
+   "121.5"
+  ],
+  "c": "yel",
+  "sid": "what-frequency-is-air-traffic-control"
+ },
+ {
+  "see": "A website streaming live tower audio",
+  "is": "Listening to aeronautical radio is permitted under US federal law; the UK is described as stricter",
+  "section": "aviation",
+  "anchor": "Is it legal to listen to air traffic control?",
+  "tags": [
+   "liveatc",
+   "legal",
+   "scanner",
+   "uk",
+   "atc"
+  ],
+  "c": "yel",
+  "sid": "is-it-legal-to-listen-to-air-traffic-control"
+ },
+ {
+  "see": "A transponder or squawk code mentioned in a flight tracker",
+  "is": "The radar-reply box on the aircraft and the four-digit code ATC assigns",
+  "section": "aviation",
+  "anchor": "What does a transponder do?",
+  "tags": [
+   "transponder",
+   "squawk",
+   "mode s",
+   "radar"
+  ],
+  "c": "yel",
+  "sid": "what-does-a-transponder-do"
+ },
+ {
+  "see": "Jets climbing in a steady line over Cambridge or Somerville",
+  "is": "Runway 33L RNAV departures from Logan, concentrated on a narrow track since 2013-2014",
+  "section": "aviation",
+  "anchor": "In Boston: why do planes fly low over certain neighborhoods?",
+  "tags": [
+   "logan",
+   "noise",
+   "rnav",
+   "somerville",
+   "cambridge"
+  ],
+  "c": "yel",
+  "sid": "in-boston-why-do-planes-fly-low-over-certain-neighborhoods"
+ },
+ {
+  "see": "A ship app showing a ferry or tanker in the harbor",
+  "is": "The vessel's AIS broadcast on 161.975/162.025 MHz, collected by shore receivers",
+  "section": "ships",
+  "anchor": "What is AIS?",
+  "tags": [
+   "ais",
+   "marinetraffic",
+   "ship",
+   "tracker"
+  ],
+  "c": "blu",
+  "sid": "what-is-ais"
+ },
+ {
+  "see": "Big ships on a tracker but not small sailboats",
+  "is": "SOLAS and US rules require AIS on larger and commercial vessels, not most recreational boats",
+  "section": "ships",
+  "anchor": "Which ships have to carry AIS?",
+  "tags": [
+   "ais",
+   "solas",
+   "boats",
+   "carriage"
+  ],
+  "c": "blu",
+  "sid": "which-ships-have-to-carry-ais"
+ },
+ {
+  "see": "A tug or ferry showing on a ship tracker",
+  "is": "US rules require Class A AIS on commercial vessels of 65 ft or more, larger towing vessels and big passenger vessels",
+  "section": "ships",
+  "anchor": "What are the US rules for AIS?",
+  "tags": [
+   "ais",
+   "tug",
+   "ferry",
+   "class a"
+  ],
+  "c": "blu",
+  "sid": "what-are-the-us-rules-for-ais"
+ },
+ {
+  "see": "A world map of ship icons that thins out at sea",
+  "is": "MarineTraffic's network of coastal AIS receivers, mostly run by contributors",
+  "section": "ships",
+  "anchor": "How does MarineTraffic track ships?",
+  "tags": [
+   "marinetraffic",
+   "ais",
+   "receiver",
+   "coverage"
+  ],
+  "c": "blu",
+  "sid": "how-does-marinetraffic-track-ships"
+ },
+ {
+  "see": "A marine radio or scanner tuned to channel 16",
+  "is": "The international distress, safety and calling channel, 156.800 MHz",
+  "section": "ships",
+  "anchor": "What is marine VHF channel 16?",
+  "tags": [
+   "channel 16",
+   "marine vhf",
+   "distress",
+   "156.8"
+  ],
+  "c": "blu",
+  "sid": "what-is-marine-vhf-channel-16"
+ },
+ {
+  "see": "A short data burst on marine channel 70",
+  "is": "Digital Selective Calling, with no voice",
+  "section": "ships",
+  "anchor": "What is marine VHF channel 16?",
+  "tags": [
+   "dsc",
+   "channel 70",
+   "marine",
+   "digital"
+  ],
+  "c": "blu",
+  "sid": "what-is-marine-vhf-channel-16"
+ },
+ {
+  "see": "A handheld scanner at the waterfront picking up boats",
+  "is": "Receiving marine radio is permitted under US federal law",
+  "section": "ships",
+  "anchor": "Can I listen to marine radio?",
+  "tags": [
+   "marine radio",
+   "legal",
+   "scanner",
+   "listen"
+  ],
+  "c": "blu",
+  "sid": "can-i-listen-to-marine-radio"
+ },
+ {
+  "see": "A line of buoys in the water around Logan Airport",
+  "is": "A 250-ft security zone marked by 29 buoys, set up in 2002",
+  "section": "ships",
+  "anchor": "In Boston",
+  "tags": [
+   "logan",
+   "buoys",
+   "security zone",
+   "harbor"
+  ],
+  "c": "blu",
+  "sid": "in-boston"
+ },
+ {
+  "see": "A blue dot that drifts across the street downtown",
+  "is": "GPS multipath and blocked satellites in an urban canyon",
+  "section": "gps",
+  "anchor": "Why is my GPS wrong downtown?",
+  "tags": [
+   "gps",
+   "multipath",
+   "urban canyon",
+   "phone",
+   "accuracy"
+  ],
+  "c": "grn",
+  "sid": "why-is-my-gps-wrong-downtown"
+ },
+ {
+  "see": "A pale circle around my location dot",
+  "is": "The phone's own estimate of its position error",
+  "section": "gps",
+  "anchor": "How accurate is GPS on my phone?",
+  "tags": [
+   "gps",
+   "accuracy",
+   "map",
+   "phone"
+  ],
+  "c": "grn",
+  "sid": "how-accurate-is-gps-on-my-phone"
+ },
+ {
+  "see": "A GPS test app showing satellites with different country flags",
+  "is": "Your phone using GPS, GLONASS, Galileo and BeiDou together",
+  "section": "gps",
+  "anchor": "Is my phone using GPS, or something else?",
+  "tags": [
+   "gnss",
+   "galileo",
+   "glonass",
+   "beidou",
+   "satellites"
+  ],
+  "c": "grn",
+  "sid": "is-my-phone-using-gps-or-something-else"
+ },
+ {
+  "see": "Dual-frequency GPS (L1 + L5) on a phone spec sheet",
+  "is": "A receiver using two GPS carriers to correct atmospheric delay",
+  "section": "gps",
+  "anchor": "What frequencies does GPS use?",
+  "tags": [
+   "l5",
+   "l1",
+   "gps",
+   "frequency",
+   "dual-frequency"
+  ],
+  "c": "grn",
+  "sid": "what-frequencies-does-gps-use"
+ },
+ {
+  "see": "A small dome or puck antenna on a cell site",
+  "is": "Possibly a GPS antenna; cell networks rely on GPS for precise timing",
+  "section": "gps",
+  "anchor": "Why do cell towers and power grids need GPS?",
+  "tags": [
+   "timing",
+   "cell tower",
+   "gps antenna",
+   "grid"
+  ],
+  "c": "grn",
+  "sid": "why-do-cell-towers-and-power-grids-need-gps"
+ },
+ {
+  "see": "A 'GPS privacy' plug-in device for sale online",
+  "is": "A GPS jammer, which the FCC says has no lawful use in the US",
+  "section": "gps",
+  "anchor": "Are GPS jammers illegal?",
+  "tags": [
+   "jammer",
+   "illegal",
+   "fcc",
+   "gps"
+  ],
+  "c": "grn",
+  "sid": "are-gps-jammers-illegal"
+ },
+ {
+  "see": "A plane on a flight tracker flying a strange zigzag near a border",
+  "is": "Possible GNSS jamming or spoofing affecting its reported position",
+  "section": "gps",
+  "anchor": "Why are planes losing GPS over the Baltic?",
+  "tags": [
+   "spoofing",
+   "jamming",
+   "aviation",
+   "ads-b",
+   "flight tracker"
+  ],
+  "c": "grn",
+  "sid": "why-are-planes-losing-gps-over-the-baltic"
+ },
+ {
+  "see": "An 'atomic' clock with a tower icon that syncs overnight",
+  "is": "A radio-controlled clock receiving NIST's WWVB on 60 kHz",
+  "section": "gps",
+  "anchor": "How does an \"atomic\" clock set itself?",
+  "tags": [
+   "wwvb",
+   "atomic clock",
+   "60 khz",
+   "radio-controlled"
+  ],
+  "c": "grn",
+  "sid": "how-does-an-atomic-clock-set-itself"
+ },
+ {
+  "see": "A ticking voice announcing Coordinated Universal Time on shortwave",
+  "is": "NIST's WWV or WWVH time station",
+  "section": "gps",
+  "anchor": "What is that ticking voice on shortwave?",
+  "tags": [
+   "wwv",
+   "wwvh",
+   "shortwave",
+   "time signal"
+  ],
+  "c": "grn",
+  "sid": "what-is-that-ticking-voice-on-shortwave"
+ },
+ {
+  "see": "Old tutorials for receiving NOAA weather images on 137 MHz",
+  "is": "NOAA APT, shut down in 2025",
+  "section": "satellites",
+  "anchor": "Can I still pick up NOAA weather satellite pictures?",
+  "tags": [
+   "noaa",
+   "apt",
+   "137 mhz",
+   "weather satellite"
+  ],
+  "c": "pur",
+  "sid": "can-i-still-pick-up-noaa-weather-satellite-pictures"
+ },
+ {
+  "see": "A cloud loop of all North America on the TV forecast",
+  "is": "Imagery from NOAA's geostationary GOES satellites",
+  "section": "satellites",
+  "anchor": "What is GOES, and why does it never move?",
+  "tags": [
+   "goes",
+   "weather",
+   "satellite",
+   "noaa"
+  ],
+  "c": "pur",
+  "sid": "what-is-goes-and-why-does-it-never-move"
+ },
+ {
+  "see": "A bright steady light crossing the sky in a few minutes",
+  "is": "Often the International Space Station",
+  "section": "satellites",
+  "anchor": "Can I hear the International Space Station?",
+  "tags": [
+   "iss",
+   "ariss",
+   "ham radio",
+   "space station"
+  ],
+  "c": "pur",
+  "sid": "can-i-hear-the-international-space-station"
+ },
+ {
+  "see": "Smeared pictures with 'ARISS' in the corner posted online",
+  "is": "SSTV images received from the ISS on 145.800 MHz",
+  "section": "satellites",
+  "anchor": "What is SSTV from the ISS, and how do people receive it?",
+  "tags": [
+   "sstv",
+   "iss",
+   "145.800",
+   "ariss"
+  ],
+  "c": "pur",
+  "sid": "what-is-sstv-from-the-iss-and-how-do-people-receive-it"
+ },
+ {
+  "see": "A line of satellites moving together after sunset",
+  "is": "Starlink satellites",
+  "section": "satellites",
+  "anchor": "How many Starlink satellites are there?",
+  "tags": [
+   "starlink",
+   "satellite train",
+   "spacex"
+  ],
+  "c": "pur",
+  "sid": "how-many-starlink-satellites-are-there"
+ },
+ {
+  "see": "A flat white Starlink dish on a roof or RV",
+  "is": "A Starlink user terminal using Ku/Ka-band links",
+  "section": "satellites",
+  "anchor": "What frequencies does Starlink use?",
+  "tags": [
+   "starlink",
+   "dish",
+   "ku band",
+   "ka band"
+  ],
+  "c": "pur",
+  "sid": "what-frequencies-does-starlink-use"
+ },
+ {
+  "see": "My phone shows 'SAT' with no bars",
+  "is": "Direct-to-cell satellite texting, such as T-Mobile T-Satellite",
+  "section": "satellites",
+  "anchor": "How can my phone text from space?",
+  "tags": [
+   "direct-to-cell",
+   "t-satellite",
+   "starlink",
+   "texting"
+  ],
+  "c": "pur",
+  "sid": "how-can-my-phone-text-from-space"
+ },
+ {
+  "see": "\"This device must accept any interference received\" in a gadget manual",
+  "is": "The FCC Part 15 condition for unlicensed radios: no protected frequency, no harmful interference allowed.",
+  "section": "unlicensed",
+  "anchor": "What does \"must accept any interference received\" mean?",
+  "tags": [
+   "fcc",
+   "part 15",
+   "label",
+   "unlicensed"
+  ],
+  "c": "grn",
+  "sid": "what-does-must-accept-any-interference-received-mean"
+ },
+ {
+  "see": "Wi-Fi cuts out when the microwave is running",
+  "is": "The oven leaks 2.45 GHz energy into 2.4 GHz Wi-Fi channels 7-11.",
+  "section": "unlicensed",
+  "anchor": "Why does my Wi-Fi drop when the microwave is on?",
+  "tags": [
+   "wifi",
+   "microwave",
+   "interference",
+   "2.4 ghz"
+  ],
+  "c": "grn",
+  "sid": "why-does-my-wi-fi-drop-when-the-microwave-is-on"
+ },
+ {
+  "see": "A router box labeled Wi-Fi 6, 6E or 7",
+  "is": "Wi-Fi Alliance generation names for IEEE 802.11ax and 802.11be.",
+  "section": "unlicensed",
+  "anchor": "What do Wi-Fi 4, 5, 6 and 7 mean?",
+  "tags": [
+   "wifi 7",
+   "wifi 6",
+   "router",
+   "802.11"
+  ],
+  "c": "grn",
+  "sid": "what-do-wi-fi-4-5-6-and-7-mean"
+ },
+ {
+  "see": "My router shows separate 2.4 GHz, 5 GHz and 6 GHz networks",
+  "is": "Three unlicensed bands with different range and capacity trade-offs.",
+  "section": "unlicensed",
+  "anchor": "Why does my router have 2.4, 5 and 6 GHz bands?",
+  "tags": [
+   "wifi",
+   "bands",
+   "6 ghz",
+   "router"
+  ],
+  "c": "grn",
+  "sid": "why-does-my-router-have-2-4-5-and-6-ghz-bands"
+ },
+ {
+  "see": "My phone shows no 6 GHz Wi-Fi while traveling in Europe",
+  "is": "The EU opened only the lower part of the 6 GHz band.",
+  "section": "unlicensed",
+  "anchor": "Can I use 6 GHz Wi-Fi outside the US?",
+  "tags": [
+   "6 ghz",
+   "europe",
+   "uk",
+   "travel"
+  ],
+  "c": "grn",
+  "sid": "can-i-use-6-ghz-wi-fi-outside-the-us"
+ },
+ {
+  "see": "The blue angular Bluetooth \"B\" logo",
+  "is": "Runic-style branding for a 2.4 GHz short-range radio named after a Danish king.",
+  "section": "unlicensed",
+  "anchor": "Why is Bluetooth called Bluetooth?",
+  "tags": [
+   "bluetooth",
+   "logo",
+   "name",
+   "ble"
+  ],
+  "c": "grn",
+  "sid": "why-is-bluetooth-called-bluetooth"
+ },
+ {
+  "see": "A store app that knows which aisle I am in",
+  "is": "A BLE beacon broadcasting an ID that the app recognizes.",
+  "section": "unlicensed",
+  "anchor": "What is a Bluetooth beacon?",
+  "tags": [
+   "beacon",
+   "ibeacon",
+   "ble",
+   "store"
+  ],
+  "c": "grn",
+  "sid": "what-is-a-bluetooth-beacon"
+ },
+ {
+  "see": "A Matter, Thread, Zigbee or Z-Wave logo on a smart bulb or lock box",
+  "is": "Low-power smart-home mesh radios and the Matter standard that runs over them.",
+  "section": "unlicensed",
+  "anchor": "What are Zigbee, Z-Wave, Thread and Matter?",
+  "tags": [
+   "smart home",
+   "matter",
+   "thread",
+   "zigbee",
+   "z-wave"
+  ],
+  "c": "grn",
+  "sid": "what-are-zigbee-z-wave-thread-and-matter"
+ },
+ {
+  "see": "A small box with a stubby antenna on a meter, fence or bin labeled LoRaWAN",
+  "is": "A long-range, low-data-rate IoT sensor, at 915 MHz in the US.",
+  "section": "unlicensed",
+  "anchor": "What is LoRa, and how far does it reach?",
+  "tags": [
+   "lora",
+   "lorawan",
+   "iot",
+   "sensor"
+  ],
+  "c": "grn",
+  "sid": "what-is-lora-and-how-far-does-it-reach"
+ },
+ {
+  "see": "A Helium crypto hotspot in a window",
+  "is": "A crowd-built LoRaWAN gateway that earns tokens.",
+  "section": "unlicensed",
+  "anchor": "What is the Helium network, and is it legit?",
+  "tags": [
+   "helium",
+   "crypto",
+   "hotspot",
+   "lorawan"
+  ],
+  "c": "grn",
+  "sid": "what-is-the-helium-network-and-is-it-legit"
+ },
+ {
+  "see": "A new digital electric meter with no spinning dial",
+  "is": "An AMI smart meter that reports readings by radio, often a 902-928 MHz mesh.",
+  "section": "everyday",
+  "anchor": "What is that new electric meter, and does it transmit?",
+  "tags": [
+   "smart meter",
+   "ami",
+   "eversource",
+   "national grid"
+  ],
+  "c": "yel",
+  "sid": "what-is-that-new-electric-meter-and-does-it-transmit"
+ },
+ {
+  "see": "A letter from Eversource scheduling a meter swap",
+  "is": "Eversource's Massachusetts smart meter rollout, due to finish by late 2027.",
+  "section": "everyday",
+  "anchor": "When is Eversource installing smart meters in Massachusetts?",
+  "tags": [
+   "eversource",
+   "smart meter",
+   "massachusetts",
+   "rollout"
+  ],
+  "c": "yel",
+  "sid": "when-is-eversource-installing-smart-meters-in-massachusetts"
+ },
+ {
+  "see": "A National Grid notice about a new meter",
+  "is": "National Grid's Massachusetts smart meter rollout, with a fee-based opt-out.",
+  "section": "everyday",
+  "anchor": "Can I opt out of a National Grid smart meter in Massachusetts?",
+  "tags": [
+   "national grid",
+   "opt out",
+   "smart meter",
+   "massachusetts"
+  ],
+  "c": "yel",
+  "sid": "can-i-opt-out-of-a-national-grid-smart-meter-in-massachusetts"
+ },
+ {
+  "see": "The amber horseshoe-shaped tire warning light on my dashboard",
+  "is": "The TPMS warning, fed by 315 or 434 MHz sensors in each wheel.",
+  "section": "everyday",
+  "anchor": "What frequency do tire pressure sensors use?",
+  "tags": [
+   "tpms",
+   "tire",
+   "dashboard",
+   "315 mhz"
+  ],
+  "c": "yel",
+  "sid": "what-frequency-do-tire-pressure-sensors-use"
+ },
+ {
+  "see": "The four curved lines of the contactless symbol",
+  "is": "A 13.56 MHz tap-range link powered by the reader.",
+  "section": "everyday",
+  "anchor": "How does tap-to-pay work, and how close do I need to be?",
+  "tags": [
+   "nfc",
+   "contactless",
+   "tap to pay",
+   "13.56 mhz"
+  ],
+  "c": "yel",
+  "sid": "how-does-tap-to-pay-work-and-how-close-do-i-need-to-be"
+ },
+ {
+  "see": "A green CharlieCard or an MBTA gate that takes my phone",
+  "is": "MBTA fare media: MIFARE Classic CharlieCard since 2006, contactless bank cards since August 2024.",
+  "section": "everyday",
+  "anchor": "Is the CharlieCard being replaced?",
+  "tags": [
+   "charliecard",
+   "mbta",
+   "tap to ride",
+   "fare"
+  ],
+  "c": "yel",
+  "sid": "is-the-charliecard-being-replaced"
+ },
+ {
+  "see": "A gray toll tag behind the rearview mirror",
+  "is": "An E-ZPass active RFID transponder at 915 MHz.",
+  "section": "everyday",
+  "anchor": "How does E-ZPass work?",
+  "tags": [
+   "e-zpass",
+   "toll",
+   "rfid",
+   "915 mhz"
+  ],
+  "c": "yel",
+  "sid": "how-does-e-zpass-work"
+ },
+ {
+  "see": "A highway sign showing minutes to the next town",
+  "is": "Travel times computed by matching Bluetooth MAC addresses at roadside readers.",
+  "section": "everyday",
+  "anchor": "How do highway signs know the travel time?",
+  "tags": [
+   "travel time",
+   "bluetooth",
+   "massdot",
+   "highway sign"
+  ],
+  "c": "yel",
+  "sid": "how-do-highway-signs-know-the-travel-time"
+ },
+ {
+  "see": "A presenter with a belt-pack transmitter and no mic cable",
+  "is": "A wireless mic, a low-power transmitter sharing leftover TV spectrum",
+  "section": "show-wireless",
+  "anchor": "Who is allowed to put a microphone on the air?",
+  "tags": [
+   "wireless mic",
+   "lavalier",
+   "belt pack",
+   "part 74"
+  ],
+  "c": "pnk",
+  "sid": "who-is-allowed-to-put-a-microphone-on-the-air"
+ },
+ {
+  "see": "A singer wearing a molded earpiece on stage",
+  "is": "An in-ear monitor, a wireless transmitter sending the performer their mix",
+  "section": "show-wireless",
+  "anchor": "Who is allowed to put a microphone on the air?",
+  "tags": [
+   "iem",
+   "in-ear monitor",
+   "earpiece",
+   "concert"
+  ],
+  "c": "pnk",
+  "sid": "who-is-allowed-to-put-a-microphone-on-the-air"
+ },
+ {
+  "see": "A \"50 mW\" notice in a wireless mic manual",
+  "is": "The US power cap for unlicensed mics in the TV bands",
+  "section": "show-wireless",
+  "anchor": "What is the 50 mW rule?",
+  "tags": [
+   "50 mw",
+   "unlicensed",
+   "part 15",
+   "eirp"
+  ],
+  "c": "pnk",
+  "sid": "what-is-the-50-mw-rule"
+ },
+ {
+  "see": "A cheap secondhand mic system labeled 700-something MHz",
+  "is": "A 700 MHz mic, banned in the US since 2010",
+  "section": "show-wireless",
+  "anchor": "What happened to 700 MHz wireless microphones?",
+  "tags": [
+   "700 mhz",
+   "illegal mic",
+   "used gear"
+  ],
+  "c": "pnk",
+  "sid": "what-happened-to-700-mhz-wireless-microphones"
+ },
+ {
+  "see": "A wireless mic receiver tuned between 617 and 698 MHz",
+  "is": "A 600 MHz mic that had to stop operating in the US by July 13, 2020",
+  "section": "show-wireless",
+  "anchor": "Is my 600 MHz wireless mic illegal?",
+  "tags": [
+   "600 mhz",
+   "illegal mic",
+   "incentive auction"
+  ],
+  "c": "pnk",
+  "sid": "is-my-600-mhz-wireless-mic-illegal"
+ },
+ {
+  "see": "Referees and coaches all on wireless at an NFL game",
+  "is": "Hundreds of coordinated frequencies managed by SBE/NFL volunteers",
+  "section": "show-wireless",
+  "anchor": "Who coordinates frequencies at the Super Bowl?",
+  "tags": [
+   "super bowl",
+   "nfl",
+   "frequency coordination",
+   "sbe"
+  ],
+  "c": "pnk",
+  "sid": "who-coordinates-frequencies-at-the-super-bowl"
+ },
+ {
+  "see": "A small antenna box on a lighting truss",
+  "is": "Probably wireless DMX lighting control on 2.4 GHz",
+  "section": "show-wireless",
+  "anchor": "What about wireless lighting control?",
+  "tags": [
+   "dmx",
+   "lighting",
+   "2.4 ghz",
+   "truss"
+  ],
+  "c": "pnk",
+  "sid": "what-about-wireless-lighting-control"
+ },
+ {
+  "see": "A license plate like W1ABC on a car with a tall antenna",
+  "is": "Likely a ham radio operator's call sign",
+  "section": "hobby",
+  "anchor": "What is a ham, and how do you become one in the US?",
+  "tags": [
+   "ham",
+   "call sign",
+   "license plate",
+   "amateur radio"
+  ],
+  "c": "org",
+  "sid": "what-is-a-ham-and-how-do-you-become-one-in-the-us"
+ },
+ {
+  "see": "A UK call sign starting M7, M8, M9 or M0",
+  "is": "A UK amateur licence; the prefix shows the licence level",
+  "section": "hobby",
+  "anchor": "What are the UK amateur radio licence levels?",
+  "tags": [
+   "uk",
+   "ofcom",
+   "call sign",
+   "licence"
+  ],
+  "c": "org",
+  "sid": "what-are-the-uk-amateur-radio-licence-levels"
+ },
+ {
+  "see": "A flyer for a radio \"swapfest\" in Cambridge",
+  "is": "The MIT Swapfest, run by the MIT Radio Society W1MX",
+  "section": "hobby",
+  "anchor": "Are there ham radio clubs in Boston?",
+  "tags": [
+   "swapfest",
+   "mit",
+   "boston",
+   "club"
+  ],
+  "c": "org",
+  "sid": "are-there-ham-radio-clubs-in-boston"
+ },
+ {
+  "see": "A USB stick with an antenna showing a rainbow waterfall on a laptop",
+  "is": "An RTL-SDR, a cheap receive-only software-defined radio",
+  "section": "hobby",
+  "anchor": "What is a software-defined radio, and what is an RTL-SDR?",
+  "tags": [
+   "sdr",
+   "rtl-sdr",
+   "dongle",
+   "waterfall"
+  ],
+  "c": "org",
+  "sid": "what-is-a-software-defined-radio-and-what-is-an-rtl-sdr"
+ },
+ {
+  "see": "A flight tracker map with planes over my house",
+  "is": "Aircraft ADS-B position broadcasts, receivable with an SDR",
+  "section": "hobby",
+  "anchor": "What can I listen to with an RTL-SDR?",
+  "tags": [
+   "ads-b",
+   "flight tracker",
+   "planes",
+   "logan"
+  ],
+  "c": "org",
+  "sid": "what-can-i-listen-to-with-an-rtl-sdr"
+ },
+ {
+  "see": "A creepy buzzing shortwave station on YouTube",
+  "is": "UVB-76 \"The Buzzer\" on 4625 kHz",
+  "section": "hobby",
+  "anchor": "What is UVB-76, \"The Buzzer\"?",
+  "tags": [
+   "uvb-76",
+   "buzzer",
+   "number station",
+   "shortwave"
+  ],
+  "c": "org",
+  "sid": "what-is-uvb-76-the-buzzer"
+ },
+ {
+  "see": "A SAR number in my phone's legal settings",
+  "is": "How much RF energy the phone deposits in tissue, tested against FCC or ICNIRP limits",
+  "section": "health",
+  "anchor": "What is the SAR limit for cell phones in the US?",
+  "tags": [
+   "sar",
+   "phone",
+   "radiation",
+   "fcc"
+  ],
+  "c": "wht",
+  "sid": "what-is-the-sar-limit-for-cell-phones-in-the-us"
+ },
+ {
+  "see": "Different SAR limits for the same phone in the US and Europe",
+  "is": "Different averaging masses: 1.6 W/kg over 1 g (FCC) vs 2 W/kg over 10 g (ICNIRP)",
+  "section": "health",
+  "anchor": "Why is the US limit 1.6 and Europe's 2.0?",
+  "tags": [
+   "sar",
+   "icnirp",
+   "europe",
+   "1.6"
+  ],
+  "c": "wht",
+  "sid": "why-is-the-us-limit-1-6-and-europe-s-2-0"
+ },
+ {
+  "see": "A headline saying WHO says phones may cause cancer",
+  "is": "IARC's 2011 Group 2B classification, based on limited evidence",
+  "section": "health",
+  "anchor": "What does \"possibly carcinogenic\" (Group 2B) mean?",
+  "tags": [
+   "iarc",
+   "cancer",
+   "2b",
+   "who"
+  ],
+  "c": "wht",
+  "sid": "what-does-possibly-carcinogenic-group-2b-mean"
+ },
+ {
+  "see": "A post claiming 5G masts make people sick",
+  "is": "WHO says no adverse health effect has been causally linked to wireless technologies",
+  "section": "health",
+  "anchor": "Is 5G dangerous to health?",
+  "tags": [
+   "5g",
+   "health",
+   "mast",
+   "who"
+  ],
+  "c": "wht",
+  "sid": "is-5g-dangerous-to-health"
+ },
+ {
+  "see": "Tall towers near Route 128 in Needham",
+  "is": "Boston's TV antenna farm: WBZ-TV's Cedar Street tower and the Cabot Street candelabra.",
+  "section": "boston",
+  "anchor": "Where do Boston TV stations broadcast from?",
+  "tags": [
+   "needham",
+   "tv",
+   "towers",
+   "route 128",
+   "antenna"
+  ],
+  "c": "blu",
+  "sid": "where-do-boston-tv-stations-broadcast-from"
+ },
+ {
+  "see": "A tower whose top splits into several arms",
+  "is": "A candelabra tower, holding a separate antenna for each TV station.",
+  "section": "boston",
+  "anchor": "What is the stainless-steel tower with arms in Needham?",
+  "tags": [
+   "candelabra",
+   "tower",
+   "needham",
+   "tv"
+  ],
+  "c": "blu",
+  "sid": "what-is-the-stainless-steel-tower-with-arms-in-needham"
+ },
+ {
+  "see": "A mast on top of the Prudential",
+  "is": "An FM broadcast mast with a shared master antenna (as of 2004).",
+  "section": "boston",
+  "anchor": "What antennas are on top of the Prudential?",
+  "tags": [
+   "prudential",
+   "fm",
+   "mast",
+   "downtown"
+  ],
+  "c": "blu",
+  "sid": "what-antennas-are-on-top-of-the-prudential"
+ },
+ {
+  "see": "WBZ 1030 coming in from hundreds of miles away at night",
+  "is": "A 50 kW clear-channel AM station whose night skywave travels far.",
+  "section": "boston",
+  "anchor": "Why can I hear WBZ 1030 at night in other states?",
+  "tags": [
+   "wbz",
+   "am",
+   "skywave",
+   "night",
+   "clear channel"
+  ],
+  "c": "blu",
+  "sid": "why-can-i-hear-wbz-1030-at-night-in-other-states"
+ },
+ {
+  "see": "Two bare towers by the water in Hull",
+  "is": "WBZ's directional AM array, aimed at Boston and away from the Atlantic.",
+  "section": "boston",
+  "anchor": "Where is WBZ's transmitter?",
+  "tags": [
+   "wbz",
+   "hull",
+   "am",
+   "towers"
+  ],
+  "c": "blu",
+  "sid": "where-is-wbz-s-transmitter"
+ },
+ {
+  "see": "My phone works in the subway tunnel",
+  "is": "A distributed antenna system carries carrier signals over fiber and leaky cable.",
+  "section": "boston",
+  "anchor": "How does cell service reach the T tunnels?",
+  "tags": [
+   "mbta",
+   "subway",
+   "cell",
+   "das",
+   "tunnel"
+  ],
+  "c": "blu",
+  "sid": "how-does-cell-service-reach-the-t-tunnels"
+ },
+ {
+  "see": "Radios on MBTA staff and Transit Police",
+  "is": "The MBTA is replacing EDACS with an L3Harris P25 system.",
+  "section": "boston",
+  "anchor": "What radio do MBTA crews and Transit Police use?",
+  "tags": [
+   "mbta",
+   "p25",
+   "l3harris",
+   "radio"
+  ],
+  "c": "blu",
+  "sid": "what-radio-do-mbta-crews-and-transit-police-use"
+ },
+ {
+  "see": "Boston police and fire radio on a scanner app",
+  "is": "A UHF P25 system being upgraded across ten city radio sites.",
+  "section": "boston",
+  "anchor": "What radio system do Boston police and firefighters use?",
+  "tags": [
+   "boston police",
+   "fire",
+   "p25",
+   "uhf",
+   "scanner"
+  ],
+  "c": "blu",
+  "sid": "what-radio-system-do-boston-police-and-firefighters-use"
+ },
+ {
+  "see": "Planes flying low over my house in Somerville or Milton",
+  "is": "Logan runway use and satellite-guided RNAV paths concentrate tracks.",
+  "section": "boston",
+  "anchor": "Why are planes flying over my house in Somerville, Cambridge or Milton?",
+  "tags": [
+   "logan",
+   "planes",
+   "noise",
+   "rnav",
+   "massport"
+  ],
+  "c": "blu",
+  "sid": "why-are-planes-flying-over-my-house-in-somerville-cambridge-or-milton"
+ },
+ {
+  "see": "A flight tracker showing a plane over Boston",
+  "is": "Massport runs a near-live public Flight Monitor for Logan traffic.",
+  "section": "boston",
+  "anchor": "How can I tell which plane just flew over Boston?",
+  "tags": [
+   "flight tracker",
+   "logan",
+   "massport",
+   "planes"
+  ],
+  "c": "blu",
+  "sid": "how-can-i-tell-which-plane-just-flew-over-boston"
+ },
+ {
+  "see": "A ship-tracking website showing a tanker in the harbor",
+  "is": "Ships broadcast position and identity on AIS, on dedicated marine VHF channels.",
+  "section": "boston",
+  "anchor": "How do I track ships in Boston Harbor?",
+  "tags": [
+   "ais",
+   "ships",
+   "harbor",
+   "vhf",
+   "marine"
+  ],
+  "c": "blu",
+  "sid": "how-do-i-track-ships-in-boston-harbor"
+ },
+ {
+  "see": "A new Eversource meter on my house",
+  "is": "An Itron smart meter that reports usage daily by radio.",
+  "section": "boston",
+  "anchor": "What is the new meter on my house, and can I opt out?",
+  "tags": [
+   "smart meter",
+   "eversource",
+   "itron",
+   "opt out"
+  ],
+  "c": "blu",
+  "sid": "what-is-the-new-meter-on-my-house-and-can-i-opt-out"
+ },
+ {
+  "see": "A Christmas Eve transmission on 486 kHz",
+  "is": "WA1ZMS's experimental-license commemoration of Fessenden's claimed 1906 broadcast.",
+  "section": "boston",
+  "anchor": "Was the first radio broadcast really from Brant Rock in 1906?",
+  "tags": [
+   "fessenden",
+   "brant rock",
+   "1906",
+   "history"
+  ],
+  "c": "blu",
+  "sid": "was-the-first-radio-broadcast-really-from-brant-rock-in-1906"
+ },
+ {
+  "see": "A Marconi marker on a Cape Cod bluff",
+  "is": "The site of Marconi's 1903 Wellfleet transatlantic station.",
+  "section": "boston",
+  "anchor": "Where was Marconi's station on Cape Cod?",
+  "tags": [
+   "marconi",
+   "wellfleet",
+   "cape cod",
+   "history"
+  ],
+  "c": "blu",
+  "sid": "where-was-marconi-s-station-on-cape-cod"
+ },
+ {
+  "see": "A cluster of towers on a hill",
+  "is": "An antenna farm, where stations share height, land and backup.",
+  "section": "towers",
+  "anchor": "What is an antenna farm?",
+  "tags": [
+   "antenna farm",
+   "towers",
+   "hill"
+  ],
+  "c": "org",
+  "sid": "what-is-an-antenna-farm"
+ },
+ {
+  "see": "A very tall tower held up by cables",
+  "is": "A guyed tower.",
+  "section": "towers",
+  "anchor": "How do I tell a guyed tower from a candelabra?",
+  "tags": [
+   "guyed",
+   "tower",
+   "cables"
+  ],
+  "c": "org",
+  "sid": "how-do-i-tell-a-guyed-tower-from-a-candelabra"
+ },
+ {
+  "see": "Several identical bare towers in a row",
+  "is": "An AM directional array; the towers themselves are the antenna.",
+  "section": "towers",
+  "anchor": "Why do AM stations use several tall towers?",
+  "tags": [
+   "am",
+   "array",
+   "towers",
+   "directional"
+  ],
+  "c": "org",
+  "sid": "why-do-am-stations-use-several-tall-towers"
+ },
+ {
+  "see": "Stacked rectangular panels on a rooftop mast",
+  "is": "Often FM broadcast panel antennas, though cell panels look similar.",
+  "section": "towers",
+  "anchor": "What are the flat panels on a rooftop mast?",
+  "tags": [
+   "panel",
+   "rooftop",
+   "fm",
+   "bay"
+  ],
+  "c": "org",
+  "sid": "what-are-the-flat-panels-on-a-rooftop-mast"
+ },
+ {
+  "see": "A thick cable along a subway tunnel wall",
+  "is": "Radiating (leaky feeder) cable from a distributed antenna system.",
+  "section": "towers",
+  "anchor": "What carries cell signals into a tunnel?",
+  "tags": [
+   "leaky feeder",
+   "tunnel",
+   "das",
+   "cable"
+  ],
+  "c": "org",
+  "sid": "what-carries-cell-signals-into-a-tunnel"
+ },
+ {
+  "see": "Who owns that tower?",
+  "is": "Look it up free in the FCC's ASR database by coordinates and radius.",
+  "section": "towers",
+  "anchor": "How do I look up a tower near me?",
+  "tags": [
+   "asr",
+   "fcc",
+   "tower",
+   "owner",
+   "lookup"
+  ],
+  "c": "org",
+  "sid": "how-do-i-look-up-a-tower-near-me"
+ },
+ {
+  "see": "Who is licensed to transmit from that antenna?",
+  "is": "Search the FCC's Universal Licensing System.",
+  "section": "towers",
+  "anchor": "How do I find out who holds a radio license?",
+  "tags": [
+   "uls",
+   "fcc",
+   "license",
+   "lookup"
+  ],
+  "c": "org",
+  "sid": "how-do-i-find-out-who-holds-a-radio-license"
+ }
+]

@@ -1,0 +1,513 @@
+[
+ {
+  "title": "eCFR: 14 CFR 91.225",
+  "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-91/subpart-C/section-91.225",
+  "type": "regulation",
+  "topic": "aviation",
+  "why": "The text of the US ADS-B Out rule and where it applies."
+ },
+ {
+  "title": "FAA: Equip ADS-B FAQ",
+  "url": "https://www.faa.gov/air_traffic/technology/equipadsb/resources/faq",
+  "type": "official guide",
+  "topic": "aviation",
+  "why": "What ADS-B broadcasts, the two links, and anonymous mode, in the FAA's words."
+ },
+ {
+  "title": "FAA: ADS-B Privacy (PIA)",
+  "url": "https://www.faa.gov/air_traffic/technology/equipadsb/privacy",
+  "type": "official guide",
+  "topic": "aviation",
+  "why": "How Privacy ICAO Addresses work and who is eligible."
+ },
+ {
+  "title": "FAA: LADD",
+  "url": "https://www.faa.gov/pilots/ladd",
+  "type": "official guide",
+  "topic": "aviation",
+  "why": "The FAA program for blocking aircraft from public tracking sites."
+ },
+ {
+  "title": "Flightradar24 Support: How does Flightradar24 work?",
+  "url": "https://support.fr24.com/support/solutions/articles/3000117422-how-does-flightradar24-work-",
+  "type": "explainer",
+  "topic": "aviation",
+  "why": "Plain explanation of ADS-B and MLAT from the largest tracker."
+ },
+ {
+  "title": "Airframes.io: Technology overview",
+  "url": "https://docs.airframes.io/docs/technology/overview",
+  "type": "explainer",
+  "topic": "aviation",
+  "why": "ACARS, VDL Mode 2, HF and satellite datalinks in one page."
+ },
+ {
+  "title": "City of Cambridge: Logan Noise Study",
+  "url": "https://www.cambridgema.gov/CDD/Transportation/regionalplanning/logannoisestudy",
+  "type": "local government",
+  "topic": "aviation",
+  "why": "The FAA-Massport-MIT noise study and the community votes on it."
+ },
+ {
+  "title": "USCG NAVCEN: US VHF channel information",
+  "url": "https://www.navcen.uscg.gov/us-vhf-channel-information",
+  "type": "official reference",
+  "topic": "ships",
+  "why": "Every US marine VHF channel, including 16, 13, 70 and the AIS channels."
+ },
+ {
+  "title": "Cornell LII: 33 CFR 164.46",
+  "url": "https://www.law.cornell.edu/cfr/text/33/164.46",
+  "type": "regulation",
+  "topic": "ships",
+  "why": "Which US vessels must carry AIS."
+ },
+ {
+  "title": "Cornell LII: 18 USC 2511",
+  "url": "https://www.law.cornell.edu/uscode/text/18/2511",
+  "type": "statute",
+  "topic": "aviation",
+  "why": "The US federal exemption for receiving marine and aeronautical radio."
+ },
+ {
+  "title": "47 CFR 2.101: Frequency and wavelength bands",
+  "url": "https://www.law.cornell.edu/cfr/text/47/2.101",
+  "type": "regulation",
+  "topic": "basics",
+  "why": "The official table of band names, from VLF to EHF."
+ },
+ {
+  "title": "IEEE Milestone: Reception of Transatlantic Radio Signals, 1901",
+  "url": "https://ethw.org/Milestones:Reception_of_Transatlantic_Radio_Signals,_1901",
+  "type": "history",
+  "topic": "basics",
+  "why": "The engineering history of Marconi's Signal Hill reception, with his diary notes."
+ },
+ {
+  "title": "NTIA ITS: An In Situ Characterization of 1.7 GHz Building Entry Loss",
+  "url": "https://its.ntia.gov/publications/details?pub=4481",
+  "type": "research",
+  "topic": "basics",
+  "why": "Government measurements of how much signal historic and modern buildings block."
+ },
+ {
+  "title": "47 CFR 2.105: United States Table of Frequency Allocations",
+  "url": "https://www.law.cornell.edu/cfr/text/47/2.105",
+  "type": "regulation",
+  "topic": "rules",
+  "why": "How the US splits spectrum between the FCC and NTIA, and how to read the allocation table."
+ },
+ {
+  "title": "CRS R48861: History of the FCC's Spectrum Auction Authority, 1993-2025",
+  "url": "https://www.everycrsreport.com/reports/R48861.html",
+  "type": "report",
+  "topic": "rules",
+  "why": "A Congressional Research Service history of auction authority, its lapse and its 2025 restoration."
+ },
+ {
+  "title": "ITU: WRC-27",
+  "url": "https://itu.int/wrc-27/",
+  "type": "official",
+  "topic": "rules",
+  "why": "The ITU's page for the 2027 World Radiocommunication Conference in Shanghai."
+ },
+ {
+  "title": "In Compliance Magazine: A Selective History of Part 15",
+  "url": "https://incompliancemag.com/a-selective-history-of-part-15-of-the-fcc-rules-an-engineering-perspective/",
+  "type": "history",
+  "topic": "rules",
+  "why": "How the FCC's unlicensed-device rules grew from 1938 to today."
+ },
+ {
+  "title": "47 CFR 15.5: General conditions of operation",
+  "url": "https://www.law.cornell.edu/cfr/text/47/15.5",
+  "type": "regulation",
+  "topic": "rules",
+  "why": "The short rule that sets the terms for every unlicensed gadget in the US."
+ },
+ {
+  "title": "ACMA: Rules to manage spectrum",
+  "url": "https://www.acma.gov.au/rules-manage-spectrum",
+  "type": "official",
+  "topic": "rules",
+  "why": "Australia's regulator explains how it plans and licenses spectrum."
+ },
+ {
+  "title": "FCC ASR Registration Search",
+  "url": "https://wireless2.fcc.gov/UlsApp/AsrSearch/asrRegistrationSearch.jsp?activeErrorMessage=",
+  "type": "database",
+  "topic": "towers",
+  "why": "Look up any registered tower by coordinates, owner or number."
+ },
+ {
+  "title": "FCC ASRN Records Within a Radius",
+  "url": "https://www.fcc.gov/media/radio/asrn-within-radius",
+  "type": "database",
+  "topic": "towers",
+  "why": "Find registered structures around a point; links broadcast stations to their towers."
+ },
+ {
+  "title": "FCC ULS License Search help",
+  "url": "https://wireless2.fcc.gov/helpfiles/licenseSearch/helpAbout.html",
+  "type": "guide",
+  "topic": "towers",
+  "why": "Explains every way to search wireless licenses, including by site and frequency."
+ },
+ {
+  "title": "FCC ASR Help: Registration Search",
+  "url": "https://wireless2.fcc.gov/helpfiles/AsrHelp/help-regsearch.html",
+  "type": "guide",
+  "topic": "towers",
+  "why": "What each ASR search field does."
+ },
+ {
+  "title": "Fybush: Boston's Cabot Street Tower (2021)",
+  "url": "https://www.fybush.com/site-20210326",
+  "type": "article",
+  "topic": "boston",
+  "why": "The candelabra after the TV repack, from a longtime tower-site chronicler."
+ },
+ {
+  "title": "Fybush: WBZ: 65 Years in Hull (2005)",
+  "url": "https://www.fybush.com/sites/2005/site-050805.html",
+  "type": "article",
+  "topic": "boston",
+  "why": "How WBZ's two-tower array works and where it reaches."
+ },
+ {
+  "title": "MIT News: New Logan flight procedures (2024)",
+  "url": "https://news.mit.edu/2024/new-flight-procedures-reduce-noise-aircraft-boston-logan-airport-0418",
+  "type": "article",
+  "topic": "boston",
+  "why": "Why flight paths narrowed and what is being done about it."
+ },
+ {
+  "title": "Radio World: Fessenden: The Next Chapter",
+  "url": "https://www.radioworld.com/columns-and-views/fessenden-the-next-chapter",
+  "type": "article",
+  "topic": "boston",
+  "why": "The evidence for and against the 1906 Christmas Eve broadcast."
+ },
+ {
+  "title": "Cape Cod & the Islands: Where Radio Began",
+  "url": "https://capecodandtheislandsmag.com/where-radio-began/",
+  "type": "article",
+  "topic": "boston",
+  "why": "Marconi's Wellfleet station from 1901 to its closing."
+ },
+ {
+  "title": "CRS: TV Broadcast Incentive Auction: Results and Repacking",
+  "url": "https://www.everycrsreport.com/reports/IF10751.html",
+  "type": "report",
+  "topic": "broadcast",
+  "why": "Short, neutral summary of the auction's money and the repack timeline."
+ },
+ {
+  "title": "FCC 25-72: ATSC 3.0 Fifth Further Notice",
+  "url": "https://docs.fcc.gov/public/attachments/FCC-25-72A1.pdf",
+  "type": "regulation",
+  "topic": "broadcast",
+  "why": "The FCC's own text on ending the ATSC 1.0 simulcast mandate, with market data."
+ },
+ {
+  "title": "HyperPhysics: AM and FM Radio Frequencies",
+  "url": "https://hyperphysics.gsu.edu/hbase/audio/radio.html",
+  "type": "reference",
+  "topic": "broadcast",
+  "why": "Clear explanation of AM and FM channel spacing and FM stereo."
+ },
+ {
+  "title": "WorldDAB: United Kingdom",
+  "url": "https://www.worlddab.org/countries/united-kingdom?page=25",
+  "type": "data",
+  "topic": "broadcast",
+  "why": "Current UK digital radio listening and coverage figures."
+ },
+ {
+  "title": "AAAE: FAA radio altimeter rule summary",
+  "url": "https://alerts.aaae.org/latest/regulatory_52523",
+  "type": "article",
+  "topic": "cellular",
+  "why": "Dates and numbers for the 5G and altimeter fix."
+ },
+ {
+  "title": "Ofcom: 3G and 2G switch off",
+  "url": "https://www.ofcom.org.uk/__data/assets/pdf_file/0025/252592/3G-and-2G-switch-off.pdf",
+  "type": "guide",
+  "topic": "cellular",
+  "why": "UK regulator's explainer on network switch-off timing."
+ },
+ {
+  "title": "Ofcom: Final spectrum auction results (2021)",
+  "url": "https://www.ofcom.org.uk/spectrum/spectrum-awards/final-spectrum-auction-results",
+  "type": "data",
+  "topic": "cellular",
+  "why": "Who won which UK 5G frequencies and for how much."
+ },
+ {
+  "title": "FCC: Wireless Microphones",
+  "url": "https://www.fcc.gov/topic/wireless-microphone",
+  "type": "regulator",
+  "topic": "show-wireless",
+  "why": "The FCC's own list of which bands US wireless mics may use and who can be licensed."
+ },
+ {
+  "title": "FCC OET: Wireless Microphone Rules (2017)",
+  "url": "https://transition.fcc.gov/oet/ea/presentations/files/nov17/61-Wireless-Microphone-Rules-DT.pdf",
+  "type": "presentation",
+  "topic": "show-wireless",
+  "why": "Power limits by band, licensed and unlicensed, in one table."
+ },
+ {
+  "title": "Radio World: The SBE/NFL Game-Day Coordinators",
+  "url": "https://www.radioworld.com/?p=92138",
+  "type": "article",
+  "topic": "show-wireless",
+  "why": "How NFL game-day frequency coordination started and works."
+ },
+ {
+  "title": "Ofcom: Updating the amateur radio licensing framework",
+  "url": "https://www.ofcom.org.uk/__data/assets/pdf_file/0037/272998/Statement-Updating-the-amateur-radio-licensing-framework.pdf",
+  "type": "regulator",
+  "topic": "hobby",
+  "why": "The 2023 statement setting current UK licence power limits and call signs."
+ },
+ {
+  "title": "MIT Radio Society W1MX",
+  "url": "https://w1mx.mit.edu/",
+  "type": "club",
+  "topic": "hobby",
+  "why": "Open Friday meetings in Cambridge and the MIT Swapfest."
+ },
+ {
+  "title": "RTL-SDR.com: About RTL-SDR",
+  "url": "https://www.rtl-sdr.com/about-rtl-sdr/",
+  "type": "guide",
+  "topic": "hobby",
+  "why": "History, cost and common uses of the cheap SDR dongle."
+ },
+ {
+  "title": "eCFR: 47 CFR 1.1310",
+  "url": "https://www.ecfr.gov/current/title-47/chapter-I/subchapter-A/part-1/subpart-I/section-1.1310",
+  "type": "regulation",
+  "topic": "health",
+  "why": "The text of the US RF exposure limits."
+ },
+ {
+  "title": "IARC Press Release 208 (2011)",
+  "url": "https://www.iarc.who.int/wp-content/uploads/2018/07/pr208_E.pdf",
+  "type": "agency",
+  "topic": "health",
+  "why": "IARC's own explanation of the Group 2B classification."
+ },
+ {
+  "title": "ARPANSA on the WHO-commissioned review (2024)",
+  "url": "https://www.arpansa.gov.au/who-review-finds-no-link-between-mobile-phone-use-and-brain-cancer",
+  "type": "agency",
+  "topic": "health",
+  "why": "Plain-language summary of the 2024 review on phones and cancer."
+ },
+ {
+  "title": "WHO: 5G mobile networks and health",
+  "url": "https://www.who.int/news-room/q-a-detail/radiation-5g-mobile-networks-and-health",
+  "type": "agency",
+  "topic": "health",
+  "why": "The WHO's Q&A on 5G exposure."
+ },
+ {
+  "title": "Wi-Fi Alliance: Wi-Fi CERTIFIED 7",
+  "url": "https://wi-fi.org/news-events/newsroom/wi-fi-alliance-introduces-wi-fi-certified-7",
+  "type": "official",
+  "topic": "unlicensed",
+  "why": "What Wi-Fi 7 adds, from the certifying body."
+ },
+ {
+  "title": "Ofcom 6 GHz consultation (July 2026)",
+  "url": "https://www.ofcom.org.uk/siteassets/resources/documents/consultations/category-3-4-weeks/consultation-expanding-access-to-the-6-ghz-band-for-commercial-mobile-and-wi-fi-services/main-document/consultation-notice-of-proposed-regulations.pdf",
+  "type": "regulation",
+  "topic": "unlicensed",
+  "why": "The UK plan for Wi-Fi in the upper 6 GHz band."
+ },
+ {
+  "title": "CSA: Matter arrives",
+  "url": "https://csa-iot.org/newsroom/matter-arrives/",
+  "type": "official",
+  "topic": "unlicensed",
+  "why": "The launch announcement for the Matter smart-home standard."
+ },
+ {
+  "title": "The Things Network: LoRaWAN regional parameters",
+  "url": "https://www.thethingsnetwork.org/docs/lorawan/regional-parameters/",
+  "type": "reference",
+  "topic": "unlicensed",
+  "why": "Which LoRaWAN frequency plan applies in each country."
+ },
+ {
+  "title": "Itron OpenWay RF white paper (BC Hydro)",
+  "url": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/accounts-billing/customer-care/smart-metering/itron-open-way-rf-white-paper.pdf",
+  "type": "technical report",
+  "topic": "everyday",
+  "why": "Measured smart meter transmit times and power."
+ },
+ {
+  "title": "National Grid: 500,000 smart meters in Massachusetts",
+  "url": "https://www.nationalgrid.com/news/national-grid-surpasses-500000-smart-meters-installed-across-massachusetts",
+  "type": "official",
+  "topic": "everyday",
+  "why": "Status of National Grid's Massachusetts meter rollout."
+ },
+ {
+  "title": "Eversource: 100,000 smart meter installations",
+  "url": "https://www.eversource.com/residential/about/our-company/news-room/massachusetts-news/detail/eversource-marks-100-000-smart-meter-installations-as-statewide-rollout-continues-into-eastern-massachusetts",
+  "type": "official",
+  "topic": "everyday",
+  "why": "Status of Eversource's Massachusetts meter rollout."
+ },
+ {
+  "title": "Signal Identification Wiki: TPMS",
+  "url": "https://sigidwiki.com/wiki/Tire_Pressure_Monitoring_System_(TPMS)",
+  "type": "reference",
+  "topic": "everyday",
+  "why": "What tire pressure sensor bursts look like on the air."
+ },
+ {
+  "title": "CISA, LMR 101",
+  "url": "https://www.cisa.gov/sites/default/files/publications/LMR%20101_508FINAL.pdf",
+  "type": "PDF guide",
+  "topic": "public-safety",
+  "why": "A plain federal primer on repeaters, conventional and trunked radio."
+ },
+ {
+  "title": "TIA, Benefits of Project 25",
+  "url": "https://tiaonline.org/wp-content/uploads/2020/11/Benefits_of_Project_25.pdf",
+  "type": "PDF",
+  "topic": "public-safety",
+  "why": "The standards body's overview of P25's history, phases and interoperability."
+ },
+ {
+  "title": "RadioReference Wiki, APCO Project 25",
+  "url": "https://wiki.radioreference.com/index.php/APCO_Project_25",
+  "type": "Wiki",
+  "topic": "public-safety",
+  "why": "Technical details of P25 Phase 1 and Phase 2 written for scanner listeners."
+ },
+ {
+  "title": "CISA, Metro Boston Area Public Safety T-Band Dilemma",
+  "url": "https://www.cisa.gov/news-events/news/metro-boston-area-public-safety-t-band-dilemma",
+  "type": "Case study",
+  "topic": "public-safety",
+  "why": "How Greater Boston's police and fire radio uses the T-Band, and what an auction would have cost."
+ },
+ {
+  "title": "NWS, NOAA Weather Radio brochure",
+  "url": "https://www.weather.gov/media/nwr/NWR_Brochure_250428.pdf",
+  "type": "PDF",
+  "topic": "public-safety",
+  "why": "Channels, coverage and SAME codes for weather radio."
+ },
+ {
+  "title": "EENA, Where Are We... With Public Warning?",
+  "url": "https://eena.org/blog/where-are-we-with-public-warning/",
+  "type": "Article",
+  "topic": "public-safety",
+  "why": "Status of phone-based public warning across Europe."
+ },
+ {
+  "title": "FCC guide on interception and divulgence (FindLaw copy)",
+  "url": "https://corporate.findlaw.com/litigation-disputes/interception-and-divulgence-of-radio-communications.html",
+  "type": "Government guide",
+  "topic": "scanners",
+  "why": "The FCC's own explanation of what scanner listeners may and may not do."
+ },
+ {
+  "title": "RTDNA, Use of Information From Police Scanners",
+  "url": "https://www.rtdna.org/use-of-information-from-police-scanners",
+  "type": "Article",
+  "topic": "scanners",
+  "why": "A journalism group's guide to scanner law and encryption."
+ },
+ {
+  "title": "Boston Police radio change notice",
+  "url": "https://police.boston.gov/2025/08/06/radio/",
+  "type": "Official notice",
+  "topic": "scanners",
+  "why": "BPD's explanation of its 2025 switch and its delayed public feed."
+ },
+ {
+  "title": "Wireless Telegraphy Act 2006, section 48",
+  "url": "https://www.legislation.gov.uk/ukpga/2006/36/section/48/enacted/data.html",
+  "type": "Statute",
+  "topic": "scanners",
+  "why": "The UK interception offence in full."
+ },
+ {
+  "title": "GPS.gov: GPS Accuracy",
+  "url": "https://www.gps.gov/node/70",
+  "type": "Government page",
+  "topic": "gps",
+  "why": "Official accuracy figures and the list of what degrades GPS."
+ },
+ {
+  "title": "GPS.gov: Space Segment",
+  "url": "https://www.gps.gov/node/198",
+  "type": "Government page",
+  "topic": "gps",
+  "why": "Constellation design, orbit and satellite generations."
+ },
+ {
+  "title": "NIST: What time is it? FAQs",
+  "url": "https://www.nist.gov/pml/time-and-frequency-division/what-time-it-faqs",
+  "type": "Government page",
+  "topic": "gps",
+  "why": "WWV, WWVH and WWVB frequencies, coverage and phone numbers."
+ },
+ {
+  "title": "BIPM: Time Signals table",
+  "url": "https://webtai.bipm.org/ftp/pub/tai/annual-reports/bipm-annual-report/TIMESIGNALS/timesignals_2025.pdf",
+  "type": "Reference table",
+  "topic": "gps",
+  "why": "Every national time-signal station worldwide."
+ },
+ {
+  "title": "NIST: Microsecond Accuracy at Multiple Sites (Lombardi)",
+  "url": "https://tf.nist.gov/general/pdf/2620.pdf",
+  "type": "Technical paper",
+  "topic": "gps",
+  "why": "How cell networks and power grids depend on GPS time."
+ },
+ {
+  "title": "FCC 13-106: Newark GPS jammer case",
+  "url": "https://transition.fcc.gov/eb/Orders/2013/FCC-13-106A1.html",
+  "type": "Enforcement order",
+  "topic": "gps",
+  "why": "The law on jammers and the Newark incident in the FCC's words."
+ },
+ {
+  "title": "EASA: GNSS outages and alterations",
+  "url": "https://www.easa.europa.eu/en/domains/air-operations/global-navigation-satellite-system-outages-and-alterations",
+  "type": "Regulator page",
+  "topic": "gps",
+  "why": "Europe's aviation guidance on jamming and spoofing."
+ },
+ {
+  "title": "FAA SAFO 24002 (NBAA copy)",
+  "url": "https://nbaa.org/wp-content/uploads/2024/02/SAFO24002.pdf",
+  "type": "Safety alert",
+  "topic": "gps",
+  "why": "FAA guidance to crews on recognizing GPS disruptions."
+ },
+ {
+  "title": "AMSAT-UK: ISS SSTV event guide",
+  "url": "https://amsat-uk.org/2023/12/14/iss-sstv-40th-anniv-ham-radio-in-human-spaceflight/",
+  "type": "Hobby guide",
+  "topic": "satellites",
+  "why": "Frequency, mode and Doppler notes for receiving ISS pictures."
+ },
+ {
+  "title": "FCC: Next-Gen Satellite Constellation approval",
+  "url": "https://docs.fcc.gov/public/attachments/DOC-417881A1.pdf",
+  "type": "Government release",
+  "topic": "satellites",
+  "why": "The 2026 Starlink Gen2 authorization, including direct-to-cell."
+ }
+]
